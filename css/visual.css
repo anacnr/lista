@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+@media (min-width:300px) {
+
+/*Esse é o seletor universal do código, todos recebem inicialmente essa configuração*/
+
+*{
+    margin: 0%;
+    padding: 0px;
+}
+
+body, html{
+    width: 100vw;
+    height: 80vh;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
+    background-attachment: fixed;
+}
+
+form > ul > li{
+    list-style: none;
+    
+}
+
+/*Esses são os campos onde vão receber os dados*/
+
+form > ul > li > input{
+    width: 50%;
+    height: 25px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-top: 0%;
+    margin-bottom: 10%;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: black;
+    font-size: 0.8em;
+    font-style: oblique;
+    font-weight: 600;
+} 
+
+/*Primeiro campo que recebe o dado (nome)*/
+
+form > ul > li > #cliente{
+    margin-top: 40%;    
+}
+
+/*Último campo que recebe o dado (senha)*/
+
+form > ul > li > #valido{
+    margin-bottom: 15%;    
+}
+
+/*O placeholder é o que está escrito dentro dos campos*/
+
+form > ul > li > input::placeholder{
+    color: black;
+}
+
+/*Configurações do botão de cadastro*/
+
+form > button{
+    margin: auto;
+    display: block;
+    width: 35%;
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+form > ul > li > label{
+    display: none;
+}
+
+/*Campo do input com tipo image*/
+form > ul > li > #foto[type = 'file']{
+    display: none;
+}
+
+/*Label do input com tipo image*/
+form > ul > li > #descricao {
+    position: absolute;
+    top: 4%;
+    left: 36%;
+    font-size: 0.9em;
+    border: 0px solid black;
+    height: 15vh;
+    min-width: 25vw;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.559);
+    background-attachment: fixed;
+    background-position: center top;
+    background-image: url('../imagens/supermercado/store-min.jpg'); 
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    opacity: 80%;
+    filter: blur(1px);
+    cursor: pointer;
+    display: block;
+    
+}
+
+/*
+
+Esse link está especificando a largura(width) das telas:
+https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp
+
+No meu Notebook a largura(width) max foi até 611px, e no 611px a parte em cima ficou muito grande e embaixo o botão ficou colado.
+
+*/
+}

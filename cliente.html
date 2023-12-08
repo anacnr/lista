@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt -Br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testando o banco</title>
+    <!--Tela maior-->
+    <link rel="stylesheet" href="css/desktop.css">
+    <!--Tela do celular na horizonatal-->
+    <link rel="stylesheet" href="css/visual.css" media="screen and (orientation:portrait)">
+  
+  </head>
+  <body>
+    <!--Vou testar o banco clientes, tentar fazer a conexão-->
+
+    <!--Criar a tela de cadastro do comprador para Mobile First-->
+
+    <form method="post" action="php/cliente.php" onsubmit="return Open()"> 
+      <!--Abriu outra página quando utilizei o atributo onsubmit-->
+
+    <ul>
+  
+      <label for="cliente"></label>
+      <li> <img src="imagens/avatar-1299805_640.png" alt="" id="user">
+        <input type="text" name="nome" id="cliente" placeholder="Nome" required /></li>
+
+      <label for="unico"></label>
+      <li><input type="text" name="cpf" id="unico" placeholder="CPF" required /></li>
+      <li>
+
+        <label for="contato"></label>
+        <input type="tel" name="telefone" id="contato" placeholder="Telefone" required />
+      </li>
+
+      <li>
+        <label for="local"></label>
+        <input type="text" name="moradia" id="local" placeholder="Endereço" required />
+      </li>
+
+      <li>
+        <label for="endereco"></label>
+        <input type="email" name="gmail" id="end" placeholder="Email" required />
+      </li>
+
+      <li>
+        <label for="valido"></label>
+        <input type="password" name="senha" id="valido" placeholder="Senha" required />
+      </li>
+
+    </ul>
+  
+      <button type="submit" onclick="Open()">Cadastrar</button>
+
+    </form>
+
+     <!--Código para fazer abrir em outra página-->
+     <script>
+      function Open(){
+      //let linke =  window.location.href = '#'
+      //return false
+      }
+    </script>
+  </body>
+</html>

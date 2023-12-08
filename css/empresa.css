@@ -1,0 +1,358 @@
+@charset "UTF-8";
+
+ /*Configurações para tela do computador width acima de 780 */
+
+ @media (min-width:780px){
+
+/*Esse é o seletor universal do código, todos recebem inicialmente essa configuração */
+
+*{
+    margin: 0%;
+    padding: 0px;
+}
+
+body, html{
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
+    background-attachment: fixed;
+}
+
+/*Esses são os campos onde vão receber os dados*/
+
+form{
+    background-color: rgba(255, 255, 255, 0.909);
+    width: 60%;
+    height: 80%;
+    display: inline-block;
+    position: relative;
+    transform: translate(34%,12%);
+    border: 1px solid rgba(0, 0, 0, 0.772);
+    border-radius: 5px;
+}
+
+form > ul > li{
+    list-style: none;
+}
+
+/*Esses são os campos onde vão receber os dados*/
+
+form > ul > li > input{
+    position: absolute;
+    text-align: center;
+    margin-top: 0%;
+    margin-bottom: 1%;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.884);
+    font-size: 0.5em;
+    font-style: oblique;
+    font-weight: 500;
+} 
+
+/*Primeiro campo que recebe o dado (nome)*/
+form > ul > li > #cliente{
+    margin-top: 0%;
+    width: 70%;
+    height: 35px;
+    top: 33%;
+    left: 5%;    
+}
+
+/*Label do campo Empresa*/
+
+form > ul > li #empresa{
+    position: absolute;
+    top: 28%;
+    left: 6%;
+}
+
+/*Campo CNPJ*/
+form > ul > li > #unico{
+    top: 47%;
+    left: 65%;
+    width: 30%;
+    height: 35px;
+}
+
+/*Label do CNPJ*/
+
+form > ul > li > #registro{
+    color: black;
+    position: absolute;
+    top: 42%;
+    left: 66%;
+}
+
+/*Campo responsável pela empresa*/
+
+form > ul > li > #responsavel{
+    top: 47%;
+    left: 5%;
+    width: 50%;
+    height: 35px;
+}
+
+/*Label do responsável*/
+
+form > ul > li > #funcionario{
+    color: rgb(12, 1, 1);
+    position: absolute;
+    top: 42%;
+    left: 6%;
+}
+
+/*Campo Telefone pessoal*/
+
+form > ul > li > #movel{
+    top:62%;
+    left: 75%;
+    width: 20%;
+    height: 35px;
+}
+
+/*Label do Telefone pessoal*/
+form > ul > li > #tel-cel{
+    color: black;
+    position: absolute;
+    top: 57%;
+    left: 75%;
+}
+
+/*Campo Telefone fixo*/
+
+form > ul > li > #fixo{
+    top: 62%;
+    left: 53%;
+    width: 20%;
+    height: 35px;
+}
+
+/*Label do Telefone fixo*/
+
+form > ul > li > #tel-fixo{
+    color: black;
+    position: absolute;
+    top: 57%;
+    left: 53%;
+}
+
+/*Campo do endereço*/
+
+form > ul > li > #local{
+    top: 62%;
+    left: 5%;
+    width: 45%;
+    height: 35px;
+}
+
+/*Label do endereço*/
+
+form > ul > li > #localizacao{
+    color: black;
+    position: absolute;
+    top: 57%;
+    left: 6%;
+}
+
+/*Campo do e-mail*/
+
+form > ul > li > #end{
+    margin-top: 0%;
+    top: 76%;
+    left: 5%;
+    width: 50%;
+    height: 35px;    
+}
+
+/*Campo do e-mail*/
+
+form > ul > li > #g-mail{
+    color: black;
+    position: absolute;
+    top: 72%;
+    left: 6%;
+}
+
+/*Campo da senha*/
+
+form > ul > li > #valido{
+    margin-bottom: 1%;
+    top: 76%;
+    left: 65%;
+    width: 30%;
+    height: 35px; 
+}
+
+/*Label da senha*/
+
+form > ul > li > #senha {
+    color: black;
+    position: absolute;
+    top: 72%;
+    left: 65%;
+    cursor: pointer;
+}
+
+/*Campo do input com tipo image*/
+form > ul > li > #foto[type = 'file']{
+    display: none;
+}
+
+/*Label do input com tipo image*/
+form > ul > li > #descricao{
+    position: absolute;
+    top: 5%;
+    left: 44%;
+    font-size: 0.9em;
+    border: 0px solid black;
+    height: 20%;
+    width: 12%;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.559);
+    background-position: top center;
+    background-attachment: fixed;
+    background-image: url(''); 
+    background-size: cover;
+    opacity: 70%;
+    filter: blur(1px);
+    cursor: pointer;
+}
+
+/*O placeholder é o que está escrito dentro dos campos*/
+
+form > ul > li > input::placeholder{
+    color: black;
+}
+
+/*Configurações do botão de cadastro*/
+
+form > button{
+    width: 17%;
+    height: 35px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 0.8em;
+    cursor: pointer;
+    position: absolute;
+    top: 87%;
+    left: 77%;
+}
+
+/*Esse comando é para tirar as setinhas dos campos que tem o tipo number*/
+
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+/*Para esconder o que está escrito dentro dos inputs*/
+
+input::placeholder{
+    display: none;
+    opacity: 0%;
+}
+
+ }
+/*Configurações para tela do computador width minimo de 621px e max de 780px */
+
+@media (min-width:620px) and (max-width: 780px){
+
+    body{
+        background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
+        background-attachment: fixed;
+    }
+  
+    form > ul > li{
+        list-style: none;
+    }
+    
+    /*Esses são os campos onde vão receber os dados*/
+    
+    form > ul > li > input{
+        width: 50%;
+        height: 25px;
+        display: block;
+        margin: auto;
+        text-align: center;
+        margin-top: 0%;
+        margin-bottom: 10%;
+        border-radius: 25px;
+        border-style: solid;
+        border-color: black;
+        font-size: 0.8em;
+        font-style: oblique;
+        font-weight: 600;
+    }
+        
+    /*Primeiro campo que recebe o dado (nome)*/
+
+    form > ul > li > #cliente{
+    margin-top: 40%;    
+    }
+
+/*Último campo que recebe o dado (senha)*/
+
+    form > ul > li > #valido{
+    margin-bottom: 15%;    
+    }
+
+/*O placeholder é o que está escrito dentro dos campos*/
+
+    form > ul > li > input::placeholder{
+    color: black;
+    }
+
+/*Configurações do botão de cadastro*/
+
+    form > button{
+    margin: auto;
+    display: block;
+    width: 35%;
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 25px;
+    font-weight: 600;
+    }
+
+    form > ul > li > label{
+    display: none;
+    }
+
+    /*Campo do input com tipo image*/
+form > ul > li > #foto[type = 'file']{
+    display: none;
+}
+
+/*Label do input com tipo image*/
+form > ul > li > #descricao{
+    position: absolute;
+    top: 6%;
+    left: 38%;
+    font-size: 0.9em;
+    border: 0px solid black;
+    height: 25vh;
+    min-width: 25vw;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.559);
+    background-attachment: fixed;
+    background-position: center top;
+    background-image: url('../imagens/supermercado/store-min.jpg'); 
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    opacity: 80%;
+    filter: blur(1px);
+    cursor: pointer;
+    display: block;
+}
+
+}
+/*Quando eu tirei a media query a tela voltou a ser normal,porém com os inputs e o botão estão disproporcionais no localhost*/

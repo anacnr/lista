@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!--Tela maior-->
+    <link rel="stylesheet" href="css/normal.css">
+    <!--Tela do celular na horizonatal-->
+    <link rel="stylesheet" href="css/login.css" media="screen and (orientation:portrait)">
+</head>
+<body>
+    <form id="loginForm" method="post" action="php/login.php">
+        <ul>
+
+          <label for="gmail"></label>
+          <li>
+            <img src="imagens/cliente/email-150497_640-min.png" alt="g-mail-icon" id="gmail-icon">
+            <input type="text" name="end" id="gmail" placeholder="G-mail" required /></li>
+            
+          <label for="senha"></label>
+          <li>
+            <img src="imagens/cliente/lock-min.png" alt="lock-icon" id="lock-icon">
+            <input type="text" name="passw" id="senha" placeholder="Senha" required /></li>
+          
+        </ul>
+        <button id="a" type="submit">Entrar</button> <button type="button" onclick="Register()">Cadastrar</button>
+        </form>
+
+        <!--Mensagens para os valores incompatíveis-->
+
+        <!--Mensagem para cadastro
+        <div class="quadro_a">,</div>-->
+        
+        <script src="javascript/jquery-3.7.1.min.js"></script>
+        <script src="javascript/form.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,102 @@
+@charset "UTF-8";
+/*Essa configuração vai até 619px de width*/
+*{
+    margin: 0%;
+    padding: 0px;
+}
+
+body,html{
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
+    background-attachment: fixed;
+}
+
+form{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.909);
+    box-shadow: 2px 1px 10px black;
+    border-radius: 3px;
+    height: 50vh;
+    width: 75vw;
+    top: 25%;
+    margin: auto;
+}
+
+form > ul > li{
+    list-style: none;
+}
+
+form > ul{
+    /*border: 0px solid purple;*/
+    transform: translate(24vw,20vh);
+    width: 25vw;
+    height: 10vh;
+}
+
+form > ul > li > #gmail-icon{
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    right: 100%;
+    margin-right: 5px;
+    z-index: 1;
+    filter: hue-rotate(44deg);
+}
+
+form > ul > li > #lock-icon{
+    width: 20%;
+    height: 21px;
+    position: absolute;
+    top: 75%;
+    right: 100%;
+    margin-right: 5px;
+    z-index: 1;
+    filter: hue-rotate(96deg);
+}
+
+/*Esses são os campos onde vão receber os dados*/
+
+form > ul > li > input{
+    position: relative;
+    width: 130%;
+    height: 50%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.675);
+    border-radius: 3px;
+    text-align: center;
+}
+
+form > ul > li > input::placeholder{
+    color: rgba(39, 39, 149, 0.94);
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+form > ul > li > #gmail{
+    margin-bottom: 15px;
+}
+
+form > ul > li > #senha{
+    margin-top: 10px;
+}
+
+form > button{
+    width: 25%;
+    height: 30px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.623);
+    border-radius: 25px;
+    font-size: 0.7em;
+    font-weight: 600;
+    margin-right: 15px;
+    position: relative;
+    transform: translate(17vw,30vh);
+}
