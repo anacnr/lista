@@ -31,8 +31,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (valide.status === "Encontrado") {
                     console.log(valide.message) 
                 }
-                else {
+                else if(valide.status === "SenhaErrada"){
                     console.log(valide.message)
+                }
+                else if(valide.status === "EmailErrado"){
+                    console.log(valide.message)
+                }
+                else {
+                  console.log(valide.message)
                 }
             }).fail(function (jqXHR, textStatus, errorThrown) {
                 console.log("Erro na requisição AJAX:", textStatus, errorThrown);

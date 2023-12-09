@@ -12,32 +12,44 @@ $mysql = new mysqli("$local", "$user", "$pass", "$bank");
 $gmail = $_POST['end'];
 $passw = $_POST['passw'];
 
-if($mysql->connect_error != null){
+if ($mysql->connect_error != null) {
     die("Conexão não realizada");
-}
-else{
+} else {
    
     //Faz a pesquisa no banco
-    $search = ('SELECT gmail,senha FROM comprador WHERE gmail = $gmail and senha = $passw');
+    $search = "SELECT * FROM comprador WHERE gmail = '$gmail'";
+    $datas = mysqli_query($mysql, $search);
 
-    $result_query = mysqli_query($mysql, $search)
-    $row = mysqli_fetch_array($result_query, MYSQLI_ASSOC );
+   $request = array("status" => "NaoEncontrado", "message" => "Não encontrado!");
 
-    //Verifica se o gmail e senha correspondem no banco de dados
-    if ($gmail == $row["gmail"] and $passw == $row["senha"]) {
-        $resposta = array("status" => "Encontrado", "message" => "Encontrado!");
-    }
-     else {
-        $resposta = array("status" => "NaoEncontrado", "message" => "Não encontrado!");
-    }
+    while ($row = mysqli_fetch_array($datas, MYSQLI_ASSOC)) {
+        // Verifica se o gmail corresponde no banco de dados
+        if ($gmail == $row["gmail"]) {
+            // Usuário encontrado, verifica a senha
+            if ($passw == $row["senha"]) {
+                $request = array("status" => "Encontrado", "message" => "Encontrado!");
+            } else {
+                $request = array("status" => "SenhaErrada", "message" => "Senha incorreta!");
+            }
+            // Não é necessário continuar o loop, pois o gmail foi encontrado
+            break;
+        }    
+        else{
+            if ($passw == $row["senha"]){
+                $request = array("status" => "EmailErrado", "message" => "Email incorreto!");
+            }
+            break;
+        }
     }
 
     // Retorna a resposta como JSON
     header('Content-Type: application/json');
-    echo json_encode($resposta);
+    echo json_encode($request);
+}
 
 //Encerra a conexão com o banco de dados
 mysqli_close($mysql);
 
 ?>
+
 
