@@ -20,7 +20,7 @@ else{
     //Faz a pesquisa no banco
     $search = ('SELECT gmail,senha FROM comprador WHERE gmail = $gmail and senha = $passw');
 
-    while($result_query = mysqli_query($mysql, $search)){
+    $result_query = mysqli_query($mysql, $search)
     $row = mysqli_fetch_array($result_query, MYSQLI_ASSOC );
 
     //Verifica se o gmail e senha correspondem no banco de dados
@@ -35,8 +35,6 @@ else{
     // Retorna a resposta como JSON
     header('Content-Type: application/json');
     echo json_encode($resposta);
-
-}
 
 //Encerra a conexão com o banco de dados
 mysqli_close($mysql);
