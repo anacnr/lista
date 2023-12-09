@@ -20,11 +20,8 @@ else{
     //Faz a pesquisa no banco
     $search = ('SELECT gmail,senha FROM comprador WHERE gmail = $gmail and senha = $passw');
 
-    
-
     while($result_query = mysqli_query($mysql, $search)){
     $row = mysqli_fetch_array($result_query, MYSQLI_ASSOC );
-
 
     //Verifica se o gmail e senha correspondem no banco de dados
     if ($gmail == $row["gmail"] and $passw == $row["senha"]) {
