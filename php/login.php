@@ -18,9 +18,11 @@ if($mysql->connect_error != null){
 else{
    
     //Faz a pesquisa no banco
-    $search = ('SELECT * from comprador');
-    $result_query = mysqli_query($mysql, $search);
+    $search = ('SELECT gmail,senha FROM comprador WHERE gmail = $gmail and senha = $passw');
 
+    
+
+    while($result_query = mysqli_query($mysql, $search)){
     $row = mysqli_fetch_array($result_query, MYSQLI_ASSOC );
 
 
@@ -31,7 +33,8 @@ else{
      else {
         $resposta = array("status" => "NaoEncontrado", "message" => "Não encontrado!");
     }
-    
+    }
+
     // Retorna a resposta como JSON
     header('Content-Type: application/json');
     echo json_encode($resposta);
