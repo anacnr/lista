@@ -34,9 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 else if(valide.status === "SenhaErrada"){
                     console.log(valide.message)
                 }
-                else if(valide.status === "EmailErrado"){
-                    console.log(valide.message)
-                }
                 else {
                   console.log(valide.message)
                 }
