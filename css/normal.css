@@ -26,8 +26,10 @@ Tive que diminuir o limite de largura máxima*/
     }
     
     form > ul{
-        transform: translate(24vw,20vh);
-        width: 25vw;
+        position: relative;
+        margin: auto;
+        top: 35%;
+        width: 50vw;
         height: 10vh;
     }
 
@@ -58,7 +60,7 @@ Tive que diminuir o limite de largura máxima*/
     
     form > ul > li > input{
         position: relative;
-        right: 15%;
+        right: 2%;
         width: 99%;
         height: 50%;
         padding-top: 4%;

@@ -34,37 +34,42 @@ form > ul > li{
 
 form > ul{
     /*border: 0px solid purple;*/
-    transform: translate(28vw,20vh);
+    position: relative;
+    margin: auto;
+    top: 35%;
     width: 50vw;
     height: 10vh;
 }
 
 form > ul > li > #gmail-icon{
-    width: 25px;
+    width: 20px;
     height: 21px;
     position: absolute;
-    right: 100%;
+    top: 04px;
+    right: 102%;
     margin-right: 5px;
-    z-index: 1;
     filter: hue-rotate(44deg);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.404);
+    border-bottom-left-radius: 25%;
 }
 
 form > ul > li > #lock-icon{
-    width: 20%;
+    width: 15px;
     height: 21px;
-    position: absolute;
-    top: 75%;
-    right: 100%;
+    position: relative;
+    top: 35px;
+    right: 25px;
     margin-right: 5px;
-    z-index: 1;
     filter: hue-rotate(96deg);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.404);
+    border-bottom-left-radius: 25%;
 }
 
 /*Esses são os campos onde vão receber os dados*/
 
 form > ul > li > input{
     width: 100%;
-    height: 50%;
+    height: 12px;
     padding-top: 2%;
     padding-bottom: 4%;
     border-style: solid;
@@ -89,14 +94,17 @@ form > ul > li > #senha{
 
 form > button{
     width: 25%;
-    height: 30px;
+    height: 7%;
     border-width: 1px;
     border-style: solid;
     border-color: rgba(0, 0, 0, 0.623);
     border-radius: 25px;
-    font-size: 0.7em;
-    font-weight: 600;
-    margin-right: 15px;
+    font-size: 2dvw;
+    font-weight: 400;
     position: relative;
-    transform: translate(17vw,30vh);
+    transform: translate(18vw,32vh);
+}
+
+form > #cad{
+margin-left: 5%;
 }
