@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*Configurações para tela do computador width minimo de 621px e max de 780px
-Tive que diminuir o limite de largura máxima*/
+Tive que diminuir o limite de largura máxima.
+Especificações baseadas no consórcio w3school. url: https://www.w3schools.com/css/css_rwd_mediaqueries.asp*/
 @media (min-width:600px) and (max-width: 768px){
 
     body{
