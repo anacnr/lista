@@ -24,7 +24,7 @@ form{
     height: 50vh;
     width: 85vw;
     top: 25%;
-    left: 5%;
+    left: 10%;
     margin: auto;
 }
 
@@ -42,27 +42,22 @@ form > ul{
 }
 
 form > ul > li > #gmail-icon{
-    width: 20px;
+    width: 21px;
     height: 21px;
     position: absolute;
-    top: 04px;
-    right: 102%;
-    margin-right: 5px;
+    top: 4px;
+    right: 100%;
+    margin-right: 10px;
     filter: hue-rotate(44deg);
-    border-bottom: 2px solid rgba(0, 0, 0, 0.404);
-    border-bottom-left-radius: 25%;
 }
 
 form > ul > li > #lock-icon{
-    width: 15px;
+    width: 17px;
     height: 21px;
     position: relative;
-    top: 35px;
-    right: 25px;
-    margin-right: 5px;
+    top: 38px;
+    right: 28px;
     filter: hue-rotate(96deg);
-    border-bottom: 2px solid rgba(0, 0, 0, 0.404);
-    border-bottom-left-radius: 25%;
 }
 
 /*Esses são os campos onde vão receber os dados*/

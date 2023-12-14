@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*Configurações para tela do computador width minimo de 621px e max de 780px
 Tive que diminuir o limite de largura máxima*/
-@media (min-width:620px) and (max-width: 696px){
+@media (min-width:600px) and (max-width: 768px){
 
     body{
         background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
@@ -10,15 +10,13 @@ Tive que diminuir o limite de largura máxima*/
     
     form{
         position: relative;
-        height: 50vh;
-        width: 75vw;
-        top: 25%;
+        top: 150px;
         margin: auto;
         background-color: rgba(255, 255, 255, 0.909);
         box-shadow: 2px 1px 10px black;
         border-radius: 3px;
         height: 50vh;
-        width: 75vw; 
+        width: 85vw; 
     }
     
     form > ul > li{
@@ -37,8 +35,8 @@ Tive que diminuir o limite de largura máxima*/
         width: 21px;
         height: 21px;
         position: absolute;
-        right: 95%;
-        bottom: 65%;
+        right: 97%;
+        bottom: 60%;
         margin-right: 5px;
         z-index: 1;
         filter: hue-rotate(44deg);
@@ -49,8 +47,110 @@ Tive que diminuir o limite de largura máxima*/
         width: 21px;
         height: 21px;
         position: absolute;
-        top: 75%;
+        top: 140%;
         right: 98%;
+        z-index: 1;
+        filter: hue-rotate(96deg);
+        cursor: context-menu;
+    }
+    
+    /*Esses são os campos onde vão receber os dados*/
+    
+    form > ul > li > input{
+        width: 100%;
+        height: 12px;
+        padding-top: 2%;
+        padding-bottom: 4%;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.675);
+        border-radius: 3px;
+        text-align: center;
+        position: relative;
+        right: 8%;
+    }
+    
+    form > ul > li > input::placeholder{
+        color: rgba(39, 39, 149, 0.94);
+        font-size: 0.8em;
+        font-weight: 600;
+    }
+    
+    form > ul > li > #gmail{
+        margin-bottom: 15px;
+    }
+    
+    form > ul > li > #senha{
+        margin-top: 35px;
+    }
+    
+    form > button{
+        width: 25%;
+        height: 7%;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.623);
+        border-radius: 25px;
+        font-size: 2dvw;
+        font-weight: 400;
+        position: relative;
+        transform: translate(18vw,32vh);
+    }
+    
+    form > #cad{
+    margin-left: 5%;
+    }
+}
+
+
+@media (min-width:768){
+    body{
+        background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
+        background-attachment: fixed;
+    } 
+
+    form{
+        position: relative;
+        margin: auto;
+        margin-top: 10%;
+        background-color: rgba(255, 255, 255, 0.909);
+        box-shadow: 2px 1px 10px black;
+        border-radius: 3px;
+        height: 50vh;
+        width: 83vw; 
+        top: 100px;
+    }
+    
+    form > ul > li{
+        list-style: none;
+    }
+    
+    form > ul{
+        position: relative;
+        margin: auto;
+        top: 30%;
+        right: 2%;
+        width: 50vw;
+        height: 10vh;
+    }
+
+    form > ul > li > #gmail-icon{
+        width: 21px;
+        height: 21px;
+        position: absolute;
+        right: 92%;
+        bottom: 45%;
+        margin-right: 0px;
+        z-index: 1;
+        filter: hue-rotate(44deg);
+        cursor: context-menu;
+    }
+
+    form > ul > li > #lock-icon{
+        width: 21px;
+        height: 21px;
+        position: absolute;
+        top: 160%;
+        right: 92%;
         z-index: 1;
         filter: hue-rotate(96deg);
         cursor: context-menu;
@@ -62,8 +162,8 @@ Tive que diminuir o limite de largura máxima*/
         position: relative;
         right: 2%;
         width: 99%;
-        height: 50%;
-        padding-top: 4%;
+        height: 12px;
+        padding-top: 2%;
         padding-bottom: 4%;
         border-style: solid;
         border-color: rgba(0, 0, 0, 0.675);
@@ -76,163 +176,33 @@ Tive que diminuir o limite de largura máxima*/
         font-size: 0.8em;
         font-weight: 600;
     }
+
+    form > ul > li > #gmail {
+        margin-top: 10px;
+    }
     
     form > ul > li > #senha{
-        margin-top: 15px;
+        margin-top: 55px;
     }
     
     form > button{
         width: 25%;
-        height: 30px;
+        height: 25px;
         border-width: 1px;
         border-style: solid;
         border-color: rgba(0, 0, 0, 0.623);
         border-radius: 25px;
         font-size: 0.7em;
-        font-weight: 600;
+        font-weight: 100;
         margin-right: 15px;
         position: relative;
-        transform: translate(17vw,30vh);
+        transform: translate(17vw,32vh);
         cursor: pointer;
     }
+
+    form > #cad{
+        margin-left: 4%;
+        }
 }
 
- /*Configurações para tela do computador width minímo de 697px
- Vou ter que alterar mais propriedades, a lista está torta, os ícones estão indo para dentro dos botões*/
- @media (min-width:697px){
-    body{
-        background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
-        background-attachment: fixed;  
-    }
-
-    form{
-        position: relative;
-        transform: translate(24vw,20vh
-        );
-        background-color: rgba(255, 255, 255, 0.909);
-        box-shadow: 2px 1px 10px black;
-        border-radius: 3px;
-        height: 60vh;
-        width: 50vw; 
-    }
-
-    form > ul > li{
-        list-style: none;
-    }
-    
-    form > ul{
-        /*border: 0px solid purple;*/
-        transform: translate(15vw,24vh);
-        width: 25vw;
-        height: 10vh;
-    }
-
-    form > ul > li > #gmail-icon{
-        width: 23px;
-        height: 23px;
-        position: absolute;
-        top: 10%;
-        right: 106%;
-        filter: hue-rotate(44deg);
-    }
-
-    form > ul > li > #lock-icon{
-        width: 21px;
-        height: 21px;
-        position: absolute;
-        top: 100%;
-        right: 106%;
-        z-index: 1;
-        filter: hue-rotate(96deg);
-    }
-
-    /*Esses são os campos onde vão receber os dados*/
-    
-    form > ul > li > input{
-        position: relative;
-        right: 15%;
-        width: 70%;
-        padding-top: 1%;
-        padding-bottom: 1%;
-        border-style: solid;
-        border-color: rgba(0, 0, 0, 0.675);
-        border-radius: 3px;
-        text-align: center;
-        cursor: context-menu;
-    }
-
-    form > ul > li > input::placeholder{
-        color: rgba(39, 39, 149, 0.94);
-        font-size: 0.8em;
-        font-weight: 600;
-    }
-
-    form > ul > li > #gmail{
-        height: 25px;
-        margin-bottom: 10px;
-    }
-    
-    form > ul > li > #senha{
-        margin-top: 15px;
-        height: 25px;
-    }
-
-    form > button{
-        width: 25%;
-        height: 30px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: rgba(0, 0, 0, 0.623);
-        border-radius: 25px;
-        font-size: 0.7em;
-        font-weight: 600;
-        margin-right: 15px;
-        position: relative;
-        transform: translate(12vw,36vh);
-        cursor: pointer;
-    }
-
-    .quadro_a{
-        border: 2px solid black;
-        width: 25vw;
-        height: 11vh;
-        display: block;
-        animation: alert 2s ease-in 1s 1;
-        border-radius: 6px;
-        border-top: none;
-        border-right-style: hidden;
-        border-bottom-width: 2px;
-        border-left-style: hidden;
-        background-color: rgba(0, 255, 255, 0.219);
-        padding-top: 2px;
-        position: absolute;
-        transform: translate(36vw,-20vh);
-     }
-
-     @keyframes alert {
-        from{
-            opacity: 0%;
-            transform: scale(90%);
-        }
-        to{
-            opacity: 100%;
-            transform: scale(100%);
-        }
-     }
-
-     .frase_a{
-        text-align: center;
-        animation: frase 2s ease-out 1;
-        font-size: 1em;
-        padding-top: 2%;
-     }
-
-     @keyframes frase {
-        from{
-            opacity: 0%;      
-        }
-        to{
-            opacity: 100%;
-        }
-     }
- }
+ /*Configurações para tela do computador width minímo de 697px */
