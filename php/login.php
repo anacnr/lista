@@ -1,5 +1,7 @@
 <?php
 
+include 'cliente.php';
+
 $local = '127.0.0.1';
 $user = 'root';
 $pass = "";
@@ -7,9 +9,12 @@ $bank = 'supermercado';
 
 $mysql = new mysqli($local, $user, $pass, $bank);
 
-//Recebimento do email e da senha de maneira ternária
+//Recebimento do email e da senha
 $gmail =  $_POST['end'];
 $passw =  $_POST['passw'];
+
+//Verifica se o hash e a senha são os mesmos do banco
+$verif_passw = password_verify($passw,$hash_passw);
 
 if ($mysql->connect_error != null) {
     die("Conexão não realizada");
@@ -46,4 +51,3 @@ if ($mysql->connect_error != null) {
 $mysql->close();
 
 ?>
-

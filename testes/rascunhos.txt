@@ -1,0 +1,106 @@
+Cad Cliente PHP
+
+<?php
+
+// Cria a conexão com o banco
+$local = '127.0.0.1';
+$user = 'root';
+$pass = "";
+$bank = 'supermercado';
+
+//Cria uma instância da classe mysqli
+$bank = new mysqli("$local", "$user", "$pass", "$bank");
+
+//Recupera dados do formulário
+$name = $_POST['nome'];
+$cpf = $_POST['cpf'];
+$end = $_POST['gmail'];
+$house = $_POST['moradia'];
+$tel = $_POST['telefone'];
+$passw = $_POST['senha']; //Preciso usar a função para criptografar a senha
+
+
+if($bank->connect_error != null){
+    die("Erro na conexão");
+}
+else{
+
+    //Chama uma outra classe para iniciar a classe mysqli e ter acesso a outros métodos
+    $start = mysqli_stmt_init($bank);
+
+    //Coloca mais segurança na hora de inserir os dados
+    mysqli_stmt_prepare($start, "INSERT INTO comprador(nome,cpf, gmail,moradia,telefone,senha) VALUES(?, ?, ?, ?, ?, ?)");
+
+    //Organiza os dados na coluna determinada. A quantidade de 's' é a quantidade dos dados
+    mysqli_stmt_bind_param($start, 'ssssss', $name, $cpf, $end, $house, $tel, $passw);
+
+    //Faz os comandos serem executados
+    mysqli_stmt_execute($start);
+
+    //Fecha as validações
+    mysqli_stmt_close($start);
+}
+
+//Encerra a conexão com o banco de dados
+mysqli_close($bank);
+?>
+
+
+
+_________________________________________________________________________________________________________________
+
+Login:
+
+<?php
+
+include 'cliente.php';
+
+$local = '127.0.0.1';
+$user = 'root';
+$pass = "";
+$bank = 'supermercado';
+
+$mysql = new mysqli($local, $user, $pass, $bank);
+
+//Recebimento do email e da senha
+$gmail =  $_POST['end'];
+$passw =  $_POST['passw'];
+
+//Verifica se o hash e a senha são os mesmos do banco
+//$verif_passw = password_verify($passw,$hash_passw);
+
+if ($mysql->connect_error != null) {
+    die("Conexão não realizada");
+} else {
+   
+    // Faz a pesquisa no banco
+    $search = $mysql->prepare("SELECT * FROM comprador WHERE gmail = ?");
+    $search->bind_param("s", $gmail);
+    $search->execute();
+    $datas = $search->get_result();
+
+    $request = array("status" => "NaoEncontrado", "message" => "Não encontrado!");
+
+    while ($row = mysqli_fetch_array($datas, MYSQLI_ASSOC)) {
+        // Verifica se o gmail corresponde no banco de dados
+        if ($gmail == $row["gmail"]) {
+            if($passw == $row["senha"]){
+                $request = array("status" => "Encontrado", "message" => "Encontrado!");
+            }
+            else{
+                $request = array("status" => "SenhaErrada", "message" => "Senha incorreta!");
+            }
+            // Não é necessário continuar o loop, pois o gmail foi encontrado
+            break;
+        }    
+    }
+
+    // Retorna a resposta como JSON
+    header('Content-Type: application/json');
+    echo json_encode($request);
+}
+
+// Encerra a conexão com o banco de dados
+$mysql->close();
+
+?>

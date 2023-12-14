@@ -15,8 +15,10 @@ $cpf = $_POST['cpf'];
 $end = $_POST['gmail'];
 $house = $_POST['moradia'];
 $tel = $_POST['telefone'];
-$passw = $_POST['senha']; //Preciso usar a função para criptografar a senha
+$passw = $_POST['senha']; 
 
+//Preciso usar a função para criptografar a senha
+$hash_passw = password_hash($passw, PASSWORD_DEFAULT,);
 
 if($bank->connect_error != null){
     die("Erro na conexão");
@@ -30,7 +32,7 @@ else{
     mysqli_stmt_prepare($start, "INSERT INTO comprador(nome,cpf, gmail,moradia,telefone,senha) VALUES(?, ?, ?, ?, ?, ?)");
 
     //Organiza os dados na coluna determinada. A quantidade de 's' é a quantidade dos dados
-    mysqli_stmt_bind_param($start, 'ssssss', $name, $cpf, $end, $house, $tel, $passw);
+    mysqli_stmt_bind_param($start, 'ssssss', $name, $cpf, $end, $house, $tel, $hash_passw);
 
     //Faz os comandos serem executados
     mysqli_stmt_execute($start);
