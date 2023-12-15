@@ -103,7 +103,7 @@ body{
         height: 34vh;
         position: relative;
         top: 40%;
-        left: 25%;
+        left: 23%;
         box-shadow: 2px 1px 10px rgb(10, 10, 10);
     }
 
@@ -244,8 +244,8 @@ body{
         display: block;
         position: relative;
         top: 35%;
-        width: 50%;
-        height: 15%;
+        width: 40%;
+        height: 14%;
     }
 
     div > #second{
@@ -253,8 +253,8 @@ body{
         display: block;
         position: relative;
         top: 50%;
-        width: 50%;
-        height: 15%;
+        width: 40%;
+        height: 14%;
     }
 
     /*Acesso dos links*/
@@ -262,7 +262,7 @@ body{
         text-decoration: none;
         text-transform: uppercase;
         color: rgb(2, 2, 2);
-        font-size: 1.5dvw;
+        font-size: 1dvw;
         font-style: italic;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
     }
