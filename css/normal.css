@@ -85,7 +85,7 @@ Especificações baseadas no consórcio w3school. url: https://www.w3schools.com
     }
     
     form > button{
-        width: 25%;
+        width: 20%;
         height: 7%;
         border-width: 1px;
         border-style: solid;
@@ -94,7 +94,7 @@ Especificações baseadas no consórcio w3school. url: https://www.w3schools.com
         font-size: 2dvw;
         font-weight: 400;
         position: relative;
-        transform: translate(18vw,32vh);
+        transform: translate(22vw,32vh);
     }
     
     form > #cad{
@@ -162,8 +162,8 @@ Especificações baseadas no consórcio w3school. url: https://www.w3schools.com
     form > ul > li > input{
         position: relative;
         right: 2%;
-        width: 99%;
-        height: 10px;
+        width: 89%;
+        height: 5px;
         padding-top: 2%;
         padding-bottom: 4%;
         border-style: solid;
@@ -187,7 +187,7 @@ Especificações baseadas no consórcio w3school. url: https://www.w3schools.com
     }
     
     form > button{
-        width: 25%;
+        width: 20%;
         height: 25px;
         border-width: 1px;
         border-style: solid;
@@ -197,7 +197,7 @@ Especificações baseadas no consórcio w3school. url: https://www.w3schools.com
         font-weight: 100;
         margin-right: 15px;
         position: relative;
-        transform: translate(17vw,32vh);
+        transform: translate(19vw,32vh);
         cursor: pointer;
     }
 
@@ -307,4 +307,107 @@ Especificações baseadas no consórcio w3school. url: https://www.w3schools.com
     form > #cad{
         margin-left: 4%;
         }
+}
+
+@media (min-width: 1200px){
+    body{
+        background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
+        background-attachment: fixed;
+    } 
+
+    form{
+        position: relative;
+        margin: auto;
+        margin-top: 5%;
+        background-color: rgba(255, 255, 255, 0.909);
+        box-shadow: 2px 1px 10px black;
+        border-radius: 3px;
+        height: 57vh;
+        width: 45vw;
+        top: 84px;
+    }
+    
+    form > ul > li{
+        list-style: none;
+    }
+    
+    form > ul{
+        position: relative;
+        margin: auto;
+        top: 30%;
+        right: 2%;
+        width: 50vw;
+        height: 10vh;
+    }
+
+    form > ul > li > #gmail-icon{
+        width: 21px;
+        height: 21px;
+        position: absolute;
+        right: 84%;
+        bottom: 40%;
+        margin-right: 0px;
+        z-index: 1;
+        filter: hue-rotate(44deg);
+        cursor: context-menu;
+    }
+
+    form > ul > li > #lock-icon{
+        width: 20px;
+        height: 19px;
+        position: absolute;
+        top: 169%;
+        right: 85%;
+        z-index: 1;
+        filter: hue-rotate(96deg);
+        cursor: context-menu;
+    }
+    
+    /*Esses são os campos onde vão receber os dados*/
+    
+    form > ul > li > input{
+        position: relative;
+        left: 12%;
+        width: 56%;
+        height: 0px;
+        padding-top: 2%;
+        padding-bottom: 3%;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.675);
+        border-radius: 3px;
+        text-align: center;
+    }
+    
+    form > ul > li > input::placeholder{
+        color: rgba(39, 39, 149, 0.94);
+        font-size: 0.8em;
+        font-weight: 600;
+    }
+
+    form > ul > li > #gmail {
+        margin-top: 10px;
+    }
+    
+    form > ul > li > #senha{
+        margin-top: 55px;
+    }
+    
+    form > button{
+        width: 20%;
+        height: 25px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.623);
+        border-radius: 25px;
+        font-size: 0.7em;
+        font-weight: 100;
+        margin-right: 15px;
+        position: relative;
+        transform: translate(11vw,37vh);
+        cursor: pointer;
+    }
+
+    form > #cad{
+        margin-left: 4%;
+        } 
 }
