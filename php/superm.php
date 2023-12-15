@@ -18,7 +18,9 @@ $end = $_POST['endereco'];
 $fixo = $_POST['contato-fixo'];
 $celular = $_POST['contato-cel'];
 $gmail = $_POST['gmail'];
-$passw = $_POST['senha']; //Preciso usar a função random para criptografar a senha
+$passw = $_POST['senha'];
+//Preciso usar a função random para criptografar a senha
+$hash_pass = password_hash($passw, PASSWORD_DEFAULT);
 $image = $_FILES['img']; 
 
 if($bank->connect_error != null){
@@ -58,7 +60,7 @@ if(isset($image)){
     mysqli_stmt_prepare($start, "INSERT INTO vendedor(empresa,responsavel,cnpj,localizacao,telfixo,celular,gmail,senha,imagem) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
     //Organiza os dados na coluna determinada
-    mysqli_stmt_bind_param($start, 'sssssssss', $company, $name, $cnpj, $end, $fixo, $celular, $gmail, $passw,$name_ext);
+    mysqli_stmt_bind_param($start, 'sssssssss', $company, $name, $cnpj, $end, $fixo, $celular, $gmail, $hash_pass,$name_ext);
 
     //Faz os comandos serem executados
     mysqli_stmt_execute($start);        

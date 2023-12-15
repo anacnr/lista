@@ -17,7 +17,7 @@ $house = $_POST['moradia'];
 $tel = $_POST['telefone'];
 $passw = $_POST['senha']; 
 
-//Preciso usar a função para criptografar a senha
+//Essa variável vai ser inserida na coluna da senha
 $hash_passw = password_hash($passw, PASSWORD_DEFAULT,);
 
 if($bank->connect_error != null){

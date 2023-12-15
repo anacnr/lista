@@ -1,7 +1,5 @@
 <?php
 
-include 'cliente.php';
-
 $local = '127.0.0.1';
 $user = 'root';
 $pass = "";
@@ -12,9 +10,6 @@ $mysql = new mysqli($local, $user, $pass, $bank);
 //Recebimento do email e da senha
 $gmail =  $_POST['end'];
 $passw =  $_POST['passw'];
-
-//Verifica se o hash e a senha são os mesmos do banco
-$verif_passw = password_verify($passw,$hash_passw);
 
 if ($mysql->connect_error != null) {
     die("Conexão não realizada");
@@ -31,7 +26,8 @@ if ($mysql->connect_error != null) {
     while ($row = mysqli_fetch_array($datas, MYSQLI_ASSOC)) {
         // Verifica se o gmail corresponde no banco de dados
         if ($gmail == $row["gmail"]) {
-            if($passw == $row["senha"]){
+            //Verifica se o hash e a senha são os mesmos do banco  
+            if(password_verify($passw, $row["senha"]) == true){
                 $request = array("status" => "Encontrado", "message" => "Encontrado!");
             }
             else{
