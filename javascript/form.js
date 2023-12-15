@@ -47,4 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function Register() {
     // Sua função de cadastro
     console.log("a")
+    setTimeout(()=>{
+    window.location.href = 'index.html'
+    },500)
 }
