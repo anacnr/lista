@@ -4,11 +4,11 @@
 
 $local = '127.0.0.1';
 $user = 'root';
-$pass = '';
+$pass = "";
 $bank = 'supermercado';
 
 //Cria uma instância da classe mysqli
-$bank = new mysqli("$local", "$user", "$pass", "$bank");
+$mysql = new mysqli("$local", "$user", "$pass", "$bank");
 
 //Pega os dados do formulário
 $company = $_POST['empresa'];
@@ -19,11 +19,10 @@ $fixo = $_POST['contato-fixo'];
 $celular = $_POST['contato-cel'];
 $gmail = $_POST['gmail'];
 $passw = $_POST['senha'];
-//Preciso usar a função random para criptografar a senha
 $hash_pass = password_hash($passw, PASSWORD_DEFAULT);
 $image = $_FILES['img']; 
 
-if($bank->connect_error != null){
+if($mysql->connect_error != null){
     die("Erro na conexão");
 }
 else{
@@ -54,7 +53,7 @@ if(isset($image)){
     if($img_sent == true){
 
     //Chama uma outra classe para iniciar a classe mysqli e ter acesso a outros métodos
-    $start = mysqli_stmt_init($bank);
+    $start = mysqli_stmt_init($mysql);
 
     //Coloca mais segurança na hora de inserir os dados
     mysqli_stmt_prepare($start, "INSERT INTO vendedor(empresa,responsavel,cnpj,localizacao,telfixo,celular,gmail,senha,imagem) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)");
@@ -82,6 +81,6 @@ else{
 mysqli_stmt_close($start); 
 
 //Fecha a conexão com o banco de dados
-mysqli_close($bank);
+mysqli_close($mysql);
 
 ?>

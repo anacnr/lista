@@ -1,6 +1,5 @@
 <?php
-
-// Cria a conexão com o banco
+//Criação do cadastro para suporte . Este script cria para que a senha do suporte receba o tratamento de hash e seja inserido no banco criptografado
 $local = '127.0.0.1';
 $user = 'root';
 $pass = "";
@@ -9,18 +8,10 @@ $bank = 'supermercado';
 //Cria uma instância da classe mysqli
 $mysql = new mysqli("$local", "$user", "$pass", "$bank");
 
-//Recupera dados do formulário
-$name = $_POST['nome'];
-$cpf = $_POST['cpf'];
-$end = $_POST['gmail'];
-$house = $_POST['moradia'];
-$tel = $_POST['telefone'];
-$passw = $_POST['senha']; 
+$gmail = $_POST["gmail"];
+$passw = $_POST["senha"];
 
-//Essa variável vai ser inserida na coluna da senha
-$hash_passw = password_hash($passw, PASSWORD_DEFAULT,);
-
-if($mysql->connect_error != null){
+if($bank->connect_error != null){
     die("Erro na conexão");
 }
 else{
@@ -29,10 +20,10 @@ else{
     $start = mysqli_stmt_init($mysql);
 
     //Coloca mais segurança na hora de inserir os dados
-    mysqli_stmt_prepare($start, "INSERT INTO comprador(nome,cpf, gmail,moradia,telefone,senha) VALUES(?, ?, ?, ?, ?, ?)");
+    mysqli_stmt_prepare($start, "INSERT INTO suporte (gmail, senha) VALUES (?,?)");
 
     //Organiza os dados na coluna determinada. A quantidade de 's' é a quantidade dos dados
-    mysqli_stmt_bind_param($start, 'ssssss', $name, $cpf, $end, $house, $tel, $hash_passw);
+    mysqli_stmt_bind_param($start, "ss", $gmail, $passw);
 
     //Faz os comandos serem executados
     mysqli_stmt_execute($start);

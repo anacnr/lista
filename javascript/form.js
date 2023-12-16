@@ -1,7 +1,7 @@
 
 /**
- * PARTE DO JAVASCRIPT CLEINTE SERVIDOR
- * Vou tentar fazer com que o js pegue só a validação do php e emita duas mensagens de compartibilidade e incompatibilidade
+ * PARTE DO JAVASCRIPT CLIENTE SIDE
+ * Vou tentar fazer com que o js pegue só a validação do php e emita duas mensagens de compatibilidade e incompatibilidade.
  */
 console.log("Script carregado!")
 // Aguarde o carregamento completo da página
@@ -45,8 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function Register() {
-    // Sua função de cadastro
-    console.log("a")
     setTimeout(()=>{
     window.location.href = 'index.html'
     },500)
