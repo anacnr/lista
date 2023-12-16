@@ -7,14 +7,24 @@
 
 </head>
 <body>
-    <div>
-        <img src="imagens/cliente/avatar-min.png" id="cliente" alt="user-superm" width="25px">
-        <label for="end">E-mail:</label>
-        <input type="email" id="end" name="gmail">
-        <br>
-        <img src="imagens/cliente/lock-min.png" id="senha" alt="user-cliente" width="25px">
-        <label for="passw">Senha:</label>
-        <input type="text" id="passw" name="senha">
-    </div>
+    <form action="php/suport.php" method="post">
+
+        <ul>
+            <li>
+                <img src="imagens/cliente/avatar-min.png" id="usuario" alt="user-superm" width="25px">
+                <label for="end">E-mail:</label>
+                <input type="email" id="end" name="gmail">
+            </li>
+        
+            <li>
+                <img src="imagens/cliente/lock-min.png" id="senha" alt="user-cliente" width="25px">
+                <label for="passw">Senha:</label>
+                <input type="text" id="passw" name="senha">
+            </li>
+        </ul>
+
+        <button type="submit" id="cad">Enviar</button>
+    </form>
+
 </body>
 </html>

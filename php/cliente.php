@@ -25,7 +25,7 @@ if($mysql->connect_error != null){
 }
 else{
 
-    //Chama uma outra classe para iniciar a classe mysqli e ter acesso a outros métodos
+    //Chama uma outra classe para iniciar a classe mysqli e ter acesso a outros métodos prepared statements
     $start = mysqli_stmt_init($mysql);
 
     //Coloca mais segurança na hora de inserir os dados

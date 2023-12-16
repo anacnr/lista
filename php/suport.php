@@ -11,19 +11,22 @@ $mysql = new mysqli("$local", "$user", "$pass", "$bank");
 $gmail = $_POST["gmail"];
 $passw = $_POST["senha"];
 
-if($bank->connect_error != null){
+//Essa variável vai ser inserida na coluna da senha
+$hash_passw = password_hash($passw, PASSWORD_DEFAULT,);
+
+if($mysql->connect_error != null){
     die("Erro na conexão");
 }
 else{
 
-    //Chama uma outra classe para iniciar a classe mysqli e ter acesso a outros métodos
+    //Chama uma outra classe para iniciar a classe mysqli e ter acesso a outros métodos do prepared statements
     $start = mysqli_stmt_init($mysql);
 
     //Coloca mais segurança na hora de inserir os dados
     mysqli_stmt_prepare($start, "INSERT INTO suporte (gmail, senha) VALUES (?,?)");
 
     //Organiza os dados na coluna determinada. A quantidade de 's' é a quantidade dos dados
-    mysqli_stmt_bind_param($start, "ss", $gmail, $passw);
+    mysqli_stmt_bind_param($start, "ss", $gmail, $hash_passw);
 
     //Faz os comandos serem executados
     mysqli_stmt_execute($start);
