@@ -104,3 +104,59 @@ if ($mysql->connect_error != null) {
 $mysql->close();
 
 ?>
+
+_______________________________________________________________________________________________________________________________________________________________
+
+<?php
+
+$local = '127.0.0.1';
+$user = 'root';
+$pass = "";
+$bank = 'supermercado';
+
+$mysql = new mysqli($local, $user, $pass, $bank);
+
+//Recebimento do email e da senha
+$gmail =  $_POST['end'];
+$passw =  $_POST['passw'];
+
+if ($mysql->connect_error != null) {
+    die("Conexão não realizada");
+} else {
+
+    /*Criação de condicional para verificar se o gmail está na tebala comprador ou vendeder
+
+    $search_tables = $mysql->query("SELECT comprador.gmail, vendedor.gmail FROM comprador, vendedor WHERE comprador.gmail = ? AND vendedor.gmail = ?");*/
+   
+    // Faz a pesquisa no banco
+    $search = $mysql->prepare("SELECT * FROM comprador WHERE gmail = ?");
+    $search->bind_param("s", $gmail);
+    $search->execute();
+    $datas = $search->get_result();
+
+    $request = array("status" => "NaoEncontrado", "message" => "Não encontrado!");
+
+    while ($row = mysqli_fetch_array($datas, MYSQLI_ASSOC)) {
+        // Verifica se o gmail corresponde no banco de dados
+        if ($gmail == $row["gmail"]) {
+            //Verifica se o hash e a senha são os mesmos do banco  
+            if(password_verify($passw, $row["senha"]) == true){
+                $request = array("status" => "Encontrado", "message" => "Encontrado!");
+            }
+            else{
+                $request = array("status" => "SenhaErrada", "message" => "Senha incorreta!");
+            }
+            // Não é necessário continuar o loop, pois o gmail foi encontrado
+            break;
+        }    
+    }
+
+    // Retorna a resposta como JSON
+    header('Content-Type: application/json');
+    echo json_encode($request);
+}
+
+// Encerra a conexão com o banco de dados
+$mysql->close();
+
+?>

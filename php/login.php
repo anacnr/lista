@@ -15,9 +15,9 @@ if ($mysql->connect_error != null) {
     die("Conexão não realizada");
 } else {
    
-    // Faz a pesquisa no banco
-    $search = $mysql->prepare("SELECT * FROM comprador WHERE gmail = ?");
-    $search->bind_param("s", $gmail);
+    //Faz a pesquisa dentro das tabelas para encontrar o gmail correspondente
+    $search = $mysql->prepare("SELECT gmail, senha FROM comprador WHERE gmail = ? AND senha = ? UNION SELECT gmail, senha FROM vendedor WHERE gmail = ? AND senha = ? UNION SELECT gmail,senha FROM suporte WHERE gmail = ? AND senha = ?");
+    $search->bind_param("ssssss", $gmail,$passw, $gmail,$passw, $gmail,$passw);
     $search->execute();
     $datas = $search->get_result();
 
@@ -25,7 +25,7 @@ if ($mysql->connect_error != null) {
 
     while ($row = mysqli_fetch_array($datas, MYSQLI_ASSOC)) {
         // Verifica se o gmail corresponde no banco de dados
-        if ($gmail == $row["gmail"]) {
+        if ($gmail == $row["gmail"]) {            
             //Verifica se o hash e a senha são os mesmos do banco  
             if(password_verify($passw, $row["senha"]) == true){
                 $request = array("status" => "Encontrado", "message" => "Encontrado!");
@@ -45,5 +45,7 @@ if ($mysql->connect_error != null) {
 
 // Encerra a conexão com o banco de dados
 $mysql->close();
+
+
 
 ?>

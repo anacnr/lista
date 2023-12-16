@@ -1,0 +1,6 @@
+SELECT vendedor.gmail, comprador.gmail FROM comprador INNER JOIN vendedor on comprador.gmail = vendedor.gmail;
+
+SELECT vendedor.gmail, comprador.gmail FROM vendedor, comprador;
+
+Pesquisa para prepared statements
+$search_tables = $mysql->query("SELECT comprador.gmail, vendedor.gmail FROM comprador, vendedor WHERE comprador.gmail = ? AND vendedor.gmail = ?");
