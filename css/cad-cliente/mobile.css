@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@media (min-width:300px) {
+@media (max-width:600px) {
 
 /*Esse é o seletor universal do código, todos recebem inicialmente essa configuração*/
 
@@ -9,15 +9,21 @@
     padding: 0px;
 }
 
-body, html{
+body{
     width: 100vw;
-    height: 80vh;
+    height: 75vh;
     box-sizing: border-box;
 }
 
 body{
     background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
     background-attachment: fixed;
+}
+
+form {
+    margin-top: 0%;
+    position: relative;
+    bottom: 20%;
 }
 
 form > ul > li{
@@ -107,12 +113,48 @@ form > ul > li > #descricao {
     
 }
 
-/*
+/*Trecho de configurações dos ícones dos campos*/
 
+form > ul > li #user{
+    width: 3vw;
+    position: absolute;
+    transform: translateX(20vw);
+}
+
+form > ul > li > #cpf{
+    width: 3vw;
+    position: absolute;
+    transform: translateX(20vw);
+}
+
+form > ul > li > #cell{
+    width: 6vw;
+    position: absolute;
+    transform: translateX(19vw);
+}
+
+form > ul > li > #house{
+    width: 4vw;
+    position: absolute;
+    transform: translateX(20vw);
+}
+
+form > ul > li > #gmail{
+    width: 4vw;
+    position: absolute;
+    transform: translate(19vw,1vh);
+}
+
+form > ul > li > #password{
+    width: 3vw;
+    height: 18px;
+    position: absolute;
+    transform: translate(20vw,1vh);
+    filter: brightness(0);
+}
+
+/*
 Esse link está especificando a largura(width) das telas:
 https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp
-
-No meu Notebook a largura(width) max foi até 611px, e no 611px a parte em cima ficou muito grande e embaixo o botão ficou colado.
-
 */
 }
