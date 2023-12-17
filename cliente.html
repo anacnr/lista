@@ -3,17 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Testando o banco</title>
+    <title>Cliente</title>
     <!--Tela maior-->
-    <link rel="stylesheet" href="css/desktop.css">
-    <!--Tela do celular na horizonatal-->
-    <link rel="stylesheet" href="css/visual.css" media="screen and (orientation:portrait)">
-  
+    <link rel="stylesheet" href="css/cad-cliente/desktop.css">
+    <!--Tela menor-->
+    <link rel="stylesheet" href="css/cad-cliente/mobile.css" media="screen and (orientation:portrait)">  
   </head>
   <body>
-    <!--Vou testar o banco clientes, tentar fazer a conexão-->
-
-    <!--Criar a tela de cadastro do comprador para Mobile First-->
+    <!--Criar a tela de cadastro do comprador para Mobile First e depois para desktop-->
 
     <form method="post" action="php/cliente.php" onsubmit="return Open()"> 
       <!--Abriu outra página quando utilizei o atributo onsubmit-->
@@ -56,8 +53,7 @@
      <!--Código para fazer abrir em outra página-->
      <script>
       function Open(){
-      //let linke =  window.location.href = '#'
-      //return false
+      window.location.href = 'index.html'
       }
     </script>
   </body>
