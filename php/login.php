@@ -31,20 +31,21 @@ if ($mysql->connect_error != null) {
     $found = false; // Flag para verificar se encontrou o gmail
 
     while ($row = mysqli_fetch_array($datas, MYSQLI_ASSOC)) {
-        // Verifica se o gmail e a senha correspondem no banco de dados
-        if ($gmail == $row["gmail"]){
-            $found = true; // Marca que encontrou o gmail
-            if(password_verify($passw, $row["senha"])){
+        // Verifica se o gmail corresponde no banco de dados
+        if ($gmail == $row["gmail"]) {
+            $found = true;  //Marca que encontrou o gmail
+            // Verifica se a senha está correta
+            if (password_verify($passw, $row["senha"])) {
+                //O probelma está na maneira que o hash é tratadado
                 $request = array("status" => "Encontrado", "message" => "Encontrado!");
-            }
-            else{
+            } else {
                 $request = array("status" => "SenhaErrada", "message" => "Senha Incorreta!");
             }
-            
-        } 
-        break;       
+            break; // Não é necessário continuar o loop após encontrar o gmail
+        }
     }
-    if($found!= true){
+    
+    if($found != true){
         $request = array("status" => "NaoEncontrado", "message" => "Não encontrado!");
     }
 

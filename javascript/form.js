@@ -1,7 +1,7 @@
 
 /**
  * PARTE DO JAVASCRIPT CLIENTE SIDE
- * Vou tentar fazer com que o js pegue só a validação do php e emita duas mensagens de compatibilidade e incompatibilidade.
+ *O Ajax permite que o JavaScript se comunique com o PHP para validar as condicionais de acesso.
  */
 console.log("Script carregado!")
 // Aguarde o carregamento completo da página
@@ -29,7 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 contentType: false
             }).done(function(valide) {
                 if (valide.status === "Encontrado") {
-                    console.log(valide.message) 
+                    console.log(valide.message)
+                    //window.location.href = 'test.html' 
                 }
                 else if(valide.status === "SenhaErrada"){
                     console.log(valide.message)

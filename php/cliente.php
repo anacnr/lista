@@ -18,7 +18,7 @@ $tel = $_POST['telefone'];
 $passw = $_POST['senha']; 
 
 //Essa variável vai ser inserida na coluna da senha
-$hash_passw = password_hash($passw, PASSWORD_DEFAULT,);
+$hash_passw = password_hash($passw, PASSWORD_DEFAULT);
 
 if($mysql->connect_error != null){
     die("Erro na conexão");

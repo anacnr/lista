@@ -6,7 +6,7 @@
 }
 
 body,html{
-width: 70vw;
+width: 99vw;
 height: 90vh;
 box-sizing: border-box;
 }
@@ -19,10 +19,11 @@ body{
 @media (min-width:600px) and (max-width: 768px){
 
     h1{
-        margin-top: 10%;
-        position: absolute;
-        left: 35%;
-        font-size: 5dvw;
+        text-align: center;
+        position: relative;
+        top: 30%;
+        font-size: 6dvw;
+        text-decoration: 4px underline rgb(123, 228, 97);
     }
 
     div{
@@ -33,11 +34,10 @@ body{
         border-bottom-right-radius: 10%;
         margin: auto;
         display: block;
-        width: 44vw;
-        height: 30vh;
+        width: 57vw;
+        height:38vh;
         position: relative;
-        top: 40%;
-        left: 25%;
+        top: 37%;
         box-shadow: 2px 1px 10px rgb(10, 10, 10);
     }
 
@@ -64,31 +64,35 @@ body{
         text-decoration: none;
         text-transform: uppercase;
         color: rgb(2, 2, 2);
-        font-size: 2dvw;
+        font-size: 1em;
         font-style: italic;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    }
+
+    /*Configurações das imagens*/
+
+    div > #supermercado{
+        width: 10vw;
+        height: 8vh;
+        position: absolute;
+        transform: translate(23vw,3vh);
+        border-radius: 50%;
     }
 
     div > #cliente{
         width: 2.5vw;
         position: absolute;
-        transform: translate(20vw,11vh);
-    }
-
-    div > #supermercado{
-        width: 6vw;
-        height: 4vh;
-        position: absolute;
-        transform: translate(19vw,4vh);
+        transform: translate(26vw,14vh);
     }
 }
 
 @media (min-width:768px) and (max-width: 992px){
     h1{
-        margin-top: 10%;
-        position: absolute;
-        left: 35%;
-        font-size: 5dvw;
+        text-align: center;
+        position: relative;
+        top: 30%;
+        font-size: 3em;
+        text-decoration: 4px underline rgb(123, 228, 97);
     }
 
     div{
@@ -99,11 +103,10 @@ body{
         border-bottom-right-radius: 10%;
         margin: auto;
         display: block;
-        width: 40vw;
-        height: 34vh;
+        width: 440px;
+        height:38vh;
         position: relative;
-        top: 40%;
-        left: 23%;
+        top: 35%;
         box-shadow: 2px 1px 10px rgb(10, 10, 10);
     }
 
@@ -130,31 +133,35 @@ body{
         text-decoration: none;
         text-transform: uppercase;
         color: rgb(2, 2, 2);
-        font-size: 1.5dvw;
+        font-size: 1em;
         font-style: italic;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
     }
 
-    div > #cliente{
-        width: 2.5vw;
-        position: absolute;
-        transform: translate(18vw,11vh);
-    }
+    /*Configurações das imagens*/
 
     div > #supermercado{
-        width: 6vw;
-        height: 6vh;
+        width: 60px;
+        height: 60px;
         position: absolute;
-        transform: translate(17vw,4vh);
+        transform: translate(180px,14px);
+        border-radius: 50%;
+    }
+
+    div > #cliente{
+        width: 18px;
+        position: absolute;
+        transform: translate(200px,85px);
     }
 }
 
 @media (min-width:992px) and (max-width: 1200px){
     h1{
-        margin-top: 10%;
-        position: absolute;
-        left: 35%;
-        font-size: 5dvw;
+        text-align: center;
+        position: relative;
+        top: 30%;
+        font-size: 3em;
+        text-decoration: 4px underline rgb(123, 228, 97);
     }
 
     div{
@@ -165,11 +172,10 @@ body{
         border-bottom-right-radius: 10%;
         margin: auto;
         display: block;
-        width: 35vw;
-        height: 34vh;
+        width: 440px;
+        height:38vh;
         position: relative;
-        top: 40%;
-        left: 22%;
+        top: 35%;
         box-shadow: 2px 1px 10px rgb(10, 10, 10);
     }
 
@@ -196,31 +202,35 @@ body{
         text-decoration: none;
         text-transform: uppercase;
         color: rgb(2, 2, 2);
-        font-size: 1.5dvw;
+        font-size: 1em;
         font-style: italic;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
     }
 
-    div > #cliente{
-        width: 2vw;
-        position: absolute;
-        transform: translate(16vw,12vh);
-    }
+    /*Configurações das imagens*/
 
     div > #supermercado{
-        width: 5vw;
-        height: 6vh;
+        width: 60px;
+        height: 60px;
         position: absolute;
-        transform: translate(15vw,4vh);
+        transform: translate(180px,14px);
+        border-radius: 50%;
+    }
+
+    div > #cliente{
+        width: 18px;
+        position: absolute;
+        transform: translate(200px,85px);
     }
 }
 
 @media (min-width: 1200px){
     h1{
-        margin-top: 10%;
-        position: absolute;
-        left: 39%;
+        text-align: center;
+        position: relative;
+        top: 30%;
         font-size: 3em;
+        text-decoration: 4px underline rgb(123, 228, 97);
     }
 
     div{
@@ -231,11 +241,10 @@ body{
         border-bottom-right-radius: 10%;
         margin: auto;
         display: block;
-        width: 30vw;
-        height: 38vh;
+        width: 440px;
+        height:38vh;
         position: relative;
-        top: 40%;
-        left: 22%;
+        top: 35%;
         box-shadow: 2px 1px 10px rgb(10, 10, 10);
     }
 
@@ -262,22 +271,24 @@ body{
         text-decoration: none;
         text-transform: uppercase;
         color: rgb(2, 2, 2);
-        font-size: 1dvw;
+        font-size: 1em;
         font-style: italic;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
     }
 
-    div > #cliente{
-        width: 1.5vw;
-        position: absolute;
-        transform: translate(14vw,14vh);
-    }
+    /*Configurações das imagens*/
 
     div > #supermercado{
-        width: 4vw;
-        height: 6vh;
+        width: 60px;
+        height: 60px;
         position: absolute;
-        transform: translate(12vw,4vh);
-        margin-left: 2%;
+        transform: translate(180px,14px);
+        border-radius: 50%;
+    }
+
+    div > #cliente{
+        width: 18px;
+        position: absolute;
+        transform: translate(200px,85px);
     }
 }

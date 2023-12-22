@@ -1,5 +1,5 @@
 <?php
-//Criação do cadastro para suporte . Este script cria para que a senha do suporte receba o tratamento de hash e seja inserido no banco criptografado. Porém talvez dê para adicionar o usuário de suporte por aqui.
+//Criação do cadastro para suporte . Este script cria para que a senha do suporte receba o tratamento de hash e seja inserido no banco criptografado
 $local = '127.0.0.1';
 $user = 'root';
 $pass = "";

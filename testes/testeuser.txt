@@ -1,7 +1,10 @@
 Cliente cad
 
-gmail:x@gmail.com
+gmail: user@gmail.com
 senha: 123
+
+gmail: usert@gmail.com
+senha:1234
 
 
 Suporte cad
