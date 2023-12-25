@@ -1,6 +1,6 @@
 @charset "UTF-8";
-/*Configurações para tela do computador width minimo de 621px e max de 780px */
-@media (min-width:620px) and (max-width: 780px){
+/*Configurações para tela do computador */
+@media (min-width:600px) and (max-width: 768px){
 
     body{
         background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
@@ -63,6 +63,46 @@
     form > ul > li > label{
     display: none;
     }
+
+    /*Trecho de configurações dos ícones dos campos*/
+
+form > ul > li > #user{
+    width: 3vw;
+    position: absolute;
+    transform: translateX(20vw);
+}
+
+form > ul > li > #cpf{
+    width: 3vw;
+    position: absolute;
+    transform: translateX(20vw);
+}
+
+form > ul > li > #cell{
+    width: 6vw;
+    position: absolute;
+    transform: translateX(19vw);
+}
+
+form > ul > li > #house{
+    width: 4vw;
+    position: absolute;
+    transform: translateX(20vw);
+}
+
+form > ul > li > #gmail{
+    width: 4vw;
+    position: absolute;
+    transform: translate(19vw,1vh);
+}
+
+form > ul > li > #password{
+    width: 3vw;
+    height: 18px;
+    position: absolute;
+    transform: translate(20vw,1vh);
+    filter: brightness(0);
+}
 
 }
 

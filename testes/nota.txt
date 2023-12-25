@@ -1,0 +1,2 @@
+A tela minimizada interfere na vizualização das medias querys. 
+Estou enfrentando problemas com o carregamento de estilos no localhost com os arquivos na pasta cliente

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@media (max-width:600px) {
+@media (max-width:600px){
 
 /*Esse é o seletor universal do código, todos recebem inicialmente essa configuração*/
 
@@ -115,7 +115,7 @@ form > ul > li > #descricao {
 
 /*Trecho de configurações dos ícones dos campos*/
 
-form > ul > li #user{
+form > ul > li > #user{
     width: 3vw;
     position: absolute;
     transform: translateX(20vw);
