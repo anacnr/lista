@@ -30,10 +30,30 @@ document.addEventListener("DOMContentLoaded", function () {
             }).done(function(valide) {
                 if (valide.status === "Encontrado") {
                     console.log(valide.message)
-                    //window.location.href = 'test.html' 
+                    window.location.href = './teste.html' 
                 }
                 else if(valide.status === "SenhaErrada"){
                     console.log(valide.message)
+
+                    //Esconder o form por um tempo
+                    let form = document.querySelector("#loginForm")
+                    form.style.opacity = '0.5'
+
+                    //Quadro de aviso criado
+                    let advice = document.createElement('div')
+
+                    advice.className = 'advice'
+                    
+                    let godfather = document.querySelector("body")
+                    godfather.appendChild(advice)
+
+                    let phrase = document.createElement("p")
+                    phrase.id = 'alert'
+                    phrase.innerHTML = 'Dados não encontrados. <br> Por favor faça cadastro!'
+
+                    let godmother = document.querySelector('.advice')
+                    godmother.appendChild(phrase)
+
                 }
                 else {
                   console.log(valide.message)

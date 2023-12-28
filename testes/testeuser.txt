@@ -1,12 +1,14 @@
-Cliente cad
+Cliente login
 
-gmail: user@gmail.com
-senha: 123
+g: usert@gmail.com
+s:1234
 
-gmail: usert@gmail.com
-senha:1234
+Suporte login
 
+g: suport@gmail.com
+s: 1357
 
-Suporte cad
-gmail: suport@gmail.com
-senha:10
+Supermercado login
+
+g: dedo@gmail.com
+s: 1234
