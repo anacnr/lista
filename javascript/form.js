@@ -37,26 +37,62 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     //Esconder o form por um tempo
                     let form = document.querySelector("#loginForm")
-                    form.style.opacity = '0.5'
+                    form.style.opacity = '0'
 
                     //Quadro de aviso criado
-                    let advice = document.createElement('div')
+                    // Verificar se a div já existe
+                    let advice = document.querySelector('.advice');
 
-                    advice.className = 'advice'
+                    // Se não existir, criar a div e adicioná-la ao body
+                    if (!advice) {
+                        advice = document.createElement('div');
+                        advice.className = 'advice';
+                        let godfather = document.querySelector("body");
+                        godfather.appendChild(advice);
+
+                        let phrase = document.createElement("p")
+                        phrase.id = 'alert'
+                        phrase.innerHTML = 'Senha incorreta! <br> Por favor tente de novo.'
+
+                        advice.appendChild(phrase)
+                    }
                     
-                    let godfather = document.querySelector("body")
-                    godfather.appendChild(advice)
 
-                    let phrase = document.createElement("p")
-                    phrase.id = 'alert'
-                    phrase.innerHTML = 'Dados não encontrados. <br> Por favor faça cadastro!'
+                    //Fazer o form reaparecer e esconder o aviso
+                    setTimeout(()=>{
+                        form.style.opacity = '1'
 
-                    let godmother = document.querySelector('.advice')
-                    godmother.appendChild(phrase)
+                        //advice.style.opacity = '0'
+                        advice.style.zIndex = -1
+                    },5000)
 
                 }
                 else {
                   console.log(valide.message)
+                  //Esconder o form por um tempo
+                  let form = document.querySelector("#loginForm")
+                  form.style.opacity = '0'
+
+                  //Quadro de aviso criado
+                  let advice = document.createElement('div')
+
+                  advice.className = 'advice'
+                  
+                  let godfather = document.querySelector("body")
+                  godfather.appendChild(advice)
+
+                  let phrase = document.createElement("p")
+                  phrase.id = 'alert'
+                  phrase.innerHTML = 'Dados inválidos! <br> Por favor se cadastre.'
+
+                  advice.appendChild(phrase)
+
+                  //Fazer o form reaparecer e esconder o aviso
+                  setTimeout(()=>{
+                      form.style.opacity = '1'
+
+                      advice.style.opacity = '0'
+                  },5000)
                 }
             }).fail(function (jqXHR, textStatus, errorThrown) {
                 console.log("Erro na requisição AJAX:", textStatus, errorThrown);
