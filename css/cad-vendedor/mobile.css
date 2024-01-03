@@ -19,14 +19,13 @@ body{
 
 form > ul > li{
     list-style: none;
-    
 }
 
 /*Esses são os campos onde vão receber os dados*/
 
 form > ul > li > input{
-    width: 50%;
-    height: 25px;
+    width: 40%;
+    height: 20px;
     display: block;
     margin: auto;
     text-align: center;
@@ -56,6 +55,7 @@ form > ul > li > #valido{
 
 form > ul > li > input::placeholder{
     color: black;
+    font-size: 0.8em;
 }
 
 /*Configurações do botão de cadastro*/
@@ -64,11 +64,12 @@ form > button{
     margin: auto;
     display: block;
     width: 35%;
-    height: 30px;
+    height: 27px;
     border-style: solid;
     border-color: black;
     border-radius: 25px;
     font-weight: 600;
+    font-size: 3dvw;
 }
 
 form > ul > li > label{
@@ -81,14 +82,14 @@ form > ul > li > #foto[type = 'file']{
 }
 
 /*Label do input com tipo image*/
-form > ul > li > #descricao {
+form > ul > li > #descricao { 
+    top: 40px;
+    left: 38%;
     position: absolute;
-    top: 4%;
-    left: 36%;
     font-size: 0.9em;
     border: 0px solid black;
-    height: 17vh;
-    min-width: 25vw;
+    height: 22cqmin;
+    width: 22cqmin;
     border-radius: 50%;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.559);
     background-position: center;
@@ -108,7 +109,7 @@ form > ul > li > #descricao {
 ul > li > #company, #worker, #address{
     width: 3vw;
     position: absolute;
-    transform: translateX(20vw);
+    transform: translateX(24vw);
 }
 
 ul > li > #cnpj{
@@ -116,7 +117,7 @@ ul > li > #cnpj{
     font-weight: 900;
     font-style: italic;
     position: absolute;
-    transform: translate(16vw,1vh);
+    transform: translate(20vw,1vh);
     text-decoration: underline;
 }
 
@@ -127,36 +128,31 @@ ul > li > #address{
 ul > li > #telephone{
     width: 4vw;
     position: absolute;
-    transform: translate(19vw,1vh);
+    transform: translate(23vw,0vh);
     filter: brightness(0);
 }
 
 ul > li > #phone{
     width: 7vw;
     position: absolute;
-    transform: translate(18vw,0vh);
+    transform: translate(23vw,-1vh);
 }
 
 ul > li > #email{
     width: 4.5vw;
     position: absolute;
-    transform: translate(19vw, 1vh);
+    transform: translate(23vw, 1vh);
 }
 
 ul > li > #pass{
     width: 4vw;
     height: 3vh;
     position: absolute;
-    transform: translate(19vw,0vh);
+    transform: translate(23vw,0vh);
     filter: brightness(0);
 }
 
-
 /*
-
 Esse link está especificando a largura(width) das telas:
 https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp
-
-No meu Notebook a largura(width) max foi até 611px, e no 611px a parte em cima ficou muito grande e embaixo o botão ficou colado.
-
 */
