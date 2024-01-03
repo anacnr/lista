@@ -8,7 +8,14 @@ Suporte login
 g: suport@gmail.com
 s: 1357
 
+g: helio@gmail.com
+s: 12
+
+
 Supermercado login
 
 g: dedo@gmail.com
 s: 1234
+
+g: lopoa@gmail.com
+s:1234
