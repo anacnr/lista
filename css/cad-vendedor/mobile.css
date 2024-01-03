@@ -1,7 +1,4 @@
 @charset "UTF-8";
-
-@media (min-width:300px) {
-
 /*Esse é o seletor universal do código, todos recebem inicialmente essa configuração*/
 
 *{
@@ -90,22 +87,70 @@ form > ul > li > #descricao {
     left: 36%;
     font-size: 0.9em;
     border: 0px solid black;
-    height: 15vh;
+    height: 17vh;
     min-width: 25vw;
     border-radius: 50%;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.559);
-    background-attachment: fixed;
-    background-position: center top;
-    background-image: url('../imagens/supermercado/store-min.jpg'); 
-    background-size:cover;
+    background-position: center;
+    background-image: url('/supermercado/imgs-cad/upload-min.png');
+    background-color: white; 
+    background-size: 30%;
     background-repeat: no-repeat;
-    background-attachment: local;
-    opacity: 80%;
+    opacity: 90%;
     filter: blur(1px);
     cursor: pointer;
     display: block;
     
 }
+
+/*Personalização dos ícones*/
+
+ul > li > #company, #worker, #address{
+    width: 3vw;
+    position: absolute;
+    transform: translateX(20vw);
+}
+
+ul > li > #cnpj{
+    font-size: 3dvw;
+    font-weight: 900;
+    font-style: italic;
+    position: absolute;
+    transform: translate(16vw,1vh);
+    text-decoration: underline;
+}
+
+ul > li > #address{
+    filter: hue-rotate(180deg);
+}
+
+ul > li > #telephone{
+    width: 4vw;
+    position: absolute;
+    transform: translate(19vw,1vh);
+    filter: brightness(0);
+}
+
+ul > li > #phone{
+    width: 7vw;
+    position: absolute;
+    transform: translate(18vw,0vh);
+}
+
+ul > li > #email{
+    width: 4.5vw;
+    position: absolute;
+    transform: translate(19vw, 1vh);
+}
+
+ul > li > #pass{
+    width: 4vw;
+    height: 3vh;
+    position: absolute;
+    transform: translate(19vw,0vh);
+    filter: brightness(0);
+}
+
 
 /*
 
@@ -115,4 +160,3 @@ https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp
 No meu Notebook a largura(width) max foi até 611px, e no 611px a parte em cima ficou muito grande e embaixo o botão ficou colado.
 
 */
-}

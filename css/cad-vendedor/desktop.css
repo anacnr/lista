@@ -1,8 +1,7 @@
 @charset "UTF-8";
 
- /*Configurações para tela do computador width acima de 780 */
 
- @media (min-width:780px){
+ @media (min-width:600px) and (max-width: 768px){
 
 /*Esse é o seletor universal do código, todos recebem inicialmente essa configuração */
 
@@ -260,9 +259,9 @@ input::placeholder{
 }
 
  }
-/*Configurações para tela do computador width minimo de 621px e max de 780px */
 
-@media (min-width:620px) and (max-width: 780px){
+
+@media (min-width:768px) and (max-width: 992px){
 
     body{
         background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
@@ -355,4 +354,3 @@ form > ul > li > #descricao{
 }
 
 }
-/*Quando eu tirei a media query a tela voltou a ser normal,porém com os inputs e o botão estão disproporcionais no localhost*/
