@@ -5,5 +5,4 @@ function Addition(){
 
     let godfather = document.querySelector("body")
     godfather.appendChild(input)
-
 }
