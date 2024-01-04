@@ -145,10 +145,10 @@ ul > li > #email{
 }
 
 ul > li > #pass{
-    width: 4vw;
+    width: 3vw;
     height: 3vh;
     position: absolute;
-    transform: translate(23vw,0vh);
+    transform: translate(25vw,0vh);
     filter: brightness(0);
 }
 
