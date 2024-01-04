@@ -42,7 +42,7 @@ form > ul > li > input{
 /*Primeiro campo que recebe o dado (nome)*/
 
 form > ul > li > #cliente{
-    margin-top: 40%;    
+    margin-top: 37%;    
 }
 
 /*Último campo que recebe o dado (senha)*/
@@ -83,13 +83,13 @@ form > ul > li > #foto[type = 'file']{
 
 /*Label do input com tipo image*/
 form > ul > li > #descricao { 
-    top: 40px;
+    top: 6%;
     left: 38%;
     position: absolute;
     font-size: 0.9em;
     border: 0px solid black;
-    height: 22cqmin;
-    width: 22cqmin;
+    height: 19cqmin;
+    width: 19cqmin;
     border-radius: 50%;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.559);
     background-position: center;
