@@ -12,8 +12,7 @@
   <body>
     <!--Criar a tela de cadastro do comprador para Mobile First e depois para desktop-->
 
-    <form method="post" action="../php/cliente.php" onsubmit="return Open()"> 
-      <!--Abriu outra página quando utilizei o atributo onsubmit-->
+    <form method="post" action="../php/cliente.php"> 
 
     <ul>
       
@@ -64,10 +63,9 @@
       let name = document.getElementById("cliente").value
 
       if(name.length != null){
-        window.location.href = '../teste.html'
+        window.location.href = '../teste.html' //Validação não está funcionando
       }
 
-       //window.location.href = '../teste.html'
       }
     </script>
   </body>
