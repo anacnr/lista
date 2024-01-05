@@ -117,13 +117,20 @@ body{
 
 form{
     background-color: rgba(255, 255, 255, 0.909);
-    width: 65vw;
-    height: 65vh;
+    /*width: 65vw; height: 65vh;*/
+    width: 65%;
+    height: 550px;
     display: inline-block;
     position: relative;
-    transform: translate(30%,30%);
+    transform: translate(25%,30%);
     border: 1px solid rgba(0, 0, 0, 0.772);
     border-radius: 5px;
+}
+
+form > ul{
+    position: absolute;
+    width: 100%;
+    top: 20%;
 }
 
 form > ul > li{
