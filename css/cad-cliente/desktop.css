@@ -119,7 +119,7 @@ form{
     background-color: rgba(255, 255, 255, 0.909);
     /*width: 65vw; height: 65vh;*/
     width: 65%;
-    height: 550px;
+    height: 70%;
     display: inline-block;
     position: relative;
     transform: translate(25%,30%);
@@ -130,7 +130,7 @@ form{
 form > ul{
     position: absolute;
     width: 100%;
-    top: 20%;
+    top: 10%;
 }
 
 form > ul > li{
