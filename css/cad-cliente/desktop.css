@@ -35,7 +35,7 @@ body{
         border-radius: 25px;
         border-style: solid;
         border-color: black;
-        font-size: 0.8em;
+        font-size: 0.9em;
         font-style: oblique;
         font-weight: 600;
     }
@@ -49,7 +49,7 @@ body{
 /*Último campo que recebe o dado (senha)*/
 
     form > ul > li > #valido{
-    margin-bottom: 15%;    
+    margin-bottom: 10%;    
     }
 
 /*O placeholder é o que está escrito dentro dos campos*/
@@ -63,12 +63,13 @@ body{
     form > button{
     margin: auto;
     display: block;
-    width: 35%;
+    width: 200px;
     height: 30px;
     border-style: solid;
     border-color: black;
     border-radius: 25px;
     font-weight: 600;
+    font-size: 0.9em;
     }
 
     form > ul > li > label{
@@ -123,7 +124,7 @@ form{
     height: 75%;
     display: inline-block;
     position: relative;
-    transform: translate(25%,25%);
+    transform: translate(25%,20%);
     border: 1px solid rgba(0, 0, 0, 0.772);
     border-radius: 5px;
 }
@@ -141,7 +142,7 @@ form > ul > li{
 /*Esses são os campos onde vão receber os dados*/
 
 form > ul > li > input{
-    width: 40%;
+    width: 290px;
     height: 25px;
     display: block;
     margin: auto;
@@ -165,7 +166,7 @@ form > ul > li > input{
     /*Campos dos dados*/
 
     form > ul > li > #cliente,#valido, #end,#local,#contato,#unico{
-        margin-top: 5%;    
+        margin-top: 30px;    
     }    
     
     /*Configurações do botão de cadastro*/
@@ -197,39 +198,50 @@ form > ul > li > input{
 
 /*Configurações dos ícones dos campos*/
 
-    form > ul > li > #user, #cpf{
+    form > ul > li > #user{
     width: 20px;
     position: absolute;
-    transform: translateX(10vw);
+    top: 8%;
+    left: 15%;
+    }
+
+    form > ul > li > #cpf{
+        width: 20px;
+        position: absolute;
+        top: 24%;
+        left: 15%; 
     }
 
     form > ul > li > #cell{
     width: 35px;
     position: absolute;
-    transform: translate(9.5vw,-1vh);
+    top: 39%;
+    left: 14%;
     }
 
     form > ul > li > #house{
     width: 24px;
     position: absolute;
-    transform: translate(10vw,1vh);
+    top: 56%;
+    left: 15%;
     }
 
     form > ul > li > #gmail{
     width: 25px;
     position: absolute;
-    transform: translate(10vw,2vh);
+    top: 74%;
+    left: 15%;
     }
 
     form > ul > li > #password{
     width: 24px;
     height: 20px;
     position: absolute;
-    transform: translate(10vw,1vh);
+    left: 15%;
     filter: brightness(0);
     }    
     
-     }
+}
 
 @media (min-width:992px) and (max-width:1200px){
 /*Espaço onde estão os dados*/
@@ -238,7 +250,7 @@ form{
     background-color: rgba(255, 255, 255, 0.909);
     /*width: 65vw; height: 65vh;*/
     width: 65%;
-    height: 80%;
+    height: 75%;
     display: inline-block;
     position: relative;
     transform: translate(25%,20%);
@@ -249,7 +261,7 @@ form{
 form > ul{
     position: absolute;
     width: 100%;
-    top: 10%;
+    top: 5%;
 }
 
 form > ul > li{
@@ -282,7 +294,7 @@ form > ul > li > input{
     /*Campos dos dados*/
 
     form > ul > li > #cliente,#valido, #end,#local,#contato,#unico{
-        margin-top: 4%;    
+        margin-top: 5%;    
     }    
     
     /*Configurações do botão de cadastro*/
@@ -290,130 +302,13 @@ form > ul > li > input{
     form > button{
         position: absolute;
         display: block;
-        width: 30%;
+        width: 25%;
         height: 30px;
         border-style: solid;
         border-color: black;
         border-radius: 25px;
         font-weight: 600;
-        transform: translate(23vw,66vh);
-        margin-top: 5%;
-    }
-    
-    /*Esse comando é para tirar as setinhas dos campos que tem o tipo number*/
-    
-    input::-webkit-inner-spin-button{
-        -webkit-appearance: none;
-    }
-    
-    /*Para esconder o que está escrito dentro dos inputs*/
-
-    input::placeholder{
-        opacity: 100%;
-    }
-
-/*Configurações dos ícones dos campos*/
-
-    form > ul > li > #user, #cpf{
-    width: 20px;
-    position: absolute;
-    transform: translateX(10vw);
-    }
-
-    form > ul > li > #cell{
-    width: 35px;
-    position: absolute;
-    transform: translate(9.5vw,-1vh);
-    }
-
-    form > ul > li > #house{
-    width: 24px;
-    position: absolute;
-    transform: translate(10vw,1vh);
-    }
-
-    form > ul > li > #gmail{
-    width: 25px;
-    position: absolute;
-    transform: translate(10vw,2vh);
-    }
-
-    form > ul > li > #password{
-    width: 24px;
-    height: 20px;
-    position: absolute;
-    transform: translate(10vw,1vh);
-    filter: brightness(0);
-    }
-}
-
-@media(min-width:1200px){
- 
-/*Espaço onde estão os dados*/
-
-form{
-    background-color: rgba(255, 255, 255, 0.909);
-    /*width: 65vw; height: 65vh;*/
-    width: 65%;
-    height: 75%;
-    display: inline-block;
-    position: relative;
-    transform: translate(25%,20%);
-    border: 1px solid rgba(0, 0, 0, 0.772);
-    border-radius: 5px;
-}
-
-form > ul{
-    position: absolute;
-    width: 100%;
-}
-
-form > ul > li{
-    list-style: none;
-}
-
-/*Esses são os campos onde vão receber os dados*/
-
-form > ul > li > input{
-    width: 300px;
-    height: 25px;
-    display: block;
-    margin: auto;
-    text-align: center;
-    margin-bottom: 0%;
-    border-radius: 25px;
-    border-style: solid;
-    border-color: black;
-    font-size: 0.8em;
-    font-style: oblique;
-    font-weight: 600;
-} 
-    
-    
-    /*O placeholder é o que está escrito dentro dos campos*/
-    
-    form > ul > li > input::placeholder{
-        color: black;
-    }
-
-    /*Campos dos dados*/
-
-    form > ul > li > #cliente,#valido, #end,#local,#contato,#unico{
-        margin-top: 4%;    
-    }    
-    
-    /*Configurações do botão de cadastro*/
-    
-    form > button{
-        position: absolute;
-        display: block;
-        width: 20%;
-        height: 30px;
-        border-style: solid;
-        border-color: black;
-        border-radius: 25px;
-        font-weight: 600;
-        transform: translate(26vw,64vh);
+        transform: translate(24vw,66vh);
         margin-top: 3%;
     }
     
@@ -434,32 +329,153 @@ form > ul > li > input{
     form > ul > li > #user, #cpf{
     width: 20px;
     position: absolute;
-    transform: translateX(20vw);
+    transform: translateX(15vw);
     }
 
     form > ul > li > #cell{
     width: 35px;
     position: absolute;
-    transform: translate(19.5vw,-1vh);
+    transform: translate(14vw,-1vh);
     }
 
     form > ul > li > #house{
     width: 24px;
     position: absolute;
-    transform: translate(20vw,1vh);
+    transform: translate(15vw,1vh);
     }
 
     form > ul > li > #gmail{
     width: 25px;
     position: absolute;
-    transform: translate(20vw,2vh);
+    transform: translate(15vw,2vh);
     }
 
     form > ul > li > #password{
-    width: 2%;
-    height: 15px;
+    width: 24px;
+    height: 20px;
     position: absolute;
-    transform: translate(19vw,1vh);
+    transform: translate(15vw,1vh);
     filter: brightness(0);
-    }     
+    }
+}
+
+@media(min-width:1200px){
+ 
+/*Espaço onde estão os dados*/
+
+body{
+    height: 101%;
+}
+
+form{
+    background-color: rgba(255, 255, 255, 0.909);
+    width: 64%;
+    height: 82%;
+    display: inline-block;
+    position: relative;
+    transform: translate(28%,20%);
+    box-shadow: 1px 0px 6px black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+form > ul{
+    position: absolute;
+    width: 100%;
+    top: 5%;
+}
+
+form > ul > li{
+    list-style: none;
+}
+
+/*Esses são os campos onde vão receber os dados*/
+
+form > ul > li > input{
+    width: 320px;
+    height: 25px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: black;
+    font-size: 0.8em;
+    font-style: oblique;
+    font-weight: 600;
+} 
+       
+    /*O placeholder é o que está escrito dentro dos campos*/
+    
+    form > ul > li > input::placeholder{
+        color: black;
+    }
+
+    /*Campos dos dados*/
+
+    form > ul > li > #cliente,#valido, #end,#local,#contato,#unico{
+        margin-top: 5%;    
+    }
+    
+    /*Configurações do botão de cadastro*/
+    
+    form > button{
+        position: absolute;
+        display: block;
+        width: 190px;
+        height: 30px;
+        border-style: solid;
+        border-color: black;
+        border-radius: 25px;
+        font-weight: 600;
+        margin-top: 3%;
+        top: 89%;
+        left: 40%;
+    }
+    
+    /*Esse comando é para tirar as setinhas dos campos que tem o tipo number*/
+    
+    input::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+    }
+    
+    /*Para esconder o que está escrito dentro dos inputs*/
+
+    input::placeholder{
+        opacity: 100%;
+    }
+
+/*Configurações dos ícones dos campos*/
+
+form > ul > li > #user, #cpf{
+    width: 20px;
+    position: absolute;
+    left: 25%;
+    }
+
+    form > ul > li > #cell{
+    width: 35px;
+    position: absolute;
+    left: 24%;
+    }
+
+    form > ul > li > #house{
+    width: 24px;
+    position: absolute;
+    left: 25%;
+    }
+
+    form > ul > li > #gmail{
+    width: 25px;
+    position: absolute;
+    left: 25%;
+    }
+
+    form > ul > li > #password{
+    width: 24px;
+    height: 20px;
+    position: absolute;
+    left: 25%;
+    filter: brightness(0);
+    }    
 }

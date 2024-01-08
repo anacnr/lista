@@ -50,7 +50,7 @@ form > ul > li > #cliente{
 /*Último campo que recebe o dado (senha)*/
 
 form > ul > li > #valido{
-    margin-bottom: 15%;    
+    margin-bottom: 10%;    
 }
 
 /*O placeholder é o que está escrito dentro dos campos*/
