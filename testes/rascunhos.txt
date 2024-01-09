@@ -231,3 +231,50 @@ if ($mysql->connect_error != null) {
 // Encerra a conexão com o banco de dados
 $mysql->close();
 ?>
+
+___________________________________________________________________________________________________________
+
+function Addition(){
+
+    let input = document.createElement("input")
+    input.className = 'setor'
+    input.value = ''
+
+    let godfather = document.querySelector("body")
+    godfather.appendChild(input)
+
+    if(input.value.length != null){
+        document.addEventListener("click", function(){
+        let count = 0
+        count++
+        let button = document.querySelector('#add')
+        button.style.marginTop = '1%'
+        console.log(count)
+    });
+    }
+    else{
+     document.removeEventListener("click",function(){})
+    }
+
+   console.log(input)
+}
+
+/*
+    if(input){
+        for(let count = 0 ; count < 2; count++){
+        let button = document.querySelector('#add')
+        button.style.marginTop = '10%'
+        console.log(count)
+        }
+
+        if(input){
+        document.addEventListener("click", function(){
+        let count = 0
+        count++
+        let button = document.querySelector('#add')
+        button.style.marginTop = '10%'
+        console.log(count)
+        })
+    }
+  
+    }*/ 

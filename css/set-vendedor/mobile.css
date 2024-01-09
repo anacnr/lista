@@ -51,6 +51,7 @@ span > h2{
 #add{
     display: block;
     margin: auto;
+    margin-top: 0%;
     transform: translateY(35vh);
     width: 7%;
     cursor: pointer;
@@ -62,8 +63,9 @@ span > h2{
     border-radius: 7px;
     border: 4px solid black;
     display: block;
-    margin: auto;
-    transform: translateY(40vh);
+    position: relative;
+    transform: translate(25vw,36vh);
+    margin-bottom: 5%;
 }
 
 .save{
