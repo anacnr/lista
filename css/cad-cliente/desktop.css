@@ -174,7 +174,7 @@ form > ul > li > input{
     form > button{
         position: absolute;
         display: block;
-        width: 30%;
+        width: 26%;
         height: 30px;
         border-style: solid;
         border-color: black;
@@ -271,7 +271,7 @@ form > ul > li{
 /*Esses são os campos onde vão receber os dados*/
 
 form > ul > li > input{
-    width: 40%;
+    width: 43%;
     height: 25px;
     display: block;
     margin: auto;
@@ -302,13 +302,13 @@ form > ul > li > input{
     form > button{
         position: absolute;
         display: block;
-        width: 25%;
+        width: 23%;
         height: 30px;
         border-style: solid;
         border-color: black;
         border-radius: 25px;
         font-weight: 600;
-        transform: translate(24vw,66vh);
+        transform: translate(25vw,66vh);
         margin-top: 3%;
     }
     
@@ -363,20 +363,16 @@ form > ul > li > input{
  
 /*Espaço onde estão os dados*/
 
-body{
-    height: 101%;
-}
-
 form{
     background-color: rgba(255, 255, 255, 0.909);
-    width: 64%;
-    height: 82%;
+    /*width: 65vw; height: 65vh;*/
+    width: 65%;
+    height: 540px;
     display: inline-block;
     position: relative;
-    transform: translate(28%,20%);
-    box-shadow: 1px 0px 6px black;
+    transform: translate(25%,16%);
+    border: 1px solid rgba(0, 0, 0, 0.772);
     border-radius: 5px;
-    margin-bottom: 10px;
 }
 
 form > ul{
@@ -392,7 +388,7 @@ form > ul > li{
 /*Esses são os campos onde vão receber os dados*/
 
 form > ul > li > input{
-    width: 320px;
+    width: 40%;
     height: 25px;
     display: block;
     margin: auto;
@@ -404,7 +400,8 @@ form > ul > li > input{
     font-style: oblique;
     font-weight: 600;
 } 
-       
+    
+    
     /*O placeholder é o que está escrito dentro dos campos*/
     
     form > ul > li > input::placeholder{
@@ -415,22 +412,21 @@ form > ul > li > input{
 
     form > ul > li > #cliente,#valido, #end,#local,#contato,#unico{
         margin-top: 5%;    
-    }
+    }    
     
     /*Configurações do botão de cadastro*/
     
     form > button{
         position: absolute;
         display: block;
-        width: 190px;
+        width: 20%;
         height: 30px;
         border-style: solid;
         border-color: black;
         border-radius: 25px;
         font-weight: 600;
-        margin-top: 3%;
-        top: 89%;
-        left: 40%;
+        transform: translate(25vw,66vh);
+        margin-top: 8%;
     }
     
     /*Esse comando é para tirar as setinhas dos campos que tem o tipo number*/
@@ -447,35 +443,35 @@ form > ul > li > input{
 
 /*Configurações dos ícones dos campos*/
 
-form > ul > li > #user, #cpf{
+    form > ul > li > #user, #cpf{
     width: 20px;
     position: absolute;
-    left: 25%;
+    transform: translateX(16vw);
     }
 
     form > ul > li > #cell{
     width: 35px;
     position: absolute;
-    left: 24%;
+    transform: translate(15vw,-1vh);
     }
 
     form > ul > li > #house{
     width: 24px;
     position: absolute;
-    left: 25%;
+    transform: translate(15vw,1vh);
     }
 
     form > ul > li > #gmail{
     width: 25px;
     position: absolute;
-    left: 25%;
+    transform: translate(15vw,2vh);
     }
 
     form > ul > li > #password{
     width: 24px;
     height: 20px;
     position: absolute;
-    left: 25%;
+    transform: translate(15vw,1vh);
     filter: brightness(0);
     }    
 }
