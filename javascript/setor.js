@@ -1,4 +1,3 @@
-
 function Addition(){
 
 /*Criação dos elementos: input, botão de salvar e o botão para deletar*/
@@ -14,6 +13,7 @@ godfather.appendChild(input)
 
 button_save.className = 'save'
 button_save.textContent = 'salvar'
+button_save.type = 'submit'
 godfather.appendChild(button_save)
 
 button_del.className = 'del'
@@ -29,8 +29,49 @@ if(input){
     count++
     let button = document.querySelector('#add')
     button.style.transform = 'translateY(50vh)'
-    console.log(count)
 });
 }
-}
 
+/*Funções do botão*/
+button_save.addEventListener("click", function(){
+input.style.cursor = 'pointer'
+let name = input.value;
+
+let setor = document.createElement("span")
+setor.className = 'name'
+setor.innerHTML = `${name}`
+
+let brother = input.parentNode
+brother.appendChild(setor)
+
+let times = false
+
+let click =  function Clicked(){
+if(!times){
+    times = true
+    setTimeout(()=>{
+        times = false
+        window.location.href = '../teste.html'   
+    },1000);
+}  
+else{
+   times = false
+}
+}
+setor.addEventListener("click", click);
+
+var ondbclick = function clickedTwice(){
+    console.log("Clicado duas vezes")
+    setor.removeEventListener("click", click)
+}
+setor.addEventListener("dblclick", ondbclick);
+
+input.style.display = 'none'
+button_save.style.transform = 'translate(55vw,35vh)'
+button_del.style.transform = 'translate(75vw,35vh)'
+});
+
+button_del.addEventListener("click" , function(){
+console.log("Excluído")
+});
+}

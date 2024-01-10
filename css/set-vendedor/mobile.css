@@ -67,6 +67,8 @@ span > h2{
     transform: translate(10vw,36vh);
     margin-bottom: 4%;
     display: inline;
+    text-align: center;
+    text-transform: capitalize;
 }
 
 .save{
@@ -80,17 +82,33 @@ span > h2{
     color: #FEFEFE;
     text-transform: uppercase;
     position: absolute;
-    transform: translate(10vw,35vh);
+    transform: translate(10vw,36vh);
     margin-left: 2%;
     margin-bottom: 5%;
-
+    cursor: pointer;
 }
 
 .del{
     width: 6%;
     height: 35px;
     position: absolute;
-    transform: translate(30vw,35vh);
+    transform: translate(30vw,36vh);
     margin-bottom: 5%;
     margin-left: 1%;
+    cursor: pointer;
+}
+
+.name{
+    width: 50%;
+    height: 7%;
+    border-radius: 7px;
+    border: 4px solid rgb(3, 3, 3);
+    display: block;
+    position: relative;
+    transform: translate(-20vw,-3vh);
+    margin-bottom: 4%;
+    text-align: center;
+    text-transform: capitalize;
+    cursor: pointer;
+    background-color: white;
 }
