@@ -1,9 +1,123 @@
 @charset "UTF-8";
 
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+*{
+    margin: 0%;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body,html{
+    width: 100vw;
+    height: 90vh;
+}
+
+body{
+    background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
+    background-attachment: fixed;
+}
+
+@media (min-width:600px) and (max-width: 768px){
+
+h1{
+    color: rgba(255, 255, 255, 0.932);
+    text-align: center;
+    margin: 5%;
+    transform: translateY(10vh);
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    cursor: context-menu;
+}
+
+span{
+    width: 50%;
+    height: 5%;
+    position: absolute;
+    top: 35vh;
+    left: 25vw;
+}
+
+span > h2{
+    background-color: #FF5757;
+    border: 2px solid black;
+    border-radius: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4dvw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: white;
+    cursor: context-menu;
+}
+
+#add{
+    display: block;
+    margin: auto;
+    margin-top: 0%;
+    transform: translateY(35vh);
+    width: 7%;
+    cursor: pointer;
+}
+
+.setor{
+    width: 50%;
+    height: 6%;
+    border-radius: 7px;
+    border: 4px solid black;
+    display: block;
+    position: relative;
+    transform: translate(10vw,36vh);
+    margin-bottom: 4%;
+    display: inline;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.save{
+    width: 18%;
+    height: 40px;
+    border: 3px solid black;
+    background-color: #00BF63;
+    border-radius: 15px;
+    font-size: 3dvw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #FEFEFE;
+    text-transform: uppercase;
+    position: absolute;
+    transform: translate(10vw,36vh);
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-bottom: 5%;
+    cursor: pointer;
+}
+
+.del{
+    width: 6%;
+    height: 35px;
+    position: absolute;
+    transform: translate(30vw,37vh);
+    margin-bottom: 4%;
+    margin-left: 1%;
+    cursor: pointer;
+}
+
+.name{
+    width: 50%;
+    height: 6%;
+    border-radius: 7px;
+    border: 4px solid rgb(3, 3, 3);
+    display: block;
+    position: relative;
+    transform: translate(-15vw,0vh);
+    margin-bottom: 4%;
+    margin-left: 1%;
+    text-align: center;
+    text-transform: capitalize;
+    cursor: pointer;
+    background-color: white;
+}
+}
+
+@media (min-width: 768px) and (max-width:992px){
+
 }

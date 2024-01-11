@@ -27,51 +27,30 @@ if(input){
     document.addEventListener("click", function(){
     let count = 0
     count++
-    let button = document.querySelector('#add')
-    button.style.transform = 'translateY(50vh)'
 });
-}
+}//Condicional se existei input
 
+for(let count = 0; count < 1; count++){
 /*Funções do botão*/
 button_save.addEventListener("click", function(){
 input.style.cursor = 'pointer'
-let name = input.value;
 
-let setor = document.createElement("span")
-setor.className = 'name'
-setor.innerHTML = `${name}`
+    let name = input.value;
 
-let brother = input.parentNode
-brother.appendChild(setor)
+    let setor = document.createElement("span")
+    setor.className = 'name'
+    setor.innerHTML = `${name}`
+    
+    let brother = input.parentNode
+    brother.appendChild(setor)
+    
+    input.style.display = 'none'
+    button_save.style.transform ='translate(60vw,37vh)'
+    button_del.style.transform = 'translate(79vw,38vh)'
 
-let times = false
-
-let click =  function Clicked(){
-if(!times){
-    times = true
-    setTimeout(()=>{
-        times = false
-        window.location.href = '../teste.html'   
-    },1000);
-}  
-else{
-   times = false
-}
-}
-setor.addEventListener("click", click);
-
-var ondbclick = function clickedTwice(){
-    console.log("Clicado duas vezes")
-    setor.removeEventListener("click", click)
-}
-setor.addEventListener("dblclick", ondbclick);
-
-input.style.display = 'none'
-button_save.style.transform = 'translate(55vw,35vh)'
-button_del.style.transform = 'translate(75vw,35vh)'
-});
-
+});//Botão salvar
+}//Loop for
 button_del.addEventListener("click" , function(){
 console.log("Excluído")
-});
-}
+});//Botão deletar
+}//Funhção
