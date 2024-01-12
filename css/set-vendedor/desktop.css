@@ -230,11 +230,11 @@ span > h2{
     }
     
     span{
-        width: 50%;
+        width: 500px;
         height: 5%;
         position: absolute;
         top: 35vh;
-        left: 25vw;
+        left: 26vw;
     }
     
     span > h2{
@@ -243,7 +243,7 @@ span > h2{
         border-radius: 15px;
         text-align: center;
         text-transform: uppercase;
-        font-size: 4dvw;
+        font-size: 39px;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 600;
         color: white;
@@ -323,18 +323,18 @@ span > h2{
         text-align: center;
         margin: 5%;
         transform: translateY(10vh);
-        font-size: 5rem;
+        font-size: 50px;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 900;
         cursor: context-menu;
     }
     
     span{
-        width: 50%;
+        width: 500px;
         height: 5%;
-        position: absolute;
-        top: 35vh;
-        left: 25vw;
+        margin: auto;
+        margin-top: 10%;
+        display: block;
     }
     
     span > h2{
@@ -343,7 +343,7 @@ span > h2{
         border-radius: 15px;
         text-align: center;
         text-transform: uppercase;
-        font-size: 4dvw;
+        font-size: 40px;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 600;
         color: white;
@@ -353,9 +353,8 @@ span > h2{
     #add{
         display: block;
         margin: auto;
-        margin-top: 0%;
-        transform: translateY(35vh);
-        width: 7%;
+        transform: translateY(15vh);
+        width: 60px;
         cursor: pointer;
     }
     
@@ -374,19 +373,18 @@ span > h2{
     }
     
     .save{
-        width: 18%;
-        height: 70px;
+        width: 180px;
+        height: 65px;
         border: 3px solid black;
         background-color: #00BF63;
         border-radius: 15px;
-        font-size: 3dvw;
+        font-size: 30px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         color: #FEFEFE;
         text-transform: uppercase;
         position: absolute;
-        transform: translate(10vw,36vh);
-        margin-top: 1%;
-        margin-left: 2%;
+        transform: translate(10vw,35vh);
+        margin-left: 1%;
         cursor: pointer;
     }
     
@@ -396,7 +394,6 @@ span > h2{
         position: absolute;
         transform: translate(30vw,37vh);
         margin-bottom: 4%;
-        margin-left: 1%;
         cursor: pointer;
     }
     
