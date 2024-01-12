@@ -391,7 +391,7 @@ span > h2{
         width: 120px;
         height: 55px;
         position: absolute;
-        transform: translate(48vw,25vh);
+        transform: translate(48fvw, 25vh);
         margin-bottom: 4%;
         cursor: pointer;
     }
