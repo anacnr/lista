@@ -1,3 +1,4 @@
+
 function Addition(){
 
 /*Criação dos elementos: input, botão de salvar e o botão para deletar*/
@@ -45,8 +46,8 @@ input.style.cursor = 'pointer'
     brother.appendChild(setor)
     
     input.style.display = 'none'
-    button_save.style.transform ='translate(60vw,37vh)'
-    button_del.style.transform = 'translate(79vw,38vh)'
+    button_save.style.transform ='translate(61vw,37vh)'
+    button_del.style.transform = 'translate(69vw,38vh)'
 
 });//Botão salvar
 }//Loop for
