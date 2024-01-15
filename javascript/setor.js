@@ -46,8 +46,19 @@ input.style.cursor = 'pointer'
     brother.appendChild(setor)
     
     input.style.display = 'none'
-    button_save.style.transform ='translate(61vw,37vh)'
-    button_del.style.transform = 'translate(69vw,38vh)'
+
+    if(window.innerWidth <= 600){
+    button_save.style.transform ='translate(58vw,38vh)'
+    button_save.style.marginTop = '0.6%'
+    button_del.style.transform = 'translate(76vw,38vh)'
+    button_del.style.left = '2%'
+    }
+    else if(window.innerWidth >= 600 && window.innerWidth <=768){
+    button_save.style.transform ='translate(68vw,20vh)'
+    button_save.style.marginTop = '0'
+    button_del.style.transform = 'translate(59vw,28vh)'
+    button_del.style.left = '2%'
+    }
 
 });//Botão salvar
 }//Loop for
