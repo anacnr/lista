@@ -1,49 +1,3 @@
-Cad Cliente PHP
-
-<?php
-
-// Cria a conexão com o banco
-$local = '127.0.0.1';
-$user = 'root';
-$pass = "";
-$bank = 'supermercado';
-
-//Cria uma instância da classe mysqli
-$bank = new mysqli("$local", "$user", "$pass", "$bank");
-
-//Recupera dados do formulário
-$name = $_POST['nome'];
-$cpf = $_POST['cpf'];
-$end = $_POST['gmail'];
-$house = $_POST['moradia'];
-$tel = $_POST['telefone'];
-$passw = $_POST['senha']; //Preciso usar a função para criptografar a senha
-
-
-if($bank->connect_error != null){
-    die("Erro na conexão");
-}
-else{
-
-    //Chama uma outra classe para iniciar a classe mysqli e ter acesso a outros métodos
-    $start = mysqli_stmt_init($bank);
-
-    //Coloca mais segurança na hora de inserir os dados
-    mysqli_stmt_prepare($start, "INSERT INTO comprador(nome,cpf, gmail,moradia,telefone,senha) VALUES(?, ?, ?, ?, ?, ?)");
-
-    //Organiza os dados na coluna determinada. A quantidade de 's' é a quantidade dos dados
-    mysqli_stmt_bind_param($start, 'ssssss', $name, $cpf, $end, $house, $tel, $passw);
-
-    //Faz os comandos serem executados
-    mysqli_stmt_execute($start);
-
-    //Fecha as validações
-    mysqli_stmt_close($start);
-}
-
-//Encerra a conexão com o banco de dados
-mysqli_close($bank);
-?>
 ____________________________________________________________________________________________________________
 
 Login:
@@ -233,47 +187,72 @@ $mysql->close();
 ?>
 
 ___________________________________________________________________________________________________________
+ function Addition(){
 
-function Addition(){
+/*Criação dos elementos: input, botão de salvar,o botão para deletar e a quebra de linha*/
+let input = document.createElement("input")
+let button_save = document.createElement('button')
+let button_del = document.createElement('img')
+let godfather = document.querySelector("body")//Elemento pai(padrinho)
+let line = document.createElement('br')
 
-    let input = document.createElement("input")
-    input.className = 'setor'
+input.className = 'setor'
+godfather.appendChild(input)
 
-    let godfather = document.querySelector("body")
-    godfather.appendChild(input)
+button_save.className = 'save'
+button_save.textContent = 'salvar'
+button_save.type = 'submit'
+godfather.appendChild(button_save)
 
-    if(input.value.length != null){
-        document.addEventListener("click", function(){
-        let count = 0
-        count++
-        let button = document.querySelector('#add')
-        button.style.marginTop = '1%'
-        console.log(count)
-    });
-    }
-    else{
-     document.removeEventListener("click",function(){})
-    }
+button_del.className = 'del'
+button_del.src = 'imgs-cad/cancel.svg'//ícone retirado do Google Icons
+godfather.appendChild(button_del)
 
-   console.log(input)
-}
+godfather.appendChild(line)
 
-/*
-    if(input){
-        for(let count = 0 ; count < 2; count++){
-        let button = document.querySelector('#add')
-        button.style.marginTop = '10%'
-        console.log(count)
-        }
+/*Se o input existir cria mais um*/
+if(input){
+    document.addEventListener("click", function(){
+    let count = 0
+    count++
+    //Está criando sem ter colocado nome no setor anterior
+});
+}//Condicional input
 
-        if(input){
-        document.addEventListener("click", function(){
-        let count = 0
-        count++
-        let button = document.querySelector('#add')
-        button.style.marginTop = '10%'
-        console.log(count)
-        })
-    }
-  
-    }*/ 
+//Iteração para que o comando de salvar seja executado mais vezes
+for(let count = 0; count < 1; count++){
+/*Funções do botão*/
+button_save.addEventListener("click", function(){
+
+    let name = input.value;
+//Caixa onde vai ficar o setor
+    let setor = document.createElement("span")
+    setor.className = 'name'
+    setor.innerHTML = `${name}`
+
+/*O Chat me explicou que o input não pose apadrinhar outro elemento então ele tem que ser como um irmão para que esse irmão herde suas propriedades*/
+    let brother = input.parentNode
+    brother.appendChild(setor)
+    
+    input.style.display = 'none'
+
+/*Essa parte iria deixar o tamanho dos botões conforme a largura da janela. Porém não funciona quando adapto as telas*/
+    if(window.innerWidth <= 600){
+    button_save.style.transform ='translate(58vw,38vh)'
+    button_save.style.marginTop = '0.6%'
+    button_del.style.transform = 'translate(76vw,38vh)'
+    button_del.style.left = '2%'
+    }//Condiiconal <=600
+    else if(window.innerWidth >= 600 && window.innerWidth <=768){
+    button_save.style.transform ='translate(68vw,20vh)'
+    button_save.style.marginTop = '0'
+    button_del.style.transform = 'translate(59vw,28vh)'
+    button_del.style.left = '2%'
+    }//Condiiconal >=600 e <=768
+
+});//Botão salvar
+}//Loop for
+button_del.addEventListener("click" , function(){
+console.log("Excluído")
+});//Botão deletar
+}//Funhção    
