@@ -21,7 +21,7 @@ h1{
     position: relative;
     top: 30%;
     font-size: 7dvw;
-    text-decoration: 4px underline rgb(123, 228, 97);
+    text-shadow: 2px 2px 6px #111111eb;
 }
 
 div{
@@ -39,6 +39,7 @@ div{
     box-shadow: 2px 1px 10px rgb(10, 10, 10);
 }
 
+/*Personalização dos botões*/
 div > #first{
     margin: auto;
     display: block;
@@ -65,20 +66,21 @@ div > button > #vendedor, #comprador{
     font-size: 2.5dvw;
     font-style: italic;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    font-weight: 900;
 }
 
-/*Imagens do supermercado e do cliente*/
+/*Ícones do supermercado e do cliente*/
 
 div > #supermercado{
-    width: 10vw;
-    height: 8vh;
+    width: 12vw;
+    height: 6vh;
     position: absolute;
-    transform: translate(25vw,3vh);
+    transform: translate(24vw,4vh);
     border-radius: 50%;
 }
 
 div > #cliente{
     width: 3vw;
     position: absolute;
-    transform: translate(28vw,13vh);
+    transform: translate(28vw,14vh);
 }
