@@ -31,6 +31,7 @@ Especificações baseadas no consórcio w3school. url: https://www.w3schools.com
         width: 50vw;
         height: 10vh;
     }
+/*Configurações dos ícones*/
 
     form > ul > li > #gmail-icon{
         width: 21px;
@@ -96,11 +97,13 @@ Especificações baseadas no consórcio w3school. url: https://www.w3schools.com
         position: relative;
         transform: translate(22vw,32vh);
     }
-    
+
+/*Botão de cadastro*/
     form > #cad{
     margin-left: 5%;
     }
 
+/*Classe criada para o quadro de aviso dos dados inválidos*/
     .advice{
         width: 50vw;
         height: 150px;
@@ -129,7 +132,7 @@ Especificações baseadas no consórcio w3school. url: https://www.w3schools.com
             height: 150px;
         }
     }
-    
+/*ID do parágrafo que está dentro do quadro de aviso*/    
     #alert{
         color: rgb(10, 10, 10);
         font-size: 1rem;
@@ -240,7 +243,7 @@ Especificações baseadas no consórcio w3school. url: https://www.w3schools.com
         margin-left: 4%;
         }
 
-        .advice{
+    .advice{
             width: 50vw;
             height: 150px;
             display: block;
@@ -256,7 +259,7 @@ Especificações baseadas no consórcio w3school. url: https://www.w3schools.com
             animation-iteration-count: 1; 
         }
         
-        @keyframes alert {
+    @keyframes alert {
             from{
                 opacity: 0%;
                 width: 50vw;
@@ -269,7 +272,7 @@ Especificações baseadas no consórcio w3school. url: https://www.w3schools.com
             }
         }
         
-        #alert{
+    #alert{
             color: rgb(10, 10, 10);
             font-size: 1rem;
             text-align: center;
@@ -379,7 +382,7 @@ Especificações baseadas no consórcio w3school. url: https://www.w3schools.com
         margin-left: 4%;
         }
 
-        .advice{
+    .advice{
             width: 50vw;
             height: 150px;
             display: block;
@@ -395,7 +398,7 @@ Especificações baseadas no consórcio w3school. url: https://www.w3schools.com
             animation-iteration-count: 1; 
         }
         
-        @keyframes alert {
+    @keyframes alert {
             from{
                 opacity: 0%;
                 width: 50vw;
@@ -408,7 +411,7 @@ Especificações baseadas no consórcio w3school. url: https://www.w3schools.com
             }
         }
         
-        #alert{
+    #alert{
             color: rgb(10, 10, 10);
             font-size: 1rem;
             text-align: center;
@@ -516,7 +519,9 @@ Especificações baseadas no consórcio w3school. url: https://www.w3schools.com
 
     form > #cad{
         margin-left: 4%;
-        }.advice{
+        }
+    
+    .advice{
             width: 50vw;
             height: 150px;
             display: block;
@@ -532,7 +537,7 @@ Especificações baseadas no consórcio w3school. url: https://www.w3schools.com
             animation-iteration-count: 1; 
         }
         
-        @keyframes alert {
+    @keyframes alert {
             from{
                 opacity: 0%;
                 width: 50vw;
@@ -545,12 +550,10 @@ Especificações baseadas no consórcio w3school. url: https://www.w3schools.com
             }
         }
         
-        #alert{
+    #alert{
             color: rgb(10, 10, 10);
             font-size: 1rem;
             text-align: center;
             transform: translateY(50px);
         }
-        
-    
 }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 22/12/2023 às 01:49
+-- Tempo de geração: 16/01/2024 às 15:24
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -45,8 +45,8 @@ CREATE TABLE `comprador` (
 INSERT INTO `comprador` (`nome`, `cpf`, `gmail`, `moradia`, `telefone`, `senha`, `id`, `texto`) VALUES
 ('Catarina', '11111111111', 'aateste@gmail.com', 'Rua 1 aven', '1234567890', 'as12', 1, NULL),
 ('Nick', '1000000001', 'nickteste@gmail.com', 'Avenida da', '1234567891', '123', 2, NULL),
-('Amadeu', '12', 'user@gmail.com', 'Rua agua', '12', '$2y$10$s4s36', 17, NULL),
-('Xae', '13', 'usert@gmail.com', 'Rua agua', '13', '$2y$10$0F/xqbh51MepmsngvbRM6eb9yTSEvG1seCAzXOnucm.exUC7b1W.a', 18, NULL);
+('Xae', '13', 'usert@gmail.com', 'Rua agua', '13', '$2y$10$0F/xqbh51MepmsngvbRM6eb9yTSEvG1seCAzXOnucm.exUC7b1W.a', 18, NULL),
+('Helio', '08', 'helio@gmail.com', 'Rua 2 av', '08', '$2y$10$BNiUlaA7ISMbMYa5X2CGRuC3SdCYyQgYqYD14vm0KjsI8HceA0D4K', 20, NULL);
 
 -- --------------------------------------------------------
 
@@ -89,6 +89,15 @@ CREATE TABLE `suporte` (
   `resposta` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Despejando dados para a tabela `suporte`
+--
+
+INSERT INTO `suporte` (`id`, `gmail`, `senha`, `resposta`) VALUES
+(1, 'su@gmail.com', NULL, NULL),
+(3, 'suport@gmail.com', '$2y$10$Dup4cNIDRm4gA.IG1rBf2uPJbkZn9MhUgb2NjlEpb/mpP7gyHNL/S', NULL),
+(4, 'help@gmail.com', '$2y$10$IVYXLV6LdW6JdmYLrtXu3OutYvrHCT1xUI2rw/GUf7npSc00cAszO', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -115,7 +124,9 @@ CREATE TABLE `vendedor` (
 INSERT INTO `vendedor` (`empresa`, `responsavel`, `cnpj`, `localizacao`, `telfixo`, `celular`, `gmail`, `senha`, `imagem`, `id`) VALUES
 ('Departamento', 'Amadeu', '11', 'Rua  2 Avenida', '11', '11', 'testeuser5@gmail.com', 'xxz2', '', 2),
 ('Agua', 'Milena', '11', 'Rua 3 avenida', '11', '11', 'testeuser10@gmail.com', 'ddd4', 'enviadas/655905dfa8af3.jpg', 6),
-('Agua', 'Pedro', '09', 'Rua  2 Avenida', '09', '10', 'testeuser17@gmail.com', 'as12', 'enviadas/6565097689782.jpg', 10);
+('Agua', 'Pedro', '09', 'Rua  2 Avenida', '09', '10', 'testeuser17@gmail.com', 'as12', 'enviadas/6565097689782.jpg', 10),
+('Dedo', 'Jaiela', '20', 'Rua 1 av', '20', '20', 'dedo@gmail.com', '$2y$10$jEaAPWHj0.OIf3ds/ge7q./C/Y.dsU2WU6odREZTwCIBYAqcHFMyi', 'enviadas/658d9d7d81c8a.png', 11),
+('Lopoa', 'Verno', '33', 'Rua 1 Avenida', '09', '09', 'lopoa@gmail.com', '$2y$10$/JsMIdYORFrUCBUJEVmhgO7GnEc.2Z9uCtLUOENZGRvWheMgkDvwm', 'enviadas/6595648259fbe.png', 12);
 
 --
 -- Índices para tabelas despejadas
@@ -144,7 +155,8 @@ ALTER TABLE `setor`
 -- Índices de tabela `suporte`
 --
 ALTER TABLE `suporte`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `gmail` (`gmail`);
 
 --
 -- Índices de tabela `vendedor`
@@ -161,7 +173,7 @@ ALTER TABLE `vendedor`
 -- AUTO_INCREMENT de tabela `comprador`
 --
 ALTER TABLE `comprador`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de tabela `produto`
@@ -179,13 +191,13 @@ ALTER TABLE `setor`
 -- AUTO_INCREMENT de tabela `suporte`
 --
 ALTER TABLE `suporte`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `vendedor`
 --
 ALTER TABLE `vendedor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
