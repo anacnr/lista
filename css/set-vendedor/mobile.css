@@ -15,7 +15,7 @@ body{
     background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
     background-attachment: fixed;
 }
-
+/*Esse h1 é o título da página*/
 h1{
     color: rgba(255, 255, 255, 0.932);
     text-align: center;
@@ -26,7 +26,7 @@ h1{
     font-weight: 600;
     cursor: context-menu;
 }
-
+/*Caixinha que abriga o h2*/
 span{
     width: 50%;
     height: 5%;
@@ -35,7 +35,7 @@ span{
     left: 25vw;
     margin-top: 2%;
 }
-
+/*Esse h2 é o supermercado*/
 span > h2{
     background-color: #FF5757;
     border: 2px solid black;
@@ -49,7 +49,7 @@ span > h2{
     cursor: context-menu;
     padding: 5px;
 }
-
+/*ID da imagem(botão) de adição*/
 #add{
     display: block;
     margin: auto;
@@ -58,7 +58,7 @@ span > h2{
     width: 6%;
     cursor: pointer;
 }
-
+/*Classe do input criado*/
 .setor{
     width: 40%;
     height: 6%;
@@ -72,7 +72,7 @@ span > h2{
     text-align: center;
     text-transform: capitalize;
 }
-
+/*Classe do botão de salvar*/
 .save{
     width: 18%;
     height: 40px;
@@ -89,7 +89,7 @@ span > h2{
     margin-left: 2%;
     cursor: pointer;
 }
-
+ /*Classe do botão de deletar*/
 .del{
     width: 6vmin;
     height: 45px;
@@ -99,7 +99,7 @@ span > h2{
     margin-left: 1%;
     cursor: pointer;
 }
-
+/*Classe da caixa que vai estar o nome do setor*/
 .name{
     width: 40%;
     height: 6%;
