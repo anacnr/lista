@@ -75,6 +75,8 @@
 
     </form>
 
+    <!--JAVASCRIPT-->
+
     <script>
     //Configurar a foto do input file depois da imagem ter sido escolhida
 
@@ -91,7 +93,7 @@
     let eyes = new FileReader()
     //Evento onload serve para a imagem carregada
     eyes.onload = function read(){
-    //Nesse trecho está a definição da imagem que vai ocupar o fundo da label. Eu vi essa dica em um comentário     pela Internet
+    //Nesse trecho está a definição da imagem que vai ocupar o fundo da label. Eu vi essa dica em um comentário pela Internet
     label.style.backgroundImage = `url('${eyes.result}')`
     label.style.filter = `blur(0px)`
     label.style.opacity = '99%'
@@ -104,7 +106,7 @@
 }
 
 function Register(){
-  //Bota para ser redirecionado
+  //Bota para ser redirecionado aqui também precisa fazer uma validação
 }
     </script>
 
