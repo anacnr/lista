@@ -26,7 +26,7 @@ godfather.appendChild(line)
 /*Funções do botão*/
 button_save.addEventListener("click", function(){
 
-    console.log("Salavo!")//Teste
+    console.log("Salvo!")//Teste
 
 //Nome do setor vai ser o valor recebdio no input
     let name = input.value;
@@ -41,15 +41,14 @@ button_save.addEventListener("click", function(){
 //Escondo o input para a caixa não ficar aberta para digitação
     input.style.display = 'none'
 
-/*Essa parte iria deixar o tamanho dos botões conforme a largura da janela. Porém não funciona quando adapto as telas*/
+/*Essa parte iria deixar o tamanho dos botões conforme a largura da janela. Porém não funciona quando adapto as telas
 if(window.innerWidth <= 600){
     button_save.style.transform ='translate(58vw,38vh)'
     button_save.style.marginTop = '0.6%'
     button_del.style.transform = 'translate(76vw,38vh)'
     button_del.style.left = '2%'
-    }//Condiiconal <=600
+    }//Condiiconal <=600 */
 });//Botão salvar
-
 button_del.addEventListener("click" , function(){
 console.log("Excluído")//Teste
 });//Botão deletar
