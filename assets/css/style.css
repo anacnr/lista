@@ -1,4 +1,7 @@
+/*IMPORTAÇÃO DA FONTE*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+
+/*SELETOR UNIVERSAL PARA ZERAR AS CONFIGURAÇÕES INICIAIS*/
 * {
     padding: 0;
     margin: 0;
@@ -70,6 +73,65 @@ header {
     font-size: 1.1rem;
 }
 
+#carousel{
+    width: 90vw;
+    height: 50vh;
+    border: 2px solid black;
+    margin: auto;
+    margin-top: 12px;
+    display: block;
+    position: relative;
+
+    animation-name: walking;
+    animation-duration: 12s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+@keyframes walking {
+    0%{
+        transform: translateX(110%)
+    }
+    
+    100%{
+        transform: translateX(-110%)
+    }
+}
+
+#carousel > #first > img{
+    border: 3px solid red;
+    width: 200px;
+    height: 200px;
+    display: inline;
+    padding-left: 10px;
+    position: absolute;
+    top: 25%;
+    left: 1%;
+}
+
+#carousel > #second > img{
+    border: 3px solid rgb(38, 255, 0);
+    width: 200px;
+    height: 200px;
+    display: inline;
+    padding-left: 10px;
+    position: absolute;
+    top: 25%;
+    left: 34%;
+}
+
+#carousel > #third > img{
+    border: 3px solid rgb(13, 0, 255);
+    width: 200px;
+    height: 200px;
+    display: inline;
+    padding-left: 10px;
+    position: absolute;
+    top: 25%;
+    left: 67%;
+}
+
 .mobile-menu-icon {
     display: none;
 }
@@ -125,9 +187,8 @@ header {
         margin-top: 10px;
     }
 }
-    .open {
-        display: block;
-    }
-
+.open {
+    display: block;
+}
 
 
