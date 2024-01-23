@@ -103,8 +103,7 @@ form > ul > li > #descricao {
     opacity: 90%;
     filter: blur(1px);
     cursor: pointer;
-    display: block;
-    
+    display: block;    
 }
 
 /*Personalização dos ícones*/
