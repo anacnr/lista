@@ -190,6 +190,7 @@ header {
 }
 .open {
     display: block;
+    background-image: url('assets/img/menu_white_36dp.svg');
 }
 
 

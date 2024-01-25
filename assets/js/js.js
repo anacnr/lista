@@ -8,3 +8,5 @@ function menuShow() {
         document.querySelector('.icon').src = "assets/img/menu_white_36dp.svg";
     }
 }
+
+/*Parte do carrossel*/
