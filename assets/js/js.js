@@ -10,3 +10,29 @@ function menuShow() {
 }
 
 /*Parte do carrossel*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+let main_div = document.querySelector('#carousel')
+
+const paused =  setTimeout(()=>{
+    main_div.style.animationPlayState = 'paused'
+},2000)
+
+
+const run = setInterval(()=>{
+
+    clearTimeout(paused)
+
+},4000)
+*/
