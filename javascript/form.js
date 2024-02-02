@@ -37,12 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 contentType: false//Tipo dos objetos enviados para a requisição
             }).done(function(valide) {
             /*O .done() cuida do que ocorre depois da requisição bem sucedida.
-            Inicío da validação de acesso.*/
-                if (valide.status === "Encontrado") {
+            Inicío da validação de acesso. O parâm. valide é quem recebe a variável $request lá do php.*/
+                if (valide.status === "Encontrado") { //Email e senha corretos
                     console.log(valide.message)
                     window.location.href = './teste.html' 
                 }
-                else if(valide.status === "SenhaErrada"){
+                else if(valide.status === "SenhaErrada"){ //Email correto mas senha incorreta.
                     console.log(valide.message)
 
                     //Esconder o form por um tempo
@@ -67,16 +67,16 @@ document.addEventListener("DOMContentLoaded", function () {
                         advice.appendChild(phrase)
                     }
                     
-                    //Fazer o form reaparecer e esconder o aviso
+                    //Fazer o form reaparecer e esconder o aviso.
                     setTimeout(()=>{
                         form.style.opacity = '1'
 
-                        advice.style.zIndex = -1
+                        advice.style.opacity = '0'
                     },5000)
 
                 }
                 else {
-                  console.log(valide.message)
+                  console.log(valide.message) //Usuário não cadastrado.
 
                 //Esconder o form por um tempo
                   let form = document.querySelector("#loginForm")
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                   let phrase = document.createElement("p")
                   phrase.id = 'alert'
-                  phrase.innerHTML = 'Dados inválidos! <br> Por favor se cadastre.'
+                  phrase.innerHTML = 'Dados inválidos. <br> Por favor se cadastre!'
 
                   advice.appendChild(phrase)
 

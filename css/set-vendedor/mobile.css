@@ -27,7 +27,7 @@ h1{
     cursor: context-menu;
 }
 /*Caixinha que abriga o h2*/
-span{
+output{
     width: 50%;
     height: 5%;
     position: absolute;
@@ -36,7 +36,7 @@ span{
     margin-top: 2%;
 }
 /*Esse h2 é o supermercado*/
-span > h2{
+output > h2{
     background-color: #FF5757;
     border: 2px solid black;
     border-radius: 15px;

@@ -4,7 +4,7 @@
     let input = document.createElement("input")
     let button_save = document.createElement('button')
     let button_del = document.createElement('img')
-    let godfather = document.querySelector("body")//Elemento pai(padrinho)
+    let godfather = document.querySelector("form")//Elemento pai(padrinho)
     let line = document.createElement('br')
 
     input.className = 'setor'

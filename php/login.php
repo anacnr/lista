@@ -1,5 +1,9 @@
 <?php
 
+///Inicia a sessão para o usuário
+
+session_start();
+
 $local = '127.0.0.1';
 $user = 'root';
 $pass = "";
@@ -15,7 +19,7 @@ if ($mysql->connect_error != null) {
     die("Conexão não realizada");
 } else {
    
-    // Faz a pesquisa dentro das tabelas para encontrar o gmail e senha correspondente
+    // Faz a pesquisa dentro das tabelas para encontrar o gmail e senha correspondente de maneira mais segura.
     $search = $mysql->prepare("
         SELECT gmail, senha FROM comprador WHERE gmail = ? 
         UNION
@@ -24,11 +28,12 @@ if ($mysql->connect_error != null) {
         SELECT gmail, senha FROM suporte WHERE gmail = ? 
     ");
 
+//Uso do prepared statements para evitar injeção sql.
     $search->bind_param("sss", $gmail, $gmail, $gmail);
     $search->execute();
     $datas = $search->get_result();
 
-    $found = false; // Flag para verificar se encontrou o gmail
+    $found = false;// Flag para verificar se encontrou o gmail
 
     while ($row = mysqli_fetch_array($datas, MYSQLI_ASSOC)) {
         // Verifica se o gmail corresponde no banco de dados

@@ -8,16 +8,20 @@
     <link rel="stylesheet" href="../css/set-vendedor/desktop.css">
     <!--Tela menor-->
     <link rel="stylesheet" href="../css/set-vendedor/mobile.css" media="(orientation:portrait) and (max-width: 600px)">
+    <!--Comunicação com o php <link rel="import" href="../php/setor.php">-->
 </head>
 
 <body>
     <h1>Cadastro dos Setores</h1>
 
-    <span><h2>supermercado</h2></span>
+    <output name="supermercado"><h2>supermercado</h2></output>
+
+    <form action="../php/setor.php" method="post"></form>
     
   <!--ícone retirado do Google Icons-->
     <img src="imgs-cad/add.svg" alt="Botão-adiciona" id="add">
 
     <script src="../javascript/setor.js"></script>
+
 </body>
 </html>
