@@ -11,7 +11,7 @@ $bank = 'supermercado';
 
 $mysql = new mysqli($local, $user, $pass, $bank);
 
-// Recebimento do email e da senha
+//Recebimento do email e da senha
 $gmail =  $_POST['end'];
 $passw =  $_POST['passw'];
 
@@ -28,6 +28,8 @@ if ($mysql->connect_error != null) {
         SELECT gmail, senha FROM suporte WHERE gmail = ? 
     ");
 
+    var_dump($search);
+
 //Uso do prepared statements para evitar injeção sql.
     $search->bind_param("sss", $gmail, $gmail, $gmail);
     $search->execute();
@@ -43,6 +45,9 @@ if ($mysql->connect_error != null) {
             if (password_verify($passw, $row["senha"])) {
                 //O probelma está na maneira que o hash é tratadado
                 $request = array("status" => "Encontrado", "message" => "Encontrado!");
+
+            // Verificar qual tabela que é. Se for de supermercado vamos selecionar a coluna "empresa"
+            
             } else {
                 $request = array("status" => "SenhaErrada", "message" => "Senha Incorreta!");
             }
