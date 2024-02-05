@@ -5,7 +5,7 @@ $user = 'root';
 $passw = "";
 $bank = 'supermercado';
 
-$mysql = new mysqli("$local", "$user", "$pass", "$bank");
+$mysql = new mysqli("$local", "$user", "$passw", "$bank");
 
 $setor_name = $_POST['setor'];
 
@@ -14,9 +14,21 @@ if($mysql->connect_error != null){
 }
 else{
 
-    $insert = "INSERT INTO setor ('nome') VALUES ('$setor_name')";
+    //Inserção de dados
+    $insert = "INSERT INTO setor (nome) VALUES ('$setor_name')";
 
-    mysqli_query($mysql,$insert);
+    $query =  mysqli_query($mysql,$insert);
+
+    //Se a query não for nula vai emitir o echo
+    if(!$query == null){
+        echo "Setor " . $setor_name . " inserido";
+        $request = true;
+    }
+    else{
+        echo "Erro na inserção";
+    }
+
+    echo json_encode($request);//Se comunicar com o js
 }
 
 ?>
