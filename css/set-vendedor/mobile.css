@@ -116,3 +116,12 @@ output > h2{
     cursor: pointer;
     background-color: white;
 }
+
+#phrase{
+    text-decoration-line: underline;
+    text-align: center;
+    transform: translateY(40vh);
+    color: #ffffffe6;
+    text-shadow: 2px -1px 4px black;
+    cursor: context-menu;
+}

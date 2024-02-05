@@ -44,9 +44,18 @@ document.querySelector('form').addEventListener("submit", function(e){
                 /*O result vai valer como o $request*/
                 if(result == "true"){
                     console.log("Teste 1: " , result)
+                    //Vai ter a função de adicionar e de excluir.
                 }
                 else{
                     console.log("Teste 2: " , result)
+                    //Cria uma linha para avisar que o setor não foi cadastradado por causa do requisito.
+                    let phrase = document.createElement("p")
+                    phrase.id = 'phrase'
+                    phrase.innerHTML = 'Necessário nome com mais de 3 letras'
+                    godfather.appendChild(phrase)
+                    setTimeout(()=>{
+                        phrase.style.display = 'none'
+                    },4000)
                 }
             }).fail(function (jqXHR, textStatus, errorThrown) {
                 /*O .fail() serve para mostrar o erro caso exista*/
