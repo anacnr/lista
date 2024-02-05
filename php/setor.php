@@ -14,6 +14,8 @@ if($mysql->connect_error != null){
 }
 else{
 
+    if(strlen($setor_name) > 3){
+
     //Inserção de dados
     $insert = "INSERT INTO setor (nome) VALUES ('$setor_name')";
 
@@ -21,14 +23,19 @@ else{
 
     //Se a query não for nula vai emitir o echo
     if(!$query == null){
+
         echo "Setor " . $setor_name . " inserido";
         $request = true;
     }
     else{
         echo "Erro na inserção";
     }
+    echo json_encode($request);//Se comunica com o js
+    }
+    else{
+        echo "Nome de setor inválido" . $setor_name. strlen($setor_name) . " letras ";
+    }
 
-    echo json_encode($request);//Se comunicar com o js
 }
 
 ?>
