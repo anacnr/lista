@@ -27,23 +27,30 @@ console.log("Script")
                 
     godfather.appendChild(line)
 
-    //Função button_save
+document.querySelector('form').addEventListener("submit", function(e){
 
-    const save = function toSave(){
-        let values = input.value
-        if(values.length <=3){
-            console.log("Nome de setor inválido: " , values)
-        }
-        else{
+            e.preventDefault();
 
-            document.querySelector('form').addEventListener("submit", function(e){
+            const form = new FormData()
+            form.append('setor' , input.value);
 
-                e.preventDefault();
-            
-            });//submit
-        }
-    }//function toSave
-
-    button_save.addEventListener('click', save);
-
+            //ajax
+            $.ajax({
+                url: '../php/setor.php',
+                type: 'POST',
+                data: form,
+                processData: false, contentType: false
+            }).done(function(result){
+                /*O result vai valer como o $request*/
+                if(result == "true"){
+                    console.log("Teste 1: " , result)
+                }
+                else{
+                    console.log("Teste 2: " , result)
+                }
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                /*O .fail() serve para mostrar o erro caso exista*/
+                console.log("Erro na requisição AJAX:", textStatus, errorThrown);
+            });//ajax //done //fail          
+        });//submit
 });//DOMContentLoaded

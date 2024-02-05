@@ -21,21 +21,16 @@ else{
 
     $query =  mysqli_query($mysql,$insert);
 
-    //Se a query não for nula vai emitir o echo
-    if(!$query == null){
-
-        echo "Setor " . $setor_name . " inserido";
-        $request = true;
+    echo "Setor " . $setor_name . " inserido";
+    $request = true;
+    
     }
     else{
-        echo "Erro na inserção";
+        $request = false;
+        echo " Nome de setor inválido " . $setor_name. strlen($setor_name) . " letras ";
     }
-    echo json_encode($request);//Se comunica com o js
-    }
-    else{
-        echo "Nome de setor inválido" . $setor_name. strlen($setor_name) . " letras ";
-    }
-
+    echo json_encode($request);//Se comunica com o js. É uma string respondendo o valor "true" ou "false" entre aspas
 }
 
+mysqli_close($mysql)
 ?>
