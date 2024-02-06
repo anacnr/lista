@@ -1,1 +1,10 @@
 @charset "UTF-8";
+
+@media (orientation:portrait) and (max-width: 600px) {
+*{
+    margin: 0%;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+}
