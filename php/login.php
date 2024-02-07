@@ -27,27 +27,21 @@ if ($mysql->connect_error != null) {
         UNION
         SELECT gmail, senha FROM suporte WHERE gmail = ? 
     ");
-
-    var_dump($search);
-
-//Uso do prepared statements para evitar injeção sql.
+    
     $search->bind_param("sss", $gmail, $gmail, $gmail);
     $search->execute();
     $datas = $search->get_result();
-
-    $found = false;// Flag para verificar se encontrou o gmail
-
-    while ($row = mysqli_fetch_array($datas, MYSQLI_ASSOC)) {
+    
+    $found = false; // Flag para verificar se encontrou o gmail
+    
+    while ($row = $datas->fetch_assoc()) {
         // Verifica se o gmail corresponde no banco de dados
         if ($gmail == $row["gmail"]) {
-            $found = true;  //Marca que encontrou o gmail
+            $found = true; // Marca que encontrou o gmail
             // Verifica se a senha está correta
             if (password_verify($passw, $row["senha"])) {
-                //O probelma está na maneira que o hash é tratadado
+                // O problema está na maneira que o hash é tratado
                 $request = array("status" => "Encontrado", "message" => "Encontrado!");
-
-            // Verificar qual tabela que é. Se for de supermercado vamos selecionar a coluna "empresa"
-            
             } else {
                 $request = array("status" => "SenhaErrada", "message" => "Senha Incorreta!");
             }
@@ -55,13 +49,14 @@ if ($mysql->connect_error != null) {
         }
     }
     
-    if($found != true){
+    if (!$found) {
         $request = array("status" => "NaoEncontrado", "message" => "Não encontrado!");
     }
-
+    
     // Retorna a resposta como JSON
     header('Content-Type: application/json');
     echo json_encode($request);
+    
 }
 
 // Encerra a conexão com o banco de dados

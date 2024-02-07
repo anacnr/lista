@@ -1,2 +1,7 @@
 A tela minimizada interfere na vizualização das medias querys. 
 Estou enfrentando problemas com o carregamento de estilos no localhost com os arquivos.
+
+
+no login.php eu estava usando mysqli_fetch_array($datas,MYSQLI_ASSOC) na variável $row dentro do while.
+A requisição ajax não estava pegando, então o chat alterou o valor da variável $row para $datas->fetch_assoc() e funcionou direitinho.
+O chat me explicou que eu estou usando o nome das colunas como chaves em um arry associativo, e o fetch_assoc() seria mais direito para trabalhar com esse tipo.

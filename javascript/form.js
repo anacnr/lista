@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }).fail(function (jqXHR, textStatus, errorThrown) {
                 /*O .fail() serve para mostrar o erro caso exista*/
-                console.log("Erro na requisição AJAX:", textStatus, errorThrown);
+                console.log("Erro na requisição AJAX:", "STATUS RESPOSTA: ",jqXHR,textStatus, errorThrown);
             });//fail
         }
     });
@@ -114,6 +114,6 @@ document.addEventListener("DOMContentLoaded", function () {
 function Register() {
 
 /*Essa função redireciona para a tela de escolha entre supermercado e comprador*/
-    window.location.href = 'choose.html'
+   window.location.href = 'choose.html'
     
 }
