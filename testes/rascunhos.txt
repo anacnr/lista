@@ -256,3 +256,120 @@ button_del.addEventListener("click" , function(){
 console.log("Excluído")
 });//Botão deletar
 }//Funhção    
+
+
+___________________________________________________________________________________________________________
+
+setor.js com o database
+
+/*O chat me aconselhou a criar uma outra função para criar os elementos um de cada vez, somente quando o botão salvar for clicado que deixa criar mais input do setor. CRUD*/
+
+document.addEventListener("DOMContentLoaded", function(){
+
+console.log("Script")
+
+    /*Criação dos elementos: input, botão de salvar,o botão para deletar e a quebra de linha*/
+    let input = document.createElement("input")
+    let button_save = document.createElement('button')
+    let button_del = document.createElement('img')
+    let godfather = document.querySelector("form")//Elemento pai(padrinho)
+    let line = document.createElement('br')
+
+    input.className = 'setor'
+    input.maxLength = '15'
+    input.name = 'setor' //Utilizar para salvar no php
+    godfather.appendChild(input)
+                
+    button_save.className = 'save'
+    button_save.textContent = 'salvar'
+    button_save.type = 'submit'
+    godfather.appendChild(button_save)
+                
+    button_del.className = 'del'
+    button_del.src = 'imgs-cad/cancel.svg'//ícone retirado do GoogIcons
+    godfather.appendChild(button_del)
+                
+    godfather.appendChild(line)
+
+document.querySelector('form').addEventListener("submit", function(e){
+
+            e.preventDefault();
+
+            const form = new FormData()
+            form.append('setor' , input.value);
+
+            //ajax
+            $.ajax({
+                url: '../php/setor.php',
+                type: 'POST',
+                data: form,
+                processData: false, contentType: false
+            }).done(function(result){
+                /*O result vai valer como o $request*/
+                if(result == "true"){
+                    console.log("Teste 1: " , result)
+                    //Vai ter a função de adicionar e de excluir.
+                }
+                else{
+                    console.log("Teste 2: " , result)
+                    //Cria uma linha para avisar que o setor não foi cadastradado por causa do requisito.
+                    let phrase = document.createElement("p")
+                    phrase.id = 'phrase'
+                    phrase.innerHTML = 'Necessário nome com mais de 3 letras'
+                    godfather.appendChild(phrase)
+                    setTimeout(()=>{
+                        phrase.style.display = 'none'
+                    },4000)
+                }
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                /*O .fail() serve para mostrar o erro caso exista*/
+                console.log("Erro na requisição AJAX:", textStatus, errorThrown);
+            });//ajax //done //fail          
+        });//submit
+});//DOMContentLoaded
+
+html: <form action="../php/setor.php" method="post"></form>
+
+<!--<script src="../javascript/jquery-3.7.1.min.js"></script>-->
+
+php
+
+setor.php 
+
+<?php
+
+$local = '127.0.0.1';
+$user = 'root';
+$passw = "";
+$bank = 'supermercado';
+
+$mysql = new mysqli("$local", "$user", "$passw", "$bank");
+
+$setor_name = $_POST['setor'];
+
+if($mysql->connect_error != null){
+    die("Erro na conexão." . $connect->connect_error);
+}
+else{
+
+    if(strlen($setor_name) > 3){
+
+    //Inserção de dados
+    $insert = "INSERT INTO setor (nome) VALUES ('$setor_name')";
+
+    $query =  mysqli_query($mysql,$insert);
+
+    echo "Setor " . $setor_name . " inserido";
+    $request = true;
+    
+    }
+    else{
+        $request = false;
+        echo " Nome de setor inválido " . $setor_name. strlen($setor_name) . " letras ";
+    }
+    echo json_encode($request);//Se comunica com o js. É uma string respondendo o valor "true" ou "false" entre aspas
+}
+
+mysqli_close($mysql)
+?>
+_________________________________________________________________________________________________________________________________
