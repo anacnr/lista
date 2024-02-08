@@ -2,16 +2,25 @@
 
 console.log("Script carregado!");
 
+document.addEventListener("DOMContentLoaded", function(){
+
+document
+  .querySelector("form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+  });
+
 /*Criação dos elementos: input, botão de salvar,o botão para deletar e a quebra de linha*/
 let input = document.createElement("input");
 let button_save = document.createElement("button");
 let button_del = document.createElement("img");
-let godfather = document.querySelector("body"); //Elemento pai(padrinho)
+let godfather = document.querySelector("form"); //Elemento pai(padrinho)
 let line = document.createElement("br");
 
 input.className = "setor";
 input.maxLength = "15";
-input.name = "setor"; //Utilizar para salvar no php
+input.name = "setor";
+input.required = true;
 godfather.appendChild(input);
 
 button_save.className = "save";
@@ -20,47 +29,19 @@ button_save.type = "submit";
 godfather.appendChild(button_save);
 
 button_del.className = "del";
-button_del.src = "imgs-cad/cancel.svg"; //ícone retirado do GoogIcons
+button_del.src = "imgs-cad/cancel.svg"; //Ìcone retirado do GoogIcons
+button_del.type = "button";
 godfather.appendChild(button_del);
 
 godfather.appendChild(line);
-
-//Cria a função para adicionar
-
-const addition = function toAdd() {
-  /*Criação dos elementos: input, botão de salvar,o botão para deletar e a quebra de linha*/
-  let input = document.createElement("input");
-  let button_save = document.createElement("button");
-  let button_del = document.createElement("img");
-  let godfather = document.querySelector("body"); //Elemento pai(padrinho)
-  let line = document.createElement("br");
-
-  input.className = "setor";
-  input.maxLength = "15";
-  input.name = "setor"; //Utilizar para salvar no php
-  godfather.appendChild(input);
-
-  button_save.className = "save";
-  button_save.textContent = "salvar";
-  button_save.type = "submit";
-  godfather.appendChild(button_save);
-
-  button_del.className = "del";
-  button_del.src = "imgs-cad/cancel.svg"; //ícone retirado do GoogIcons
-  godfather.appendChild(button_del);
-
-  godfather.appendChild(line);
-
-};//Função addition
 
 /*LocalStorage dos setores para criar o CRUD*/
 
 //Nomeação do setor(variável global)
 const nameSection = {
-  //let name_setor = input.value
-  name: "setora",
-  id: "3",
+  name: input.value,
 };
+
 /*Métodos do localStorage*/
 const getItem = () => JSON.parse(localStorage.getItem("name")) ?? [];
 
@@ -75,13 +56,9 @@ function newSection(sector) {
 }
 
 //Leitura do setor em JSON
-
 const readSection = () => getItem();
 
-//function readSection(){ getItem(); } Não pegou
-
 //Atualização do setor em JSON
-
 function upSetor(setor, index) {
   const up_sector = readSection();
   up_sector[index] = setor;
@@ -89,8 +66,69 @@ function upSetor(setor, index) {
 }
 
 //Exclusão do setor em JSON
-function delSetor(index){
-    const del_sector = readSection()
-    del_sector.splice(index,1)
-    setItem(del_sector)
+function delSetor(index) {
+  const del_sector = readSection();
+  del_sector.splice(index, 1);
+  setItem(del_sector);
 }
+
+//Cria a função para adicionar novo setor
+const addition = function toAdd() {
+  let input = document.createElement("input");
+  let button_save = document.createElement("button");
+  let button_del = document.createElement("img");
+  let godfather = document.querySelector("form"); //Elemento pai(padrinho)
+  let line = document.createElement("br");
+
+  input.className = "setor";
+  input.maxLength = "15";
+  input.name = "setor";
+  godfather.appendChild(input);
+
+  button_save.className = "save";
+  button_save.textContent = "salvar";
+  button_save.type = "submit";
+  godfather.appendChild(button_save);
+
+  button_del.className = "del";
+  button_del.src = "imgs-cad/cancel.svg"; //Ìcone retirado do GoogIcons
+  button_del.type = "button";
+  godfather.appendChild(button_del);
+
+  godfather.appendChild(line);
+}; //Função addition
+
+//Função para deletar setor
+  const delet = function toExclude(){
+  console.log("Setor excluído")
+};//Funcão deletar
+
+//Função para salvar o setor
+const save = function toSave() {
+  let values = input.value;
+
+  if (values.length < 3) {
+    console.log(
+      values,
+      " não é permitido. Por favor digite mais do que ",
+      values.length , " letras "
+    )
+    button_save.disabled = false;
+  }
+  else {
+     //Chamei a variável global
+    newSection(nameSection.name)
+
+    console.log(newSection(nameSection.name))
+
+    let button_add = document.getElementById("add");
+    button_add.addEventListener("click", addition);
+
+    button_del.addEventListener("click" , delet);
+}};
+
+console.log(input.value)
+
+button_save.addEventListener("click",save);
+
+});//domloaded

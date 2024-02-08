@@ -54,7 +54,7 @@ output > h2{
     display: block;
     margin: auto;
     margin-top: 0%;
-    transform: translateY(52vh);
+    transform: translateY(42vh);
     width: 6%;
     cursor: pointer;
 }
@@ -109,9 +109,9 @@ output > h2{
     height: 45px;
     position: absolute;
     transform: translate(48vw,37vh);
-    margin-bottom: 4%;
-    margin-left: 1%;
+    margin:1%;
     cursor: pointer;
+    opacity: 85%;
 }
 /*Classe da caixa que vai estar o nome do setor*/
 .name{
