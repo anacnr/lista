@@ -7,7 +7,7 @@
     <!--Tela maior-->
     <link rel="stylesheet" href="estilos/desktop.css">
     <!--Tela menor-->
-    <link rel="stylesheet" href="estilos/mobile.css">
+    <link rel="stylesheet" href="estilos/mobile.css" media="(orientation:portrait) and (max-wid: 600px)">
 </head>
 <body>
    <span><p>Limpeza</p></span>
@@ -38,7 +38,11 @@
     </tbody>
    </table>
 
-   <span id="buttons"><button type="button">Excluir</button> <button type="submit" >Editar</button> <button type="button">Salvar</button> </span>
+   <span id="buttons">
+    <button type="button" id="exc">Excluir</button>
+    <button type="submit" id="edi">Editar</button>
+    <button type="button" id="sav">Salvar</button>
+    </span>
    
 </body>
 </html>

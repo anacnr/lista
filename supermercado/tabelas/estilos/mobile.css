@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-@media (orientation:portrait) and (max-width: 600px) {
 *{
     margin: 0%;
     padding: 0px;
@@ -14,12 +13,14 @@ body {
 
 span > p{
     text-align: center;
-    background-image: linear-gradient(to bottom,#ff3131,#ffd34d);
+    background-color: #dc6cebe8;
     width: 120px;
     margin: auto;
     transform: translateY(10vh);
     border-radius: 20px;
     box-shadow: 2px 2px 7px black;
+    color: rgb(243, 242, 242);
+    text-shadow: 1px 1px 2px black;
 }
 
 table{
@@ -64,15 +65,41 @@ table > #body-tab > tr > #code{
 }
 
 #buttons{
-    border: 1px solid black;
     position: absolute;
     transform: translate(0vw,40vh);
     width: 100%;
     text-align: center;
 }
 
+/*Personalização dos botões*/
 #buttons > button{
-padding: 10px;
+padding: 5px;
+margin-left: 20px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 2.6dvi;
+border-width: 0px;
+border-radius: 15px;
+width: 12%;
+box-shadow: 1px 1px 4px black;
+cursor: pointer;
 }
 
+/*Botão de excluir*/
+#buttons >  #exc{
+    background-color: rgba(0, 0, 0, 0.712);
+    color: rgb(243, 242, 242);
+}
+
+/*Botão de editar*/
+#buttons > #edi{
+    background-color: #ff3131;
+    color: rgb(243, 242, 242);
+    text-shadow: 1px 1px 2px black;
+}
+
+/*Botão de salvar*/
+#buttons > #sav{
+    background-color: #00bf63;
+    color: rgb(243, 242, 242);
+    text-shadow: 1px 1px 2px black;
 }
