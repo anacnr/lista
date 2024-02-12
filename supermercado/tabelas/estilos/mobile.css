@@ -6,11 +6,14 @@
     box-sizing: border-box;
 }
 
+@media (max-width: 600px) {
+    
 body {
     background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
     background-attachment: fixed;
 }
 
+/*Caixa nome sessão*/
 span > p{
     text-align: center;
     background-color: #dc6cebe8;
@@ -21,6 +24,7 @@ span > p{
     box-shadow: 2px 2px 7px black;
     color: rgb(243, 242, 242);
     text-shadow: 1px 1px 2px black;
+    cursor: context-menu;
 }
 
 table{
@@ -31,8 +35,14 @@ table{
     box-shadow: 1px 2px 7px black;
 }
 
+/*Cabeçalho da tabela*/
 table > #head-tab{
     height: 20px;
+}
+
+/*Cor das linhas(cor sim e cornão)*/
+table > #head-tab, tbody > tr:nth-child(2n){
+    background-color: #dc6ceb85;    
 }
 
 /*Configuração dos campos do cabeçalho*/
@@ -60,10 +70,16 @@ table > #body-tab > tr > td{
     height: 40px;  
 }
 
+table > #body-tab > tr > #new_td{
+    border: 1px solid black;
+}
+
+/*Código do produto*/
 table > #body-tab > tr > #code{
     text-transform: lowercase;
 }
 
+/*Botões*/
 #buttons{
     position: absolute;
     transform: translate(0vw,40vh);
@@ -102,4 +118,12 @@ cursor: pointer;
     background-color: #00bf63;
     color: rgb(243, 242, 242);
     text-shadow: 1px 1px 2px black;
+}
+/*Botão de salvar*/
+#buttons > #add{
+    background-color: #f5f4edd8;
+    border-radius: 6px;
+    display: none;
+    cursor: pointer;
+}
 }
