@@ -82,9 +82,12 @@ table > #body-tab > tr > #code{
 /*Botões*/
 #buttons{
     position: absolute;
-    transform: translate(0vw,40vh);
+    transform: translateY(40vh);
     width: 100%;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*Personalização dos botões*/
