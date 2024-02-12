@@ -59,7 +59,31 @@ const edit = function toEdit(){
     let button_add = document.getElementById("add")
     button_add.style.display = 'block'
     button_add.style.position = 'relative'
-    button_add.style.right = '15vw'
+    //button_add.style.right = '15vw'
+
+    function Recise(){
+        if(window.innerWidth <=600){
+            button_add.style.right = '15vw' 
+        }
+        else if (window.innerWidth > 600 && window.innerWidth <= 768) {
+            button_add.style.right = '15vw'
+        }
+        else if (window.innerWidth > 768 && window.innerWidth <= 830) {
+            button_add.style.right = '15vw'
+        }
+        else if (window.innerWidth > 830 && window.innerWidth <= 1000) {
+            button_add.style.right = '13vw'
+        }
+        else if (window.innerWidth > 1000 && window.innerWidth <= 1200) {
+            button_add.style.right = '10vw'
+        }
+         else {
+            button_add.style.right = '9vw'
+        }
+    }
+  
+    window.addEventListener('resize', Recise)
+    Recise()
 
     button_add.addEventListener("click" , toAdd)
 

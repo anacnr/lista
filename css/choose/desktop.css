@@ -73,8 +73,8 @@ body{
     /*Configurações das imagens*/
 
     div > #supermercado{
-    width: 70px;
-    height: 70px;
+    width: 55px;
+    height: 55px;
     position: absolute;
     transform: translate(25vw,4vh);
     border-radius: 50%;
@@ -83,7 +83,7 @@ body{
     div > #cliente{
     width: 20px;
     position: absolute;
-    transform: translate(28vw,15vh);
+    transform: translate(28vw,14vh);
     }
 }
 
@@ -93,7 +93,6 @@ body{
         position: relative;
         top: 30%;
         font-size: 3em;
-        text-decoration: 4px underline rgb(123, 228, 97);
     }
 
     div{
@@ -150,9 +149,9 @@ body{
     }
 
     div > #cliente{
-        width: 18px;
+        width: 20px;
         position: absolute;
-        transform: translate(200px,85px);
+        transform: translate(205px,85px);
     }
 }
 
@@ -162,7 +161,6 @@ body{
         position: relative;
         top: 30%;
         font-size: 3em;
-        text-decoration: 4px underline rgb(123, 228, 97);
     }
 
     div{
@@ -219,9 +217,9 @@ body{
     }
 
     div > #cliente{
-        width: 18px;
+        width: 20px;
         position: absolute;
-        transform: translate(200px,85px);
+        transform: translate(205px,85px);
     }
 }
 
@@ -231,7 +229,6 @@ body{
         position: relative;
         top: 30%;
         font-size: 3em;
-        text-decoration: 4px underline rgb(123, 228, 97);
     }
 
     div{
@@ -288,8 +285,8 @@ body{
     }
 
     div > #cliente{
-        width: 18px;
+        width: 20px;
         position: absolute;
-        transform: translate(200px,85px);
+        transform: translate(205px,85px);
     }
 }

@@ -97,11 +97,8 @@ form > ul > li > #descricao {
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.559);
     background-position: center;
     background-image: url('/supermercado/imgs-cad/upload-min.png');
-    background-color: white; 
-    background-size: 30%;
-    background-repeat: no-repeat;
-    opacity: 90%;
-    filter: blur(1px);
+    background-color: rgba(255, 255, 255, 0.879);
+    background-size: cover;
     cursor: pointer;
     display: block;    
 }
@@ -233,11 +230,8 @@ form > ul > li > #descricao {
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.559);
     background-position: center;
     background-image: url('/supermercado/imgs-cad/upload-min.png');
-    background-color: white; 
-    background-size: 30%;
-    background-repeat: no-repeat;
-    opacity: 90%;
-    filter: blur(1px);
+    background-color: rgba(255, 255, 255, 0.879);
+    background-size: cover;
     cursor: pointer;
     display: block;
     
@@ -493,11 +487,8 @@ form > ul > li > #descricao{
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.559);
     background-position: center;
     background-image: url('/supermercado/imgs-cad/upload-min.png');
-    background-color: white; 
-    background-size: 30%;
-    background-repeat: no-repeat;
-    opacity: 90%;
-    filter: blur(1px);
+    background-color: rgba(255, 255, 255, 0.879);
+    background-size: cover;
     cursor: pointer;
     display: block;
 }
@@ -742,11 +733,8 @@ form > ul > li > #descricao{
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.559);
     background-position: center;
     background-image: url('/supermercado/imgs-cad/upload-min.png');
-    background-color: white; 
-    background-size: 30%;
-    background-repeat: no-repeat;
-    opacity: 90%;
-    filter: blur(1px);
+    background-color: rgba(255, 255, 255, 0.879);
+    background-size: cover;
     cursor: pointer;
     display: block;
 }

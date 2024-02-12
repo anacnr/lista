@@ -72,10 +72,10 @@ div > button > #vendedor, #comprador{
 /*Ícones do supermercado e do cliente*/
 
 div > #supermercado{
-    width: 12vw;
-    height: 6vh;
+    width: 50px;
+    height: 50px;
     position: absolute;
-    transform: translate(24vw,4vh);
+    transform: translate(25vw,4vh);
     border-radius: 50%;
 }
 

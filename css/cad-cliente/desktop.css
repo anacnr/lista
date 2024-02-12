@@ -333,7 +333,7 @@ form{
 form > ul{
     position: absolute;
     width: 100%;
-    top: 5%;
+    top: 1%;
 }
 
 form > ul > li{
