@@ -132,3 +132,20 @@ output > h2{
     cursor: pointer;
     background-color: white;
 }
+
+#menu{
+    position: absolute;
+    transform: translate(90vw,-6vh);
+    filter: invert(1);
+}
+
+#conta{
+    width: 150px;
+    height: 150px;
+    background-color: rgba(240, 248, 255, 0.507);
+    border: 2px solid black;
+    position: absolute;
+    transform: translate(66vw, -3vh);
+    border-radius: 26px;
+}
+

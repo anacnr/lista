@@ -131,4 +131,33 @@ console.log(input.value)
 
 button_save.addEventListener("click",save);
 
+/**Menu para ver perfil */
+
+let menu_open = document.querySelector('#menu')
+menu_open.addEventListener("click" , function(){
+
+  let board = document.createElement("div")
+  board.id = 'conta'
+
+  let godfather = document.querySelector("body")
+  godfather.appendChild(board)
+
+  let menu_close = document.createElement('img')
+  menu_close.id = 'menu'
+  menu_close.src = 'imgs/close_FILL0_wght400_GRAD0_opsz24.svg'
+
+  let sister = menu_open.parentNode
+  sister.appendChild(menu_close)
+
+  menu_open.style.opacity = '0'
+
+  menu_close.addEventListener("click", function(){
+    board.style.display = 'none'
+    let young_sister = menu_close.parentNode
+    young_sister.appendChild(menu_open)
+    menu_close.style.opacity = 0
+    menu_open.style.opacity = '1'
+  })
+})
+
 });//domloaded
