@@ -2,162 +2,65 @@
 
 console.log("Script carregado!");
 
-document.addEventListener("DOMContentLoaded", function(){
-
-document
-  .querySelector("form")
-  .addEventListener("submit", function (e) {
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector("form").addEventListener("submit", function (e) {
     e.preventDefault();
   });
 
-/*Criação dos elementos: input, botão de salvar,o botão para deletar e a quebra de linha*/
-let input = document.createElement("input");
-let button_save = document.createElement("button");
-let button_del = document.createElement("img");
-let godfather = document.querySelector("form"); //Elemento pai(padrinho)
-let line = document.createElement("br");
+  /**Menu para ver perfil */
 
-input.className = "setor";
-input.maxLength = "15";
-input.name = "setor";
-input.required = true;
-godfather.appendChild(input);
+  let menu_open = document.querySelector("#menu");
+  menu_open.addEventListener("click", function () {
+    let board = document.createElement("div");
+    board.id = "conta";
 
-button_save.className = "save";
-button_save.textContent = "salvar";
-button_save.type = "submit";
-godfather.appendChild(button_save);
+    let godfather = document.querySelector("body");
+    godfather.appendChild(board);
 
-button_del.className = "del";
-button_del.src = "imgs-cad/cancel.svg"; //Ìcone retirado do GoogIcons
-button_del.type = "button";
-godfather.appendChild(button_del);
+    let link_user = document.createElement("a");
+    link_user.className = "link";
+    link_user.href = "#";
+    link_user.textContent = "Conta";
 
-godfather.appendChild(line);
+    let link_help = document.createElement("a");
+    link_help.className = "link";
+    link_help.href = "#";
+    link_help.textContent = "Ajuda";
 
-/*LocalStorage dos setores para criar o CRUD*/
+    let link_other = document.createElement("a");
+    link_other.className = "link";
+    link_other.href = "#";
+    link_other.textContent = "Link";
 
-//Nomeação do setor(variável global)
-const nameSection = {
-  name: input.value,
-};
+    board.appendChild(link_user);
+    board.appendChild(link_help);
+    board.appendChild(link_other);
 
-/*Métodos do localStorage*/
-const getItem = () => JSON.parse(localStorage.getItem("name")) ?? [];
+    let menu_close = document.createElement("img");
+    menu_close.id = "menu";
+    menu_close.src = "buttons/close_FILL0_wght400_GRAD0_opsz24.svg";
 
-const setItem = (add_name) =>
-  localStorage.setItem("name", JSON.stringify(add_name));
+    let sister = menu_open.parentNode;
+    sister.appendChild(menu_close);
 
-//Criação do setor em JSON
-function newSection(sector) {
-  let add_name = getItem();
-  add_name.push(sector);
-  setItem(add_name);
-}
+    menu_open.style.opacity = "0";
 
-//Leitura do setor em JSON
-const readSection = () => getItem();
+    menu_close.addEventListener("click", function () {
+      board.style.display = "none";
+      let young_sister = menu_close.parentNode;
+      young_sister.appendChild(menu_open);
+      menu_close.style.opacity = 0;
+      menu_open.style.opacity = "1";
+    }); //menu_close
+  }); //menu_open
 
-//Atualização do setor em JSON
-function upSetor(setor, index) {
-  const up_sector = readSection();
-  up_sector[index] = setor;
-  setItem(up_sector);
-}
+  //Notificações
 
-//Exclusão do setor em JSON
-function delSetor(index) {
-  const del_sector = readSection();
-  del_sector.splice(index, 1);
-  setItem(del_sector);
-}
-
-//Cria a função para adicionar novo setor
-const addition = function toAdd() {
-  let input = document.createElement("input");
-  let button_save = document.createElement("button");
-  let button_del = document.createElement("img");
-  let godfather = document.querySelector("form"); //Elemento pai(padrinho)
-  let line = document.createElement("br");
-
-  input.className = "setor";
-  input.maxLength = "15";
-  input.name = "setor";
-  godfather.appendChild(input);
-
-  button_save.className = "save";
-  button_save.textContent = "salvar";
-  button_save.type = "submit";
-  godfather.appendChild(button_save);
-
-  button_del.className = "del";
-  button_del.src = "imgs-cad/cancel.svg"; //Ìcone retirado do GoogIcons
-  button_del.type = "button";
-  godfather.appendChild(button_del);
-
-  godfather.appendChild(line);
-}; //Função addition
-
-//Função para deletar setor
-  const delet = function toExclude(){
-  console.log("Setor excluído")
-};//Funcão deletar
-
-//Função para salvar o setor
-const save = function toSave() {
-  let values = input.value;
-
-  if (values.length < 3) {
-    console.log(
-      values,
-      " não é permitido. Por favor digite mais do que ",
-      values.length , " letras "
-    )
-    button_save.disabled = false;
-  }
-  else {
-     //Chamei a variável global
-    newSection(nameSection.name)
-
-    console.log(newSection(nameSection.name))
-
-    let button_add = document.getElementById("add");
-    button_add.addEventListener("click", addition);
-
-    button_del.addEventListener("click" , delet);
-}};
-
-console.log(input.value)
-
-button_save.addEventListener("click",save);
-
-/**Menu para ver perfil */
-
-let menu_open = document.querySelector('#menu')
-menu_open.addEventListener("click" , function(){
-
-  let board = document.createElement("div")
-  board.id = 'conta'
-
-  let godfather = document.querySelector("body")
-  godfather.appendChild(board)
-
-  let menu_close = document.createElement('img')
-  menu_close.id = 'menu'
-  menu_close.src = 'imgs/close_FILL0_wght400_GRAD0_opsz24.svg'
-
-  let sister = menu_open.parentNode
-  sister.appendChild(menu_close)
-
-  menu_open.style.opacity = '0'
-
-  menu_close.addEventListener("click", function(){
-    board.style.display = 'none'
-    let young_sister = menu_close.parentNode
-    young_sister.appendChild(menu_open)
-    menu_close.style.opacity = 0
-    menu_open.style.opacity = '1'
-  })
-})
-
-});//domloaded
+  let notification = document.getElementById("noti");
+  notification.addEventListener("click", function () {
+    setTimeout(() => {
+      location.href = "#";
+      console.log("Redirecionado");
+    }, 500);
+  }); //notificação
+}); //domloaded

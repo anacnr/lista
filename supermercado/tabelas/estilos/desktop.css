@@ -10,7 +10,7 @@ body {
     background-attachment: fixed;
 }
 
-@media (min-width:601px) and (max-width:768px) {
+@media (min-width:600px) and (max-width:768px) {
 
 /*Caixa nome sessão*/
     span > p{
@@ -133,7 +133,7 @@ body {
     } 
 }
 
-@media (min-width:769px) and (max-width:992px) {
+@media (min-width:768px) and (max-width:992px) {
    
 /*Caixa nome sessão*/
     span > p{
@@ -252,7 +252,7 @@ body {
     }    
 }
 
-@media (min-width:993px) and (max-width:1200px) {
+@media (min-width:992px) and (max-width:1200px) {
    /*Caixa nome sessão*/
     span > p{
         text-align: center;
@@ -370,7 +370,7 @@ body {
     } 
 }
 
-@media (min-width: 1201px) {
+@media (min-width: 1200px) {
     /*Caixa nome sessão*/
     span > p{
         text-align: center;

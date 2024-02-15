@@ -16,7 +16,7 @@ body{
     background-attachment: fixed;
 }
 
-@media (min-width:601px) and (max-width: 768px){
+@media (min-width:600px) and (max-width: 768px){
 /*Esse h1 é o título da página*/ 
 h1{
     color: rgba(255, 255, 255, 0.932);

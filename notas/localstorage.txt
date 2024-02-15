@@ -1,0 +1,83 @@
+LocalStorage -> não funcionou
+
+  /*LocalStorage dos setores para criar o CRUD*/
+
+  /*Métodos do localStorage*/
+  const getItem = () => JSON.parse(localStorage.getItem("name")) ?? [];
+
+  const setItem = (add_name) =>
+    localStorage.setItem("name", JSON.stringify(add_name));
+
+  //Criação do setor em JSON
+  function newSection(sector) {
+    let add_name = getItem();
+    add_name.push(sector);
+    setItem(add_name);
+  }
+
+  //Leitura do setor em JSON
+  const readSection = () => getItem();
+
+  //Atualização do setor em JSON
+  function upSetor(setor, index) {
+    const up_sector = readSection();
+    up_sector[index] = setor;
+    setItem(up_sector);
+  }
+
+  //Exclusão do setor em JSON
+  function delSetor(index) {
+    const del_sector = readSection();
+    del_sector.splice(index, 1);
+    setItem(del_sector);
+  }
+
+
+  //Função para deletar setor
+  const delet = function toExclude() {
+    console.log("Setor excluído");
+  }; //Funcão deletar
+
+  //Função para salvar o setor
+  const save = function toSave() {
+    let values = input.value;
+
+    if (values.length < 3) {
+      console.log(
+        values,
+        " não é permitido. Por favor digite mais do que ",
+        values.length,
+        " letras "
+      );
+      button_save.disabled = false;
+    } else {
+
+      let nameSection = values //Letras do input
+
+      if (nameSection.trim() !== '') {
+        // Chama a função newSection com o valor do setor
+        newSection(nameSection);
+      //  console.log("Setor adicionado:", nameSection);
+        let element = readSection
+
+        if(element.length == 0){
+          console.log("Vazio")
+        }
+        else{
+          input.value = element[0]
+        }
+
+        let button_add = document.getElementById("add");
+        button_add.addEventListener("click", addition);
+
+        
+      button_del.addEventListener("click", delet);
+
+      }
+      else {
+        console.log('O valor do setor está vazio.');
+      }
+    }
+  };
+
+  button_save.addEventListener("click", save);
