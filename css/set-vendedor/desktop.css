@@ -29,14 +29,14 @@ h1{
     cursor: context-menu;
 }
 /*Caixinha que abriga o h2*/
-output{
+span{
     width: 290px;
     margin: auto;
     display: block;
     transform: translateY(140px);
 }
 /*Esse h2 é o supermercado*/ 
-output > h2{
+span > h2{
     background-color: #FF5757;
     border: 2px solid black;
     border-radius: 15px;
@@ -131,14 +131,14 @@ output > h2{
         cursor: context-menu;
     }
     
-    output{
+    span{
     width: 290px;
     margin: auto;
     display: block;
     transform: translateY(140px);
     }
     
-    output > h2{
+    span > h2{
         background-color: #FF5757;
         border: 2px solid black;
         border-radius: 15px;
@@ -230,14 +230,14 @@ output > h2{
         cursor: context-menu;
     }
     
-    output{
+    span{
     width: 290px;
     margin: auto;
     display: block;
     transform: translateY(140px);
     }
     
-    output > h2{
+    span > h2{
         background-color: #FF5757;
         border: 2px solid black;
         border-radius: 15px;
@@ -331,14 +331,14 @@ output > h2{
         cursor: context-menu;
     }
 /*Caixinha que abriga o h2*/    
-    output{
+    span{
     width: 290px;
     margin: auto;
     display: block;
     transform: translateY(140px);
     }
 /*Esse h2 seria é o  supermercado*/    
-    output > h2{
+    span > h2{
         background-color: #FF5757;
         border: 2px solid black;
         border-radius: 15px;

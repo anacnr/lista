@@ -7,8 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
   });
 
-  /**Menu para ver perfil */
-
+  /*Menu para ver perfil*/
   let menu_open = document.querySelector("#menu");
   menu_open.addEventListener("click", function () {
     let board = document.createElement("div");
@@ -54,8 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }); //menu_close
   }); //menu_open
 
-  //Notificações
-
+  /*Notificações*/
   let notification = document.getElementById("noti");
   notification.addEventListener("click", function () {
     setTimeout(() => {

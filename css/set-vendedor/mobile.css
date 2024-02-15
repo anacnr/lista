@@ -16,6 +16,9 @@ body {
   background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
   background-attachment: fixed;
 }
+
+@media (max-width: 600px) {
+
 /*Esse h1 é o título da página*/
 h1 {
   color: rgba(255, 255, 255, 0.932);
@@ -28,7 +31,7 @@ h1 {
   cursor: context-menu;
 }
 /*Caixinha que abriga o h2*/
-output {
+span {
   width: 50%;
   height: 5%;
   position: absolute;
@@ -37,7 +40,7 @@ output {
   margin-top: 2%;
 }
 /*Esse h2 é o supermercado*/
-output > h2 {
+span > h2 {
   background-color: #ff5757;
   box-shadow: 2px 2px 10px black;
   border-radius: 15px;
@@ -168,17 +171,12 @@ output > h2 {
 }
 
 #noti {
-  width:20px;
+  width: 20px;
   height: 20px;
   position: absolute;
   transform: translate(90vw, 1vh);
   filter: hue-rotate(80deg);
   cursor: pointer;
 }
-
-iframe{
-  background-color: green;
-  width: 25%;
-  height: 3%;
 
 }
