@@ -7,12 +7,14 @@ if (!$mysql) {
 }
 
 // Pesquisar e imprimir na página
-$select = "SELECT nome FROM setor";
+$select = "SELECT id,nome FROM setor";
 $query = mysqli_query($mysql, $select);
 
 if (mysqli_num_rows($query) > 0) {
     while ($row = mysqli_fetch_assoc($query)) {
-        echo "<p>" . $row['nome'] . "</p>";
+        echo "ID: " . $row['id']. "NOME: " . $row['nome'] . "<br>";
+
+        echo $lenghts = mysqli_num_rows($query);//Números d elinhas
     }
 } else {
     echo "Nenhum resultado encontrado.";

@@ -3,6 +3,36 @@
 console.log("Script carregado!");
 
 document.addEventListener("DOMContentLoaded", function () {
+
+  let setor = document.querySelector('.setor').value
+
+  let nome = new FormData();
+  
+  nome.append('setor' , setor)
+//Requisição ajax solicitada para exibir os resultados do banco
+  $.ajax({
+    url : '../php/setor.php', type: 'POST', data: nome, processData: false, contentType: false
+  }).done(function(request){
+    console.log("Registro: " , request) //FUNCIONOOOOOOU!!
+
+  for(let count = 0; count < request.length;count++){
+
+    console.log(count)
+
+    let phrase = document.createElement('p')
+    phrase.class = 'phrase'
+    //phrase.textContent = request
+
+    let body = document.querySelector('body')
+    body.appendChild(phrase)
+
+  } 
+
+  }).fail(function(jqXHR, textStatus, errorThrown){
+    console.log("Erro na requisição AJAX:", "STATUS RESPOSTA: ",jqXHR,textStatus, errorThrown);
+  })
+
+  //Previne o padrão de envio do formulário
   document.querySelector("form").addEventListener("submit", function (e) {
     e.preventDefault();
   });
