@@ -12,9 +12,10 @@ $query = mysqli_query($mysql, $select);
 
 if (mysqli_num_rows($query) > 0) {
     while ($row = mysqli_fetch_assoc($query)) {
-        echo "ID: " . $row['id']. "NOME: " . $row['nome'] . "<br>";
+        //Imprime no console do navegador com o js
+        echo "\n"." ID: " . $row['id']. "NOME: " . $row['nome'] . "<br>";
 
-        echo $lenghts = mysqli_num_rows($query);//Números d elinhas
+        echo $lenghts = mysqli_num_rows($query);//Número de linhas resultadas
     }
 } else {
     echo "Nenhum resultado encontrado.";

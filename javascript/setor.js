@@ -14,8 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
     url : '../php/setor.php', type: 'POST', data: nome, processData: false, contentType: false
   }).done(function(request){
     console.log("Registro: " , request) //FUNCIONOOOOOOU!!
-
-  for(let count = 0; count < request.length;count++){
+  /*Preciso contabilizar o número de linhas resultadas
+  Eu posso tentar fazer a lógica lá no php e apenas emitir as colunas atarvés do ajax
+  */
+  for(let count = 0; count < request; count++){
 
     console.log(count)
 
