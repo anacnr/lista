@@ -1,0 +1,143 @@
+@charset "UTF-08";
+
+*{
+    margin: 0%;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html{
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
+    background-attachment: fixed;
+}
+
+@media (max-width: 600px){
+
+/*Div que está todos os dados*/
+#company-dates{
+    box-shadow: 4px 4px 15px rgb(19, 14, 14);
+    width: 80vw;
+    height: 85vh;
+    background-color: rgba(255, 255, 255, 0.793);
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+}
+
+/*Lista com os campos*/
+#company-dates > ul{
+    width: 100%;
+    height: 100%;
+}
+
+/*Lista e parágrafos*/
+#company-dates > ul > li{
+    list-style: none;
+    margin: auto;
+}
+
+/*Estilo das letras do parágrafo*/
+#company-dates > ul > .par{
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 2.5dvi;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-style: oblique;
+    color: rgb(43, 36, 36);
+}
+
+/*Imagem da empresa*/
+#company-dates > ul > #image{
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 100px; height: 100px;
+    margin: auto;
+}
+
+/*Localização(parágrafo)*/
+#company-dates > ul > #par-location{
+    position: absolute;
+    transform: translate(20vw, 15vh);
+}
+/*Localização(lista)*/
+#company-dates > ul > #local{
+    transform: translateY(20vh);
+    box-shadow: 2px 2px 10px rgb(36, 30, 30);
+    width: 55%; height: 25px;
+    border-radius: 10px;
+    background-color: rgba(98, 139, 146, 0.646); 
+}
+/*Localização(span)*/
+#company-dates > ul > #local > #span-local{
+font-size: 3dvi;
+color: rgba(245, 245, 245, 0.742);
+text-shadow: 1px 1px 2px black;
+}
+
+/*Telefone fixo(parágrafo)*/
+#company-dates > ul > #par-set{
+    position: absolute;
+    transform: translate(20vw, 21vh);
+}
+/*Telefone fixo(lista)*/
+#company-dates > ul > #private{
+    transform: translateY(20vh);
+    box-shadow: 2px 2px 10px rgb(36, 30, 30);
+    width: 55%; height: 25px;
+    border-radius: 10px;
+    background-color: rgba(98, 139, 146, 0.646);    
+}
+/*Telefone fixo(span)*/
+#company-dates > ul > #private > #span-private{
+font-size: 3dvi;
+color: rgba(245, 245, 245, 0.742);
+text-shadow: 1px 1px 2px black;
+}
+
+/*Email(parágrafo)*/
+#company-dates > ul > #par-email{
+position: absolute;
+transform: translate(20vw, 22vh);
+}
+/*Email(lista)*/
+#company-dates > ul > #email{
+    transform: translateY(25vh);
+    box-shadow: 2px 2px 10px rgb(36, 30, 30);
+    width: 55%; height: 25px;
+    border-radius: 10px;
+    background-color: rgba(98, 139, 146, 0.646);    
+}
+/*Email(span)*/
+#company-dates > ul > #email > #span-email{
+    font-size: 3dvi;
+    color: rgba(245, 245, 245, 0.742);
+    text-shadow: 1px 1px 2px black;
+}
+
+/*Senha (parágrafo)*/
+#company-dates > ul > #par-password{
+position: absolute;
+transform: translate(20vw, 27vh);
+}
+/*Senha (lista)*/
+#company-dates > ul > #password{
+transform: translateY(30vh);
+box-shadow: 2px 2px 10px rgb(36, 30, 30);
+width: 55%; height: 25px;
+border-radius: 10px;
+background-color: rgba(98, 139, 146, 0.646);
+}
+/*Senha (span)*/
+#company-dates > ul > #password > #span-password{
+    font-size: 3dvi;
+    color: rgba(245, 245, 245, 0.742);
+    text-shadow: 1px 1px 2px black;
+}
+}
