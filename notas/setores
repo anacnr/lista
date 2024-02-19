@@ -1,10 +1,12 @@
 Cadastro dos setores
 
-A inserção não estava indo porque eu não havia baixado a classe mysql na pasta supermercados e uqnado coloquei para a pasta php onde eu já havia baixado pegou! Estou usando o prepared staetements para evitar injeção sql.
+Estou usando o prepared staetements para evitar injeção sql.
 O site é sequelize.org url: https://sequelize.org/docs/v6/getting-started/
 
-Instalar o driver para o banco npm install --save mysql2
+Instalar o driver para o banco npm install --save mysql2(Só serve para o node)
 
 Entretanto um rapaz usou o objeto new mysql e não precisou baixar nenhum dirver.
 
 Qunado o navegador está aberto na pasta php e no arquivo php, quando dou um reload na pasta ele cadastra novamente.
+
+O ajax não funciou lá no curso com o cadastro dos setores. O erro na verdade estava no form pois estava com o preventDeufaul, só que com o login foi tranquilo e não deu problema com validação. Tirei o preventDefault

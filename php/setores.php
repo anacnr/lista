@@ -34,6 +34,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
         //Fecha as validações
         mysqli_stmt_close($start);
+
+        header('Location: /lista/supermercado/setores.html'); //O endereço deve ser completo. Tive que por o redirecionamento aqui.
   }
 }
 }

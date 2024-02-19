@@ -7,17 +7,24 @@ if (!$mysql) {
 }
 
 // Pesquisar e imprimir na página
-$select = "SELECT id,nome FROM setor";
+$select = "SELECT * FROM setor";
+
 $query = mysqli_query($mysql, $select);
 
 if (mysqli_num_rows($query) > 0) {
-    while ($row = mysqli_fetch_assoc($query)) {
-        //Imprime no console do navegador com o js
-        echo "\n"." ID: " . $row['id']. "NOME: " . $row['nome'] . "<br>";
 
-        echo $lenghts = mysqli_num_rows($query);//Número de linhas resultadas
-    }
-} else {
+    $lines = mysqli_num_rows($query);//Número de linhas contidas na tabela setor
+
+  while ($row = mysqli_fetch_assoc($query)) {
+    $id = $row['id']; //Coluna dos ids
+    $nome = $row['nome']; //Coluna dos nomes
+    $request = ["id" => $id, "nome" => $nome, "linha" => $lines]; //Esse array vai servir para fazer a manipulação para o front-end
+}
+header('Content-Type: application:json');
+echo json_encode($request);
+
+}       
+else {
     echo "Nenhum resultado encontrado.";
 }
 
