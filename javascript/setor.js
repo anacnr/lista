@@ -1,7 +1,5 @@
 /*O chat me aconselhou a criar uma outra função para criar os elementos um de cada vez, somente quando o botão salvar for clicado que deixa criar mais input do setor. CRUD*/
 
-//const { count } = require("console");
-
 console.log("Script carregado!");
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -11,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let nome = new FormData();
   
   nome.append('setor' , setor)
-//Requisição ajax solicitada para exibir os resultados do banco
+//Requisição ajax solicitada para exibir os resultados do banco. Porém o PHP só me retorna a última ocorrência.
   $.ajax({
     url : '../php/setor.php', type: 'POST', data: nome, processData: false, contentType: false
   }).done(function(request) {
@@ -34,19 +32,16 @@ for(let count = 0; count < 1; count++){
   body.appendChild(span)
 
   document.querySelector("#but-save").style.transform = 'translate(28vw, 44vh)' //Ajuste da posição do botão inicial de salvar
-  //document.querySelector("#but-del").style.transform = 'translate(50vw, 40vh)' //Ajuste da posição do botão inicial de deletar
 
   let new_button_save = document.createElement('button')
   new_button_save.className = 'save'
   new_button_save.type = 'submit'
   new_button_save.textContent = 'Salvar'
-  new_button_save.addEventListener("click", function(){
-    console.log("Setor Salvado")
-  });//Função do botão de deletar
 
   let new_button_del = document.createElement('img')
   new_button_del.className = 'del'
   new_button_del.src = './buttons/cancel.svg'
+
   body.appendChild(new_button_save);
   body.appendChild(new_button_del)
 }
@@ -63,16 +58,50 @@ $.ajax({
 }).done(function(request){
   console.log(request)
   if(request === "true"){
-  document.querySelector('.name').innerHTML = " " //Se funcionar o span fica vazio
+  //O span pega o nome do setor que passou a ser o último setor cadastrado
 }
 else{
-  console.log("Tá parando aqui!")
+  console.log("Erro com a remoção do setor")
 }
 }).fail(function(jqXHR, textStatus, errorThrown){
   console.log(" ERRO " , jqXHR, textStatus, errorThrown)
 });
-
 });//Função do botão de deletar
+
+let span = document.querySelector('.name')
+span.addEventListener("click", function(){
+
+  let input = document.createElement('input')
+  input.className = 'name'
+
+  span.appendChild(input)
+  
+});
+
+/*Parte da edição do nome do setor*/
+document.querySelectorAll('.save')[1].addEventListener("click" , function(){
+
+let sent_dates = new FormData();
+sent_dates.append('novo-valor' ,)
+sent_dates.append('id' , id)
+$.ajax({
+url: '../php/nome-setor.php', type: 'POST', data: sent_dates, processData: false, contentType: false  
+}).done(function(request){
+  console.log(request)
+  if(request === "true"){
+    let brother = input.parentNode
+    let span = document.querySelector('.name')
+    brother.appendChild(span)
+    console.log(request)
+  }
+  else{
+    console.log("Está parando aqui")
+  }
+}).fail(function(jqXHR, textStatus, errorThrown){
+  console.log(" ERRO " , jqXHR, textStatus, errorThrown)
+})
+
+});//Função do botão de salvar
 
 }).fail(function(jqXHR, textStatus, errorThrown) {
   console.log(" ERRO " , jqXHR, textStatus, errorThrown)
