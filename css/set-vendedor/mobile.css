@@ -42,7 +42,7 @@ h1 {
 /*Esse h2 é o supermercado*/
 #span-superm > h2 {
   background-color: #ff5757;
-  box-shadow: 2px 2px 10px black;
+  box-shadow: 2px 2px 7px black;
   border-radius: 15px;
   text-align: center;
   text-transform: uppercase;
