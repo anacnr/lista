@@ -122,7 +122,7 @@ h1{
 }
 
 @media (min-width: 768px) and (max-width:992px){
- h1 é o título da página*/ 
+ /*h1 é o título da página*/ 
     h1{
         color: rgba(255, 255, 255, 0.932);
         text-align: center;
@@ -229,6 +229,9 @@ h1{
     }
 }
 
+       
+}
+
 @media (min-width: 992px) and (max-width: 1200px){
     h1{
         color: rgba(255, 255, 255, 0.932);
@@ -332,117 +335,7 @@ h1{
 }
 
 @media (min-width: 1200px) {
-/*Esse h1 é o título da página*/    
-    h1{
-        color: rgba(255, 255, 255, 0.932);
-        text-align: center;
-        margin: 5% 5% 0% 5%;
-        transform: translateY(14vh);
-        font-size: 2rem;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 600;
-        cursor: context-menu;
-    }
-/*Caixinha que abriga o h2*/    
-    #span-superm{
-    width: 290px;
-    margin: auto;
-    display: block;
-    transform: translateY(140px);
-    }
-/*Esse h2 seria é o  supermercado*/    
-    #span-superm > h2{
-        background-color: #FF5757;
-        border: 2px solid black;
-        border-radius: 15px;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 18px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 600;
-        color: white;
-        cursor: context-menu;
-        padding: 4px;
-    }
-/*ID da imagem(botão) de adição*/    
-    #add{
-        display: block;
-        margin: auto;
-        transform: translate(24vw,35vh);
-        margin-top: 0%;
-        margin-left: 2%;
-        cursor: pointer;
-    }
-     /*Classe do botão de deletar*/
-    .del{
-        width: 35px;
-        height: 40px;
-        position: absolute;
-        transform: translate(44vw,35vh);
-        margin-bottom: 4%;
-        margin-left: 2%;
-        cursor: pointer;
-    }
-    /*Classe da caixa que vai estar o nome do setor*/
-    .name{
-        width: 50%;
-        height: 6%;
-        border-radius: 7px;
-        border: 4px solid rgb(3, 3, 3);
-        display: block;
-        position: relative;
-        transform: translate(-15vw,0vh);
-        margin-bottom: 4%;
-        margin-left: 1%;
-        text-align: center;
-        text-transform: capitalize;
-        cursor: pointer;
-        background-color: white;
-    }
-    #menu {
-        position: absolute;
-        transform: translate(90vw, -1vh);
-        filter: invert(1);
-        cursor: pointer;
-      }
-      
-      #conta {
-        width: 150px;
-        height: 150px;
-        background-color: rgba(240, 248, 255, 0.932);
-        box-shadow: 2px 2px 10px rgb(24, 5, 5);
-        position: absolute;
-        transform: translate(66vw, -3vh);
-        border-radius: 26px;
-        display: grid;
-        cursor: context-menu;
-      }
-      
-      #conta > .link {
-        text-decoration: none;
-        color: black;
-        text-align: center;
-        padding-top: 10px;
-        font-family: Arial, Helvetica, sans-serif;
-        cursor: pointer;
-      }
-      
-      #conta > .link:hover {
-        color: #3fd5ec;
-        text-shadow: 1px 1px 2px black;
-      }
-      
-      #noti {
-        width: 25px;
-        height: 25px;
-        position: absolute;
-        transform: translate(90vw, 5vh);
-        filter: hue-rotate(80deg);
-        cursor: pointer;
-      }
-    }
-    
-    @media (min-width: 768px) and (max-width:992px){
+    /*Esse h1 é o título da página*/    
         h1{
             color: rgba(255, 255, 255, 0.932);
             text-align: center;
@@ -453,17 +346,17 @@ h1{
             font-weight: 600;
             cursor: context-menu;
         }
-        
-        span{
+    /*Caixinha que abriga o h2*/    
+        #span-superm{
         width: 290px;
         margin: auto;
         display: block;
         transform: translateY(140px);
         }
-        
-        span > h2{
+    /*Esse h2 seria é o  supermercado*/    
+        #span-superm > h2{
             background-color: #FF5757;
-            box-shadow: 1px 1px 7px black;
+            border: 2px solid black;
             border-radius: 15px;
             text-align: center;
             text-transform: uppercase;
@@ -474,55 +367,26 @@ h1{
             cursor: context-menu;
             padding: 4px;
         }
-        
+    /*ID da imagem(botão) de adição*/    
         #add{
             display: block;
             margin: auto;
+            transform: translate(24vw,35vh);
             margin-top: 0%;
-            transform: translateY(37vh);
-            width: 35px;
+            margin-left: 2%;
             cursor: pointer;
         }
-        
-        .setor{
-            width: 240px;
-            height: 35px;
-            border-radius: 7px;
-            border: 4px solid black;
-            display: block;
-            position: relative;
-            transform: translate(25vw,36vh);
-            margin-bottom: 4%;
-            display: inline;
-            text-align: center;
-            text-transform: capitalize;
-        }
-        
-        .save{
-            width: 115px;
-            height: 40px;
-            border: 3px solid black;
-            background-color: #00BF63;
-            border-radius: 15px;
-            font-size: 15px;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            color: #FEFEFE;
-            text-transform: uppercase;
-            position: absolute;
-            transform: translate(28vw,35vh);
-            cursor: pointer;
-        }
-        
+         /*Classe do botão de deletar*/
         .del{
             width: 35px;
             height: 40px;
             position: absolute;
-            transform: translate(41vw,35vh);
+            transform: translate(44vw,35vh);
             margin-bottom: 4%;
             margin-left: 2%;
             cursor: pointer;
         }
-        
+        /*Classe da caixa que vai estar o nome do setor*/
         .name{
             width: 50%;
             height: 6%;
@@ -538,13 +402,11 @@ h1{
             cursor: pointer;
             background-color: white;
         }
-    
         #menu {
             position: absolute;
-            transform: translate(90vw, -10vh);
+            transform: translate(90vw, -1vh);
             filter: invert(1);
             cursor: pointer;
-            width: 35px;
           }
           
           #conta {
@@ -574,296 +436,11 @@ h1{
           }
           
           #noti {
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
             position: absolute;
-            transform: translate(90vw, -1vh);
+            transform: translate(90vw, 5vh);
             filter: hue-rotate(80deg);
             cursor: pointer;
           }
-    }
-    
-    @media (min-width: 992px) and (max-width: 1200px){
-        h1{
-            color: rgba(255, 255, 255, 0.932);
-            text-align: center;
-            margin: 5% 5% 0% 5%;
-            transform: translateY(14vh);
-            font-size: 2rem;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 600;
-            cursor: context-menu;
-        }
-        
-        span{
-        width: 300px;
-        margin: auto;
-        display: block;
-        transform: translateY(180px);
-        }
-        
-        span > h2{
-            background-color: #FF5757;
-            box-shadow: 2px 2px 7px black;
-            border-radius: 15px;
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 22px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 600;
-            color: white;
-            cursor: context-menu;
-            padding: 4px;
-        }
-        
-        #add{
-            display: block;
-            margin: auto;
-            margin-top: 0%;
-            transform: translateY(38vh);
-            width: 35px;
-            cursor: pointer;
-        }
-        
-        .setor{
-            width: 240px;
-            height: 35px;
-            border-radius: 7px;
-            border-width: 0px;
-            box-shadow: 3px 2px 9px black;
-            display: block;
-            position: relative;
-            transform: translate(26vw,36vh);
-            margin-bottom: 4%;
-            display: inline;
-            text-align: center;
-            text-transform: capitalize;
-        }
-        
-        .save{
-            width: 115px;
-            height: 40px;
-            border: 3px solid black;
-            background-color: #00BF63;
-            border-radius: 15px;
-            font-size: 16px;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            color: #FEFEFE;
-            text-transform: uppercase;
-            position: absolute;
-            transform: translate(29vw,35vh);
-            margin-top: 1%;
-            cursor: pointer;
-        }
-        
-        .del{
-            width: 35px;
-            height: 40px;
-            position: absolute;
-            transform: translate(40vw,36vh);
-            margin-left: 2%;
-            cursor: pointer;
-        }
-        
-        .name{
-            width: 50%;
-            height: 6%;
-            border-radius: 7px;
-            border: 4px solid rgb(3, 3, 3);
-            display: block;
-            position: relative;
-            transform: translate(-15vw,0vh);
-            margin-bottom: 4%;
-            margin-left: 1%;
-            text-align: center;
-            text-transform: capitalize;
-            cursor: pointer;
-            background-color: white;
-        }
-    
-        #menu {
-            position: absolute;
-            transform: translate(90vw, -10vh);
-            filter: invert(1);
-            cursor: pointer;
-            width: 35px;
-          }
-          
-          #conta {
-            width: 150px;
-            height: 150px;
-            background-color: rgba(240, 248, 255, 0.932);
-            box-shadow: 2px 2px 10px rgb(24, 5, 5);
-            position: absolute;
-            transform: translate(66vw, -3vh);
-            border-radius: 26px;
-            display: grid;
-            cursor: context-menu;
-          }
-          
-          #conta > .link {
-            text-decoration: none;
-            color: black;
-            text-align: center;
-            padding-top: 10px;
-            font-family: Arial, Helvetica, sans-serif;
-            cursor: pointer;
-          }
-          
-          #conta > .link:hover {
-            color: #3fd5ec;
-            text-shadow: 1px 1px 2px black;
-          }
-          
-          #noti {
-            width: 30px;
-            height: 30px;
-            position: absolute;
-            transform: translate(90vw, -1vh);
-            filter: hue-rotate(80deg);
-            cursor: pointer;
-          }
-    }
-    
-    @media (min-width: 1200px) {
-        h1{
-            color: rgba(255, 255, 255, 0.932);
-            text-align: center;
-            margin: 5% 5% 0% 5%;
-            transform: translateY(14vh);
-            font-size: 3rem;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 600;
-            cursor: context-menu;
-        }
-        
-        span{
-        width: 325px;
-        margin: auto;
-        display: block;
-        transform: translateY(230px);
-        }
-        
-        span > h2{
-            background-color: #FF5757;
-            box-shadow: 2px 2px 7px black;
-            border-radius: 15px;
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 28px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 600;
-            color: white;
-            cursor: context-menu;
-            padding: 4px;
-        }
-        
-        #add{
-            display: block;
-            margin: auto;
-            margin-top: 0%;
-            transform: translateY(38vh);
-            width: 50px;
-            cursor: pointer;
-        }
-        
-        .setor{
-            width: 260px;
-            height: 40px;
-            border-radius: 7px;
-            border-width: 0px;
-            box-shadow: 3px 2px 9px black;
-            display: block;
-            position: relative;
-            transform: translate(26vw,36vh);
-            margin-bottom: 4%;
-            display: inline;
-            text-align: center;
-            text-transform: capitalize;
-        }
-        
-        .save{
-            width: 200px;
-            height: 50px;
-            border: 3px solid black;
-            background-color: #00BF63;
-            border-radius: 15px;
-            font-size: 24px;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            color: #FEFEFE;
-            text-transform: uppercase;
-            position: absolute;
-            transform: translate(30vw,35vh);
-            margin-top: 1%;
-            cursor: pointer;
-        }
-        
-        .del{
-            width: 45px;
-            height: 45px;
-            position: absolute;
-            transform: translate(47vw,36vh);
-            margin-left: 2%;
-            cursor: pointer;
-        }
-        
-        .name{
-            width: 50%;
-            height: 6%;
-            border-radius: 7px;
-            border: 4px solid rgb(3, 3, 3);
-            display: block;
-            position: relative;
-            transform: translate(-15vw,0vh);
-            margin-bottom: 4%;
-            margin-left: 1%;
-            text-align: center;
-            text-transform: capitalize;
-            cursor: pointer;
-            background-color: white;
-        }
-    
-        #menu {
-            position: absolute;
-            transform: translate(90vw, -10vh);
-            filter: invert(1);
-            cursor: pointer;
-            width: 35px;
-          }
-          
-          #conta {
-            width: 150px;
-            height: 150px;
-            background-color: rgba(240, 248, 255, 0.932);
-            box-shadow: 2px 2px 10px rgb(24, 5, 5);
-            position: absolute;
-            transform: translate(66vw, -3vh);
-            border-radius: 26px;
-            display: grid;
-            cursor: context-menu;
-          }
-          
-          #conta > .link {
-            text-decoration: none;
-            color: black;
-            text-align: center;
-            padding-top: 10px;
-            font-family: Arial, Helvetica, sans-serif;
-            cursor: pointer;
-          }
-          
-          #conta > .link:hover {
-            color: #3fd5ec;
-            text-shadow: 1px 1px 2px black;
-          }
-          
-          #noti {
-            width: 30px;
-            height: 30px;
-            position: absolute;
-            transform: translate(90vw, -1vh);
-            filter: hue-rotate(80deg);
-            cursor: pointer;
-          }
-        }    
-    }
+}
