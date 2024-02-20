@@ -1,6 +1,5 @@
 <?php
-
-// Cria a conexão com o banco
+//Cria a conexão com o banco
 $local = '127.0.0.1';
 $user = 'root';
 $pass = "";

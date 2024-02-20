@@ -1,1 +1,18 @@
 A renomeação do setor não estava funcionando então coloquei o nome entre parenteses e dentro de aspas simples, funcionou.
+
+SCRIPT CONTENDO SETORES CADASTRADOS
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+        console.log('Script carregado!')
+    let nome = document.querySelector('.name')
+    let setor = new FormData();
+    setor.append('nome', nome)
+    $.ajax({
+        url: 'exibi-set.php' , type: 'POST' ,data:setor , processData: false ,contentType: false  
+    }).done(function(request){
+       
+    }).fail(function(jqXHR, textStatus, errorThrown){
+        console.log(" ERRO " , jqXHR, textStatus, errorThrown)
+    })//ajax
+    });//Onload
+</script>
