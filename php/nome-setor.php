@@ -10,11 +10,11 @@ else{
 
     $reuest = false; //flag
 
-    if(isset($input)){
+    if($input){
 
         $id_edit = $_POST['id'];
 
-        $alter_date = "UPDATE setor SET nome = $input WHERE  id = $id_edit";
+        $alter_date = "UPDATE setor SET nome = ('$input') WHERE  id = $id_edit"; //O $input está como indefinida
 
         $query = mysqli_query($mysql,$alter_date);
 

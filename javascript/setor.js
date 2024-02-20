@@ -56,7 +56,6 @@ sent_id.append('botao-deleta', document.querySelector('.del'))
 $.ajax({
   url: '../php/del-setor.php', type: 'POST', data: sent_id, processData: false, contentType: false
 }).done(function(request){
-  console.log(request)
   if(request === "true"){
   //O span pega o nome do setor que passou a ser o último setor cadastrado
 }
@@ -68,31 +67,29 @@ else{
 });
 });//Função do botão de deletar
 
+/*Transformação do span para input*/
 let span = document.querySelector('.name')
 span.addEventListener("click", function(){
 
   let input = document.createElement('input')
   input.className = 'name'
+  input.style.border = 'none'
 
-  span.appendChild(input)
-  
-});
+  let brother = span.parentNode
+  brother.appendChild(input)
 
-/*Parte da edição do nome do setor*/
+  /*Parte da edição do nome do setor*/
 document.querySelectorAll('.save')[1].addEventListener("click" , function(){
-
+  //Nome novo
+let input_value = input.value
 let sent_dates = new FormData();
-sent_dates.append('novo-valor' ,)
+sent_dates.append('novo-valor' ,input_value)
 sent_dates.append('id' , id)
 $.ajax({
 url: '../php/nome-setor.php', type: 'POST', data: sent_dates, processData: false, contentType: false  
 }).done(function(request){
-  console.log(request)
   if(request === "true"){
-    let brother = input.parentNode
-    let span = document.querySelector('.name')
-    brother.appendChild(span)
-    console.log(request)
+   console.log(request)
   }
   else{
     console.log("Está parando aqui")
@@ -102,6 +99,9 @@ url: '../php/nome-setor.php', type: 'POST', data: sent_dates, processData: false
 })
 
 });//Função do botão de salvar
+  
+});
+
 
 }).fail(function(jqXHR, textStatus, errorThrown) {
   console.log(" ERRO " , jqXHR, textStatus, errorThrown)
