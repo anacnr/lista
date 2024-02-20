@@ -13,12 +13,10 @@ $query = mysqli_query($mysql, $select);
 
 $request = [];
 
-$lines = mysqli_num_rows($query);
-
 if (mysqli_num_rows($query) > 0) {
 
     while ($row = mysqli_fetch_assoc($query)) { 
-      $request []= array('nome' => $row['nome'], 'id'  => $row['id'], 'linhas' => $lines); //Listar todos os nomes
+      $request []= array('nome' => $row['nome'], 'id'  => $row['id']); //Listar todos os nomes
     }
     header('Content-Type: application/json');
     echo  json_encode($request);
