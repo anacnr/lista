@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
   let nome = new FormData();
   
   nome.append('setor' , setor)
-//Requisição ajax solicitada para exibir os resultados do banco. Porém o PHP só me retorna a última ocorrência.
+
+//Requisição principal ajax solicitada para exibir os resultados do banco. Porém o PHP só me retorna a última ocorrência.
   $.ajax({
     url : '../php/setor.php', type: 'POST', data: nome, processData: false, contentType: false
   }).done(function(request) {
@@ -22,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(' ID :', id, " NOME: " , nome, " LINHA " , line);
 
     /*O for é responsável por gerar os elementos na tela*/
-for(let count = 0; count < 1; count++){
+  for(let count = 0; count < 1; count++){
   let body = document.querySelector('body')
 
   let span = document.createElement('span')
@@ -67,7 +68,7 @@ else{
 });
 });//Função do botão de deletar
 
-/*Transformação do span para input*/
+/*Transformação do span para input. Inspirado em outas aplicações*/
 let span = document.querySelector('.name')
 span.addEventListener("click", function(){
 
@@ -89,7 +90,7 @@ $.ajax({
 url: '../php/nome-setor.php', type: 'POST', data: sent_dates, processData: false, contentType: false  
 }).done(function(request){
   if(request === "true"){
-   console.log(request)
+   console.log(request)//A alteração do nome está funcionando porém só fica dando lá no else
   }
   else{
     console.log("Está parando aqui")
@@ -99,8 +100,7 @@ url: '../php/nome-setor.php', type: 'POST', data: sent_dates, processData: false
 })
 
 });//Função do botão de salvar
-  
-});
+});//Evento click do span
 
 
 }).fail(function(jqXHR, textStatus, errorThrown) {

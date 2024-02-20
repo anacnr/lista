@@ -14,7 +14,7 @@ else{
 
         $id_edit = $_POST['id'];
 
-        $alter_date = "UPDATE setor SET nome = ('$input') WHERE  id = $id_edit"; //O $input está como indefinida
+        $alter_date = "UPDATE setor SET nome = ('$input') WHERE  id = $id_edit"; 
 
         $query = mysqli_query($mysql,$alter_date);
 

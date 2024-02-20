@@ -6,8 +6,6 @@ no login.php eu estava usando mysqli_fetch_array($datas,MYSQLI_ASSOC) na variáv
 A requisição ajax não estava pegando, então o chat alterou o valor da variável $row para $datas->fetch_assoc() e funcionou direitinho.
 O chat me explicou que eu estou usando o nome das colunas como chaves em um arry associativo, e o fetch_assoc() seria mais direito para trabalhar com esse tipo.
 
-function readSection(){ getItem(); } ->Não funciounou
-
 Coloquei um botão que começou com o display none e posição absoluta e transforma : translateX(vw) no css e lá no js alterei para display block desse elemento porém não apareceu na tela. Porque estava com o transform junto do display, então alterei a posição lá no js e coloquei left e bottom.
 
 Bnaco de dados:

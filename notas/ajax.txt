@@ -1,0 +1,1 @@
+A renomeação do setor não estava funcionando então coloquei o nome entre parenteses e dentro de aspas simples, funcionou.

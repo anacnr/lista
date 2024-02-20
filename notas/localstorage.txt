@@ -81,3 +81,5 @@ LocalStorage -> não funcionou
   };
 
   button_save.addEventListener("click", save);
+
+function readSection(){ getItem(); } ->Não funciounou

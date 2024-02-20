@@ -28,6 +28,6 @@ else {
     echo "Nenhum resultado encontrado.";
 }
 
-// Encerra a conexão com o banco de dados
+//Encerra a conexão com o banco de dados
 mysqli_close($mysql);
 ?>
