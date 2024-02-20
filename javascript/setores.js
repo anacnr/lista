@@ -23,16 +23,35 @@ document.addEventListener("DOMContentLoaded", function(){
         icon_edit.src = './buttons/edit_square_FILL0_wght400_GRAD0_opsz24.svg'
 
         let icon_delete = document.createElement('img')
-        icon_edit.className = 'icon-delete'
-        icon_edit.src = './buttons/delete_FILL0_wght400_GRAD0_opsz24.svg'
+        icon_delete.className = 'icon-delete'
+        icon_delete.src = './buttons/delete_FILL0_wght400_GRAD0_opsz24.svg'
+
+        let icon_save = document.createElement('img')
+        icon_save.className = 'icon-save'
+        icon_save.src = 'buttons/save_FILL0_wght400_GRAD0_opsz24.svg'
 
         let body = document.querySelector('body')
         body.appendChild(span)
         body.appendChild(span_icons)
-        body.appendChild(icon_edit)
-       
-        
+        span_icons.appendChild(icon_edit)
+        span_icons.appendChild(icon_delete)
+        span_icons.appendChild(icon_save)
+
         });
+
+                /*Função para editar o nome*/
+                let icon_edit =  document.querySelectorAll('.icon-edit')
+                icon_edit.addEventListener("click" , function(){
+                    console.log("Botão eidta")
+                    /*   
+                    let sent_id = new FormData();
+                    sent_id.append('id' , id_setor)
+                    $.ajax({
+                        url: '../php/nome-setor.php' , type: 'POST',data: sent_id , processData: false ,contentType: false
+                    }).done(function(request){
+                        console.log(request)
+                    })*/
+                });
 
     }).fail(function(jqXHR, textStatus, errorThrown){
         console.log(" ERRO " , jqXHR, textStatus, errorThrown)

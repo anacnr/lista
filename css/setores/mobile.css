@@ -44,17 +44,20 @@
     }
 
     .icon-edit{
-        background-color: green;
+        
         width: 20%;
+        margin: 1px 4px 0px 2px;
     }
 
     .icon-delete{
-        background-color: azure;
+        
         width: 20%;
+        margin: 1px 4px 0px 20px;
     }
 
     .icon-save{
-        background-color: blueviolet;
+        
         width: 20%;
+        margin: 1px 4px 0px 18px;
     }
 }
