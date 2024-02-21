@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
         let id_setor = data.id; //Esse vai mandar lá para o formulário quando quiser mser manipulado
 
         let span = document.createElement("span");
-        span.textContent = name_setor;
         span.id = `nome${id_setor}`; //Essa técnina eu vi em um vídeo no Youtube, o span terá como id a palavra nome + o número do seu id do banco
         span.className = "setor";
 
@@ -33,13 +32,21 @@ document.addEventListener("DOMContentLoaded", function () {
         icon_save.className = "icon-save";
         icon_save.src = "buttons/save_FILL0_wght400_GRAD0_opsz24.svg";
 
+        /*Link para o setor*/
+
+        let link = document.createElement('a')
+        link.href = '../supermercado/tabelas/setor1.html'
+        link.className = 'link'
+        link.rel = ''
+        link.textContent = name_setor
+
         let body = document.querySelector("body");
-        body.appendChild(span);
+        body.appendChild(span)
         body.appendChild(span_icons);
         span_icons.appendChild(icon_edit);
         span_icons.appendChild(icon_delete);
         span_icons.appendChild(icon_save);
-
+        span.appendChild(link)
         /*Função para editar o nome*/
         let controll_button = false;
 
@@ -107,11 +114,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (confirm(`Deletar o setor ${name_setor}?`)) {
 
+                let id = data.id
                 let sent_id = new FormData()
-                sent_id.append('id' , id_setor)
+                sent_id.append('id' , id)
 
                 $.ajax({
-                    url: '../php/del-setor.php', type: "POST'", data: sent_id , processData : false, contentType: false
+                    url: '../php/del-setor.php', type: "POST", data: sent_id , processData : false, contentType: false
                 }).done(function(request){
                     console.log(request)
                     console.log("Setor deletado com sucesso");
