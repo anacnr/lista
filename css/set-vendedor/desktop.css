@@ -51,15 +51,7 @@ h1{
     cursor: context-menu;
     padding: 4px;
 }
-/*ID da imagem(botão) de adição*/
-#add{
-    display: block;
-    margin: auto;
-    margin-top: 0%;
-    transform: translateY(40vh);
-    width: 35px;
-    cursor: pointer;
-}
+
 /*Classe do input criado*/
 .setor{
     width: 240px;
@@ -75,50 +67,24 @@ h1{
     text-align: center;
     text-transform: capitalize;
 }
-/*Classe do botão de salvar*/
-.save{
+
+/*ID do botão de salvar*/
+#but-save{
     width: 115px;
-    height: 33px;
-    box-shadow: 3px 2px 9px black;
-    border-width: 0px;
+    height: 40px;
+    border: 3px solid black;
     background-color: #00BF63;
     border-radius: 15px;
-    font-size: 14px;
+    font-size: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #FEFEFE;
     text-transform: uppercase;
     position: absolute;
-    transform: translate(24vw,35vh);
-    margin-top: 0%;
-    margin-left: 2%;
+    transform: translate(28vw,34vh);
+    margin-top: 1%;
     cursor: pointer;
-}
- /*Classe do botão de deletar*/
-.del{
-    width: 35px;
-    height: 40px;
-    position: absolute;
-    transform: translate(44vw,35vh);
-    margin-bottom: 4%;
-    margin-left: 2%;
-    cursor: pointer;
-}
-/*Classe da caixa que vai estar o nome do setor*/
-.name{
-    width: 50%;
-    height: 6%;
-    border-radius: 7px;
-    border: 4px solid rgb(3, 3, 3);
-    display: block;
-    position: relative;
-    transform: translate(-15vw,0vh);
-    margin-bottom: 4%;
-    margin-left: 1%;
-    text-align: center;
-    text-transform: capitalize;
-    cursor: pointer;
-    background-color: white;
-}
+} 
+
 }
 
 @media (min-width: 768px) and (max-width:992px){
@@ -139,19 +105,11 @@ h1{
     display: block;
     transform: translateY(140px);
     }
-    
-    #span-superm > h2{
-    /*Caixinha que abriga o h2*/
-    span{
-        width: 290px;
-        margin: auto;
-        display: block;
-        transform: translateY(180px);
-    }
+
     /*Esse h2 é o supermercado*/ 
-    span > h2{
+    #span-superm > h2{
         background-color: #FF5757;
-       box-shadow: 1px 1px 7px black;
+        box-shadow: 1px 1px 7px black;
         border-radius: 15px;
         text-align: center;
         text-transform: uppercase;
@@ -161,16 +119,9 @@ h1{
         color: white;
         cursor: context-menu;
         padding: 4px;
+    
     }
-    /*ID da imagem(botão) de adição*/
-    #add{
-        display: block;
-        margin: auto;
-        margin-top: 0%;
-        transform: translateY(40vh);
-        width: 35px;
-        cursor: pointer;
-    }
+
     /*Classe do input criado*/
     .setor{
         width: 240px;
@@ -186,7 +137,7 @@ h1{
         text-transform: capitalize;
     }
     
-    .save{
+    #but-save{
         width: 115px;
         height: 40px;
         border: 3px solid black;
@@ -200,35 +151,7 @@ h1{
         transform: translate(28vw,34vh);
         margin-top: 1%;
         cursor: pointer;
-    }
-    
-    .del{
-        width: 35px;
-        height: 40px;
-        position: absolute;
-        transform: translate(41vw,35vh);
-        margin-bottom: 4%;
-        margin-left: 2%;
-        cursor: pointer;
-    }
-    
-    .name{
-        width: 50%;
-        height: 6%;
-        border-radius: 7px;
-        border: 4px solid rgb(3, 3, 3);
-        display: block;
-        position: relative;
-        transform: translate(-15vw,0vh);
-        margin-bottom: 4%;
-        margin-left: 1%;
-        text-align: center;
-        text-transform: capitalize;
-        cursor: pointer;
-        background-color: white;
-    }
-}
-
+}    
        
 }
 
@@ -265,15 +188,6 @@ h1{
         padding: 4px;
     }
     
-    #add{
-        display: block;
-        margin: auto;
-        margin-top: 0%;
-        transform: translateY(30vh);
-        width: 35px;
-        cursor: pointer;
-    }
-    
     .setor{
         width: 240px;
         height: 35px;
@@ -289,49 +203,23 @@ h1{
         text-align: center;
         text-transform: capitalize;
     }
-    /*Classe do botão de salvar*/
-    .save{
+
+    #but-save{
         width: 115px;
-        height: 33px;
-        box-shadow: 3px 2px 9px black;
-        border-width: 0px;
+        height: 40px;
+        border: 3px solid black;
         background-color: #00BF63;
         border-radius: 15px;
-        font-size: 14px;
+        font-size: 15px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         color: #FEFEFE;
         text-transform: uppercase;
         position: absolute;
-        transform: translate(29vw,34vh);
+        transform: translate(28vw,34vh);
         margin-top: 1%;
         cursor: pointer;
-    }
+}  
     
-    .del{
-        width: 35px;
-        height: 40px;
-        position: absolute;
-        transform: translate(40vw,35vh);
-        margin-bottom: 4%;
-        margin-left: 2%;
-        cursor: pointer;
-    }
-    
-    .name{
-        width: 50%;
-        height: 6%;
-        border-radius: 7px;
-        border: 4px solid rgb(3, 3, 3);
-        display: block;
-        position: relative;
-        transform: translate(-15vw,0vh);
-        margin-bottom: 4%;
-        margin-left: 1%;
-        text-align: center;
-        text-transform: capitalize;
-        cursor: pointer;
-        background-color: white;
-    }
 }
 
 @media (min-width: 1200px) {
@@ -367,41 +255,7 @@ h1{
             cursor: context-menu;
             padding: 4px;
         }
-    /*ID da imagem(botão) de adição*/    
-        #add{
-            display: block;
-            margin: auto;
-            transform: translate(24vw,35vh);
-            margin-top: 0%;
-            margin-left: 2%;
-            cursor: pointer;
-        }
-         /*Classe do botão de deletar*/
-        .del{
-            width: 35px;
-            height: 40px;
-            position: absolute;
-            transform: translate(44vw,35vh);
-            margin-bottom: 4%;
-            margin-left: 2%;
-            cursor: pointer;
-        }
-        /*Classe da caixa que vai estar o nome do setor*/
-        .name{
-            width: 50%;
-            height: 6%;
-            border-radius: 7px;
-            border: 4px solid rgb(3, 3, 3);
-            display: block;
-            position: relative;
-            transform: translate(-15vw,0vh);
-            margin-bottom: 4%;
-            margin-left: 1%;
-            text-align: center;
-            text-transform: capitalize;
-            cursor: pointer;
-            background-color: white;
-        }
+
         #menu {
             position: absolute;
             transform: translate(90vw, -1vh);

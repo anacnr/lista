@@ -12,24 +12,22 @@
 
 <body>
 
-    <h1>Cadastro dos Setores</h1>
+  <h1>Cadastro dos Setores</h1>
 
-    <span id="span-superm"><h2>supermercado</h2></span>
+  <span id="span-superm"><h2>supermercado</h2></span>
 
   <form id="form" action="../php/setores.php" method="post">
+  
+      <input type="text" name="setor" class="setor" required>
+  
+      <button type="submit" id="but-save" class="save">Salvar</button>
 
-    <input type="text" name="setor" class="setor" required>
-
-    <!--img src="buttons/cancel.svg" alt="Botão-deleta" id="but-del" class="del"-->
-
-    <button type="submit" id="but-save" class="save">Salvar</button>
   </form> 
-  <!--Ícone retirado do Google Icons-->
-    <img src="imgs-cad/add.svg" alt="Botão-adiciona" id="add">
+  <!--Ícones retirados do Google Icons-->
 
     <img src="buttons\menu_FILL0_wght400_GRAD0_opsz24.svg" alt="menu-abrir" id="menu">
 
-    <img src="imgs/bell-4924849_1280-min.png" alt="notificação" id="noti">
+    <img src="buttons/notifications_FILL0_wght400_GRAD0_opsz24.svg" alt="notificação" id="noti">
 
 <script src="../javascript/jquery-3.7.1.min.js"></script>
 <script src="../javascript/setor.js"></script>
