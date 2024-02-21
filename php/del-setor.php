@@ -6,27 +6,30 @@ if($mysql->connect_error != null){
 }
 else{
 
-    $button_del = $_POST['botao-deleta'];
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
 
-    $request = false;//flag
+           $request = false;//flag
 
-    if($button_del){
+           if(isset($_POST['id'])){
 
-        $del_id = $_POST['id-deletado'];
-
-        $del_date = "DELETE FROM setor WHERE id = $del_id";
-
-        $query  = mysqli_query($mysql, $del_date);
-
-        if(isset($query)){
-            $request = true;
-        }
-        else{
-            $request = false;
-        }
-
+            $del_id = $_POST['id'];
+    
+            $del_date = "DELETE FROM setor WHERE id = $del_id";
+    
+            $query  = mysqli_query($mysql, $del_date);
+    
+            if($query){
+                $request = true;
+            }
+            else{
+                $request = false;
+            }
+           }           
+           header('Content-Type: application/json');
+           echo json_encode($request);
     }
-    header('Content-Type: application/json');
-    echo json_encode($request);
+
 }
+
+mysqli_close($mysql);
 ?>

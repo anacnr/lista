@@ -6,27 +6,38 @@ if($mysql->connect_error != null){
 }
 else{
 
-    $input = $_POST['novo-valor'];
+    if ($_SERVER["REQUEST_METHOD"] == "POST"){
+        $input = $_POST['novo-valor'];
 
-    $reuest = false; //flag
-
-    if($input){
-
-        $id_edit = $_POST['id'];
-
-        $alter_date = "UPDATE setor SET nome = ('$input') WHERE  id = $id_edit"; 
-
-        $query = mysqli_query($mysql,$alter_date);
-
-        if(isset($query)){
-            $reuest = true;
+        $request = false; //flag
+    
+        if(isset($input)){
+    
+            $id_edit = $_POST['id'];
+    
+            $alter_date = "UPDATE setor SET nome = '$input' WHERE  id = $id_edit"; 
+    
+            if(!empty($input)){
+                $query = mysqli_query($mysql,$alter_date);
+    
+                if($query){
+                    $request = true;
+                    echo $input;
+                }
+                else{
+                    $request = false;
+                }
+            }
+            else{
+                echo "Input vazio";
+                exit;
+            }
         }
-        else{
-            $reuest = false;
-        }
+    
+        header('Content-Type: application/json');
+        echo json_encode($request);
     }
 
-    header('Content-Type: application/json');
-    echo json_encode($reuest);
 }
+mysqli_close($mysql);
 ?>

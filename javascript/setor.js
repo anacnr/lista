@@ -47,12 +47,12 @@ document.addEventListener("DOMContentLoaded", function () {
   body.appendChild(new_button_del)
 }
 
-/*Parte que executa a exclusão do setor*/
+/*Parte que executa a exclusão do setor
 document.querySelector('.del').addEventListener("click", function(){
   
-/*Segunda requisição para apagar um setor*/
+/*Segunda requisição para apagar um setor
 let sent_id = new FormData();
-sent_id.append('id-deletado', id)//o id-deletado vai servir como o nome da variável do meu id
+sent_id.append('id-deletado', id)//o id-deletado vai servir como o name da variável do meu id
 sent_id.append('botao-deleta', document.querySelector('.del'))
 $.ajax({
   url: '../php/del-setor.php', type: 'POST', data: sent_id, processData: false, contentType: false
@@ -67,6 +67,7 @@ else{
   console.log(" ERRO " , jqXHR, textStatus, errorThrown)
 });
 });//Função do botão de deletar
+*/
 
 /*Transformação do span para input. Inspirado em outas aplicações*/
 let span = document.querySelector('.name')
@@ -86,7 +87,7 @@ let input_value = input.value
 let sent_dates = new FormData();
 sent_dates.append('novo-valor' ,input_value)
 sent_dates.append('id' , id)
-$.ajax({
+$.ajax({/*
 url: '../php/nome-setor.php', type: 'POST', data: sent_dates, processData: false, contentType: false  
 }).done(function(request){
   if(request === "true"){
@@ -96,7 +97,7 @@ url: '../php/nome-setor.php', type: 'POST', data: sent_dates, processData: false
     console.log("Está parando aqui")
   }
 }).fail(function(jqXHR, textStatus, errorThrown){
-  console.log(" ERRO " , jqXHR, textStatus, errorThrown)
+  console.log(" ERRO " , jqXHR, textStatus, errorThrown)*/
 })
 
 });//Função do botão de salvar
