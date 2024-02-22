@@ -68,10 +68,15 @@ document.addEventListener("DOMContentLoaded", function () {
     sister.appendChild(menu_close);
 
     menu_open.style.opacity = "0";
-
     let bell = document.getElementById("noti");
     bell.style.transform = "translate(85vw,30vh)";
-
+    /*Media query*/
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 600 || window.innerWidth.innerWidth <= 768) {
+        bell.style.transform = "translate(90vw,10vh)";
+      }
+    });//Funçao do resize
+console.log(window.innerWidth)
     /*Botão para fechar a div*/
     menu_close.addEventListener("click", function () {
       board.style.display = "none";
@@ -79,8 +84,13 @@ document.addEventListener("DOMContentLoaded", function () {
       young_sister.appendChild(menu_open);
       menu_close.style.opacity = 0;
       menu_open.style.opacity = "1";
-
-      bell.style.transform = "translate(85vw,10vh)";
+      bell.style.transform = "translate(85vw,10vh)"
+     /* window.addEventListener("resize", function () {
+        if (window.innerWidth <= 600) {
+          bell.style.transform = "translate(85vw,10vh)"
+        }
+      });//Funçao do resize
+  */
     }); //menu_close
   }); //menu_open
 
