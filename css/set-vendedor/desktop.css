@@ -6,10 +6,10 @@
   box-sizing: border-box;
 }
 
-body,
-html {
+body,html {
   width: 100vw;
   height: 90vh;
+  overflow: hidden;
 }
 
 body {
@@ -534,7 +534,7 @@ body {
   /*Menu hambírguer*/
   #menu {
     position: absolute;
-    transform: translate(90vw, -4vh);
+    transform: translate(70vw, -5vh);
     filter: invert(1);
     cursor: pointer;
     display: block;
@@ -549,7 +549,7 @@ body {
     background-color: rgba(240, 248, 255, 0.968);
     box-shadow: 2px 2px 10px rgb(24, 5, 5);
     position: absolute;
-    transform: translate(85vw, 1vh);
+    transform: translate(66vw, -1vh);
     border-radius: 26px;
     display: grid;
     cursor: context-menu;
@@ -573,7 +573,7 @@ body {
     width: 25px;
     height: 25px;
     position: absolute;
-    transform: translate(90vw, 3vh);
+    transform: translate(70vw, 3vh);
     filter: invert();
     cursor: pointer;
 }
