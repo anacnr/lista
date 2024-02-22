@@ -15,8 +15,232 @@ body{
     background-attachment: fixed;
 }
 
-@media (min-width:600px) and (max-width: 768px){
+@media (min-width:600px) and (max-width:768px){
 /*Div que está todos os dados*/
+#company-dates{
+    box-shadow: 4px 4px 15px rgb(19, 14, 14);
+    width: 80vw;
+    height: 110vh;
+    background-color: rgba(255, 255, 255, 0.793);
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+/*Lista com os campos*/
+#company-dates > ul{
+    width: 100%;
+    height: 100%;
+}
+
+/*Lista e parágrafos*/
+#company-dates > ul > li{
+    list-style: none;
+    margin: auto;
+}
+
+/*Estilo das letras do parágrafo*/
+#company-dates > ul > .par{
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 2.5dvi;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-style: oblique;
+    color: rgb(43, 36, 36);
+}
+
+/*Imagem da empresa*/
+#company-dates > ul > #image{
+    box-shadow: 2px 2px 10px rgba(98, 139, 146, 0.646);
+    border-radius: 50%;
+    width: 100px; height: 100px;
+    margin: auto;
+    transform: translateY(7vh);
+}
+
+/*Empresa(parágrafo)*/
+#company-dates > ul > #par-name{
+    position: absolute;
+    transform: translate(20vw, 12vh);
+}
+/*Empresa(lista)*/
+#company-dates > ul > #name{
+    transform: translateY(15vh);
+    box-shadow: 2px 2px 10px rgb(36, 30, 30);
+    width: 55%; height: 25px;
+    border-radius: 10px;
+    background-color: rgba(98, 139, 146, 0.646); 
+}
+/*Empresa(span)*/
+#company-dates > ul > #name > #span-name{
+font-size: 3dvi;
+color: rgba(245, 245, 245, 0.742);
+text-shadow: 1px 1px 2px black;
+}
+
+/*Responsável(parágrafo)*/
+#company-dates > ul > #par-manager{
+    position: absolute;
+    transform: translate(20vw, 16vh);
+}
+/*Responsável(lista)*/
+#company-dates > ul > #manager{
+    transform: translateY(20vh);
+    box-shadow: 2px 2px 10px rgb(36, 30, 30);
+    width: 55%; height: 25px;
+    border-radius: 10px;
+    background-color: rgba(98, 139, 146, 0.646); 
+}
+/*Responsável(span)*/
+#company-dates > ul > #manager > #span-manager{
+font-size: 3dvi;
+color: rgba(245, 245, 245, 0.742);
+text-shadow: 1px 1px 2px black;
+}
+
+/*CNPJ(parágrafo)*/
+#company-dates > ul > #par-cnpj{
+    position: absolute;
+    transform: translate(20vw, 22vh);
+}
+/*CNPJ(lista)*/
+#company-dates > ul > #cnpj{
+    transform: translateY(25vh);
+    box-shadow: 2px 2px 10px rgb(36, 30, 30);
+    width: 55%; height: 25px;
+    border-radius: 10px;
+    background-color: rgba(98, 139, 146, 0.646); 
+}
+/*CNPJ(span)*/
+#company-dates > ul > #cnpj > #span-cnpj{
+font-size: 3dvi;
+color: rgba(245, 245, 245, 0.742);
+text-shadow: 1px 1px 2px black;
+}
+
+/*Localização(parágrafo)*/
+#company-dates > ul > #par-location{
+    position: absolute;
+    transform: translate(20vw, 26vh);
+}
+/*Localização(lista)*/
+#company-dates > ul > #local{
+    transform: translateY(30vh);
+    box-shadow: 2px 2px 10px rgb(36, 30, 30);
+    width: 55%; height: 25px;
+    border-radius: 10px;
+    background-color: rgba(98, 139, 146, 0.646); 
+}
+/*Localização(span)*/
+#company-dates > ul > #local > #span-local{
+font-size: 3dvi;
+color: rgba(245, 245, 245, 0.742);
+text-shadow: 1px 1px 2px black;
+}
+
+/*Telefone fixo(parágrafo)*/
+#company-dates > ul > #par-tel{
+    position: absolute;
+    transform: translate(20vw, 31vh);
+}
+/*Telefone fixo(lista)*/
+#company-dates > ul > #tel{
+    transform: translateY(35vh);
+    box-shadow: 2px 2px 10px rgb(36, 30, 30);
+    width: 55%; height: 25px;
+    border-radius: 10px;
+    background-color: rgba(98, 139, 146, 0.646);    
+}
+/*Telefone fixo(span)*/
+#company-dates > ul > #tel > #span-tel{
+font-size: 3dvi;
+color: rgba(245, 245, 245, 0.742);
+text-shadow: 1px 1px 2px black;
+} 
+
+/*Telefone privado(parágrafo)*/
+#company-dates > ul > #par-private{
+    position: absolute;
+    transform: translate(20vw, 36vh);
+}
+/*Telefone privado(lista)*/
+#company-dates > ul > #private{
+    transform: translateY(40vh);
+    box-shadow: 2px 2px 10px rgb(36, 30, 30);
+    width: 55%; height: 25px;
+    border-radius: 10px;
+    background-color: rgba(98, 139, 146, 0.646);    
+}
+/*Telefone privado(span)*/
+#company-dates > ul > #private > #span-private{
+font-size: 3dvi;
+color: rgba(245, 245, 245, 0.742);
+text-shadow: 1px 1px 2px black;
+} 
+
+/*Email(parágrafo)*/
+#company-dates > ul > #par-email{
+position: absolute;
+transform: translate(20vw, 42vh);
+}
+/*Email(lista)*/
+#company-dates > ul > #email{
+    transform: translateY(45vh);
+    box-shadow: 2px 2px 10px rgb(36, 30, 30);
+    width: 55%; height: 25px;
+    border-radius: 10px;
+    background-color: rgba(98, 139, 146, 0.646);    
+}
+/*Email(span)*/
+#company-dates > ul > #email > #span-email{
+    font-size: 3dvi;
+    color: rgba(245, 245, 245, 0.742);
+    text-shadow: 1px 1px 2px black;
+}
+
+/*Senha (parágrafo)*/
+#company-dates > ul > #par-password{
+position: absolute;
+transform: translate(20vw, 47vh);
+}
+/*Senha (lista)*/
+#company-dates > ul > #password{
+transform: translateY(50vh);
+box-shadow: 2px 2px 10px rgb(36, 30, 30);
+width: 55%; height: 25px;
+border-radius: 10px;
+background-color: rgba(98, 139, 146, 0.646);
+}
+/*Senha (span)*/
+#company-dates > ul > #password > #span-password{
+    font-size: 3dvi;
+    color: rgba(245, 245, 245, 0.742);
+    text-shadow: 1px 1px 2px black;
+}
+
+/*Botão de editar*/
+#edit{
+    text-transform: uppercase;
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    color: rgb(58, 113, 33);
+    padding: 5px 10px 5px 10px;
+    display: block;
+    margin: auto;
+    transform: translateY(4vh);
+    cursor: pointer;
+    border-width: 0px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px black;
+}
+}
+
+@media (min-width:768px) and (max-width:992px){
+    /*Div que está todos os dados*/
 #company-dates{
     box-shadow: 4px 4px 15px rgb(19, 14, 14);
     width: 80vw;
