@@ -83,7 +83,7 @@ console.log(window.innerWidth)
       //Enquanto tiver na media query menor de 600 de largura
       bell.style.transform = "translate(85vw,10vh)"
 
-          /*Media query*/
+      /*Media query*/
     window.addEventListener("resize", function () {
       if (window.innerWidth > 600 || window.innerWidth.innerWidth <= 768) {
         bell.style.transform = "translate(88vw,10vh)";
