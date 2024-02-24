@@ -41,17 +41,19 @@ body{
 #company-dates > ul > li{
     list-style: none;
     margin: auto;
+    cursor: context-menu;
 }
 
 /*Estilo das letras do parágrafo*/
 #company-dates > ul > .par{
     text-transform: uppercase;
     text-align: left;
-    font-size: 2.5dvi;
+    font-size: 2dvi;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-style: oblique;
     color: rgb(43, 36, 36);
+    cursor: context-menu;
 }
 
 /*Imagem da empresa*/
@@ -72,7 +74,7 @@ body{
 #company-dates > ul > #name{
     transform: translateY(15vh);
     box-shadow: 2px 2px 10px rgb(36, 30, 30);
-    width: 55%; height: 25px;
+    width: 55%; height: 22px;
     border-radius: 10px;
     background-color: rgba(98, 139, 146, 0.646); 
 }
@@ -92,7 +94,7 @@ text-shadow: 1px 1px 2px black;
 #company-dates > ul > #manager{
     transform: translateY(20vh);
     box-shadow: 2px 2px 10px rgb(36, 30, 30);
-    width: 55%; height: 25px;
+    width: 55%; height: 22px;
     border-radius: 10px;
     background-color: rgba(98, 139, 146, 0.646); 
 }
@@ -112,7 +114,7 @@ text-shadow: 1px 1px 2px black;
 #company-dates > ul > #cnpj{
     transform: translateY(25vh);
     box-shadow: 2px 2px 10px rgb(36, 30, 30);
-    width: 55%; height: 25px;
+    width: 55%; height: 22px;
     border-radius: 10px;
     background-color: rgba(98, 139, 146, 0.646); 
 }
@@ -132,7 +134,7 @@ text-shadow: 1px 1px 2px black;
 #company-dates > ul > #local{
     transform: translateY(30vh);
     box-shadow: 2px 2px 10px rgb(36, 30, 30);
-    width: 55%; height: 25px;
+    width: 55%; height: 22px;
     border-radius: 10px;
     background-color: rgba(98, 139, 146, 0.646); 
 }
@@ -152,7 +154,7 @@ text-shadow: 1px 1px 2px black;
 #company-dates > ul > #tel{
     transform: translateY(35vh);
     box-shadow: 2px 2px 10px rgb(36, 30, 30);
-    width: 55%; height: 25px;
+    width: 55%; height: 22px;
     border-radius: 10px;
     background-color: rgba(98, 139, 146, 0.646);    
 }
@@ -172,7 +174,7 @@ text-shadow: 1px 1px 2px black;
 #company-dates > ul > #private{
     transform: translateY(40vh);
     box-shadow: 2px 2px 10px rgb(36, 30, 30);
-    width: 55%; height: 25px;
+    width: 55%; height: 22px;
     border-radius: 10px;
     background-color: rgba(98, 139, 146, 0.646);    
 }
@@ -192,7 +194,7 @@ transform: translate(20vw, 42vh);
 #company-dates > ul > #email{
     transform: translateY(45vh);
     box-shadow: 2px 2px 10px rgb(36, 30, 30);
-    width: 55%; height: 25px;
+    width: 55%; height: 22px;
     border-radius: 10px;
     background-color: rgba(98, 139, 146, 0.646);    
 }
@@ -212,7 +214,7 @@ transform: translate(20vw, 47vh);
 #company-dates > ul > #password{
 transform: translateY(50vh);
 box-shadow: 2px 2px 10px rgb(36, 30, 30);
-width: 55%; height: 25px;
+width: 55%; height: 22px;
 border-radius: 10px;
 background-color: rgba(98, 139, 146, 0.646);
 }
@@ -229,7 +231,7 @@ background-color: rgba(98, 139, 146, 0.646);
     font-size: 13px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 600;
-    color: rgb(58, 113, 33);
+    color: rgb(88, 33, 113);
     padding: 5px 10px 5px 10px;
     display: block;
     margin: auto;
