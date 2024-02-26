@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function(){
+
+    console.log("Script carregado!")
+
 /*Dados do usuário*/
-let image = document.getElementById("company-img")
+let image = document.getElementById("company-img")//Pega o id da imagem
 let company = document.getElementById("span-name")//Pega o id do span
 let manager = document.getElementById("span-manager")
 let cnpj = document.getElementById("span-cnpj")
