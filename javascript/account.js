@@ -86,7 +86,7 @@ input_cnpj.style.textShadow = 'none'
 input_cnpj.style.letterSpacing = '3px'
 input_cnpj.style.textAlign = 'center'
 
-company.style.display = 'none'
+cnpj.style.display = 'none'
 
 document.querySelector("#company-dates > ul > #cnpj").style.backgroundColor = 'transparent'
 
@@ -103,13 +103,32 @@ input_local.style.textShadow = 'none'
 input_local.style.letterSpacing = '3px'
 input_local.style.textAlign = 'center'
 
-company.style.display = 'none'
+local.style.display = 'none'
 
 document.querySelector("#company-dates > ul > #local").style.backgroundColor = 'transparent'
 
 let span_local = local.parentNode
 span_local.insertBefore(input_local,local.nextSibling)
 span_local.removeChild(local)
+
+let input_tel_fix = document.createElement('input')
+input_tel_fix.className = 'par'
+input_tel_fix.id = 'span-local'
+input_tel_fix.name = 'span-local'
+input_tel_fix.style.color = 'black'
+input_tel_fix.style.textShadow = 'none'
+input_tel_fix.style.letterSpacing = '3px'
+input_tel_fix.style.textAlign = 'center'
+
+tel_fix.style.display = 'none'
+
+document.querySelector("#company-dates > ul > #tel").style.backgroundColor = 'transparent'
+
+let span_tel_fix = local.parentNode
+span_tel_fix.insertBefore(input_tel_fix,tel_fix.nextSibling)
+span_tel_fix.removeChild(tel_fix)
+
+
 });//Função de editar
 
 });//Carregamento da página
