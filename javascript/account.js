@@ -27,7 +27,7 @@ dates.append('span-private' , tel_priv)
 dates.append('span-email' , email)
 dates.append('span-password' , password)
 /*
-/*Exibe os dados do usuário. Requisição dos dados
+/*Exibe os dados do usuário. Requisição dos dados*/
 $.ajax({
     url: '../php/account-super.php' , type: 'POST', data: dates, processData: false, contentType: false
 }).done(function(request){
@@ -35,7 +35,7 @@ $.ajax({
 
     manager.textContent = `${request.empresa}`
 })
-*/
+
 /*Caso o usuário edite os dados*/
 
 let button_edit = document.getElementById("edit")
@@ -49,7 +49,8 @@ input_company.className = 'par'
 input_company.id = 'span-name'
 input_company.name = 'span-name'
 
-document.querySelector("#name").style.backgroundColor = 'transparent'
+document.querySelector("#company-dates > ul > #name").style.backgroundColor = 'transparent'
+document.querySelector("#company-dates > ul > #name").style.boxShadow = 'none';
 
 company.style.display = 'none'
 
