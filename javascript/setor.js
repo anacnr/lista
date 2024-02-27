@@ -48,17 +48,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let link_help = document.createElement("a");
     link_help.className = "link";
-    link_help.href = "#";
+    link_help.href = "../supermercado/ajuda.html";
     link_help.textContent = "Ajuda";
 
-    let link_other = document.createElement("a");
-    link_other.className = "link";
-    link_other.href = "../supermercado/setores.html";
-    link_other.textContent = "Setores";
+    let link_sectors = document.createElement("a");
+    link_sectors.className = "link";
+    link_sectors.href = "../supermercado/setores.html";
+    link_sectors.textContent = "Setores";
 
     board.appendChild(link_user);
     board.appendChild(link_help);
-    board.appendChild(link_other);
+    board.appendChild(link_sectors);
 
     let menu_close = document.createElement("img");
     menu_close.id = "menu";

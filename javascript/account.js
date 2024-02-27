@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     console.log("Script carregado!")
 
-/*Dados do usuário*/
+/*Dados do usuário para emitir inicialmente*/
 let image = document.getElementById("company-img")//Pega o id da imagem
 let company = document.getElementById("span-name")//Pega o id do span
 let manager = document.getElementById("span-manager")
@@ -26,8 +26,8 @@ dates.append('span-tel' , tel_fix)
 dates.append('span-private' , tel_priv)
 dates.append('span-email' , email)
 dates.append('span-password' , password)
-
-/*Exibe os dados do usuário. Requisição dos dados*/
+/*
+/*Exibe os dados do usuário. Requisição dos dados
 $.ajax({
     url: '../php/account-super.php' , type: 'POST', data: dates, processData: false, contentType: false
 }).done(function(request){
@@ -35,5 +35,27 @@ $.ajax({
 
     manager.textContent = `${request.empresa}`
 })
+*/
+/*Caso o usuário edite os dados*/
+
+let button_edit = document.getElementById("edit")
+button_edit.addEventListener("click", function(){
+
+/*Transformação dos campos em inputs*/
+
+
+let input_company = document.createElement('input')
+input_company.className = 'par'
+input_company.id = 'span-name'
+input_company.name = 'span-name'
+
+document.querySelector("#name").style.backgroundColor = 'transparent'
+
+company.style.display = 'none'
+
+let brother = company.parentNode
+brother.insertBefore(input_company,company.nextSibling)
+brother.removeChild(company)
+});//Função de editar
 
 });//Carregamento da página
