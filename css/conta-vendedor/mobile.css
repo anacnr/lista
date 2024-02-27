@@ -83,6 +83,9 @@ body{
 font-size: 3dvi;
 color: rgba(245, 245, 245, 0.742);
 text-shadow: 1px 1px 2px black;
+border-width: 0px;
+border-radius: 10px;
+width: 99%; height: 22px;
 }
 
 /*Responsável(parágrafo)*/
@@ -103,6 +106,9 @@ text-shadow: 1px 1px 2px black;
 font-size: 3dvi;
 color: rgba(245, 245, 245, 0.742);
 text-shadow: 1px 1px 2px black;
+border-width: 0px;
+border-radius: 10px;
+width: 99%; height: 22px;
 }
 
 /*CNPJ(parágrafo)*/
@@ -123,6 +129,9 @@ text-shadow: 1px 1px 2px black;
 font-size: 3dvi;
 color: rgba(245, 245, 245, 0.742);
 text-shadow: 1px 1px 2px black;
+border-width: 0px;
+border-radius: 10px;
+width: 99%; height: 22px;
 }
 
 /*Localização(parágrafo)*/
@@ -143,6 +152,9 @@ text-shadow: 1px 1px 2px black;
 font-size: 3dvi;
 color: rgba(245, 245, 245, 0.742);
 text-shadow: 1px 1px 2px black;
+border-width: 0px;
+border-radius: 10px;
+width: 99%; height: 22px;
 }
 
 /*Telefone fixo(parágrafo)*/
@@ -163,6 +175,9 @@ text-shadow: 1px 1px 2px black;
 font-size: 3dvi;
 color: rgba(245, 245, 245, 0.742);
 text-shadow: 1px 1px 2px black;
+border-width: 0px;
+border-radius: 10px;
+width: 99%; height: 22px;
 } 
 
 /*Telefone privado(parágrafo)*/
@@ -183,6 +198,9 @@ text-shadow: 1px 1px 2px black;
 font-size: 3dvi;
 color: rgba(245, 245, 245, 0.742);
 text-shadow: 1px 1px 2px black;
+border-width: 0px;
+border-radius: 10px;
+width: 99%; height: 22px;
 } 
 
 /*Email(parágrafo)*/
@@ -203,6 +221,9 @@ transform: translate(20vw, 42vh);
     font-size: 3dvi;
     color: rgba(245, 245, 245, 0.742);
     text-shadow: 1px 1px 2px black;
+    border-width: 0px;
+    border-radius: 10px;
+    width: 99%; height: 22px;
 }
 
 /*Senha (parágrafo)*/
@@ -223,6 +244,9 @@ background-color: rgba(98, 139, 146, 0.646);
     font-size: 3dvi;
     color: rgba(245, 245, 245, 0.742);
     text-shadow: 1px 1px 2px black;
+    border-width: 0px;
+    border-radius: 10px;
+    width: 99%; height: 22px;
 }
 
 /*Botão de editar*/

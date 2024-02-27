@@ -43,20 +43,73 @@ button_edit.addEventListener("click", function(){
 
 /*Transformação dos campos em inputs*/
 
-
 let input_company = document.createElement('input')
 input_company.className = 'par'
 input_company.id = 'span-name'
 input_company.name = 'span-name'
-
-document.querySelector("#company-dates > ul > #name").style.backgroundColor = 'transparent'
-document.querySelector("#company-dates > ul > #name").style.boxShadow = 'none';
+input_company.style.color = 'black'
+input_company.style.textShadow = 'none'
+input_company.style.letterSpacing = '3px'
+input_company.style.textAlign = 'center'
 
 company.style.display = 'none'
 
-let brother = company.parentNode
-brother.insertBefore(input_company,company.nextSibling)
-brother.removeChild(company)
+document.querySelector("#company-dates > ul > #name").style.backgroundColor = 'transparent'
+
+let span_company = company.parentNode
+span_company.insertBefore(input_company,company.nextSibling)
+span_company.removeChild(company)
+
+let input_manager = document.createElement('input')
+input_manager.className = 'par'
+input_manager.id = 'span-manager'
+input_manager.name = 'span-manager'
+input_manager.style.color = 'black'
+input_manager.style.textShadow = 'none'
+input_manager.style.letterSpacing = '3px'
+input_manager.style.textAlign = 'center'
+
+company.style.display = 'none'
+
+document.querySelector("#company-dates > ul > #manager").style.backgroundColor = 'transparent'
+
+let span_manager = manager.parentNode
+span_manager.insertBefore(input_manager,manager.nextSibling)
+span_manager.removeChild(manager)
+
+let input_cnpj = document.createElement('input')
+input_cnpj.className = 'par'
+input_cnpj.id = 'span-cnpj'
+input_cnpj.name = 'span-cnpj'
+input_cnpj.style.color = 'black'
+input_cnpj.style.textShadow = 'none'
+input_cnpj.style.letterSpacing = '3px'
+input_cnpj.style.textAlign = 'center'
+
+company.style.display = 'none'
+
+document.querySelector("#company-dates > ul > #cnpj").style.backgroundColor = 'transparent'
+
+let span_cnpj = cnpj.parentNode
+span_cnpj.insertBefore(input_cnpj,cnpj.nextSibling)
+span_cnpj.removeChild(cnpj)
+
+let input_local = document.createElement('input')
+input_local.className = 'par'
+input_local.id = 'span-local'
+input_local.name = 'span-local'
+input_local.style.color = 'black'
+input_local.style.textShadow = 'none'
+input_local.style.letterSpacing = '3px'
+input_local.style.textAlign = 'center'
+
+company.style.display = 'none'
+
+document.querySelector("#company-dates > ul > #local").style.backgroundColor = 'transparent'
+
+let span_local = local.parentNode
+span_local.insertBefore(input_local,local.nextSibling)
+span_local.removeChild(local)
 });//Função de editar
 
 });//Carregamento da página
