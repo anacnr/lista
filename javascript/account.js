@@ -213,7 +213,61 @@ const save = function sentNewDates(){
         company.style.display = 'block'
         document.querySelector("#company-dates > ul > #name").style.backgroundColor = 'rgba(98, 139, 146, 0.646)'
 
+        let new_manager = input_manager.parentNode
+        new_manager.insertBefore(manager,input_manager.nextSibling)
+        new_manager.removeChild(input_manager)
+        
+        manager.textContent = `${input_manager_val}`
+        manager.style.display = 'block'
+        document.querySelector("#company-dates > ul > #manager").style.backgroundColor = 'rgba(98, 139, 146, 0.646)'
 
+        let new_cnpj = input_cnpj.parentNode
+        new_cnpj.insertBefore(cnpj,input_cnpj.nextSibling)
+        new_cnpj.removeChild(input_cnpj)
+        
+        cnpj.textContent = `${input_cnpj_val}`
+        cnpj.style.display = 'block'
+        document.querySelector("#company-dates > ul > #cnpj").style.backgroundColor = 'rgba(98, 139, 146, 0.646)'
+
+        let new_local = input_local.parentNode
+        new_local.insertBefore(local,input_local.nextSibling)
+        new_local.removeChild(input_local)
+        
+        local.textContent = `${input_local_val}`
+        local.style.display = 'block'
+        document.querySelector("#company-dates > ul > #local").style.backgroundColor = 'rgba(98, 139, 146, 0.646)'
+
+        let new_tel_fix = input_tel_fix.parentNode
+        new_tel_fix.insertBefore(tel_fix,input_tel_fix.nextSibling)
+        new_tel_fix.removeChild(input_tel_fix)
+        
+        tel_fix.textContent = `${input_tel_val}`
+        tel_fix.style.display = 'block'
+        document.querySelector("#company-dates > ul > #tel").style.backgroundColor = 'rgba(98, 139, 146, 0.646)'
+
+        let new_private = input_private.parentNode
+        new_private.insertBefore(tel_priv,input_private.nextSibling)
+        new_private.removeChild(input_private)
+        
+        tel_priv.textContent = `${input_private_val}`
+        tel_priv.style.display = 'block'
+        document.querySelector("#company-dates > ul > #private").style.backgroundColor = 'rgba(98, 139, 146, 0.646)'
+
+        let new_email = input_email.parentNode
+        new_email.insertBefore(email,input_email.nextSibling)
+        new_email.removeChild(input_email)
+        
+        email.textContent = `${input_email_val}`
+        email.style.display = 'block'
+        document.querySelector("#company-dates > ul > #email").style.backgroundColor = 'rgba(98, 139, 146, 0.646)'
+
+        let new_passw = input_passw.parentNode
+        new_passw.insertBefore(password,input_passw.nextSibling)
+        new_passw.removeChild(input_passw)
+        
+        password.textContent = `${input_passw_val}`
+        password.style.display = 'block'
+        document.querySelector("#company-dates > ul > #password").style.backgroundColor = 'rgba(98, 139, 146, 0.646)'
     },1000)
 }
 
