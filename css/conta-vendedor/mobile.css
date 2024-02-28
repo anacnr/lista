@@ -265,4 +265,21 @@ background-color: rgba(98, 139, 146, 0.646);
     border-radius: 5px;
     box-shadow: 2px 2px 10px black;
 }
+
+/*Botão save que está dentro do evento do botão "Editar"*/
+#save{
+    text-transform: uppercase;
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    color: rgb(88, 33, 113);
+    padding: 5px 10px 5px 10px;
+    display: block;
+    margin: auto;
+    transform: translateY(4vh);
+    cursor: pointer;
+    border-width: 0px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px black;
+}
 }

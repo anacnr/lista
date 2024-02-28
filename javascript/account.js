@@ -13,7 +13,7 @@ let tel_priv = document.getElementById("span-private")
 let email = document.getElementById("span-email")
 let password = document.getElementById("span-password")
 
-/*Criação do novo formulário para passar os campos para o PHP*/
+/*Criação do novo formulário para passar os campos para o PHP e de lá apresentar os dados cadastrados da Empresa*/
 
 let dates = new FormData()
 
@@ -27,14 +27,14 @@ dates.append('span-private' , tel_priv)
 dates.append('span-email' , email)
 dates.append('span-password' , password)
 /*
-/*Exibe os dados do usuário. Requisição dos dados*/
+/*Exibe os dados do usuário. Requisição dos dados
 $.ajax({
     url: '../php/account-super.php' , type: 'POST', data: dates, processData: false, contentType: false
 }).done(function(request){
     console.log(request);
 
     manager.textContent = `${request.empresa}`
-})
+})*/
 
 /*Caso o usuário edite os dados*/
 
@@ -69,7 +69,7 @@ input_manager.style.textShadow = 'none'
 input_manager.style.letterSpacing = '3px'
 input_manager.style.textAlign = 'center'
 
-company.style.display = 'none'
+manager.style.display = 'none'
 
 document.querySelector("#company-dates > ul > #manager").style.backgroundColor = 'transparent'
 
@@ -113,8 +113,8 @@ span_local.removeChild(local)
 
 let input_tel_fix = document.createElement('input')
 input_tel_fix.className = 'par'
-input_tel_fix.id = 'span-local'
-input_tel_fix.name = 'span-local'
+input_tel_fix.id = 'span-tel'
+input_tel_fix.name = 'span-tel'
 input_tel_fix.style.color = 'black'
 input_tel_fix.style.textShadow = 'none'
 input_tel_fix.style.letterSpacing = '3px'
@@ -124,11 +124,106 @@ tel_fix.style.display = 'none'
 
 document.querySelector("#company-dates > ul > #tel").style.backgroundColor = 'transparent'
 
-let span_tel_fix = local.parentNode
+let span_tel_fix = tel_fix.parentNode
 span_tel_fix.insertBefore(input_tel_fix,tel_fix.nextSibling)
 span_tel_fix.removeChild(tel_fix)
 
+let input_private = document.createElement('input')
+input_private.className = 'par'
+input_private.id = 'span-private'
+input_private.name = 'span-private'
+input_private.style.color = 'black'
+input_private.style.textShadow = 'none'
+input_private.style.letterSpacing = '3px'
+input_private.style.textAlign = 'center'
 
+tel_priv.style.display = 'none'
+
+document.querySelector("#company-dates > ul > #private").style.backgroundColor = 'transparent'
+
+let span_private = tel_priv.parentNode
+span_private.insertBefore(input_private,tel_priv.nextSibling)
+span_private.removeChild(tel_priv)
+
+let input_email = document.createElement('input')
+input_email.className = 'par'
+input_email.id = 'span-email'
+input_email.name = 'span-email'
+input_email.style.color = 'black'
+input_email.style.textShadow = 'none'
+input_email.style.letterSpacing = '3px'
+input_email.style.textAlign = 'center'
+
+email.style.display = 'none'
+
+document.querySelector("#company-dates > ul > #email").style.backgroundColor = 'transparent'
+
+let span_email = email.parentNode
+span_email.insertBefore(input_email,email.nextSibling)
+span_email.removeChild(email)
+
+let input_passw = document.createElement('input')
+input_passw.className = 'par'
+input_passw.id = 'span-password'
+input_passw.name = 'span-password'
+input_passw.style.color = 'black'
+input_passw.style.textShadow = 'none'
+input_passw.style.letterSpacing = '3px'
+input_passw.style.textAlign = 'center'
+
+password.style.display = 'none'
+
+document.querySelector("#company-dates > ul > #password").style.backgroundColor = 'transparent'
+
+let span_passw = password.parentNode
+span_passw.insertBefore(input_passw,password.nextSibling)
+span_passw.removeChild(password)
+
+/*Botão de salvar alterações*/
+
+let button_sav = document.createElement('button')
+button_sav.id = 'save'
+button_sav.type = 'submit'
+button_sav.textContent = 'Salvar'
+
+const save = function sentNewDates(){
+    setTimeout(()=>{
+        console.log("Dados novos enviados para o banco")
+
+        button.insertBefore(button_edit, button_sav.nextSibling)
+        button.removeChild(button_sav)
+        button_edit.style.display = 'block'
+
+        /*Valores do input*/
+        let input_name_val =  input_company.value
+        let input_manager_val = input_manager.value
+        let input_cnpj_val = input_cnpj.value
+        let input_local_val = input_local.value
+        let input_tel_val = input_tel_fix.value
+        let input_private_val = input_private.value
+        let input_email_val = input_email.value
+        let input_passw_val = input_passw.value
+
+        /*Volta dos spans que estava com os novos dados*/
+        let new_company = input_company.parentNode
+        new_company.insertBefore(company,input_company.nextSibling)
+        new_company.removeChild(input_company)
+        
+        company.textContent = `${input_name_val}`
+        company.style.display = 'block'
+        document.querySelector("#company-dates > ul > #name").style.backgroundColor = 'rgba(98, 139, 146, 0.646)'
+
+        
+    },1000)
+}
+
+button_edit.style.display = 'none'
+
+let button = button_edit.parentNode
+button.insertBefore(button_sav, button_edit.nextSibling)
+button.removeChild(button_edit)
+
+button_sav.addEventListener("click", save)
 });//Função de editar
 
 });//Carregamento da página
