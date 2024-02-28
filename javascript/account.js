@@ -213,7 +213,7 @@ const save = function sentNewDates(){
         company.style.display = 'block'
         document.querySelector("#company-dates > ul > #name").style.backgroundColor = 'rgba(98, 139, 146, 0.646)'
 
-        
+
     },1000)
 }
 

@@ -80,12 +80,13 @@ body{
 }
 /*Empresa(span)*/
 #company-dates > ul > #name > #span-name{
-font-size: 3dvi;
-color: rgba(245, 245, 245, 0.742);
-text-shadow: 1px 1px 2px black;
-border-width: 0px;
-border-radius: 10px;
-width: 99%; height: 22px;
+    font-size: 3dvi;
+    color: rgba(245, 245, 245, 0.742);
+    text-shadow: 1px 1px 2px black;
+    border-width: 0px;
+    border-radius: 10px;
+    width: 99%; height: 22px;
+    text-transform: capitalize;
 }
 
 /*Responsável(parágrafo)*/
@@ -109,6 +110,7 @@ text-shadow: 1px 1px 2px black;
 border-width: 0px;
 border-radius: 10px;
 width: 99%; height: 22px;
+text-transform: capitalize;
 }
 
 /*CNPJ(parágrafo)*/
@@ -155,6 +157,7 @@ text-shadow: 1px 1px 2px black;
 border-width: 0px;
 border-radius: 10px;
 width: 99%; height: 22px;
+text-transform: capitalize;
 }
 
 /*Telefone fixo(parágrafo)*/
@@ -172,12 +175,12 @@ width: 99%; height: 22px;
 }
 /*Telefone fixo(span)*/
 #company-dates > ul > #tel > #span-tel{
-font-size: 3dvi;
-color: rgba(245, 245, 245, 0.742);
-text-shadow: 1px 1px 2px black;
-border-width: 0px;
-border-radius: 10px;
-width: 99%; height: 22px;
+    font-size: 3dvi;
+    color: rgba(245, 245, 245, 0.742);
+    text-shadow: 1px 1px 2px black;
+    border-width: 0px;
+    border-radius: 10px;
+    width: 99%; height: 22px;
 } 
 
 /*Telefone privado(parágrafo)*/
@@ -195,18 +198,18 @@ width: 99%; height: 22px;
 }
 /*Telefone privado(span)*/
 #company-dates > ul > #private > #span-private{
-font-size: 3dvi;
-color: rgba(245, 245, 245, 0.742);
-text-shadow: 1px 1px 2px black;
-border-width: 0px;
-border-radius: 10px;
-width: 99%; height: 22px;
+    font-size: 3dvi;
+    color: rgba(245, 245, 245, 0.742);
+    text-shadow: 1px 1px 2px black;
+    border-width: 0px;
+    border-radius: 10px;
+    width: 99%; height: 22px;
 } 
 
 /*Email(parágrafo)*/
 #company-dates > ul > #par-email{
-position: absolute;
-transform: translate(20vw, 42vh);
+    position: absolute;
+    transform: translate(20vw, 42vh);
 }
 /*Email(lista)*/
 #company-dates > ul > #email{
@@ -233,11 +236,11 @@ transform: translate(20vw, 47vh);
 }
 /*Senha (lista)*/
 #company-dates > ul > #password{
-transform: translateY(50vh);
-box-shadow: 2px 2px 10px rgb(36, 30, 30);
-width: 55%; height: 22px;
-border-radius: 10px;
-background-color: rgba(98, 139, 146, 0.646);
+    transform: translateY(50vh);
+    box-shadow: 2px 2px 10px rgb(36, 30, 30);
+    width: 55%; height: 22px;
+    border-radius: 10px;
+    background-color: rgba(98, 139, 146, 0.646);
 }
 /*Senha (span)*/
 #company-dates > ul > #password > #span-password{
