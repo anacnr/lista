@@ -1,0 +1,55 @@
+@charset "UTF-08";
+
+*{
+    margin: 0%;
+    padding: 0px;
+}
+
+body, html{
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    background-color: antiquewhite;
+    cursor: context-menu;
+}
+
+@media (max-width:600px) {
+    /*Dados do cliente e da compra*/
+    #dates{
+        background-color: rgba(0, 0, 0, 0.68);
+        color: white;
+        width: 70%;
+        height: 110px;
+        margin: auto;
+        transform: translateY(25vh);
+    }
+
+    #dates > #address {
+        text-align: left;
+        text-transform: capitalize;
+        padding: 10px 0px 10px 10px;
+        letter-spacing: 1px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 2.5dvi;
+    }
+
+    #dates > #pay, #money{
+        text-align: left;
+        text-transform: capitalize;
+        padding: 1px 0px 5px 10px;
+        font-size: 2.5dvi;
+    }
+
+    #dates > #status{
+        text-align: center;
+        text-transform: capitalize;
+        padding: 1px 0px 5px 10px;
+        background-color: white;
+        color: black;
+        width: 100px;
+        margin: auto;
+    }
+}
