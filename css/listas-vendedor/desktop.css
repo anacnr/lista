@@ -1,0 +1,12 @@
+@charset "UTF-08";
+
+body, html{
+    width: 90vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
+    background-attachment: fixed;
+}
