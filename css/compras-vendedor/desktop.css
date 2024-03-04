@@ -260,7 +260,8 @@ body{
         border-width: 0px;
         box-shadow: 2px 2px 7px rgb(24, 41, 27);
         position: absolute;
-        transform: translate(27vw,45vh);
+        top: 72%;
+        left: 35%;
         cursor: pointer;
     }
 
@@ -349,8 +350,9 @@ body{
         border-width: 0px;
         box-shadow: 2px 2px 7px rgb(24, 41, 27);
         position: absolute;
-        transform: translate(27vw,45vh);
-        cursor: pointer;
+        top: 73%;
+        left: 37%;
+       cursor: pointer;
     }
 
     #butt-main{
