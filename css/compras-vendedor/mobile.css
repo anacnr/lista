@@ -17,14 +17,28 @@ body{
 }
 
 @media (max-width:600px) {
+    /*Título da página*/
+    #contents{
+        width: 90%; height: 500px;
+        margin: auto;
+    }
+    h1{
+        font-size: 2em;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: 500;
+        color: rgb(231, 234, 232);
+        text-shadow: 2px 2px 3px rgb(33, 31, 31);
+        text-align: center;
+        transform: translateY(25vh);
+    }
     /*Dados do cliente e da compra*/
     #dates{
         background-color: rgba(0, 0, 0, 0.68);
         color: white;
         width: 70%;
-        height: 110px;
+        height: 120px;
         margin: auto;
-        transform: translateY(25vh);
+        transform: translateY(35vh);
     }
 
     #dates > #address {
@@ -46,10 +60,42 @@ body{
     #dates > #status{
         text-align: center;
         text-transform: capitalize;
-        padding: 1px 0px 5px 10px;
+        padding: 1px 0px 5px 0px;
         background-color: white;
         color: black;
         width: 100px;
         margin: auto;
+    }
+
+    #butt-list{
+        padding: 3px 5px 3px 5px;
+        text-transform: capitalize;
+        text-shadow: 2px 1px 3px black;
+        font-size: 13px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 600;
+        color: white;
+        background-image: linear-gradient(to right, rgb(165, 190, 180),rgba(232, 64, 176, 0.598));
+        border-width: 0px;
+        box-shadow: 2px 2px 7px rgb(24, 41, 27);
+        position: absolute;
+        transform: translate(23vw,45vh);
+        cursor: pointer;
+    }
+
+    #butt-main{
+        padding: 3px 5px 3px 5px;
+        text-transform: capitalize;
+        text-shadow: 2px 1px 3px black;
+        font-size: 13px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 600;
+        color: white;
+        background-image: linear-gradient(to right, rgb(161, 191, 184),rgb(241, 165, 43));
+        border-width: 0px;
+        box-shadow: 2px 2px 7px rgb(26, 40, 52);
+        position: absolute;
+        transform: translate(50vw,45vh);
+        cursor: pointer;
     }
 }
