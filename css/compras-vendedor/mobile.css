@@ -17,20 +17,23 @@ body{
 }
 
 @media (max-width:600px) {
-    /*Título da página*/
+    /*Div principal dos conteúdos*/
     #contents{
         width: 90%; height: 500px;
         margin: auto;
     }
+
+    /*Título da página*/
     h1{
         font-size: 2em;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-weight: 500;
-        color: rgb(231, 234, 232);
+        color: rgba(247, 183, 45, 0.877);
         text-shadow: 2px 2px 3px rgb(33, 31, 31);
         text-align: center;
         transform: translateY(25vh);
     }
+
     /*Dados do cliente e da compra*/
     #dates{
         background-color: rgba(0, 0, 0, 0.68);
@@ -67,6 +70,7 @@ body{
         margin: auto;
     }
 
+    /*Botões*/
     #butt-list{
         padding: 3px 5px 3px 5px;
         text-transform: capitalize;
