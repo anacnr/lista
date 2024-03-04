@@ -99,7 +99,7 @@ console.log(window.innerWidth)
   let notification = document.getElementById("noti");
   notification.addEventListener("click", function () {
     setTimeout(() => {
-      location.href = "#";
+      location.href = "../supermercado/listas.html";
       console.log("Redirecionado");
     }, 500);
   }); //notificação
