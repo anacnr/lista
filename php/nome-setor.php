@@ -9,7 +9,7 @@ else{
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $input = $_POST['novo-valor'];
 
-        $request = false; //flag
+        $request = false;//flag
     
         if(isset($input)){
     

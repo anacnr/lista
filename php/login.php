@@ -1,9 +1,4 @@
 <?php
-
-///Inicia a sessão para o usuário
-
-session_start();
-
 $local = '127.0.0.1';
 $user = 'root';
 $pass = "";

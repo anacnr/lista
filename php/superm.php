@@ -1,5 +1,4 @@
 <?php
-
 // Criar a conexão com o banco
 
 $local = '127.0.0.1';
@@ -28,7 +27,7 @@ if($mysql->connect_error != null){
 else{
 
 //Amostra as configurações da imagem
-$img_dates = $image['name']; //Tentei colocar a posição [0] mas não fucinonou
+$img_dates = $image['name'];
 
 //Verificar se alguma imagem foi escolhida
 if(isset($image)){

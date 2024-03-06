@@ -1,4 +1,4 @@
-/*O chat me aconselhou a criar uma outra função para criar os elementos um de cada vez, somente quando o botão salvar for clicado que deixa criar mais input do setor. CRUD*/
+/*Cria uma outra função para criar os elementos um de cada vez, somente quando o botão salvar for clicado que deixa criar mais input do setor. CRUD*/
 
 console.log("Script carregado!");
 
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelector(".save").addEventListener("click", save);
 
-  /*Menu para ver  o perfil, ajuda e os setores cadastrados*/
+  /*Menu para ver o perfil, ajuda e os setores cadastrados*/
   let menu_open = document.querySelector("#menu");
   menu_open.addEventListener("click", function () {
     let board = document.createElement("div");
