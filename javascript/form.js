@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
             Inicío da validação de acesso. O parâm. valide é quem recebe a variável $request lá do php.*/
                 if (valide.status === "Encontrado") { //Email e senha corretos
                     console.log(valide.message)
-                    window.location.href = './teste.html' 
+                    window.location.href = './index.html' 
                 }
                 else if(valide.status === "SenhaErrada"){ //Email correto mas senha incorreta.
                     console.log(valide.message)
@@ -69,10 +69,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     
                     //Fazer o form reaparecer e esconder o aviso.
                     setTimeout(()=>{
-                        form.style.opacity = '1'
-
                         advice.style.opacity = '0'
-                    },5000)
+                        location.href = './login.html'
+                    },2000)
 
                 }
                 else {
@@ -98,10 +97,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
                   //Fazer o form reaparecer e esconder o aviso
                   setTimeout(()=>{
-                      form.style.opacity = '1'
-
-                      advice.style.opacity = '0'
-                  },5000)
+                    advice.style.opacity = '0'
+                    location.href = './login.html'
+                },2000)
                 }
             }).fail(function (jqXHR, textStatus, errorThrown) {
                 /*O .fail() serve para mostrar o erro caso exista*/
