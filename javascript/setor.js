@@ -56,9 +56,15 @@ document.addEventListener("DOMContentLoaded", function () {
     link_sectors.href = "../supermercado/setores.html";
     link_sectors.textContent = "Setores";
 
+    let link_site = document.createElement("a");
+    link_site.className = "link";
+    link_site.href = "../index.html";
+    link_site.textContent = "Site";
+
     board.appendChild(link_user);
     board.appendChild(link_help);
     board.appendChild(link_sectors);
+    board.appendChild(link_site);
 
     let menu_close = document.createElement("img");
     menu_close.id = "menu";

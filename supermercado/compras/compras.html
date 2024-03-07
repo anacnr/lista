@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,5 +24,21 @@
         <button type="submit" id="butt-list">ver lista</button>
         <button type="submit" id="butt-main">tela pricipal</button>
     </div>
+
+    <script>
+        document.querySelectorAll('button')[0].addEventListener("click", function(){
+            setTimeout(()=>{
+                location.href = '#'
+                console.log("Botão de ver lista")
+            },1000)
+        });
+
+        document.querySelectorAll('button')[1].addEventListener("click", function(){
+            setTimeout(()=>{
+                location.href = '/index.html'
+                console.log("Botão que redireciona para a tela principal")
+            },1000)
+        });
+    </script>
 </body>
 </html>
