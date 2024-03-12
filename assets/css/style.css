@@ -206,7 +206,9 @@ header {
  
 /*IMAGEM DE PROMOÇÃO*/  
 
-
+.img-fluid{
+  width: 100px; height: 100px;
+}
 
 /*RODAPÉ*/
 
@@ -249,11 +251,37 @@ footer {
     text-decoration: none; /*tira a linha que mostra do link*/
   }
   
-  .redes-sociais img {
-    width: 40px; /*largura*/
-    height: 20px; /*altura*/
+  .redes-sociais{
+    width: 100px; /*largura*/
+    height: 30px; /*altura*/
+    right: 25vw;
+    transform: translateX(20vw);
+    position: relative;
   }
   
+  /*PARTE DOS ÍCONES DAS REDES SOCIAIS*/
+  footer > .conteudo-rodape > .redes-sociais > .bi-facebook, .bi-instagram, .bi-twitter-x{
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  footer > .conteudo-rodape > .redes-sociais > .bi-facebook{
+    position: relative;
+    right: 40%;
+    bottom: 50%;
+  }
+
+  footer > .conteudo-rodape > .redes-sociais > .bi-instagram{
+    position: relative;
+    right: 25%;
+    bottom: 50%;
+  }
+
+  footer > .conteudo-rodape > .redes-sociais > .bi-twitter-x{
+    position: relative;
+    right: 15%;
+    bottom: 50%;
+  }
   
   /*RODAPÉ RESPONSIVO*/
   
@@ -272,5 +300,29 @@ footer {
     .links-rodape li {
         display: block;
         margin-bottom: 10px;
+    }
+
+        /*PARTE DOS ÍCONES DAS REDES SOCIAIS*/
+    footer > .conteudo-rodape > .redes-sociais > .bi-facebook, .bi-instagram, .bi-twitter-x{
+      font-size: 16px;
+      cursor: pointer;
+    }
+B
+    footer > .conteudo-rodape > .redes-sociais > .bi-facebook{
+      position: relative;
+      left: 5%;
+      bottom: 30%;
+    }
+
+    footer > .conteudo-rodape > .redes-sociais > .bi-instagram{
+      position: relative;
+      left: 15%;
+      bottom: 30%;
+    }
+
+    footer > .conteudo-rodape > .redes-sociais > .bi-twitter-x{
+      position: relative;
+      left: 30%;
+      bottom: 30%;
     }
   }
