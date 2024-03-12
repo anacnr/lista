@@ -1,559 +1,553 @@
 @charset "UTF-8";
-/*Configurações para tela do computador width minimo de 621px e max de 780px
-Tive que diminuir o limite de largura máxima.
-Especificações baseadas no consórcio w3school. url: https://www.w3schools.com/css/css_rwd_mediaqueries.asp*/
-@media (min-width:600px) and (max-width: 768px){
 
-    body{
-        background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
-        background-attachment: fixed;
-    }
-    
-    form{
-        position: relative;
-        top: 150px;
-        margin: auto;
-        background-color: rgba(255, 255, 255, 0.909);
-        box-shadow: 2px 1px 10px black;
-        border-radius: 3px;
-        height: 50vh;
-        width: 85vw; 
-    }
-    
-    form > ul > li{
-        list-style: none;
-    }
-    
-    form > ul{
-        position: relative;
-        margin: auto;
-        top: 35%;
-        width: 50vw;
-        height: 10vh;
-    }
-/*Configurações dos ícones*/
+body {
+    background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
+    background-attachment: fixed;
+  }
 
-    form > ul > li > #gmail-icon{
-        width: 21px;
-        height: 21px;
-        position: absolute;
-        right: 97%;
-        bottom: 60%;
-        margin-right: 5px;
-        z-index: 1;
-        filter: hue-rotate(44deg);
-        cursor: context-menu;
-    }
+form > button{
+    cursor: pointer;
+}
+@media (min-width: 600px) and (max-width: 768px) {
 
-    form > ul > li > #lock-icon{
-        width: 21px;
-        height: 21px;
-        position: absolute;
-        top: 140%;
-        right: 98%;
-        z-index: 1;
-        filter: hue-rotate(96deg);
-        cursor: context-menu;
-    }
-    
-    /*Esses são os campos onde vão receber os dados*/
-    
-    form > ul > li > input{
-        width: 100%;
-        height: 12px;
-        padding-top: 2%;
-        padding-bottom: 4%;
-        border-style: solid;
-        border-color: rgba(0, 0, 0, 0.675);
-        border-radius: 3px;
-        text-align: center;
-        position: relative;
-        right: 8%;
-    }
-    
-    form > ul > li > input::placeholder{
-        color: rgba(39, 39, 149, 0.94);
-        font-size: 0.8em;
-        font-weight: 600;
-    }
-    
-    form > ul > li > #gmail{
-        margin-bottom: 15px;
-    }
-    
-    form > ul > li > #senha{
-        margin-top: 35px;
-    }
-    
-    form > button{
-        width: 20%;
-        height: 7%;
-        border-width: 1px;
-        border-style: solid;
-        border-color: rgba(0, 0, 0, 0.623);
-        border-radius: 25px;
-        font-size: 2dvw;
-        font-weight: 400;
-        position: relative;
-        transform: translate(22vw,32vh);
-    }
+  form {
+    position: relative;
+    top: 150px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.909);
+    box-shadow: 2px 1px 10px black;
+    border-radius: 3px;
+    height: 50vh;
+    width: 85vw;
+  }
 
-/*Botão de cadastro*/
-    form > #cad{
+  form > ul > li {
+    list-style: none;
+  }
+
+  form > ul {
+    position: relative;
+    margin: auto;
+    top: 35%;
+    width: 50vw;
+    height: 10vh;
+  }
+  /*Configurações dos ícones*/
+
+  form > ul > li > #gmail-icon {
+    font-size: 18px;
+    position: absolute;
+    right: 97%;
+    bottom: 65%;
+    margin-right: 5px;
+    z-index: 1;
+    filter: hue-rotate(44deg);
+    cursor: context-menu;
+  }
+
+  form > ul > li > #lock-icon {
+    font-size: 18px;
+    position: absolute;
+    top: 135%;
+    right: 98%;
+    z-index: 1;
+    filter: hue-rotate(96deg);
+    cursor: context-menu;
+  }
+
+  /*Esses são os campos onde vão receber os dados*/
+
+  form > ul > li > input {
+    width: 100%;
+    height: 12px;
+    padding-top: 2%;
+    padding-bottom: 4%;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.675);
+    border-radius: 3px;
+    text-align: center;
+    position: relative;
+    right: 8%;
+  }
+
+  form > ul > li > input::placeholder {
+    color: rgba(39, 39, 149, 0.94);
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+
+  form > ul > li > #gmail {
+    margin-bottom: 15px;
+  }
+
+  form > ul > li > #senha {
+    margin-top: 35px;
+  }
+
+  form > button {
+    width: 20%;
+    height: 7%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.623);
+    border-radius: 25px;
+    font-size: 2dvw;
+    font-weight: 400;
+    position: relative;
+    transform: translate(22vw, 32vh);
+    cursor: pointer;
+  }
+
+  /*Botão de cadastro*/
+  form > #cad {
     margin-left: 5%;
-    }
+  }
 
-/*Classe criada para o quadro de aviso dos dados inválidos*/
-    .advice{
-        width: 50vw;
-        height: 150px;
-        display: block;
-        margin: auto;
-        transform: translateY(-50vh);
-        box-shadow: 0px -4px 6px black inset;
-        background-color: white;
-        border-radius: 12px;
-    
-        animation-name: alert;
-        animation-duration: 2s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: 1; 
+  /*Classe criada para o quadro de aviso dos dados inválidos*/
+  .advice {
+    width: 50vw;
+    height: 150px;
+    display: block;
+    margin: auto;
+    transform: translateY(-50vh);
+    box-shadow: 0px -4px 6px black inset;
+    background-color: white;
+    border-radius: 12px;
+
+    animation-name: alert;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes alert {
+    from {
+      opacity: 0%;
+      width: 50vw;
+      height: 150px;
     }
-    
-    @keyframes alert {
-        from{
-            opacity: 0%;
-            width: 50vw;
-            height: 150px;      
-        }
-        to{
-            opacity: 100%;
-            width:  50vw;
-            height: 150px;
-        }
+    to {
+      opacity: 100%;
+      width: 50vw;
+      height: 150px;
     }
-/*ID do parágrafo que está dentro do quadro de aviso*/    
-    #alert{
-        color: rgb(10, 10, 10);
-        font-size: 1rem;
-        text-align: center;
-        transform: translateY(50px);
-    }
+  }
+  /*ID do parágrafo que está dentro do quadro de aviso*/
+  #alert {
+    color: rgb(10, 10, 10);
+    font-size: 1rem;
+    text-align: center;
+    transform: translateY(50px);
+  }
 }
 
-@media (min-width:768px) and (max-width: 992px){
-    body{
-        background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
-        background-attachment: fixed;
-    } 
+@media (min-width: 768px) and (max-width: 992px) {
+  body {
+    background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
+    background-attachment: fixed;
+  }
 
-    form{
-        position: relative;
-        margin: auto;
-        margin-top: 10%;
-        background-color: rgba(255, 255, 255, 0.909);
-        box-shadow: 2px 1px 10px black;
-        border-radius: 3px;
-        height: 50vh;
-        width: 75vw; 
-        top: 84px;
-    }
-    
-    form > ul > li{
-        list-style: none;
-    }
-    
-    form > ul{
-        position: relative;
-        margin: auto;
-        top: 30%;
-        right: 2%;
-        width: 50vw;
-        height: 10vh;
-    }
+  form {
+    position: relative;
+    margin: auto;
+    margin-top: 10%;
+    background-color: rgba(255, 255, 255, 0.909);
+    box-shadow: 2px 1px 10px black;
+    border-radius: 3px;
+    height: 50vh;
+    width: 75vw;
+    top: 84px;
+  }
 
-    form > ul > li > #gmail-icon{
-        width: 21px;
-        height: 21px;
-        position: absolute;
-        right: 95%;
-        bottom: 45%;
-        margin-right: 0px;
-        z-index: 1;
-        filter: hue-rotate(44deg);
-        cursor: context-menu;
-    }
+  form > ul > li {
+    list-style: none;
+  }
 
-    form > ul > li > #lock-icon{
-        width: 21px;
-        height: 21px;
-        position: absolute;
-        top: 165%;
-        right: 95%;
-        z-index: 1;
-        filter: hue-rotate(96deg);
-        cursor: context-menu;
-    }
-    
-    /*Esses são os campos onde vão receber os dados*/
-    
-    form > ul > li > input{
-        position: relative;
-        right: 2%;
-        width: 89%;
-        height: 5px;
-        padding-top: 2%;
-        padding-bottom: 4%;
-        border-style: solid;
-        border-color: rgba(0, 0, 0, 0.675);
-        border-radius: 3px;
-        text-align: center;
-    }
-    
-    form > ul > li > input::placeholder{
-        color: rgba(39, 39, 149, 0.94);
-        font-size: 0.8em;
-        font-weight: 600;
-    }
+  form > ul {
+    position: relative;
+    margin: auto;
+    top: 30%;
+    right: 2%;
+    width: 50vw;
+    height: 10vh;
+  }
 
-    form > ul > li > #gmail {
-        margin-top: 10px;
-    }
-    
-    form > ul > li > #senha{
-        margin-top: 55px;
-    }
-    
-    form > button{
-        width: 20%;
-        height: 25px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: rgba(0, 0, 0, 0.623);
-        border-radius: 25px;
-        font-size: 0.7em;
-        font-weight: 100;
-        margin-right: 15px;
-        position: relative;
-        transform: translate(19vw,32vh);
-        cursor: pointer;
-    }
+  form > ul > li > #gmail-icon {
+    font-size: 18px;
+    position: absolute;
+    right: 95%;
+    bottom: 50%;
+    margin-right: 0px;
+    z-index: 1;
+    filter: hue-rotate(44deg);
+    cursor: context-menu;
+  }
 
-    form > #cad{
-        margin-left: 4%;
-        }
+  form > ul > li > #lock-icon {
+    font-size: 18px;
+    position: absolute;
+    top: 150%;
+    right: 95%;
+    z-index: 1;
+    filter: hue-rotate(96deg);
+    cursor: context-menu;
+  }
 
-    .advice{
-            width: 50vw;
-            height: 150px;
-            display: block;
-            margin: auto;
-            transform: translateY(-50vh);
-            box-shadow: 0px -4px 6px black inset;
-            background-color: white;
-            border-radius: 12px;
-        
-            animation-name: alert;
-            animation-duration: 2s;
-            animation-timing-function: ease-in-out;
-            animation-iteration-count: 1; 
-        }
-        
-    @keyframes alert {
-            from{
-                opacity: 0%;
-                width: 50vw;
-                height: 150px;      
-            }
-            to{
-                opacity: 100%;
-                width:  50vw;
-                height: 150px;
-            }
-        }
-        
-    #alert{
-            color: rgb(10, 10, 10);
-            font-size: 1rem;
-            text-align: center;
-            transform: translateY(50px);
-        }
+  /*Esses são os campos onde vão receber os dados*/
+
+  form > ul > li > input {
+    position: relative;
+    right: 2%;
+    width: 89%;
+    height: 5px;
+    padding-top: 2%;
+    padding-bottom: 4%;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.675);
+    border-radius: 3px;
+    text-align: center;
+  }
+
+  form > ul > li > input::placeholder {
+    color: rgba(39, 39, 149, 0.94);
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+
+  form > ul > li > #gmail {
+    margin-top: 10px;
+  }
+
+  form > ul > li > #senha {
+    margin-top: 55px;
+  }
+
+  form > button {
+    width: 20%;
+    height: 25px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.623);
+    border-radius: 25px;
+    font-size: 0.7em;
+    font-weight: 100;
+    margin-right: 15px;
+    position: relative;
+    transform: translate(19vw, 32vh);
+    cursor: pointer;
+  }
+
+  form > #cad {
+    margin-left: 4%;
+  }
+
+  .advice {
+    width: 50vw;
+    height: 150px;
+    display: block;
+    margin: auto;
+    transform: translateY(-50vh);
+    box-shadow: 0px -4px 6px black inset;
+    background-color: white;
+    border-radius: 12px;
+
+    animation-name: alert;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes alert {
+    from {
+      opacity: 0%;
+      width: 50vw;
+      height: 150px;
+    }
+    to {
+      opacity: 100%;
+      width: 50vw;
+      height: 150px;
+    }
+  }
+
+  #alert {
+    color: rgb(10, 10, 10);
+    font-size: 1rem;
+    text-align: center;
+    transform: translateY(50px);
+  }
 }
 
-@media (min-width:992px) and (max-width: 1200px) {
-    body{
-        background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
-        background-attachment: fixed;
-    } 
+@media (min-width: 992px) and (max-width: 1200px) {
+  body {
+    background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
+    background-attachment: fixed;
+  }
 
-    form{
-        position: relative;
-        margin: auto;
-        margin-top: 10%;
-        background-color: rgba(255, 255, 255, 0.909);
-        box-shadow: 2px 1px 10px black;
-        border-radius: 3px;
-        height: 50vh;
-        width: 60vw; 
-        top: 84px;
-    }
-    
-    form > ul > li{
-        list-style: none;
-    }
-    
-    form > ul{
-        position: relative;
-        margin: auto;
-        top: 30%;
-        right: 2%;
-        width: 50vw;
-        height: 10vh;
-    }
+  form {
+    position: relative;
+    margin: auto;
+    margin-top: 10%;
+    background-color: rgba(255, 255, 255, 0.909);
+    box-shadow: 2px 1px 10px black;
+    border-radius: 3px;
+    height: 50vh;
+    width: 60vw;
+    top: 84px;
+  }
 
-    form > ul > li > #gmail-icon{
-        width: 21px;
-        height: 21px;
-        position: absolute;
-        right: 85%;
-        bottom: 45%;
-        margin-right: 0px;
-        z-index: 1;
-        filter: hue-rotate(44deg);
-        cursor: context-menu;
-    }
+  form > ul > li {
+    list-style: none;
+  }
 
-    form > ul > li > #lock-icon{
-        width: 21px;
-        height: 21px;
-        position: absolute;
-        top: 160%;
-        right: 85%;
-        z-index: 1;
-        filter: hue-rotate(96deg);
-        cursor: context-menu;
-    }
-    
-    /*Esses são os campos onde vão receber os dados*/
-    
-    form > ul > li > input{
-        position: relative;
-        left: 10%;
-        width: 75%;
-        height: 5px;
-        padding-top: 2%;
-        padding-bottom: 3%;
-        border-style: solid;
-        border-color: rgba(0, 0, 0, 0.675);
-        border-radius: 3px;
-        text-align: center;
-    }
-    
-    form > ul > li > input::placeholder{
-        color: rgba(39, 39, 149, 0.94);
-        font-size: 0.8em;
-        font-weight: 600;
-    }
+  form > ul {
+    position: relative;
+    margin: auto;
+    top: 30%;
+    right: 2%;
+    width: 50vw;
+    height: 10vh;
+  }
 
-    form > ul > li > #gmail {
-        margin-top: 10px;
-    }
-    
-    form > ul > li > #senha{
-        margin-top: 55px;
-    }
-    
-    form > button{
-        width: 20%;
-        height: 25px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: rgba(0, 0, 0, 0.623);
-        border-radius: 25px;
-        font-size: 0.7em;
-        font-weight: 100;
-        margin-right: 15px;
-        position: relative;
-        transform: translate(16vw,32vh);
-        cursor: pointer;
-    }
+  form > ul > li > #gmail-icon {
+    font-size: 23px;
+    position: absolute;
+    right: 85%;
+    bottom: 45%;
+    margin-right: 0px;
+    z-index: 1;
+    filter: hue-rotate(44deg);
+    cursor: context-menu;
+  }
 
-    form > #cad{
-        margin-left: 4%;
-        }
+  form > ul > li > #lock-icon {
+    font-size: 23;
+    position: absolute;
+    top: 160%;
+    right: 85%;
+    z-index: 1;
+    filter: hue-rotate(96deg);
+    cursor: context-menu;
+  }
 
-    .advice{
-            width: 50vw;
-            height: 150px;
-            display: block;
-            margin: auto;
-            transform: translateY(-50vh);
-            box-shadow: 0px -4px 6px black inset;
-            background-color: white;
-            border-radius: 12px;
-        
-            animation-name: alert;
-            animation-duration: 2s;
-            animation-timing-function: ease-in-out;
-            animation-iteration-count: 1; 
-        }
-        
-    @keyframes alert {
-            from{
-                opacity: 0%;
-                width: 50vw;
-                height: 150px;      
-            }
-            to{
-                opacity: 100%;
-                width:  50vw;
-                height: 150px;
-            }
-        }
-        
-    #alert{
-            color: rgb(10, 10, 10);
-            font-size: 1rem;
-            text-align: center;
-            transform: translateY(50px);
-        }
+  /*Esses são os campos onde vão receber os dados*/
+
+  form > ul > li > input {
+    position: relative;
+    left: 10%;
+    width: 75%;
+    height: 5px;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.675);
+    border-radius: 3px;
+    text-align: center;
+  }
+
+  form > ul > li > input::placeholder {
+    color: rgba(39, 39, 149, 0.94);
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+
+  form > ul > li > #gmail {
+    margin-top: 10px;
+  }
+
+  form > ul > li > #senha {
+    margin-top: 55px;
+  }
+
+  form > button {
+    width: 20%;
+    height: 25px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.623);
+    border-radius: 25px;
+    font-size: 0.7em;
+    font-weight: 100;
+    margin-right: 15px;
+    position: relative;
+    transform: translate(16vw, 32vh);
+    cursor: pointer;
+  }
+
+  form > #cad {
+    margin-left: 4%;
+  }
+
+  .advice {
+    width: 50vw;
+    height: 150px;
+    display: block;
+    margin: auto;
+    transform: translateY(-50vh);
+    box-shadow: 0px -4px 6px black inset;
+    background-color: white;
+    border-radius: 12px;
+
+    animation-name: alert;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes alert {
+    from {
+      opacity: 0%;
+      width: 50vw;
+      height: 150px;
+    }
+    to {
+      opacity: 100%;
+      width: 50vw;
+      height: 150px;
+    }
+  }
+
+  #alert {
+    color: rgb(10, 10, 10);
+    font-size: 1rem;
+    text-align: center;
+    transform: translateY(50px);
+  }
 }
 
-@media (min-width: 1200px){
-    body{
-        background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
-        background-attachment: fixed;
-    } 
+@media (min-width: 1200px) {
+  body {
+    background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
+    background-attachment: fixed;
+  }
 
-    form{
-        position: relative;
-        margin: auto;
-        margin-top: 5%;
-        background-color: rgba(255, 255, 255, 0.909);
-        box-shadow: 2px 1px 10px black;
-        border-radius: 3px;
-        height: 57vh;
-        width: 45vw;
-        top: 84px;
-    }
-    
-    form > ul > li{
-        list-style: none;
-    }
-    
-    form > ul{
-        position: relative;
-        margin: auto;
-        top: 30%;
-        right: 2%;
-        width: 50vw;
-        height: 10vh;
-    }
+  form {
+    position: relative;
+    margin: auto;
+    margin-top: 5%;
+    background-color: rgba(255, 255, 255, 0.909);
+    box-shadow: 2px 1px 10px black;
+    border-radius: 3px;
+    height: 57vh;
+    width: 45vw;
+    top: 84px;
+  }
 
-    form > ul > li > #gmail-icon{
-        width: 21px;
-        height: 21px;
-        position: absolute;
-        right: 84%;
-        bottom: 40%;
-        margin-right: 0px;
-        z-index: 1;
-        filter: hue-rotate(44deg);
-        cursor: context-menu;
-    }
+  form > ul > li {
+    list-style: none;
+  }
 
-    form > ul > li > #lock-icon{
-        width: 20px;
-        height: 19px;
-        position: absolute;
-        top: 169%;
-        right: 85%;
-        z-index: 1;
-        filter: hue-rotate(96deg);
-        cursor: context-menu;
-    }
-    
-    /*Esses são os campos onde vão receber os dados*/
-    
-    form > ul > li > input{
-        position: relative;
-        left: 12%;
-        width: 56%;
-        height: 0px;
-        padding-top: 2%;
-        padding-bottom: 3%;
-        border-style: solid;
-        border-color: rgba(0, 0, 0, 0.675);
-        border-radius: 3px;
-        text-align: center;
-    }
-    
-    form > ul > li > input::placeholder{
-        color: rgba(39, 39, 149, 0.94);
-        font-size: 0.8em;
-        font-weight: 600;
-    }
+  form > ul {
+    position: relative;
+    margin: auto;
+    top: 30%;
+    right: 2%;
+    width: 50vw;
+    height: 10vh;
+  }
 
-    form > ul > li > #gmail {
-        margin-top: 10px;
-    }
-    
-    form > ul > li > #senha{
-        margin-top: 55px;
-    }
-    
-    form > button{
-        width: 20%;
-        height: 25px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: rgba(0, 0, 0, 0.623);
-        border-radius: 25px;
-        font-size: 0.7em;
-        font-weight: 100;
-        margin-right: 15px;
-        position: relative;
-        transform: translate(11vw,37vh);
-        cursor: pointer;
-    }
+  form > ul > li > #gmail-icon {
+    font-size: 23px;
+    position: absolute;
+    right: 85%;
+    bottom: 40%;
+    margin-right: 0px;
+    z-index: 1;
+    filter: hue-rotate(44deg);
+    cursor: context-menu;
+  }
 
-    form > #cad{
-        margin-left: 4%;
-        }
-    
-    .advice{
-            width: 50vw;
-            height: 150px;
-            display: block;
-            margin: auto;
-            transform: translateY(-50vh);
-            box-shadow: 0px -4px 6px black inset;
-            background-color: white;
-            border-radius: 12px;
-        
-            animation-name: alert;
-            animation-duration: 2s;
-            animation-timing-function: ease-in-out;
-            animation-iteration-count: 1; 
-        }
-        
-    @keyframes alert {
-            from{
-                opacity: 0%;
-                width: 50vw;
-                height: 150px;      
-            }
-            to{
-                opacity: 100%;
-                width:  50vw;
-                height: 150px;
-            }
-        }
-        
-    #alert{
-            color: rgb(10, 10, 10);
-            font-size: 1rem;
-            text-align: center;
-            transform: translateY(50px);
-        }
+  form > ul > li > #lock-icon {
+    font-size: 23px;
+    position: absolute;
+    top: 169%;
+    right: 85%;
+    z-index: 1;
+    filter: hue-rotate(96deg);
+    cursor: context-menu;
+  }
+
+  /*Esses são os campos onde vão receber os dados*/
+
+  form > ul > li > input {
+    position: relative;
+    left: 12%;
+    width: 56%;
+    height: 0px;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.675);
+    border-radius: 3px;
+    text-align: center;
+  }
+
+  form > ul > li > input::placeholder {
+    color: rgba(39, 39, 149, 0.94);
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+
+  form > ul > li > #gmail {
+    margin-top: 10px;
+  }
+
+  form > ul > li > #senha {
+    margin-top: 55px;
+  }
+
+  form > button {
+    width: 20%;
+    height: 25px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.623);
+    border-radius: 25px;
+    font-size: 0.7em;
+    font-weight: 100;
+    margin-right: 15px;
+    position: relative;
+    transform: translate(11vw, 37vh);
+    cursor: pointer;
+  }
+
+  form > #cad {
+    margin-left: 4%;
+  }
+
+  .advice {
+    width: 50vw;
+    height: 150px;
+    display: block;
+    margin: auto;
+    transform: translateY(-50vh);
+    box-shadow: 0px -4px 6px black inset;
+    background-color: white;
+    border-radius: 12px;
+
+    animation-name: alert;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes alert {
+    from {
+      opacity: 0%;
+      width: 50vw;
+      height: 150px;
+    }
+    to {
+      opacity: 100%;
+      width: 50vw;
+      height: 150px;
+    }
+  }
+
+  #alert {
+    color: rgb(10, 10, 10);
+    font-size: 1rem;
+    text-align: center;
+    transform: translateY(50px);
+  }
 }
