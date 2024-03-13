@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 16/01/2024 às 15:24
+-- Tempo de geração: 13/03/2024 às 19:26
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -30,23 +30,20 @@ SET time_zone = "+00:00";
 CREATE TABLE `comprador` (
   `nome` varchar(100) NOT NULL,
   `cpf` char(14) NOT NULL,
-  `gmail` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
   `moradia` varchar(60) DEFAULT NULL,
   `telefone` varchar(14) DEFAULT NULL,
   `senha` varchar(255) DEFAULT NULL,
   `id` int(11) NOT NULL,
-  `texto` varchar(255) DEFAULT NULL
+  `senha_hash` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `comprador`
 --
 
-INSERT INTO `comprador` (`nome`, `cpf`, `gmail`, `moradia`, `telefone`, `senha`, `id`, `texto`) VALUES
-('Catarina', '11111111111', 'aateste@gmail.com', 'Rua 1 aven', '1234567890', 'as12', 1, NULL),
-('Nick', '1000000001', 'nickteste@gmail.com', 'Avenida da', '1234567891', '123', 2, NULL),
-('Xae', '13', 'usert@gmail.com', 'Rua agua', '13', '$2y$10$0F/xqbh51MepmsngvbRM6eb9yTSEvG1seCAzXOnucm.exUC7b1W.a', 18, NULL),
-('Helio', '08', 'helio@gmail.com', 'Rua 2 av', '08', '$2y$10$BNiUlaA7ISMbMYa5X2CGRuC3SdCYyQgYqYD14vm0KjsI8HceA0D4K', 20, NULL);
+INSERT INTO `comprador` (`nome`, `cpf`, `email`, `moradia`, `telefone`, `senha`, `id`, `senha_hash`) VALUES
+('ertinho', '22000000000', 'erto@email.com', 'Rua 1 avenida', '11100000000', '90g&!151', 21, '$2y$10$sKVHHNLHozrH2cfww9Pb.OtsUwnCE44H9I3C7ejzps4YQH0Cvzxw6');
 
 -- --------------------------------------------------------
 
@@ -84,19 +81,17 @@ CREATE TABLE `setor` (
 
 CREATE TABLE `suporte` (
   `id` int(11) NOT NULL,
-  `gmail` varchar(90) DEFAULT NULL,
+  `email` varchar(90) DEFAULT NULL,
   `senha` varchar(255) DEFAULT NULL,
-  `resposta` varchar(255) DEFAULT NULL
+  `senha_hash` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `suporte`
 --
 
-INSERT INTO `suporte` (`id`, `gmail`, `senha`, `resposta`) VALUES
-(1, 'su@gmail.com', NULL, NULL),
-(3, 'suport@gmail.com', '$2y$10$Dup4cNIDRm4gA.IG1rBf2uPJbkZn9MhUgb2NjlEpb/mpP7gyHNL/S', NULL),
-(4, 'help@gmail.com', '$2y$10$IVYXLV6LdW6JdmYLrtXu3OutYvrHCT1xUI2rw/GUf7npSc00cAszO', NULL);
+INSERT INTO `suporte` (`id`, `email`, `senha`, `senha_hash`) VALUES
+(5, 'suporte@email.com', 'vvb%$011', '$2y$10$rNGAavnHSYajQE0p.PMcoutqJJM2lJ7QkV4y86W2/teHKz6Xf2.8S');
 
 -- --------------------------------------------------------
 
@@ -111,22 +106,19 @@ CREATE TABLE `vendedor` (
   `localizacao` varchar(60) DEFAULT NULL,
   `telfixo` varchar(14) DEFAULT NULL,
   `celular` varchar(14) DEFAULT NULL,
-  `gmail` varchar(90) DEFAULT NULL,
+  `email` varchar(90) DEFAULT NULL,
   `senha` varchar(255) DEFAULT NULL,
   `imagem` varchar(60) DEFAULT NULL,
-  `id` int(11) NOT NULL
+  `id` int(11) NOT NULL,
+  `senha_hash` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `vendedor`
 --
 
-INSERT INTO `vendedor` (`empresa`, `responsavel`, `cnpj`, `localizacao`, `telfixo`, `celular`, `gmail`, `senha`, `imagem`, `id`) VALUES
-('Departamento', 'Amadeu', '11', 'Rua  2 Avenida', '11', '11', 'testeuser5@gmail.com', 'xxz2', '', 2),
-('Agua', 'Milena', '11', 'Rua 3 avenida', '11', '11', 'testeuser10@gmail.com', 'ddd4', 'enviadas/655905dfa8af3.jpg', 6),
-('Agua', 'Pedro', '09', 'Rua  2 Avenida', '09', '10', 'testeuser17@gmail.com', 'as12', 'enviadas/6565097689782.jpg', 10),
-('Dedo', 'Jaiela', '20', 'Rua 1 av', '20', '20', 'dedo@gmail.com', '$2y$10$jEaAPWHj0.OIf3ds/ge7q./C/Y.dsU2WU6odREZTwCIBYAqcHFMyi', 'enviadas/658d9d7d81c8a.png', 11),
-('Lopoa', 'Verno', '33', 'Rua 1 Avenida', '09', '09', 'lopoa@gmail.com', '$2y$10$/JsMIdYORFrUCBUJEVmhgO7GnEc.2Z9uCtLUOENZGRvWheMgkDvwm', 'enviadas/6595648259fbe.png', 12);
+INSERT INTO `vendedor` (`empresa`, `responsavel`, `cnpj`, `localizacao`, `telfixo`, `celular`, `email`, `senha`, `imagem`, `id`, `senha_hash`) VALUES
+('Empresa1', 'Zero', '1100000000000', 'Rua 1 Avenida', '0000000000', '10000000000', 'userteste20@email.com', 'abc12345', 'enviadas/65f1eaf5c0c10.jpg', 14, '$2y$10$x1WA2go9nrudOyMxdiyZUeC42EqFyuFTa5SiakHdbCPB5U27VEWEC');
 
 --
 -- Índices para tabelas despejadas
@@ -137,7 +129,7 @@ INSERT INTO `vendedor` (`empresa`, `responsavel`, `cnpj`, `localizacao`, `telfix
 --
 ALTER TABLE `comprador`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `gmail` (`gmail`);
+  ADD UNIQUE KEY `gmail` (`email`);
 
 --
 -- Índices de tabela `produto`
@@ -156,14 +148,14 @@ ALTER TABLE `setor`
 --
 ALTER TABLE `suporte`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `gmail` (`gmail`);
+  ADD UNIQUE KEY `gmail` (`email`);
 
 --
 -- Índices de tabela `vendedor`
 --
 ALTER TABLE `vendedor`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `gmail` (`gmail`);
+  ADD UNIQUE KEY `gmail` (`email`);
 
 --
 -- AUTO_INCREMENT para tabelas despejadas
@@ -173,7 +165,7 @@ ALTER TABLE `vendedor`
 -- AUTO_INCREMENT de tabela `comprador`
 --
 ALTER TABLE `comprador`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de tabela `produto`
@@ -191,13 +183,13 @@ ALTER TABLE `setor`
 -- AUTO_INCREMENT de tabela `suporte`
 --
 ALTER TABLE `suporte`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `vendedor`
 --
 ALTER TABLE `vendedor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
