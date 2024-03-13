@@ -26,16 +26,24 @@ dates.append('span-tel' , tel_fix)
 dates.append('span-private' , tel_priv)
 dates.append('span-email' , email)
 dates.append('span-password' , password)
-/*
-/*Exibe os dados do usuário. Requisição dos dados
+
+//Exibe os dados do usuário. Requisição dos dados
 $.ajax({
     url: '../php/account-super.php' , type: 'POST', data: dates, processData: false, contentType: false
 }).done(function(request){
     console.log(request);
 
-    manager.textContent = `${request.empresa}`
-})*/
+    image.textContent = `${request.imagem}`
+    company.textContent = `${request.empresa}`
+    manager.textContent = `${request.responsavel}`
+    cnpj.textContent = `${request.cnpj}`
+    local.textContent = `${request.local}`
+    tel_fix.textContent = `${request.tel_fixo}`
+    tel_priv.textContent = `${request.celular}`
+    email.textContent = `${request.email}`
+    password.textContent = `${request.senha}`
 
+})
 /*Caso o usuário edite os dados*/
 
 let button_edit = document.getElementById("edit")
