@@ -70,6 +70,7 @@ form > button{
     border-radius: 25px;
     font-weight: 600;
     font-size: 3dvw;
+    cursor: pointer;
 }
 
 form > ul > li > label{
@@ -92,13 +93,17 @@ form > ul > li > #descricao {
     width: 19cqmin;
     border-radius: 50%;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.559);
-    background-position: center top;
-    background-image: url('/supermercado/imgs-cad/upload-min.png');
-    background-color: rgba(255, 255, 255, 0.879); 
-    background-size: cover;
     cursor: pointer;
     display: block;    
 }
+
+ #descricao > .bi-upload{
+    font-size: 30px;
+    transform: translate(6vw, 5vh);
+    position: absolute;
+    opacity: 60%;
+    text-shadow: 1px 1px 2px gray;
+ }
 
 /*Personalização dos ícones*/
 
@@ -129,7 +134,7 @@ ul > li > #telephone{
 }
 
 ul > li > #phone{
-    width: 7vw;
+    width: 4vw;
     position: absolute;
     transform: translate(23vw,-1vh);
 }
