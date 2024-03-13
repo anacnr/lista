@@ -11,12 +11,12 @@ $mysql = new mysqli("$local", "$user", "$pass", "$bank");
 
 //Pega os dados do formulário
 $company = $_POST['empresa'];
-$name = $_POST['nome'];
+$name = $_POST['responsavel'];
 $cnpj = $_POST['cnpj'];
-$end = $_POST['endereco'];
-$fixo = $_POST['contato-fixo'];
-$celular = $_POST['contato-cel'];
-$gmail = $_POST['gmail'];
+$end = $_POST['localizacao'];
+$fixo = $_POST['telfixo'];
+$celular = $_POST['celular'];
+$email = $_POST['email'];
 $passw = $_POST['senha'];
 $hash_pass = password_hash($passw, PASSWORD_DEFAULT);
 $image = $_FILES['img']; 
@@ -58,7 +58,7 @@ if(isset($image)){
     mysqli_stmt_prepare($start, "INSERT INTO vendedor(empresa,responsavel,cnpj,localizacao,telfixo,celular,gmail,senha,imagem) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
     //Organiza os dados na coluna determinada
-    mysqli_stmt_bind_param($start, 'sssssssss', $company, $name, $cnpj, $end, $fixo, $celular, $gmail, $hash_pass,$name_ext);
+    mysqli_stmt_bind_param($start, 'sssssssss', $company, $name, $cnpj, $end, $fixo, $celular, $email, $hash_pass,$name_ext);
 
     //Faz os comandos serem executados
     mysqli_stmt_execute($start);        

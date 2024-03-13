@@ -18,402 +18,402 @@ body{
 
 @media (min-width:600px) and (max-width: 768px){
   
-form > ul > li{
-        list-style: none;
-    }
-    
-/*Esses são os campos onde vão receber os dados*/    
-form > ul > li > input{
-        width: 40%;
-        height: 25px;
-        display: block;
-        margin: auto;
-        text-align: center;
-        margin-top: 0%;
-        margin-bottom: 10%;
-        border-radius: 25px;
-        border-style: solid;
-        border-color: black;
-        font-size: 0.9em;
-        font-style: oblique;
-        font-weight: 600;
-    }
+    form > ul > li{
+            list-style: none;
+        }
         
-/*Primeiro campo que recebe o dado (nome)*/
-form > ul > li > #cliente{
-    margin-top: 20%;    
-    }
+    /*Esses são os campos onde vão receber os dados*/    
+    form > ul > li > input{
+            width: 40%;
+            height: 25px;
+            display: block;
+            margin: auto;
+            text-align: center;
+            margin-top: 0%;
+            margin-bottom: 10%;
+            border-radius: 25px;
+            border-style: solid;
+            border-color: black;
+            font-size: 0.9em;
+            font-style: oblique;
+            font-weight: 600;
+        }
+            
+    /*Primeiro campo que recebe o dado (nome)*/
+    form > ul > li > #cliente{
+        margin-top: 20%;    
+        }
 
-/*Último campo que recebe o dado (senha)*/
-form > ul > li > #valido{
-    margin-bottom: 10%;    
-    }
+    /*Último campo que recebe o dado (senha)*/
+    form > ul > li > #valido{
+        margin-bottom: 10%;    
+        }
 
-/*O placeholder é o que está escrito dentro dos campos*/
-form > ul > li > input::placeholder{
-    color: black;
-    }
-
-/*Configurações do botão de cadastro*/
-form > button{
-    margin: auto;
-    display: block;
-    width: 200px;
-    height: 30px;
-    border-style: solid;
-    border-color: black;
-    border-radius: 25px;
-    font-weight: 600;
-    font-size: 0.9em;
-    }
-
-form > ul > li > label{
-    display: none;
-    }
-
-/*Configurações dos ícones dos campos*/
-form > ul > li > #user, #cpf{
-    width: 3vw;
-    position: absolute;
-    transform: translateX(25vw);
-    }
-
-form > ul > li > #cell{
-    width: 6vw;
-    position: absolute;
-    transform: translate(23vw,-1vh);
-    }
-
-form > ul > li > #house{
-    width: 4vw;
-    position: absolute;
-    transform: translate(24vw,0vh);
-    }
-
-form > ul > li > #gmail{
-    width: 4vw;
-    position: absolute;
-    transform: translate(24vw,1vh);
-    }
-
-form > ul > li > #password{
-    width: 3vw;
-    height: 3%;
-    position: absolute;
-    transform: translate(25vw,1vh);
-    filter: brightness(0);
-    }
-
-}
-
- @media (min-width:768px) and (max-width: 992px){
-form{
-    background-color: rgba(255, 255, 255, 0.909);
-    width: 65%;
-    height: 75%;
-    display: inline-block;
-    position: relative;
-    transform: translate(25%,20%);
-    border: 1px solid rgba(0, 0, 0, 0.772);
-    border-radius: 5px;
-}
-
-form > ul{
-    position: absolute;
-    width: 100%;
-    top: 5%;
-}
-
-form > ul > li{
-    list-style: none;
-}
-
-form > ul > li > input{
-    width: 290px;
-    height: 25px;
-    display: block;
-    margin: auto;
-    text-align: center;
-    margin-bottom: 3%;
-    border-radius: 25px;
-    border-style: solid;
-    border-color: black;
-    font-size: 0.8em;
-    font-style: oblique;
-    font-weight: 600;
-} 
-    
-form > ul > li > input::placeholder{
+    /*O placeholder é o que está escrito dentro dos campos*/
+    form > ul > li > input::placeholder{
         color: black;
-}
+        }
 
-form > ul > li > #cliente,#valido, #end,#local,#contato,#unico{
-        margin-top: 30px;    
-    }    
-        
-form > button{
-        position: absolute;
+    /*Configurações do botão de cadastro*/
+    form > button{
+        margin: auto;
         display: block;
-        width: 26%;
+        width: 200px;
         height: 30px;
         border-style: solid;
         border-color: black;
         border-radius: 25px;
         font-weight: 600;
-        transform: translate(23vw,66vh);
-        margin-top: 2%;
+        font-size: 0.9em;
+        }
+
+    form > ul > li > label{
+        display: none;
+        }
+
+    /*Configurações dos ícones dos campos*/
+    form > ul > li > #user, #cpf{
+        width: 3vw;
+        position: absolute;
+        transform: translateX(25vw);
+        }
+
+    form > ul > li > #cell{
+        width: 6vw;
+        position: absolute;
+        transform: translate(23vw,-1vh);
+        }
+
+    form > ul > li > #house{
+        width: 4vw;
+        position: absolute;
+        transform: translate(24vw,0vh);
+        }
+
+    form > ul > li > #email{
+        width: 4vw;
+        position: absolute;
+        transform: translate(24vw,1vh);
+        }
+
+    form > ul > li > #password{
+        width: 3vw;
+        height: 3%;
+        position: absolute;
+        transform: translate(25vw,1vh);
+        filter: brightness(0);
+        }
+
+}
+
+ @media (min-width:768px) and (max-width: 992px){
+    form{
+        background-color: rgba(255, 255, 255, 0.909);
+        width: 65%;
+        height: 75%;
+        display: inline-block;
+        position: relative;
+        transform: translate(25%,20%);
+        border: 1px solid rgba(0, 0, 0, 0.772);
+        border-radius: 5px;
     }
+
+    form > ul{
+        position: absolute;
+        width: 100%;
+        top: 5%;
+    }
+
+    form > ul > li{
+        list-style: none;
+    }
+
+    form > ul > li > input{
+        width: 290px;
+        height: 25px;
+        display: block;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 3%;
+        border-radius: 25px;
+        border-style: solid;
+        border-color: black;
+        font-size: 0.8em;
+        font-style: oblique;
+        font-weight: 600;
+    } 
         
-input::-webkit-inner-spin-button{
-        -webkit-appearance: none;
-    }
-    
-input::placeholder{
-        opacity: 100%;
+    form > ul > li > input::placeholder{
+            color: black;
     }
 
-form > ul > li > #user{
-    width: 20px;
-    position: absolute;
-    top: 8%;
-    left: 15%;
-    }
+    form > ul > li > #cliente,#valido, #end,#local,#contato,#unico{
+            margin-top: 30px;    
+        }    
+            
+    form > button{
+            position: absolute;
+            display: block;
+            width: 26%;
+            height: 30px;
+            border-style: solid;
+            border-color: black;
+            border-radius: 25px;
+            font-weight: 600;
+            transform: translate(23vw,66vh);
+            margin-top: 2%;
+        }
+            
+    input::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+        }
+        
+    input::placeholder{
+            opacity: 100%;
+        }
 
-form > ul > li > #cpf{
+    form > ul > li > #user{
         width: 20px;
         position: absolute;
-        top: 24%;
-        left: 15%; 
-    }
+        top: 8%;
+        left: 15%;
+        }
 
-form > ul > li > #cell{
-    width: 35px;
-    position: absolute;
-    top: 39%;
-    left: 14%;
-    }
+    form > ul > li > #cpf{
+            width: 20px;
+            position: absolute;
+            top: 24%;
+            left: 15%; 
+        }
 
-form > ul > li > #house{
-    width: 24px;
-    position: absolute;
-    top: 56%;
-    left: 15%;
-    }
+    form > ul > li > #cell{
+        width: 35px;
+        position: absolute;
+        top: 39%;
+        left: 14%;
+        }
 
-form > ul > li > #gmail{
-    width: 25px;
-    position: absolute;
-    top: 74%;
-    left: 15%;
-    }
+    form > ul > li > #house{
+        width: 24px;
+        position: absolute;
+        top: 56%;
+        left: 15%;
+        }
 
-form > ul > li > #password{
-    width: 24px;
-    height: 20px;
-    position: absolute;
-    left: 15%;
-    filter: brightness(0);
-    }    
+    form > ul > li > #email{
+        width: 25px;
+        position: absolute;
+        top: 74%;
+        left: 15%;
+        }
+
+    form > ul > li > #password{
+        width: 24px;
+        height: 20px;
+        position: absolute;
+        left: 15%;
+        filter: brightness(0);
+        }    
     
 }
 
 @media (min-width:992px) and (max-width:1200px){
 
-form{
-    background-color: rgba(255, 255, 255, 0.909);
-    width: 65%;
-    height: 75%;
-    display: inline-block;
-    position: relative;
-    transform: translate(25%,20%);
-    border: 1px solid rgba(0, 0, 0, 0.772);
-    border-radius: 5px;
-}
-
-form > ul{
-    position: absolute;
-    width: 100%;
-    top: 5%;
-}
-
-form > ul > li{
-    list-style: none;
-}
-
-form > ul > li > input{
-    width: 43%;
-    height: 25px;
-    display: block;
-    margin: auto;
-    text-align: center;
-    border-radius: 25px;
-    border-style: solid;
-    border-color: black;
-    font-size: 0.8em;
-    font-style: oblique;
-    font-weight: 600;
-}         
-
-form > ul > li > input::placeholder{
-        color: black;
+    form{
+        background-color: rgba(255, 255, 255, 0.909);
+        width: 65%;
+        height: 75%;
+        display: inline-block;
+        position: relative;
+        transform: translate(25%,20%);
+        border: 1px solid rgba(0, 0, 0, 0.772);
+        border-radius: 5px;
     }
 
-form > ul > li > #cliente,#valido, #end,#local,#contato,#unico{
-        margin-top: 5%;    
-    }    
-    
-form > button{
+    form > ul{
         position: absolute;
+        width: 100%;
+        top: 5%;
+    }
+
+    form > ul > li{
+        list-style: none;
+    }
+
+    form > ul > li > input{
+        width: 43%;
+        height: 25px;
         display: block;
-        width: 23%;
-        height: 30px;
+        margin: auto;
+        text-align: center;
+        border-radius: 25px;
         border-style: solid;
         border-color: black;
-        border-radius: 25px;
+        font-size: 0.8em;
+        font-style: oblique;
         font-weight: 600;
-        transform: translate(25vw,66vh);
-        margin-top: 3%;
-    }    
-    
-input::-webkit-inner-spin-button{
-        -webkit-appearance: none;
-    }
-    
-input::placeholder{
-        opacity: 100%;
-    }
+    }         
 
-form > ul > li > #user, #cpf{
-    width: 20px;
-    position: absolute;
-    transform: translateX(15vw);
-    }
+    form > ul > li > input::placeholder{
+            color: black;
+        }
 
-form > ul > li > #cell{
-    width: 35px;
-    position: absolute;
-    transform: translate(14vw,-1vh);
-    }
+    form > ul > li > #cliente,#valido, #end,#local,#contato,#unico{
+            margin-top: 5%;    
+        }    
+        
+    form > button{
+            position: absolute;
+            display: block;
+            width: 23%;
+            height: 30px;
+            border-style: solid;
+            border-color: black;
+            border-radius: 25px;
+            font-weight: 600;
+            transform: translate(25vw,66vh);
+            margin-top: 3%;
+        }    
+        
+    input::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+        }
+        
+    input::placeholder{
+            opacity: 100%;
+        }
 
-form > ul > li > #house{
-    width: 24px;
-    position: absolute;
-    transform: translate(15vw,1vh);
-    }
+    form > ul > li > #user, #cpf{
+        width: 20px;
+        position: absolute;
+        transform: translateX(15vw);
+        }
 
-form > ul > li > #gmail{
-    width: 25px;
-    position: absolute;
-    transform: translate(15vw,2vh);
-    }
+    form > ul > li > #cell{
+        width: 35px;
+        position: absolute;
+        transform: translate(14vw,-1vh);
+        }
 
-form > ul > li > #password{
-    width: 24px;
-    height: 20px;
-    position: absolute;
-    transform: translate(15vw,1vh);
-    filter: brightness(0);
-    }
+    form > ul > li > #house{
+        width: 24px;
+        position: absolute;
+        transform: translate(15vw,1vh);
+        }
+
+    form > ul > li > #email{
+        width: 25px;
+        position: absolute;
+        transform: translate(15vw,2vh);
+        }
+
+    form > ul > li > #password{
+        width: 24px;
+        height: 20px;
+        position: absolute;
+        transform: translate(15vw,1vh);
+        filter: brightness(0);
+        }
 }
 
 @media(min-width:1200px){
  
-form{
-    background-color: rgba(255, 255, 255, 0.909);
-    /*width: 65vw; height: 65vh;*/
-    width: 65%;
-    height: 540px;
-    display: inline-block;
-    position: relative;
-    transform: translate(25%,16%);
-    border: 1px solid rgba(0, 0, 0, 0.772);
-    border-radius: 5px;
-}
-
-form > ul{
-    position: absolute;
-    width: 100%;
-    top: 1%;
-}
-
-form > ul > li{
-    list-style: none;
-}
-
-form > ul > li > input{
-    width: 40%;
-    height: 25px;
-    display: block;
-    margin: auto;
-    text-align: center;
-    border-radius: 25px;
-    border-style: solid;
-    border-color: black;
-    font-size: 0.8em;
-    font-style: oblique;
-    font-weight: 600;
-} 
-        
-form > ul > li > input::placeholder{
-        color: black;
+    form{
+        background-color: rgba(255, 255, 255, 0.909);
+        /*width: 65vw; height: 65vh;*/
+        width: 65%;
+        height: 540px;
+        display: inline-block;
+        position: relative;
+        transform: translate(25%,16%);
+        border: 1px solid rgba(0, 0, 0, 0.772);
+        border-radius: 5px;
     }
 
-form > ul > li > #cliente,#valido, #end,#local,#contato,#unico{
-        margin-top: 5%;    
-    }    
-        
-form > button{
+    form > ul{
         position: absolute;
+        width: 100%;
+        top: 1%;
+    }
+
+    form > ul > li{
+        list-style: none;
+    }
+
+    form > ul > li > input{
+        width: 40%;
+        height: 25px;
         display: block;
-        width: 20%;
-        height: 30px;
+        margin: auto;
+        text-align: center;
+        border-radius: 25px;
         border-style: solid;
         border-color: black;
-        border-radius: 25px;
+        font-size: 0.8em;
+        font-style: oblique;
         font-weight: 600;
-        transform: translate(25vw,66vh);
-        margin-top: 8%;
-    }
-       
-input::-webkit-inner-spin-button{
-    -webkit-appearance: none;
-    }
+    } 
+            
+    form > ul > li > input::placeholder{
+            color: black;
+        }
 
-input::placeholder{
-        opacity: 100%;
-    }
+    form > ul > li > #cliente,#valido, #end,#local,#contato,#unico{
+            margin-top: 5%;    
+        }    
+            
+    form > button{
+            position: absolute;
+            display: block;
+            width: 20%;
+            height: 30px;
+            border-style: solid;
+            border-color: black;
+            border-radius: 25px;
+            font-weight: 600;
+            transform: translate(25vw,66vh);
+            margin-top: 8%;
+        }
+        
+    input::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+        }
 
-/*Configurações dos ícones dos campos*/
+    input::placeholder{
+            opacity: 100%;
+        }
 
-form > ul > li > #user, #cpf{
-    width: 20px;
-    position: absolute;
-    transform: translateX(16vw);
-    }
+    /*Configurações dos ícones dos campos*/
 
-form > ul > li > #cell{
-    width: 35px;
-    position: absolute;
-    transform: translate(15vw,-1vh);
-    }
+    form > ul > li > #user, #cpf{
+        width: 20px;
+        position: absolute;
+        transform: translateX(16vw);
+        }
 
-form > ul > li > #house{
-    width: 24px;
-    position: absolute;
-    transform: translate(15vw,1vh);
-    }
+    form > ul > li > #cell{
+        width: 35px;
+        position: absolute;
+        transform: translate(15vw,-1vh);
+        }
 
-form > ul > li > #gmail{
-    width: 25px;
-    position: absolute;
-    transform: translate(15vw,2vh);
-    }
+    form > ul > li > #house{
+        width: 24px;
+        position: absolute;
+        transform: translate(15vw,1vh);
+        }
 
-form > ul > li > #password{
-    width: 24px;
-    height: 20px;
-    position: absolute;
-    transform: translate(15vw,1vh);
-    filter: brightness(0);
-    }    
+    form > ul > li > #email{
+        width: 25px;
+        position: absolute;
+        transform: translate(15vw,2vh);
+        }
+
+    form > ul > li > #password{
+        width: 24px;
+        height: 20px;
+        position: absolute;
+        transform: translate(15vw,1vh);
+        filter: brightness(0);
+        }    
 }

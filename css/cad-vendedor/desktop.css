@@ -213,570 +213,570 @@ ul > li > #pass{
     }
 
     /*Campo do input com tipo image*/
-form > ul > li > #foto[type = 'file']{
-    display: none;
-}
+    form > ul > li > #foto[type = 'file']{
+        display: none;
+    }
 
-/*Label do input com tipo image*/
-form > ul > li > #descricao { 
-    top: 10%;
-    left: 41%;
-    position: absolute;
-    font-size: 0.9em;
-    border: 0px solid black;
-    height: 18cqmin;
-    width: 18cqmin;
-    border-radius: 50%;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.559);
-    background-position: center;
-    background-image: url('/supermercado/imgs-cad/upload-min.png');
-    background-color: rgba(255, 255, 255, 0.879);
-    background-size: cover;
-    cursor: pointer;
-    display: block;
-    
-}
+    /*Label do input com tipo image*/
+    form > ul > li > #descricao { 
+        top: 10%;
+        left: 41%;
+        position: absolute;
+        font-size: 0.9em;
+        border: 0px solid black;
+        height: 18cqmin;
+        width: 18cqmin;
+        border-radius: 50%;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.559);
+        background-position: center;
+        background-image: url('/supermercado/imgs-cad/upload-min.png');
+        background-color: rgba(255, 255, 255, 0.879);
+        background-size: cover;
+        cursor: pointer;
+        display: block;
+        
+    }
 
-/*Personalização dos ícones*/
+    /*Personalização dos ícones*/
 
-ul > li > #company, #worker{
-    width: 3dvw;
-    position: absolute;
-    transform: translate(21vw,-1vh);
-}
+    ul > li > #company, #worker{
+        width: 3dvw;
+        position: absolute;
+        transform: translate(21vw,-1vh);
+    }
 
-ul > li > #address{
-    width: 3dvw;
-    position: absolute;
-    transform: translate(21vw,-2vh);
-    filter: hue-rotate(180deg);
-}
+    ul > li > #address{
+        width: 3dvw;
+        position: absolute;
+        transform: translate(21vw,-2vh);
+        filter: hue-rotate(180deg);
+    }
 
-ul > li > #cnpj{
-    font-size: 2dvw;
-    font-weight: 900;
-    font-style: italic;
-    position: absolute;
-    transform: translate(19vw,0vh);
-    text-decoration: underline;
-}
+    ul > li > #cnpj{
+        font-size: 2dvw;
+        font-weight: 900;
+        font-style: italic;
+        position: absolute;
+        transform: translate(19vw,0vh);
+        text-decoration: underline;
+    }
 
-ul > li > #telephone{
-    width: 4dvw;
-    position: absolute;
-    transform: translate(20vw,-1vh);
-    filter: brightness(0);
-}
+    ul > li > #telephone{
+        width: 4dvw;
+        position: absolute;
+        transform: translate(20vw,-1vh);
+        filter: brightness(0);
+    }
 
-ul > li > #phone{
-    width: 7vw;
-    position: absolute;
-    transform: translate(18vw,-3vh);
-}
+    ul > li > #phone{
+        width: 7vw;
+        position: absolute;
+        transform: translate(18vw,-3vh);
+    }
 
-ul > li > #email{
-    width: 4.5vw;
-    position: absolute;
-    transform: translate(19vw, 1vh);
-}
+    ul > li > #email{
+        width: 4.5vw;
+        position: absolute;
+        transform: translate(19vw, 1vh);
+    }
 
-ul > li > #pass{
-    width: 3vw;
-    height: 4vh;
-    position: absolute;
-    transform: translate(20vw,0vh);
-    filter: brightness(0);
-}
+    ul > li > #pass{
+        width: 3vw;
+        height: 4vh;
+        position: absolute;
+        transform: translate(20vw,0vh);
+        filter: brightness(0);
+    }
 
 }
 
 @media (min-width: 992px) and (max-width: 1200px){
 
- /*Esses são os campos onde vão receber os dados*/
-form{
-    background-color: rgba(255, 255, 255, 0.909);
-    width: 72%;
-    height: 80%;
-    display: inline-block;
-    position: relative;
-    transform: translate(20%,12%);
-    border: 1px solid rgba(0, 0, 0, 0.772);
-    border-radius: 5px;
-}
+    /*Esses são os campos onde vão receber os dados*/
+    form{
+        background-color: rgba(255, 255, 255, 0.909);
+        width: 72%;
+        height: 80%;
+        display: inline-block;
+        position: relative;
+        transform: translate(20%,12%);
+        border: 1px solid rgba(0, 0, 0, 0.772);
+        border-radius: 5px;
+    }
 
-form > ul > li{
-    list-style: none;
-}
+    form > ul > li{
+        list-style: none;
+    }
 
-/*Esses são os campos onde vão receber os dados*/
+    /*Esses são os campos onde vão receber os dados*/
 
-form > ul > li > input{
-    position: absolute;
-    text-align: center;
-    margin-top: 0%;
-    margin-bottom: 1%;
-    border-radius: 5px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.884);
-    font-size: 0.5em;
-    font-style: oblique;
-    font-weight: 500;
-    font-size: 0.8em;
-} 
+    form > ul > li > input{
+        position: absolute;
+        text-align: center;
+        margin-top: 0%;
+        margin-bottom: 1%;
+        border-radius: 5px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.884);
+        font-size: 0.5em;
+        font-style: oblique;
+        font-weight: 500;
+        font-size: 0.8em;
+    } 
 
-/*Primeiro campo que recebe o dado (nome)*/
-form > ul > li > #cliente{
-    margin-top: 0%;
-    width: 70%;
-    height: 35px;
-    top: 33%;
-    left: 5%;    
-}
+    /*Primeiro campo que recebe o dado (nome)*/
+    form > ul > li > #cliente{
+        margin-top: 0%;
+        width: 70%;
+        height: 35px;
+        top: 33%;
+        left: 5%;    
+    }
 
-/*Label do campo Empresa*/
+    /*Label do campo Empresa*/
 
-form > ul > li #empresa{
-    position: absolute;
-    top: 28%;
-    left: 6%;
-}
+    form > ul > li #empresa{
+        position: absolute;
+        top: 28%;
+        left: 6%;
+    }
 
-/*Campo CNPJ*/
-form > ul > li > #unico{
-    top: 47%;
-    left: 65%;
-    width: 30%;
-    height: 35px;
-}
+    /*Campo CNPJ*/
+    form > ul > li > #unico{
+        top: 47%;
+        left: 65%;
+        width: 30%;
+        height: 35px;
+    }
 
-/*Label do CNPJ*/
+    /*Label do CNPJ*/
 
-form > ul > li > #registro{
-    color: black;
-    position: absolute;
-    top: 42%;
-    left: 66%;
-}
+    form > ul > li > #registro{
+        color: black;
+        position: absolute;
+        top: 42%;
+        left: 66%;
+    }
 
-/*Campo responsável pela empresa*/
+    /*Campo responsável pela empresa*/
 
-form > ul > li > #responsavel{
-    top: 47%;
-    left: 5%;
-    width: 50%;
-    height: 35px;
-}
+    form > ul > li > #responsavel{
+        top: 47%;
+        left: 5%;
+        width: 50%;
+        height: 35px;
+    }
 
-/*Label do responsável*/
+    /*Label do responsável*/
 
-form > ul > li > #funcionario{
-    color: rgb(12, 1, 1);
-    position: absolute;
-    top: 42%;
-    left: 6%;
-}
+    form > ul > li > #funcionario{
+        color: rgb(12, 1, 1);
+        position: absolute;
+        top: 42%;
+        left: 6%;
+    }
 
-/*Campo Telefone pessoal*/
+    /*Campo Telefone pessoal*/
 
-form > ul > li > #movel{
-    top:62%;
-    left: 75%;
-    width: 20%;
-    height: 35px;
-}
+    form > ul > li > #movel{
+        top:62%;
+        left: 75%;
+        width: 20%;
+        height: 35px;
+    }
 
-/*Label do Telefone pessoal*/
-form > ul > li > #tel-cel{
-    color: black;
-    position: absolute;
-    top: 57%;
-    left: 75%;
-}
+    /*Label do Telefone pessoal*/
+    form > ul > li > #tel-cel{
+        color: black;
+        position: absolute;
+        top: 57%;
+        left: 75%;
+    }
 
-/*Campo Telefone fixo*/
+    /*Campo Telefone fixo*/
 
-form > ul > li > #fixo{
-    top: 62%;
-    left: 53%;
-    width: 20%;
-    height: 35px;
-}
+    form > ul > li > #fixo{
+        top: 62%;
+        left: 53%;
+        width: 20%;
+        height: 35px;
+    }
 
-/*Label do Telefone fixo*/
+    /*Label do Telefone fixo*/
 
-form > ul > li > #tel-fixo{
-    color: black;
-    position: absolute;
-    top: 57%;
-    left: 53%;
-}
+    form > ul > li > #tel-fixo{
+        color: black;
+        position: absolute;
+        top: 57%;
+        left: 53%;
+    }
 
-/*Campo do endereço*/
+    /*Campo do endereço*/
 
-form > ul > li > #local{
-    top: 62%;
-    left: 5%;
-    width: 45%;
-    height: 35px;
-}
+    form > ul > li > #local{
+        top: 62%;
+        left: 5%;
+        width: 45%;
+        height: 35px;
+    }
 
-/*Label do endereço*/
+    /*Label do endereço*/
 
-form > ul > li > #localizacao{
-    color: black;
-    position: absolute;
-    top: 57%;
-    left: 6%;
-}
+    form > ul > li > #localizacao{
+        color: black;
+        position: absolute;
+        top: 57%;
+        left: 6%;
+    }
 
-/*Campo do e-mail*/
+    /*Campo do e-mail*/
 
-form > ul > li > #end{
-    margin-top: 0%;
-    top: 76%;
-    left: 5%;
-    width: 50%;
-    height: 35px;    
-}
+    form > ul > li > #end{
+        margin-top: 0%;
+        top: 76%;
+        left: 5%;
+        width: 50%;
+        height: 35px;    
+    }
 
-/*Campo do e-mail*/
+    /*Campo do e-mail*/
 
-form > ul > li > #g-mail{
-    color: black;
-    position: absolute;
-    top: 72%;
-    left: 6%;
-}
+    form > ul > li > #e-mail{
+        color: black;
+        position: absolute;
+        top: 72%;
+        left: 6%;
+    }
 
-/*Campo da senha*/
+    /*Campo da senha*/
 
-form > ul > li > #valido{
-    margin-bottom: 1%;
-    top: 76%;
-    left: 65%;
-    width: 30%;
-    height: 35px; 
-}
+    form > ul > li > #valido{
+        margin-bottom: 1%;
+        top: 76%;
+        left: 65%;
+        width: 30%;
+        height: 35px; 
+    }
 
-/*Label da senha*/
+    /*Label da senha*/
 
-form > ul > li > #senha {
-    color: black;
-    position: absolute;
-    top: 72%;
-    left: 65%;
-    cursor: pointer;
-}
+    form > ul > li > #senha {
+        color: black;
+        position: absolute;
+        top: 72%;
+        left: 65%;
+        cursor: pointer;
+    }
 
-/*Campo do input com tipo image*/
-form > ul > li > #foto[type = 'file']{
+    /*Campo do input com tipo image*/
+    form > ul > li > #foto[type = 'file']{
+        display: none;
+    }
+
+    /*Label do input com tipo image*/
+    form > ul > li > #descricao{
+        top: 26px;
+        left: 42%;
+        position: absolute;
+        font-size: 0.9em;
+        border: 0px solid black;
+        height: 18cqmin;
+        width: 18cqmin;
+        border-radius: 50%;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.559);
+        background-position: center;
+        background-image: url('/supermercado/imgs-cad/upload-min.png');
+        background-color: rgba(255, 255, 255, 0.879);
+        background-size: cover;
+        cursor: pointer;
+        display: block;
+    }
+
+    /*O placeholder é o que está escrito dentro dos campos*/
+
+    form > ul > li > input::placeholder{
+        color: black;
+    }
+
+    /*Configurações do botão de cadastro*/
+
+    form > button{
+        width: 17%;
+        height: 35px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(0, 0, 0);
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 0.8em;
+        cursor: pointer;
+        position: absolute;
+        top: 87%;
+        left: 77%;
+    }
+
+    /*Esse comando é para tirar as setinhas dos campos que tem o tipo number*/
+
+    input::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+    }
+
+    /*Para esconder o que está escrito dentro dos inputs*/
+
+    input::placeholder{
+        opacity: 0%;
+    }
+
+    /*Personalização dos ícones*/
+
+    ul > li > #company, #worker, #address, #cnpj, #telephone, #phone, #email, #pass{
     display: none;
-}
-
-/*Label do input com tipo image*/
-form > ul > li > #descricao{
-    top: 26px;
-    left: 42%;
-    position: absolute;
-    font-size: 0.9em;
-    border: 0px solid black;
-    height: 18cqmin;
-    width: 18cqmin;
-    border-radius: 50%;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.559);
-    background-position: center;
-    background-image: url('/supermercado/imgs-cad/upload-min.png');
-    background-color: rgba(255, 255, 255, 0.879);
-    background-size: cover;
-    cursor: pointer;
-    display: block;
-}
-
-/*O placeholder é o que está escrito dentro dos campos*/
-
-form > ul > li > input::placeholder{
-    color: black;
-}
-
-/*Configurações do botão de cadastro*/
-
-form > button{
-    width: 17%;
-    height: 35px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(0, 0, 0);
-    border-radius: 5px;
-    font-weight: 500;
-    font-size: 0.8em;
-    cursor: pointer;
-    position: absolute;
-    top: 87%;
-    left: 77%;
-}
-
-/*Esse comando é para tirar as setinhas dos campos que tem o tipo number*/
-
-input::-webkit-inner-spin-button{
-    -webkit-appearance: none;
-}
-
-/*Para esconder o que está escrito dentro dos inputs*/
-
-input::placeholder{
-    opacity: 0%;
-}
-
-/*Personalização dos ícones*/
-
-ul > li > #company, #worker, #address, #cnpj, #telephone, #phone, #email, #pass{
-   display: none;
-}
+    }
 
 }
 
 @media (min-width:1200px) {
     
-     /*Esses são os campos onde vão receber os dados*/
-form{
-    background-color: rgba(255, 255, 255, 0.909);
-    width: 65%;
-    height: 80%;
-    display: inline-block;
-    position: relative;
-    transform: translate(26%,12%);
-    border: 1px solid rgba(0, 0, 0, 0.772);
-    border-radius: 5px;
-}
+    /*Esses são os campos onde vão receber os dados*/
+    form{
+        background-color: rgba(255, 255, 255, 0.909);
+        width: 65%;
+        height: 80%;
+        display: inline-block;
+        position: relative;
+        transform: translate(26%,12%);
+        border: 1px solid rgba(0, 0, 0, 0.772);
+        border-radius: 5px;
+    }
 
-form > ul > li{
-    list-style: none;
-}
+    form > ul > li{
+        list-style: none;
+    }
 
-/*Esses são os campos onde vão receber os dados*/
+    /*Esses são os campos onde vão receber os dados*/
 
-form > ul > li > input{
-    position: absolute;
-    text-align: center;
-    margin-top: 0%;
-    margin-bottom: 1%;
-    border-radius: 5px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.884);
-    font-size: 0.5em;
-    font-style: oblique;
-    font-weight: 500;
-    font-size: 0.8em;
-} 
+    form > ul > li > input{
+        position: absolute;
+        text-align: center;
+        margin-top: 0%;
+        margin-bottom: 1%;
+        border-radius: 5px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.884);
+        font-size: 0.5em;
+        font-style: oblique;
+        font-weight: 500;
+        font-size: 0.8em;
+    } 
 
-/*Primeiro campo que recebe o dado (nome)*/
-form > ul > li > #cliente{
-    margin-top: 0%;
-    width: 70%;
-    height: 35px;
-    top: 33%;
-    left: 5%;    
-}
+    /*Primeiro campo que recebe o dado (nome)*/
+    form > ul > li > #cliente{
+        margin-top: 0%;
+        width: 70%;
+        height: 35px;
+        top: 33%;
+        left: 5%;    
+    }
 
-/*Label do campo Empresa*/
+    /*Label do campo Empresa*/
 
-form > ul > li #empresa{
-    position: absolute;
-    top: 28%;
-    left: 6%;
-}
+    form > ul > li #empresa{
+        position: absolute;
+        top: 28%;
+        left: 6%;
+    }
 
-/*Campo CNPJ*/
-form > ul > li > #unico{
-    top: 47%;
-    left: 65%;
-    width: 30%;
-    height: 35px;
-}
+    /*Campo CNPJ*/
+    form > ul > li > #unico{
+        top: 47%;
+        left: 65%;
+        width: 30%;
+        height: 35px;
+    }
 
-/*Label do CNPJ*/
+    /*Label do CNPJ*/
 
-form > ul > li > #registro{
-    color: black;
-    position: absolute;
-    top: 42%;
-    left: 66%;
-}
+    form > ul > li > #registro{
+        color: black;
+        position: absolute;
+        top: 42%;
+        left: 66%;
+    }
 
-/*Campo responsável pela empresa*/
+    /*Campo responsável pela empresa*/
 
-form > ul > li > #responsavel{
-    top: 47%;
-    left: 5%;
-    width: 50%;
-    height: 35px;
-}
+    form > ul > li > #responsavel{
+        top: 47%;
+        left: 5%;
+        width: 50%;
+        height: 35px;
+    }
 
-/*Label do responsável*/
+    /*Label do responsável*/
 
-form > ul > li > #funcionario{
-    color: rgb(12, 1, 1);
-    position: absolute;
-    top: 42%;
-    left: 6%;
-}
+    form > ul > li > #funcionario{
+        color: rgb(12, 1, 1);
+        position: absolute;
+        top: 42%;
+        left: 6%;
+    }
 
-/*Campo Telefone pessoal*/
+    /*Campo Telefone pessoal*/
 
-form > ul > li > #movel{
-    top:62%;
-    left: 75%;
-    width: 20%;
-    height: 35px;
-}
+    form > ul > li > #movel{
+        top:62%;
+        left: 75%;
+        width: 20%;
+        height: 35px;
+    }
 
-/*Label do Telefone pessoal*/
-form > ul > li > #tel-cel{
-    color: black;
-    position: absolute;
-    top: 57%;
-    left: 75%;
-}
+    /*Label do Telefone pessoal*/
+    form > ul > li > #tel-cel{
+        color: black;
+        position: absolute;
+        top: 57%;
+        left: 75%;
+    }
 
-/*Campo Telefone fixo*/
+    /*Campo Telefone fixo*/
 
-form > ul > li > #fixo{
-    top: 62%;
-    left: 53%;
-    width: 20%;
-    height: 35px;
-}
+    form > ul > li > #fixo{
+        top: 62%;
+        left: 53%;
+        width: 20%;
+        height: 35px;
+    }
 
-/*Label do Telefone fixo*/
+    /*Label do Telefone fixo*/
 
-form > ul > li > #tel-fixo{
-    color: black;
-    position: absolute;
-    top: 57%;
-    left: 53%;
-}
+    form > ul > li > #tel-fixo{
+        color: black;
+        position: absolute;
+        top: 57%;
+        left: 53%;
+    }
 
-/*Campo do endereço*/
+    /*Campo do endereço*/
 
-form > ul > li > #local{
-    top: 62%;
-    left: 5%;
-    width: 45%;
-    height: 35px;
-}
+    form > ul > li > #local{
+        top: 62%;
+        left: 5%;
+        width: 45%;
+        height: 35px;
+    }
 
-/*Label do endereço*/
+    /*Label do endereço*/
 
-form > ul > li > #localizacao{
-    color: black;
-    position: absolute;
-    top: 57%;
-    left: 6%;
-}
+    form > ul > li > #localizacao{
+        color: black;
+        position: absolute;
+        top: 57%;
+        left: 6%;
+    }
 
-/*Campo do e-mail*/
+    /*Campo do e-mail*/
 
-form > ul > li > #end{
-    margin-top: 0%;
-    top: 76%;
-    left: 5%;
-    width: 50%;
-    height: 35px;    
-}
+    form > ul > li > #end{
+        margin-top: 0%;
+        top: 76%;
+        left: 5%;
+        width: 50%;
+        height: 35px;    
+    }
 
-/*Campo do e-mail*/
+    /*Campo do e-mail*/
 
-form > ul > li > #g-mail{
-    color: black;
-    position: absolute;
-    top: 72%;
-    left: 6%;
-}
+    form > ul > li > #e-mail{
+        color: black;
+        position: absolute;
+        top: 72%;
+        left: 6%;
+    }
 
-/*Campo da senha*/
+    /*Campo da senha*/
 
-form > ul > li > #valido{
-    margin-bottom: 1%;
-    top: 76%;
-    left: 65%;
-    width: 30%;
-    height: 35px; 
-}
+    form > ul > li > #valido{
+        margin-bottom: 1%;
+        top: 76%;
+        left: 65%;
+        width: 30%;
+        height: 35px; 
+    }
 
-/*Label da senha*/
+    /*Label da senha*/
 
-form > ul > li > #senha {
-    color: black;
-    position: absolute;
-    top: 72%;
-    left: 65%;
-    cursor: pointer;
-}
+    form > ul > li > #senha {
+        color: black;
+        position: absolute;
+        top: 72%;
+        left: 65%;
+        cursor: pointer;
+    }
 
-/*Campo do input com tipo image*/
-form > ul > li > #foto[type = 'file']{
+    /*Campo do input com tipo image*/
+    form > ul > li > #foto[type = 'file']{
+        display: none;
+    }
+
+    /*Label do input com tipo image*/
+    form > ul > li > #descricao{
+        top: 24px;
+        left: 42%;
+        position: absolute;
+        font-size: 0.9em;
+        border: 0px solid black;
+        height: 18cqmin;
+        width: 18cqmin;
+        border-radius: 50%;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.559);
+        background-position: center;
+        background-image: url('/supermercado/imgs-cad/upload-min.png');
+        background-color: rgba(255, 255, 255, 0.879);
+        background-size: cover;
+        cursor: pointer;
+        display: block;
+    }
+
+    /*O placeholder é o que está escrito dentro dos campos*/
+
+    form > ul > li > input::placeholder{
+        color: black;
+    }
+
+    /*Configurações do botão de cadastro*/
+
+    form > button{
+        width: 17%;
+        height: 35px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(0, 0, 0);
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 0.8em;
+        cursor: pointer;
+        position: absolute;
+        top: 87%;
+        left: 77%;
+    }
+
+    /*Esse comando é para tirar as setinhas dos campos que tem o tipo number*/
+
+    input::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+    }
+
+    /*Para esconder o que está escrito dentro dos inputs*/
+
+    input::placeholder{
+        opacity: 0%;
+    }
+
+    /*Personalização dos ícones*/
+
+    ul > li > #company, #worker, #address, #cnpj, #telephone, #phone, #email, #pass{
     display: none;
-}
-
-/*Label do input com tipo image*/
-form > ul > li > #descricao{
-    top: 24px;
-    left: 42%;
-    position: absolute;
-    font-size: 0.9em;
-    border: 0px solid black;
-    height: 18cqmin;
-    width: 18cqmin;
-    border-radius: 50%;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.559);
-    background-position: center;
-    background-image: url('/supermercado/imgs-cad/upload-min.png');
-    background-color: rgba(255, 255, 255, 0.879);
-    background-size: cover;
-    cursor: pointer;
-    display: block;
-}
-
-/*O placeholder é o que está escrito dentro dos campos*/
-
-form > ul > li > input::placeholder{
-    color: black;
-}
-
-/*Configurações do botão de cadastro*/
-
-form > button{
-    width: 17%;
-    height: 35px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(0, 0, 0);
-    border-radius: 5px;
-    font-weight: 500;
-    font-size: 0.8em;
-    cursor: pointer;
-    position: absolute;
-    top: 87%;
-    left: 77%;
-}
-
-/*Esse comando é para tirar as setinhas dos campos que tem o tipo number*/
-
-input::-webkit-inner-spin-button{
-    -webkit-appearance: none;
-}
-
-/*Para esconder o que está escrito dentro dos inputs*/
-
-input::placeholder{
-    opacity: 0%;
-}
-
-/*Personalização dos ícones*/
-
-ul > li > #company, #worker, #address, #cnpj, #telephone, #phone, #email, #pass{
-   display: none;
-}
+    }
 }

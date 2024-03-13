@@ -98,7 +98,7 @@ form > ul > li > #house{
     transform: translate(24vw,0vh);
 }
 
-form > ul > li > #gmail{
+form > ul > li > #email{
     width: 4vw;
     height: 2vh;
     position: absolute;
@@ -112,9 +112,4 @@ form > ul > li > #password{
     transform: translate(24vw,1vh);
     filter: brightness(0);
 }
-
-/*
-Esse link está especificando a largura(width) das telas:
-https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp
-*/
 }

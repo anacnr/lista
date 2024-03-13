@@ -172,7 +172,7 @@ form > button{
     height: 10vh;
   }
 
-  form > ul > li > #gmail-icon {
+  form > ul > li > #email-icon {
     font-size: 18px;
     position: absolute;
     right: 95%;
@@ -214,7 +214,7 @@ form > button{
     font-weight: 600;
   }
 
-  form > ul > li > #gmail {
+  form > ul > li > #email {
     margin-top: 10px;
   }
 
@@ -279,10 +279,6 @@ form > button{
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
-  body {
-    background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
-    background-attachment: fixed;
-  }
 
   form {
     position: relative;
@@ -309,7 +305,7 @@ form > button{
     height: 10vh;
   }
 
-  form > ul > li > #gmail-icon {
+  form > ul > li > #email-icon {
     font-size: 23px;
     position: absolute;
     right: 85%;
@@ -351,7 +347,7 @@ form > button{
     font-weight: 600;
   }
 
-  form > ul > li > #gmail {
+  form > ul > li > #email {
     margin-top: 10px;
   }
 
@@ -446,7 +442,7 @@ form > button{
     height: 10vh;
   }
 
-  form > ul > li > #gmail-icon {
+  form > ul > li > #email-icon {
     font-size: 23px;
     position: absolute;
     right: 85%;
@@ -488,7 +484,7 @@ form > button{
     font-weight: 600;
   }
 
-  form > ul > li > #gmail {
+  form > ul > li > #email {
     margin-top: 10px;
   }
 

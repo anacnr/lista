@@ -41,7 +41,7 @@ form > ul{
 }
 
 /*Configurações dos ícones*/
-form > ul > li > #gmail-icon{
+form > ul > li > #email-icon{
     width: 21px;
     height: 15px;
     position: absolute;
@@ -79,7 +79,7 @@ form > ul > li > input::placeholder{
     font-weight: 600;
 }
 
-form > ul > li > #gmail{
+form > ul > li > #email{
     margin-bottom: 15px;
 }
 

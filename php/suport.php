@@ -8,7 +8,7 @@ $bank = 'supermercado';
 //Cria uma instância da classe mysqli
 $mysql = new mysqli("$local", "$user", "$pass", "$bank");
 
-$gmail = $_POST["gmail"];
+$email = $_POST["email"];
 $passw = $_POST["senha"];
 
 //Essa variável vai ser inserida na coluna da senha
@@ -23,10 +23,10 @@ else{
     $start = mysqli_stmt_init($mysql);
 
     //Coloca mais segurança na hora de inserir os dados
-    mysqli_stmt_prepare($start, "INSERT INTO suporte (gmail, senha) VALUES (?,?)");
+    mysqli_stmt_prepare($start, "INSERT INTO suporte (email, senha) VALUES (?,?)");
 
     //Organiza os dados na coluna determinada. A quantidade de 's' é a quantidade dos dados
-    mysqli_stmt_bind_param($start, "ss", $gmail, $hash_passw);
+    mysqli_stmt_bind_param($start, "ss", $email, $hash_passw);
 
     //Faz os comandos serem executados
     mysqli_stmt_execute($start);
