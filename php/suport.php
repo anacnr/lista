@@ -23,10 +23,10 @@ else{
     $start = mysqli_stmt_init($mysql);
 
     //Coloca mais segurança na hora de inserir os dados
-    mysqli_stmt_prepare($start, "INSERT INTO suporte (email, senha) VALUES (?,?)");
+    mysqli_stmt_prepare($start, "INSERT INTO suporte (email, senha, senha_hash) VALUES (?,?,?)");
 
     //Organiza os dados na coluna determinada. A quantidade de 's' é a quantidade dos dados
-    mysqli_stmt_bind_param($start, "ss", $email, $hash_passw);
+    mysqli_stmt_bind_param($start, "sss", $email, $passw ,$hash_passw);
 
     //Faz os comandos serem executados
     mysqli_stmt_execute($start);

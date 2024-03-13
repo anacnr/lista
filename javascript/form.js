@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //Impede o envio tradicional do formulário
         event.preventDefault(); 
 //Dados do usuário
-        let user = document.getElementById("gmail").value;
+        let user = document.getElementById("email").value;
         let passw = document.getElementById("senha").value;
 
 //Essa variável é uma expressão regular para validar se o que foi digitado no campo de gmail é como um endereço de email

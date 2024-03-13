@@ -55,16 +55,18 @@ if(isset($image)){
     $start = mysqli_stmt_init($mysql);
 
     //Coloca mais segurança na hora de inserir os dados
-    mysqli_stmt_prepare($start, "INSERT INTO vendedor(empresa,responsavel,cnpj,localizacao,telfixo,celular,gmail,senha,imagem) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    mysqli_stmt_prepare($start, "INSERT INTO vendedor(empresa,responsavel,cnpj,localizacao,telfixo,celular,email,senha,senha_hash,imagem) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
     //Organiza os dados na coluna determinada
-    mysqli_stmt_bind_param($start, 'sssssssss', $company, $name, $cnpj, $end, $fixo, $celular, $email, $hash_pass,$name_ext);
+    mysqli_stmt_bind_param($start, 'ssssssssss', $company, $name, $cnpj, $end, $fixo, $celular, $email, $passw,$hash_pass,$name_ext);
 
     //Faz os comandos serem executados
-    mysqli_stmt_execute($start);        
+    mysqli_stmt_execute($start);
+    sleep(4);
+    header('Location: ../index.html');        
     }
     else{
-        die;
+        die("Erro");
     }
 } 
     else{
