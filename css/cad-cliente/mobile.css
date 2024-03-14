@@ -65,7 +65,7 @@ form > ul > li > input::placeholder{
 form > button{
     margin: auto;
     display: block;
-    width: 35%;
+    width: 30%;
     height: 30px;
     border-style: solid;
     border-color: black;
@@ -81,7 +81,7 @@ form > ul > li > label{
 /*Configurações dos ícones dos campos*/
 
 form > ul > li > #user, #cpf{
-    width: 3vw;
+    font-size: 14px;
     position: absolute;
     transform: translate(25vw,1vh);
 }
@@ -93,20 +93,20 @@ form > ul > li > #cell{
 }
 
 form > ul > li > #house{
-    width: 4vw;
+    font-size: 14px;
     position: absolute;
     transform: translate(24vw,0vh);
 }
 
 form > ul > li > #email{
-    width: 4vw;
+   font-size: 14px;
     height: 2vh;
     position: absolute;
     transform: translate(24vw,1vh);
 }
 
 form > ul > li > #password{
-    width: 4vw;
+   font-size: 14px;
     height: 3%;
     position: absolute;
     transform: translate(24vw,1vh);

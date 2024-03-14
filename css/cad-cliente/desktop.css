@@ -71,50 +71,49 @@ body{
         display: none;
         }
 
-    /*Configurações dos ícones dos campos*/
-    form > ul > li > #user, #cpf{
-        width: 3vw;
-        position: absolute;
-        transform: translateX(25vw);
-        margin-top: 6px;
-        }
+/*Configurações dos ícones dos campos*/
 
-    form > ul > li > #cell{
-        width: 3.5vw;
-        position: absolute;
-        transform: translate(25vw,0vh);
-        }
+form > ul > li > #user, #cpf{
+    font-size: 16px;
+    position: absolute;
+    transform: translate(25vw,1vh);
+}
 
-    form > ul > li > #house{
-        font-size: 19px;
-        position: absolute;
-        transform: translate(26vw,1vh);
-        }
+form > ul > li > #cell{
+    width: 24px;
+    position: absolute;
+    transform: translate(24vw,0vh);
+}
 
-    form > ul > li > #email{
-        font-size: 19px;
-        position: absolute;
-        transform: translate(24vw,1vh);
-        }
+form > ul > li > #house{
+    font-size: 16px;
+    position: absolute;
+    transform: translate(24vw,0vh);
+}
 
-    form > ul > li > #password{
-        font-size: 19px;
-        height: 3%;
-        position: absolute;
-        transform: translate(25vw,1vh);
-        filter: brightness(0);
-        }
+form > ul > li > #email{
+   font-size: 16px;
+    position: absolute;
+    transform: translate(24vw,1vh);
+}
 
+form > ul > li > #password{
+   font-size: 16px;
+    position: absolute;
+    transform: translate(24vw,1vh);
+    filter: brightness(0);
+}
 }
 
  @media (min-width:768px) and (max-width: 992px){
+
     form{
         background-color: rgba(255, 255, 255, 0.909);
-        width: 65%;
-        height: 75%;
+        width: 600px;
+        height: 500px;
         display: inline-block;
         position: relative;
-        transform: translate(25%,20%);
+        transform: translate(15vw,20vh);
         border: 1px solid rgba(0, 0, 0, 0.772);
         border-radius: 5px;
     }
@@ -155,13 +154,13 @@ body{
     form > button{
             position: absolute;
             display: block;
-            width: 26%;
+            width: 170px;
             height: 30px;
             border-style: solid;
             border-color: black;
             border-radius: 25px;
             font-weight: 600;
-            transform: translate(23vw,66vh);
+            transform: translate(200px,450px);
             margin-top: 2%;
         }
             
@@ -174,46 +173,40 @@ body{
         }
 
     form > ul > li > #user{
-        width: 20px;
+        font-size: 16px;
         position: absolute;
-        top: 8%;
-        left: 15%;
+        transform: translate(120px,1px);
         }
 
     form > ul > li > #cpf{
             width: 20px;
             position: absolute;
-            top: 24%;
-            left: 15%; 
+            transform: translate(120px,1px);
         }
 
     form > ul > li > #cell{
-        width: 35px;
+        width: 22px;
         position: absolute;
-        top: 39%;
-        left: 14%;
+        transform: translate(120px,1px);
         }
 
     form > ul > li > #house{
         width: 24px;
         position: absolute;
-        top: 56%;
-        left: 15%;
+        transform: translate(120px,1px);
         }
 
     form > ul > li > #email{
         width: 25px;
         position: absolute;
-        top: 74%;
-        left: 15%;
+        transform: translate(120px,1px);
         }
 
     form > ul > li > #password{
         width: 24px;
         height: 20px;
         position: absolute;
-        left: 15%;
-        filter: brightness(0);
+        transform: translate(120px,1px);
         }    
     
 }
@@ -222,11 +215,11 @@ body{
 
     form{
         background-color: rgba(255, 255, 255, 0.909);
-        width: 65%;
-        height: 75%;
+        width: 600px;
+        height: 500px;
         display: inline-block;
         position: relative;
-        transform: translate(25%,20%);
+        transform: translate(15vw,20vh);
         border: 1px solid rgba(0, 0, 0, 0.772);
         border-radius: 5px;
     }
@@ -242,40 +235,41 @@ body{
     }
 
     form > ul > li > input{
-        width: 43%;
+        width: 290px;
         height: 25px;
         display: block;
         margin: auto;
         text-align: center;
+        margin-bottom: 3%;
         border-radius: 25px;
         border-style: solid;
         border-color: black;
         font-size: 0.8em;
         font-style: oblique;
         font-weight: 600;
-    }         
-
+    } 
+        
     form > ul > li > input::placeholder{
             color: black;
-        }
+    }
 
     form > ul > li > #cliente,#valido, #end,#local,#contato,#unico{
-            margin-top: 5%;    
+            margin-top: 30px;    
         }    
-        
+            
     form > button{
             position: absolute;
             display: block;
-            width: 23%;
+            width: 170px;
             height: 30px;
             border-style: solid;
             border-color: black;
             border-radius: 25px;
             font-weight: 600;
-            transform: translate(25vw,66vh);
-            margin-top: 3%;
-        }    
-        
+            transform: translate(200px,450px);
+            margin-top: 2%;
+        }
+            
     input::-webkit-inner-spin-button{
             -webkit-appearance: none;
         }
@@ -284,37 +278,42 @@ body{
             opacity: 100%;
         }
 
-    form > ul > li > #user, #cpf{
-        width: 20px;
+    form > ul > li > #user{
+        font-size: 16px;
         position: absolute;
-        transform: translateX(15vw);
+        transform: translate(120px,1px);
+        }
+
+    form > ul > li > #cpf{
+            width: 20px;
+            position: absolute;
+            transform: translate(120px,1px);
         }
 
     form > ul > li > #cell{
-        width: 35px;
+        width: 22px;
         position: absolute;
-        transform: translate(14vw,-1vh);
+        transform: translate(120px,1px);
         }
 
     form > ul > li > #house{
         width: 24px;
         position: absolute;
-        transform: translate(15vw,1vh);
+        transform: translate(120px,1px);
         }
 
     form > ul > li > #email{
         width: 25px;
         position: absolute;
-        transform: translate(15vw,2vh);
+        transform: translate(120px,1px);
         }
 
     form > ul > li > #password{
         width: 24px;
         height: 20px;
         position: absolute;
-        transform: translate(15vw,1vh);
-        filter: brightness(0);
-        }
+        transform: translate(120px,1px);
+        
 }
 
 @media(min-width:1200px){
