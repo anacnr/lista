@@ -7,7 +7,9 @@
     <!--Tela maior-->
     <link rel="stylesheet" href="../css/cad-cliente/desktop.css">
     <!--Tela menor-->
-    <link rel="stylesheet" href="../css/cad-cliente/mobile.css">  
+    <link rel="stylesheet" href="../css/cad-cliente/mobile.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
   <body>
 
@@ -16,34 +18,37 @@
     <ul>
       
       <li>
-         <img src="imgs-cad/avatar-min.png" alt="Usuário" id="user">
+        <i class="bi bi-person-square" id="user"></i>
+
          <label for="cliente"></label>
         <input type="text" name="nome" id="cliente" placeholder="Nome" maxlength="50" required /></li>
 
-      <li> <img src="imgs-cad/avatar-min.png" alt="CPF" id="cpf">
+      <li>
+        <i class="bi bi-person-square" id="cpf"></i>
         <label for="unico"></label>
         <input type="text" name="cpf" id="unico" placeholder="CPF" maxlength="14" required /></li>
 
       <li>
-        <img src="" alt="Telefone móvel" id="cell">
+        
+        <img src="imgs-cad/smartphone_FILL0_wght400_GRAD0_opsz24.svg" alt="Telefone móvel" id="cell">
         <label for="contato"></label>
         <input type="tel" name="telefone" id="contato" placeholder="Telefone" maxlength="11" required />
       </li>
 
       <li>
-        <img src="imgs-cad/home-min.png" alt="Moradia" id="house">
+        <i class="bi bi-house" id="house"></i>
         <label for="local"></label>
         <input type="text" name="moradia" id="local" placeholder="Endereço" maxlength="20" required />
       </li>
 
       <li>
-        <img src="imgs-cad/letter-min.png" alt="E-mail" id="email">
+        <i class="bi bi-envelope" id="email"></i>
         <label for="end"></label>
         <input type="email" name="email" id="end" placeholder="E-mail" maxlength="50" />
       </li>
 
       <li>
-        <img src="imgs-cad/lock-min.png" alt="Senha" id="password">
+        <i class="bi bi-lock" id="password"></i>
         <label for="valido"></label>
         <input type="password" name="senha" id="valido" placeholder="Senha" minlength="8" required />
       </li>

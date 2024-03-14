@@ -87,7 +87,7 @@ form > ul > li > #user, #cpf{
 }
 
 form > ul > li > #cell{
-    width: 6%;
+    width: 4%;
     position: absolute;
     transform: translate(24vw,0vh);
 }

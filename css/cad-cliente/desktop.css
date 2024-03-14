@@ -76,28 +76,29 @@ body{
         width: 3vw;
         position: absolute;
         transform: translateX(25vw);
+        margin-top: 6px;
         }
 
     form > ul > li > #cell{
-        width: 6vw;
+        width: 3.5vw;
         position: absolute;
-        transform: translate(23vw,-1vh);
+        transform: translate(25vw,0vh);
         }
 
     form > ul > li > #house{
-        width: 4vw;
+        font-size: 19px;
         position: absolute;
-        transform: translate(24vw,0vh);
+        transform: translate(26vw,1vh);
         }
 
     form > ul > li > #email{
-        width: 4vw;
+        font-size: 19px;
         position: absolute;
         transform: translate(24vw,1vh);
         }
 
     form > ul > li > #password{
-        width: 3vw;
+        font-size: 19px;
         height: 3%;
         position: absolute;
         transform: translate(25vw,1vh);
