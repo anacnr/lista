@@ -25,7 +25,7 @@ form > ul > li{
 
 form > ul > li > input{
     width: 40%;
-    height: 20px;
+    height: 24px;
     display: block;
     margin: auto;
     text-align: center;
@@ -33,7 +33,9 @@ form > ul > li > input{
     margin-bottom: 10%;
     border-radius: 25px;
     border-style: solid;
-    border-color: black;
+    border-radius: 25px;
+    border-width: 0px;
+    box-shadow: 2px 2px 6px black;
     font-size: 0.8em;
     font-style: oblique;
     font-weight: 600;
@@ -63,13 +65,14 @@ form > ul > li > input::placeholder{
 form > button{
     margin: auto;
     display: block;
-    width: 35%;
-    height: 27px;
+    width: 30%;
+    height: 30px;
     border-style: solid;
-    border-color: black;
+    border-width: 0px;
+    box-shadow: 2px 2px 6px black;
     border-radius: 25px;
     font-weight: 600;
-    font-size: 3dvw;
+    font-size: 2.5dvw;
     cursor: pointer;
 }
 
@@ -88,11 +91,11 @@ form > ul > li > #descricao {
     left: 38%;
     position: absolute;
     font-size: 0.9em;
-    border: 0px solid black;
+    border-width: 0px;
     height: 19cqmin;
     width: 19cqmin;
     border-radius: 50%;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.559);
+    box-shadow: 2px 2px 6px black;
     cursor: pointer;
     display: block;    
 }
@@ -108,17 +111,17 @@ form > ul > li > #descricao {
 /*Personalização dos ícones*/
 
 ul > li > #company, #worker, #address{
-    width: 3vw;
+    font-size: 16px;
     position: absolute;
     transform: translateX(24vw);
 }
 
 ul > li > #cnpj{
-    font-size: 3dvw;
+    font-size: 16px;
     font-weight: 900;
     font-style: italic;
     position: absolute;
-    transform: translate(20vw,1vh);
+    transform: translateX(24vw);
     text-decoration: underline;
 }
 
@@ -127,28 +130,27 @@ ul > li > #address{
 }
 
 ul > li > #telephone{
-    width: 4vw;
+    font-size: 16px;
     position: absolute;
     transform: translate(23vw,0vh);
     filter: brightness(0);
 }
 
 ul > li > #phone{
-    width: 4vw;
+    width: 20px;
     position: absolute;
     transform: translate(23vw,-1vh);
 }
 
 ul > li > #email{
-    width: 4.5vw;
+    font-size: 16px;
     position: absolute;
-    transform: translate(23vw, 1vh);
+    transform: translate(24vw, 0vh);
 }
 
 ul > li > #pass{
-    width: 3vw;
-    height: 3vh;
+    font-size: 16px;
     position: absolute;
-    transform: translate(25vw,0vh);
+    transform: translate(24vw,0vh);
     filter: brightness(0);
 }

@@ -107,7 +107,6 @@ body{
         filter: brightness(0);
     }
 }
-
  @media (min-width:768px) and (max-width: 992px){
 
     form{
@@ -217,7 +216,6 @@ body{
         }    
     
 }
-
 @media (min-width:992px) and (max-width:1200px){
 
     form{

@@ -35,6 +35,8 @@ form > ul > li > input{
     margin-top: 0%;
     margin-bottom: 10%;
     border-radius: 25px;
+    border-width: 0px;
+    box-shadow: 2px 2px 6px black;
     border-style: solid;
     border-color: black;
     font-size: 0.8em;
@@ -71,8 +73,10 @@ form > button{
     border-style: solid;
     border-color: black;
     border-radius: 25px;
+    border-width: 0px;
+    box-shadow: 2px 2px 6px black;
     font-weight: 600;
-    font-size: 3dvw;
+    font-size: 16px;
 }
 
 form > ul > li > label{
@@ -106,17 +110,17 @@ form > ul > li > #descricao {
 /*Personalização dos ícones*/
 
 ul > li > #company, #worker, #address{
-    width: 3vw;
+    font-size: 20px;
     position: absolute;
     transform: translateX(24vw);
 }
 
 ul > li > #cnpj{
-    font-size: 3dvw;
+    font-size: 20px;
     font-weight: 900;
     font-style: italic;
     position: absolute;
-    transform: translate(20vw,1vh);
+    transform: translate(24vw,1vh);
     text-decoration: underline;
 }
 
@@ -125,29 +129,28 @@ ul > li > #address{
 }
 
 ul > li > #telephone{
-    width: 4vw;
+    font-size: 20px;
     position: absolute;
     transform: translate(23vw,0vh);
     filter: brightness(0);
 }
 
 ul > li > #phone{
-    width: 7vw;
+    font-size: 20px;
     position: absolute;
     transform: translate(23vw,-1vh);
 }
 
 ul > li > #email{
-    width: 4.5vw;
+    font-size: 20px;
     position: absolute;
     transform: translate(23vw, 1vh);
 }
 
 ul > li > #pass{
-    width: 3vw;
-    height: 3vh;
+    font-size: 20px;
     position: absolute;
-    transform: translate(25vw,1vh);
+    transform: translate(23vw,1vh);
     filter: brightness(0);
 }
 
