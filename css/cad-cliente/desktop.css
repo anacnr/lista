@@ -17,7 +17,7 @@ body{
 }
 
 @media (min-width:600px) and (max-width: 768px){
-  
+
     form > ul > li{
             list-style: none;
         }
@@ -111,11 +111,11 @@ form > ul > li > #password{
         background-color: rgba(255, 255, 255, 0.909);
         width: 600px;
         height: 500px;
-        display: inline-block;
-        position: relative;
-        transform: translate(15vw,20vh);
         border: 1px solid rgba(0, 0, 0, 0.772);
         border-radius: 5px;
+        display: block;
+        margin: auto;
+        transform: translateY(15vh);
     }
 
     form > ul{
@@ -160,7 +160,7 @@ form > ul > li > #password{
             border-color: black;
             border-radius: 25px;
             font-weight: 600;
-            transform: translate(200px,450px);
+            transform: translate(215px,425px);
             margin-top: 2%;
         }
             
@@ -215,11 +215,11 @@ form > ul > li > #password{
 
     form{
         background-color: rgba(255, 255, 255, 0.909);
-        width: 600px;
+        width: 650px;
         height: 500px;
-        display: inline-block;
-        position: relative;
-        transform: translate(15vw,20vh);
+        display: block;
+        margin: auto;
+        transform: translateY(15vh);
         border: 1px solid rgba(0, 0, 0, 0.772);
         border-radius: 5px;
     }
@@ -266,7 +266,7 @@ form > ul > li > #password{
             border-color: black;
             border-radius: 25px;
             font-weight: 600;
-            transform: translate(200px,450px);
+            transform: translate(230px,420px);
             margin-top: 2%;
         }
             
@@ -279,15 +279,15 @@ form > ul > li > #password{
         }
 
     form > ul > li > #user{
-        font-size: 16px;
+        font-size: 18px;
         position: absolute;
         transform: translate(120px,1px);
         }
 
     form > ul > li > #cpf{
-            width: 20px;
-            position: absolute;
-            transform: translate(120px,1px);
+        font-size: 18px;
+        position: absolute;
+        transform: translate(120px,1px);
         }
 
     form > ul > li > #cell{
@@ -297,35 +297,33 @@ form > ul > li > #password{
         }
 
     form > ul > li > #house{
-        width: 24px;
+       font-size: 20px;;
         position: absolute;
         transform: translate(120px,1px);
         }
 
     form > ul > li > #email{
-        width: 25px;
+        font-size: 20px;
         position: absolute;
         transform: translate(120px,1px);
         }
 
     form > ul > li > #password{
-        width: 24px;
-        height: 20px;
+        font-size: 20px;
         position: absolute;
         transform: translate(120px,1px);
         
 }
-
+}
 @media(min-width:1200px){
  
     form{
         background-color: rgba(255, 255, 255, 0.909);
-        /*width: 65vw; height: 65vh;*/
-        width: 65%;
-        height: 540px;
-        display: inline-block;
-        position: relative;
-        transform: translate(25%,16%);
+        width: 750px;
+        height: 500px;
+        display: block;
+        margin: auto;
+        transform: translateY(15vh);
         border: 1px solid rgba(0, 0, 0, 0.772);
         border-radius: 5px;
     }
@@ -333,7 +331,7 @@ form > ul > li > #password{
     form > ul{
         position: absolute;
         width: 100%;
-        top: 1%;
+        top: 5%;
     }
 
     form > ul > li{
@@ -341,11 +339,12 @@ form > ul > li > #password{
     }
 
     form > ul > li > input{
-        width: 40%;
+        width: 290px;
         height: 25px;
         display: block;
         margin: auto;
         text-align: center;
+        margin-bottom: 3%;
         border-radius: 25px;
         border-style: solid;
         border-color: black;
@@ -353,67 +352,68 @@ form > ul > li > #password{
         font-style: oblique;
         font-weight: 600;
     } 
-            
+        
     form > ul > li > input::placeholder{
             color: black;
-        }
+    }
 
     form > ul > li > #cliente,#valido, #end,#local,#contato,#unico{
-            margin-top: 5%;    
+            margin-top: 30px;    
         }    
             
     form > button{
             position: absolute;
             display: block;
-            width: 20%;
+            width: 170px;
             height: 30px;
             border-style: solid;
             border-color: black;
             border-radius: 25px;
             font-weight: 600;
-            transform: translate(25vw,66vh);
-            margin-top: 8%;
+            transform: translate(300px,420px);
+            margin-top: 2%;
+        }
+            
+    input::-webkit-inner-spin-button{
+            -webkit-appearance: none;
         }
         
-    input::-webkit-inner-spin-button{
-        -webkit-appearance: none;
-        }
-
     input::placeholder{
             opacity: 100%;
         }
 
-    /*Configurações dos ícones dos campos*/
-
-    form > ul > li > #user, #cpf{
-        width: 20px;
+    form > ul > li > #user{
+        font-size: 18px;
         position: absolute;
-        transform: translateX(16vw);
+        transform: translate(190px,1px);
+        }
+
+    form > ul > li > #cpf{
+        font-size: 18px;
+        position: absolute;
+        transform: translate(190px,1px);
         }
 
     form > ul > li > #cell{
-        width: 35px;
+        width: 22px;
         position: absolute;
-        transform: translate(15vw,-1vh);
+        transform: translate(190px,1px);
         }
 
     form > ul > li > #house{
-        width: 24px;
+       font-size: 20px;;
         position: absolute;
-        transform: translate(15vw,1vh);
+        transform: translate(190px,1px);
         }
 
     form > ul > li > #email{
-        width: 25px;
+        font-size: 20px;
         position: absolute;
-        transform: translate(15vw,2vh);
+        transform: translate(190px,1px);
         }
 
     form > ul > li > #password{
-        width: 24px;
-        height: 20px;
+        font-size: 20px;
         position: absolute;
-        transform: translate(15vw,1vh);
-        filter: brightness(0);
-        }    
+        transform: translate(190px,1px);}    
 }
