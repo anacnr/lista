@@ -8,11 +8,16 @@ body {
 form > button{
     cursor: pointer;
 }
+
+:root{
+  --lyric: Arial, Helvetica, sans-serif;
+}
+
 @media (min-width: 600px) and (max-width: 768px) {
 
   form {
     position: relative;
-    top: 150px;
+    top: 167px;
     margin: auto;
     background-color: rgba(255, 255, 255, 0.909);
     box-shadow: 2px 1px 10px black;
@@ -34,25 +39,16 @@ form > button{
   }
   /*Configurações dos ícones*/
 
-  form > ul > li > #gmail-icon {
+  form > ul > li > #email-icon {
     font-size: 18px;
     position: absolute;
-    right: 97%;
-    bottom: 65%;
-    margin-right: 5px;
-    z-index: 1;
-    filter: hue-rotate(44deg);
-    cursor: context-menu;
+    transform: translate(-9vw,1vh);
   }
 
   form > ul > li > #lock-icon {
     font-size: 18px;
     position: absolute;
-    top: 135%;
-    right: 98%;
-    z-index: 1;
-    filter: hue-rotate(96deg);
-    cursor: context-menu;
+    transform: translate(-9vw,6vh);
   }
 
   /*Esses são os campos onde vão receber os dados*/
@@ -62,8 +58,8 @@ form > button{
     height: 12px;
     padding-top: 2%;
     padding-bottom: 4%;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.675);
+    border-width: 0px;
+    box-shadow: 2px 1px 4px;
     border-radius: 3px;
     text-align: center;
     position: relative;
@@ -74,6 +70,7 @@ form > button{
     color: rgba(39, 39, 149, 0.94);
     font-size: 0.8em;
     font-weight: 600;
+    font-family: var(--lyric);
   }
 
   form > ul > li > #gmail {
@@ -94,7 +91,7 @@ form > button{
     font-size: 2dvw;
     font-weight: 400;
     position: relative;
-    transform: translate(22vw, 32vh);
+    transform: translate(22vw, 30vh);
     cursor: pointer;
   }
 
@@ -136,16 +133,13 @@ form > button{
   #alert {
     color: rgb(10, 10, 10);
     font-size: 1rem;
+    font-family: var(--lyric);
     text-align: center;
     transform: translateY(50px);
   }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
-  body {
-    background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
-    background-attachment: fixed;
-  }
 
   form {
     position: relative;
@@ -154,33 +148,28 @@ form > button{
     background-color: rgba(255, 255, 255, 0.909);
     box-shadow: 2px 1px 10px black;
     border-radius: 3px;
-    height: 50vh;
-    width: 75vw;
-    top: 84px;
+    height: 350px;
+    width: 650px;
+    top: 100px;
   }
 
   form > ul > li {
     list-style: none;
   }
 
-  form > ul {
+  form > ul{
     position: relative;
     margin: auto;
-    top: 30%;
-    right: 2%;
-    width: 50vw;
+    top: 25%;
+    right: 40%;
+    width: 100px;
     height: 10vh;
-  }
+}
 
   form > ul > li > #email-icon {
-    font-size: 18px;
+    font-size: 20px;
     position: absolute;
-    right: 95%;
-    bottom: 50%;
-    margin-right: 0px;
-    z-index: 1;
-    filter: hue-rotate(44deg);
-    cursor: context-menu;
+    transform: translate(-5vw,1vh);
   }
 
   form > ul > li > #lock-icon {
@@ -196,31 +185,31 @@ form > button{
   /*Esses são os campos onde vão receber os dados*/
 
   form > ul > li > input {
-    position: relative;
-    right: 2%;
-    width: 89%;
-    height: 5px;
+    width: 400px;
+    height: 12px;
     padding-top: 2%;
     padding-bottom: 4%;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.675);
+    border-width: 0px;
+    box-shadow: 2px 1px 4px;
     border-radius: 3px;
     text-align: center;
   }
 
   form > ul > li > input::placeholder {
     color: rgba(39, 39, 149, 0.94);
-    font-size: 0.8em;
+    font-size: 0.5em;
     font-weight: 600;
+    font-size: var(--lyric);
   }
 
-  form > ul > li > #email {
-    margin-top: 10px;
-  }
+  form > ul > li > #email{
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
 
-  form > ul > li > #senha {
-    margin-top: 55px;
-  }
+form > ul > li > #senha{
+    margin-top: 1px;
+}
 
   form > button {
     width: 20%;
