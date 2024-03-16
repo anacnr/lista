@@ -214,9 +214,8 @@ form > ul > li > #senha{
   form > button {
     width: 20%;
     height: 25px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.623);
+    border-width: 0px;
+    box-shadow: 2px 1px 4px;
     border-radius: 25px;
     font-size: 0.7em;
     font-weight: 100;
@@ -324,8 +323,8 @@ form > ul > li > #senha{
     height: 5px;
     padding-top: 2%;
     padding-bottom: 3%;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.675);
+    border-width: 0px;
+    box-shadow: 2px 1px 4px;
     border-radius: 3px;
     text-align: center;
   }
@@ -334,6 +333,7 @@ form > ul > li > #senha{
     color: rgba(39, 39, 149, 0.94);
     font-size: 0.8em;
     font-weight: 600;
+    font-size: var(--lyric);
   }
 
   form > ul > li > #email {
@@ -348,8 +348,8 @@ form > ul > li > #senha{
     width: 20%;
     height: 25px;
     border-width: 1px;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.623);
+    border-width: 0px;
+    box-shadow: 2px 1px 4px;
     border-radius: 25px;
     font-size: 0.7em;
     font-weight: 100;
@@ -357,6 +357,7 @@ form > ul > li > #senha{
     position: relative;
     transform: translate(16vw, 32vh);
     cursor: pointer;
+    font-size: var(--lyric);
   }
 
   form > #cad {
@@ -461,8 +462,8 @@ form > ul > li > #senha{
     height: 0px;
     padding-top: 2%;
     padding-bottom: 3%;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.675);
+    border-width: 0px;
+    box-shadow: 2px 1px 4px;
     border-radius: 3px;
     text-align: center;
   }
@@ -471,6 +472,7 @@ form > ul > li > #senha{
     color: rgba(39, 39, 149, 0.94);
     font-size: 0.8em;
     font-weight: 600;
+    font-size: var(--lyric);
   }
 
   form > ul > li > #email {
@@ -484,9 +486,8 @@ form > ul > li > #senha{
   form > button {
     width: 20%;
     height: 25px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.623);
+    border-width: 0px;
+    box-shadow: 2px 1px 4px;
     border-radius: 25px;
     font-size: 0.7em;
     font-weight: 100;
@@ -494,6 +495,7 @@ form > ul > li > #senha{
     position: relative;
     transform: translate(11vw, 37vh);
     cursor: pointer;
+    font-size: var(--lyric);
   }
 
   form > #cad {
