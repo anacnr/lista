@@ -63,6 +63,7 @@ body{
     width: 100px; height: 100px;
     margin: auto;
     transform: translateY(7vh);
+    background-color: black;
 }
 
 /*Empresa(parágrafo)*/
