@@ -154,3 +154,9 @@ ul > li > #pass{
     transform: translate(24vw,0vh);
     filter: brightness(0);
 }
+
+/*Placeholder dos inputs de edição*/
+form > ul > li > #span-name::placeholder{
+    color: black;
+    font-size: 0.5em;
+}

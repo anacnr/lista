@@ -38,11 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(request);
 
     //Vou fazer igual o cadastro da imagem
-    //lista../php/enviadas/655d45ab71148.jpg
-    /*background-image: url('/lista/php/enviadas/655d45ab71148.jpg');
-    background-size: cover;
-    background-position: center;*/
-
+    
     li_img.style.backgroundImage = `url(../php/${request.imagem})`
     li_img.style.backgroundSize = 'cover'
 
@@ -56,10 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
     tel_priv.textContent = `${request.celular}`;
     email.textContent = `${request.email}`;
     password.textContent = `${request.senha}`;
-  });
 
-  /*Caso o usuário edite os dados*/
 
+ /*Caso o usuário edite os dados*/
   let button_edit = document.getElementById("edit");
   button_edit.addEventListener("click", function () {
     /*Transformação dos campos em inputs*/
@@ -72,12 +67,11 @@ document.addEventListener("DOMContentLoaded", function () {
     input_company.style.textShadow = "none";
     input_company.style.letterSpacing = "3px";
     input_company.style.textAlign = "center";
+    input_company.placeholder = `${request.empresa}`
 
     company.style.display = "none";
 
-    document.querySelector(
-      "#company-dates > ul > #name"
-    ).style.backgroundColor = "transparent";
+    document.querySelector("#company-dates > ul > #name").style.backgroundColor = "transparent";
 
     let span_company = company.parentNode;
     span_company.insertBefore(input_company, company.nextSibling);
@@ -91,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
     input_manager.style.textShadow = "none";
     input_manager.style.letterSpacing = "3px";
     input_manager.style.textAlign = "center";
+    input_manager.placeholder = `${request.responsavel}`
 
     manager.style.display = "none";
 
@@ -110,6 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
     input_cnpj.style.textShadow = "none";
     input_cnpj.style.letterSpacing = "3px";
     input_cnpj.style.textAlign = "center";
+    input_cnpj.placeholder = `${request.cnpj}`
 
     cnpj.style.display = "none";
 
@@ -129,6 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
     input_local.style.textShadow = "none";
     input_local.style.letterSpacing = "3px";
     input_local.style.textAlign = "center";
+    input_local.placeholder = `${request.local}`
 
     local.style.display = "none";
 
@@ -148,6 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
     input_tel_fix.style.textShadow = "none";
     input_tel_fix.style.letterSpacing = "3px";
     input_tel_fix.style.textAlign = "center";
+    input_tel_fix.placeholder = `${request.tel_fixo}`
 
     tel_fix.style.display = "none";
 
@@ -166,6 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
     input_private.style.textShadow = "none";
     input_private.style.letterSpacing = "3px";
     input_private.style.textAlign = "center";
+    input_private.placeholder = `${request.celular}`;
 
     tel_priv.style.display = "none";
 
@@ -185,6 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
     input_email.style.textShadow = "none";
     input_email.style.letterSpacing = "3px";
     input_email.style.textAlign = "center";
+    input_email.placeholder = `${request.email}`;
 
     email.style.display = "none";
 
@@ -204,6 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
     input_passw.style.textShadow = "none";
     input_passw.style.letterSpacing = "3px";
     input_passw.style.textAlign = "center";
+    input_passw.placeholder = `${request.senha}`
 
     password.style.display = "none";
 
@@ -331,4 +332,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     button_sav.addEventListener("click", save);
   }); //Função de editar
+  });
+
+    /*Exibe os dados do usuário. Requisição dos dados
+    $.ajax({
+        url: "../php/account-super.php",
+        type: "POST",
+        data: dates,
+        processData: false,
+        contentType: false,
+      }).done(function(request){
+        //console.log(`${request.empresa}`)
+
+
+      });*/
+
+
 }); //Carregamento da página
