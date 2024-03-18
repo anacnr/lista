@@ -10,6 +10,13 @@ body {
     background-attachment: fixed;
 }
 
+/*Imagem do produto*/
+  tbody > tr > td > .produto {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(246, 245, 245);
+  }
+
 @media (min-width:600px) and (max-width:768px) {
 
 /*Caixa nome sessão*/

@@ -1,20 +1,19 @@
 @charset "UTF-8";
 
-*{
-    margin: 0%;
-    padding: 0px;
-    box-sizing: border-box;
+* {
+  margin: 0%;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 @media (max-width: 600px) {
-    
-body {
+  body {
     background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
     background-attachment: fixed;
-}
+  }
 
-/*Caixa nome sessão*/
-span > p{
+  /*Caixa nome sessão*/
+  span > p {
     text-align: center;
     background-color: #dc6cebe8;
     width: 120px;
@@ -25,41 +24,43 @@ span > p{
     color: rgb(243, 242, 242);
     text-shadow: 1px 1px 2px black;
     cursor: context-menu;
-}
+  }
 
-table{
+  table {
     margin: auto;
     transform: translateY(20vh);
     width: 70%;
     border-collapse: collapse;
     box-shadow: 1px 2px 7px black;
-}
+  }
 
-/*Cabeçalho da tabela*/
-table > #head-tab{
+  /*Cabeçalho da tabela*/
+  table > #head-tab {
     height: 20px;
-}
+  }
 
-/*Cor das linhas(cor sim e cornão)*/
-table > #head-tab, tbody > tr:nth-child(2n){
-    background-color: #dc6ceb85;    
-}
+  /*Cor das linhas(cor sim e cornão)*/
+  table > #head-tab,
+  tbody > tr:nth-child(2n) {
+    background-color: #dc6ceb85;
+  }
 
-/*Configuração dos campos do cabeçalho*/
-table > #head-tab > tr > th{
+  /*Configuração dos campos do cabeçalho*/
+  table > #head-tab > tr > th {
     border: 1px solid black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
     font-size: 2.6dvi;
     font-weight: 400;
     text-transform: capitalize;
     color: rgb(243, 242, 242);
     text-shadow: 1px 2px 3px black;
     width: 30px;
-    height: 30px;   
-}
+    height: 30px;
+  }
 
-/*Configuração dos campos do corpo*/
-table > #body-tab > tr > td{
+  /*Configuração dos campos do corpo*/
+  table > #body-tab > tr > td {
     border: 1px solid black;
     text-align: center;
     text-transform: capitalize;
@@ -67,20 +68,20 @@ table > #body-tab > tr > td{
     color: rgb(243, 242, 242);
     text-shadow: 1px 2px 3px black;
     width: 30px;
-    height: 40px;  
-}
+    height: 40px;
+  }
 
-table > #body-tab > tr > #new_td{
+  table > #body-tab > tr > #new_td {
     border: 1px solid black;
-}
+  }
 
-/*Código do produto*/
-table > #body-tab > tr > #code{
+  /*Código do produto*/
+  table > #body-tab > tr > #code {
     text-transform: lowercase;
-}
+  }
 
-/*Botões*/
-#buttons{
+  /*Botões*/
+  #buttons {
     position: absolute;
     transform: translateY(40vh);
     width: 100%;
@@ -88,45 +89,52 @@ table > #body-tab > tr > #code{
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-/*Personalização dos botões*/
-#buttons > button{
-padding: 5px;
-margin-left: 15px;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-font-size: 2.6dvi;
-border-width: 0px;
-border-radius: 15px;
-width: 12%;
-box-shadow: 1px 1px 4px black;
-cursor: pointer;
-}
+  /*Personalização dos botões*/
+  #buttons > button {
+    padding: 5px;
+    margin-left: 15px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 2.6dvi;
+    border-width: 0px;
+    border-radius: 15px;
+    width: 12%;
+    box-shadow: 1px 1px 4px black;
+    cursor: pointer;
+  }
 
-/*Botão de excluir*/
-#buttons >  #exc{
+  /*Botão de excluir*/
+  #buttons > #exc {
     background-color: rgba(0, 0, 0, 0.712);
     color: rgb(243, 242, 242);
-}
+  }
 
-/*Botão de editar*/
-#buttons > #edi{
+  /*Botão de editar*/
+  #buttons > #edi {
     background-color: #ff3131;
     color: rgb(243, 242, 242);
     text-shadow: 1px 1px 2px black;
-}
+  }
 
-/*Botão de salvar*/
-#buttons > #sav{
+  /*Botão de salvar*/
+  #buttons > #sav {
     background-color: #00bf63;
     color: rgb(243, 242, 242);
     text-shadow: 1px 1px 2px black;
-}
-/*Botão de salvar*/
-#buttons > #add{
+  }
+  /*Botão de salvar*/
+  #buttons > #add {
     background-color: #f5f4edd8;
     border-radius: 6px;
     display: none;
     cursor: pointer;
-}
+  }
+
+  /*Imagem do produto*/
+tbody > tr > td > .produto {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(246, 245, 245);
+  }
 }

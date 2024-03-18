@@ -332,20 +332,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     button_sav.addEventListener("click", save);
   }); //Função de editar
-  });
-
-    /*Exibe os dados do usuário. Requisição dos dados
-    $.ajax({
-        url: "../php/account-super.php",
-        type: "POST",
-        data: dates,
-        processData: false,
-        contentType: false,
-      }).done(function(request){
-        //console.log(`${request.empresa}`)
-
-
-      });*/
-
-
+  });// $ajax() e .done()
 }); //Carregamento da página
