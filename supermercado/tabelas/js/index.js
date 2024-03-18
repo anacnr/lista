@@ -1,5 +1,5 @@
 /**
- * A tabela poderá ter uma linha editada ou apagada e também o uusário poder acrescentar mais linhas.
+ * A tabela poderá ter uma linha editada ou apagada e também o usyário poder acrescentar mais linhas.
  */
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -8,7 +8,7 @@ function toAdd(){
     let table_row = document.createElement('tr')
     let godfather = document.querySelector('tbody')
     godfather.appendChild(table_row)
-    for(let count = 0; count < 7; count++){
+    for(let count = 0; count < 8; count++){
             let table_data = document.createElement('td')
             table_row.appendChild(table_data)
     }
@@ -59,7 +59,6 @@ const edit = function toEdit(){
     let button_add = document.getElementById("add")
     button_add.style.display = 'block'
     button_add.style.position = 'relative'
-    //button_add.style.right = '15vw'
 
     function Recise(){
         if(window.innerWidth <=600){

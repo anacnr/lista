@@ -1,12 +1,12 @@
 <?php
-// Estabelece a conexão com o banco de dados
-include 'bank.php';
+//Estabelece a conexão com o banco de dados
+include ('bank.php');
 
 if (!$mysql) {
     die("Conexão falhou: " . mysqli_connect_error());
 }
 
-// Pesquisar e imprimir na página
+//Pesquisa e imprimir na página
 $select = "SELECT * FROM setor";
 
 $query = mysqli_query($mysql, $select);
