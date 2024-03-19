@@ -17,7 +17,7 @@ body{
     background-attachment: fixed;
 }
 
-@media (min-width:600px) and (max-width: 768px){
+@media(min-width:600px) and (max-width: 768px){
 
 /*Esses são os campos onde vão receber os dados*/
 form > ul > li{
@@ -91,7 +91,7 @@ form > ul > li > #foto[type = 'file']{
 /*Label do input com tipo image*/
 form > ul > li > #descricao { 
     top: 8%;
-    left: 38%;
+    left: 40%;
     position: absolute;
     font-size: 0.9em;
     border: 0px solid black;
@@ -99,15 +99,20 @@ form > ul > li > #descricao {
     width: 18cqmin;
     border-radius: 50%;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.559);
-    background-position: center;
-    background-image: url('/supermercado/imgs-cad/upload-min.png');
-    background-color: rgba(255, 255, 255, 0.879);
-    background-size: cover;
+    background-color: rgba(248, 233, 253, 0.886);  
     cursor: pointer;
     display: block;    
 }
 
 /*Personalização dos ícones*/
+
+ #descricao > .bi-upload{
+    font-size: 5dvi;
+    transform: translate(6vw, 6vh);
+    position: absolute;
+    opacity: 60%;
+    text-shadow: 1px 1px 2px gray;
+ }
 
 ul > li > #company, #worker, #address{
     font-size: 20px;
@@ -203,7 +208,7 @@ ul > li > #pass{
     form > button{
     margin: auto;
     display: block;
-    width: 35%;
+    width: 100px;
     height: 30px;
     border-style: solid;
     border-color: black;
@@ -222,8 +227,8 @@ ul > li > #pass{
 
     /*Label do input com tipo image*/
     form > ul > li > #descricao { 
-        top: 10%;
-        left: 41%;
+        top: 8%;
+        left: 42%;
         position: absolute;
         font-size: 0.9em;
         border: 0px solid black;
@@ -231,63 +236,65 @@ ul > li > #pass{
         width: 18cqmin;
         border-radius: 50%;
         box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.559);
-        background-position: center;
-        background-image: url('/supermercado/imgs-cad/upload-min.png');
-        background-color: rgba(255, 255, 255, 0.879);
-        background-size: cover;
+        background-color: rgba(248, 233, 253, 0.886);  
         cursor: pointer;
-        display: block;
-        
+        display: block;    
     }
 
     /*Personalização dos ícones*/
 
-    ul > li > #company, #worker{
-        width: 3dvw;
+    #descricao > .bi-upload{
+        font-size: 3em;
+        transform: translate(4.5vw, 6vh);
         position: absolute;
-        transform: translate(21vw,-1vh);
+        opacity: 60%;
+        text-shadow: 1px 1px 2px gray;
+    }
+    ul > li > #company, #worker{
+        font-size: 1.3em;
+        position: absolute;
+        transform: translate(25vw,1vh);
     }
 
     ul > li > #address{
-        width: 3dvw;
+        font-size: 1.3em;
         position: absolute;
-        transform: translate(21vw,-2vh);
+        transform: translate(25vw,1vh);
         filter: hue-rotate(180deg);
     }
 
     ul > li > #cnpj{
-        font-size: 2dvw;
+        font-size: 1.3em;
         font-weight: 900;
         font-style: italic;
         position: absolute;
-        transform: translate(19vw,0vh);
+        transform: translate(25vw,0vh);
         text-decoration: underline;
     }
 
     ul > li > #telephone{
-        width: 4dvw;
+        font-size: 1.3em;
         position: absolute;
-        transform: translate(20vw,-1vh);
+        transform: translate(25vw,1vh);
         filter: brightness(0);
     }
 
     ul > li > #phone{
-        width: 7vw;
+        font-size: 1.3em;
         position: absolute;
-        transform: translate(18vw,-3vh);
+        transform: translate(25vw,0vh);
     }
 
     ul > li > #email{
-        width: 4.5vw;
+        font-size: 1.3em;
         position: absolute;
-        transform: translate(19vw, 1vh);
+        transform: translate(25vw, 1vh);
     }
 
     ul > li > #pass{
-        width: 3vw;
-        height: 4vh;
+        font-size: 1.3em;
         position: absolute;
-        transform: translate(20vw,0vh);
+        transform: translate(25vw,0vh);
         filter: brightness(0);
     }
 

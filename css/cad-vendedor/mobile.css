@@ -97,18 +97,19 @@ form > ul > li > #descricao {
     border-radius: 50%;
     box-shadow: 2px 2px 6px black;
     cursor: pointer;
-    display: block;    
+    display: block;
+    background-color: rgba(248, 233, 253, 0.886);    
 }
 
- #descricao > .bi-upload{
-    font-size: 30px;
-    transform: translate(6vw, 5vh);
+/*Personalização dos ícones*/
+
+#descricao > .bi-upload{
+    font-size: 25px;
+    transform: translate(7vw, 5vh);
     position: absolute;
     opacity: 60%;
     text-shadow: 1px 1px 2px gray;
  }
-
-/*Personalização dos ícones*/
 
 ul > li > #company, #worker, #address{
     font-size: 16px;
@@ -153,10 +154,4 @@ ul > li > #pass{
     position: absolute;
     transform: translate(24vw,0vh);
     filter: brightness(0);
-}
-
-/*Placeholder dos inputs de edição*/
-form > ul > li > #span-name::placeholder{
-    color: black;
-    font-size: 0.5em;
 }
