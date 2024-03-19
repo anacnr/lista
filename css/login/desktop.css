@@ -142,50 +142,46 @@ form > button{
 @media (min-width: 768px) and (max-width: 992px) {
 
   form {
-    position: relative;
+    position: absolute;
+    top: 167px;
+    left: 150px;
     margin: auto;
-    margin-top: 10%;
     background-color: rgba(255, 255, 255, 0.909);
     box-shadow: 2px 1px 10px black;
     border-radius: 3px;
-    height: 350px;
     width: 650px;
-    top: 100px;
+    height: 400px;
   }
 
   form > ul > li {
     list-style: none;
   }
 
-  form > ul{
+  form > ul {
     position: relative;
     margin: auto;
-    top: 25%;
-    right: 40%;
-    width: 100px;
+    top: 35%;
+    width: 50vw;
     height: 10vh;
-}
+  }
+  /*Configurações dos ícones*/
 
   form > ul > li > #email-icon {
-    font-size: 20px;
+    font-size: 18px;
     position: absolute;
-    transform: translate(-5vw,1vh);
+    transform: translate(-9vw,1vh);
   }
 
   form > ul > li > #lock-icon {
     font-size: 18px;
     position: absolute;
-    top: 150%;
-    right: 95%;
-    z-index: 1;
-    filter: hue-rotate(96deg);
-    cursor: context-menu;
+    transform: translate(-9vw,6vh);
   }
 
   /*Esses são os campos onde vão receber os dados*/
 
   form > ul > li > input {
-    width: 400px;
+    width: 100%;
     height: 12px;
     padding-top: 2%;
     padding-bottom: 4%;
@@ -193,42 +189,49 @@ form > button{
     box-shadow: 2px 1px 4px;
     border-radius: 3px;
     text-align: center;
+    position: relative;
+    right: 8%;
   }
 
   form > ul > li > input::placeholder {
     color: rgba(39, 39, 149, 0.94);
-    font-size: 0.5em;
+    font-size: 0.8em;
     font-weight: 600;
-    font-size: var(--lyric);
+    font-family: var(--lyric);
   }
 
-  form > ul > li > #email{
-    margin-top: 25px;
-    margin-bottom: 30px;
-}
+  form > ul > li > #gmail {
+    margin-bottom: 15px;
+  }
 
-form > ul > li > #senha{
-    margin-top: 1px;
-}
+  form > ul > li > #senha {
+    margin-top: 35px;
+  }
 
   form > button {
-    width: 20%;
-    height: 25px;
-    border-width: 0px;
-    box-shadow: 2px 1px 4px;
+    width: 130px;
+    height: 27px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.623);
     border-radius: 25px;
-    font-size: 0.7em;
-    font-weight: 100;
-    margin-right: 15px;
+    font-size: 15px;
+    font-weight: 400;
     position: relative;
-    transform: translate(19vw, 32vh);
     cursor: pointer;
   }
 
-  form > #cad {
-    margin-left: 4%;
+  form > #ent{
+    transform: translate(200px,240px);
   }
 
+  /*Botão de cadastro*/
+  form > #cad {
+    margin-left: 25px;
+    transform: translate(200px,240px);
+  }
+
+  /*Classe criada para o quadro de aviso dos dados inválidos*/
   .advice {
     width: 50vw;
     height: 150px;
@@ -257,10 +260,11 @@ form > ul > li > #senha{
       height: 150px;
     }
   }
-
+  /*ID do parágrafo que está dentro do quadro de aviso*/
   #alert {
     color: rgb(10, 10, 10);
     font-size: 1rem;
+    font-family: var(--lyric);
     text-align: center;
     transform: translateY(50px);
   }
