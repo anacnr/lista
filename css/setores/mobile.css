@@ -22,7 +22,6 @@ body {
 }
 
 @media (max-width: 600px) {
-  
   .setor {
     width: 100px;
     display: block;
@@ -51,19 +50,19 @@ body {
 
   .icon-edit {
     cursor: pointer;
-    font-size: 1em;
+    width: 3.5dvw;
     margin: 1px 4px 0px 2px;
   }
 
   .icon-delete {
     cursor: pointer;
-    font-size: 1em;
+    width: 3.5dvw;
     margin: 1px 4px 0px 15px;
   }
 
   .icon-save {
     cursor: pointer;
-    font-size: 1em;
+    width: 3.5dvw;
     margin: 1px 4px 0px 15px;
   }
 

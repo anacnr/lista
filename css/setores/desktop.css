@@ -1,1 +1,201 @@
 @charset "UTF-08";
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .setor {
+    width: 110px;
+    display: block;
+    transform: translateY(10vh);
+    border-radius: 7px;
+    border-width: 0px;
+    box-shadow: 3px 2px 9px black;
+    background-color: white;
+    text-transform: capitalize;
+    padding: 3px;
+    margin: auto;
+    margin-right: 50%;
+    font-family: var(--lyric);
+    font-weight: 500;
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .span_icons {
+    position: relative;
+    top: 6.5%;
+    left: 55%;
+  }
+
+  .icon-edit {
+    cursor: pointer;
+    width: 21px;
+    margin: 1px 4px 0px 2px;
+  }
+
+  .icon-delete {
+    cursor: pointer;
+    width: 21px;
+    margin: 0px 4px 0px 15px;
+  }
+
+  .icon-save {
+    cursor: pointer;
+    width: 21px;
+    margin: 0px 4px 0px 15px;
+  }
+
+  .link {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .setor {
+    width: 120px;
+    display: block;
+    transform: translateY(10vh);
+    border-radius: 7px;
+    border-width: 0px;
+    box-shadow: 3px 2px 9px black;
+    background-color: white;
+    text-transform: capitalize;
+    padding: 3px;
+    margin: auto;
+    margin-right: 50%;
+    font-family: var(--lyric);
+    font-weight: 500;
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .span_icons {
+    position: relative;
+    top: 6.5%;
+    left: 55%;
+  }
+
+  .icon-edit {
+    cursor: pointer;
+    width: 21px;
+    margin: 1px 4px 0px 2px;
+  }
+
+  .icon-delete {
+    cursor: pointer;
+    width: 21px;
+    margin: 0px 4px 0px 15px;
+  }
+
+  .icon-save {
+    cursor: pointer;
+    width: 21px;
+    margin: 0px 4px 0px 15px;
+  }
+
+  .link {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .setor {
+    width: 130px;
+    display: block;
+    transform: translateY(10vh);
+    border-radius: 7px;
+    border-width: 0px;
+    box-shadow: 3px 2px 9px black;
+    background-color: white;
+    text-transform: capitalize;
+    padding: 3px;
+    margin: auto;
+    margin-right: 50%;
+    font-family: var(--lyric);
+    font-weight: 500;
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .span_icons {
+    position: relative;
+    top: 6.5%;
+    left: 55%;
+  }
+
+  .icon-edit {
+    cursor: pointer;
+    width: 21px;
+    margin: 1px 4px 0px 2px;
+  }
+
+  .icon-delete {
+    cursor: pointer;
+    width: 21px;
+    margin: 0px 4px 0px 15px;
+  }
+
+  .icon-save {
+    cursor: pointer;
+    width: 21px;
+    margin: 0px 4px 0px 15px;
+  }
+
+  .link {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+@media (min-width:1200px){
+    .setor {
+        width: 120px;
+        display: block;
+        transform: translateY(10vh);
+        border-radius: 7px;
+        border-width: 0px;
+        box-shadow: 3px 2px 9px black;
+        background-color: white;
+        text-transform: capitalize;
+        padding: 3px;
+        margin: auto;
+        margin-right: 50%;
+        font-family: var(--lyric);
+        font-weight: 500;
+        font-size: 1em;
+        text-align: center;
+        cursor: pointer;
+      }
+    
+      .span_icons {
+        position: relative;
+        top: 6.5%;
+        left: 55%;
+      }
+    
+      .icon-edit {
+        cursor: pointer;
+        width: 21px;
+        margin: 1px 4px 0px 2px;
+      }
+    
+      .icon-delete {
+        cursor: pointer;
+        width: 21px;
+        margin: 0px 4px 0px 15px;
+      }
+    
+      .icon-save {
+        cursor: pointer;
+        width: 21px;
+        margin: 0px 4px 0px 15px;
+      }
+    
+      .link {
+        text-decoration: none;
+        color: black;
+      }
+}
