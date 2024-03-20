@@ -23,7 +23,7 @@ body {
     display: block;
     margin: auto;
     width: 450px;
-    background-color: #ecefeaa0;
+    background-color: #ecefeade;
     height: 150px;
     transform: translateY(37vh);
     border-radius: 10px;
@@ -162,7 +162,7 @@ body {
     display: block;
     margin: auto;
     width: 500px;
-    background-color: #ecefeaa0;
+    background-color: #ecefeade;
     height: 150px;
     transform: translateY(37vh);
     border-radius: 10px;
@@ -303,7 +303,7 @@ body {
     display: block;
     margin: auto;
     width: 500px;
-    background-color: #ecefeaa0;
+    background-color: #ecefeade;
     height: 160px;
     transform: translateY(37vh);
     border-radius: 10px;
@@ -444,7 +444,7 @@ body {
     display: block;
     margin: auto;
     width: 500px;
-    background-color: #ecefeaa0;
+    background-color: #ecefeade;
     height: 160px;
     transform: translateY(37vh);
     border-radius: 10px;

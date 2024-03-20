@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let menu_close = document.createElement("img");
     menu_close.id = "menu";
-    menu_close.src = "buttons/close_FILL0_wght400_GRAD0_opsz24.svg";
+    menu_close.src = "buttons/x-lg.svg";
 
     let sister = menu_open.parentNode;
     sister.appendChild(menu_close);

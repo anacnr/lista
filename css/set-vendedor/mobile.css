@@ -18,11 +18,11 @@ body {
 
 @media (max-width: 600px) {
 
-  /*Por um backgroundColor no form*/
   form{
     display: block;
     margin: auto;
-    width: 80%;background-color: #ecefeaa0;
+    width: 75%;
+    background-color: #ecefeade;
     height: 150px;
     transform: translateY(40vh);
     border-radius: 10px;
@@ -109,7 +109,7 @@ body {
   /*Menu hambírguer*/
   #menu {
     position: absolute;
-    transform: translate(85vw, 3vh);
+    transform: translate(85vw, -1vh);
     filter: invert(1);
     cursor: pointer;
     display: block;
@@ -144,7 +144,7 @@ body {
 
   /*Sino da notificação*/
   #noti {
-    width: 25px;
+    width: 15px;
     height: 23px;
     position: absolute;
     transform: translate(85vw, 10vh);
