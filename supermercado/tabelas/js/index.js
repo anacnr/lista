@@ -38,7 +38,6 @@ const save = function toSave(){
                 button_edi.style.opacity = '1'
                 button_edi.style.display = 'block'
 
-
             },500)//setTimeout
 
         }
