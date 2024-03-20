@@ -22,15 +22,15 @@ document.addEventListener("DOMContentLoaded", function () {
         let icon_edit = document.createElement("img");
         icon_edit.className = "icon-edit";
         icon_edit.id = `nome${id_setor}`;
-        icon_edit.src = "./buttons/edit_square_FILL0_wght400_GRAD0_opsz24.svg";
+        icon_edit.src = "buttons/pencil-square.svg";
 
         let icon_delete = document.createElement("img");
         icon_delete.className = "icon-delete";
-        icon_delete.src = "./buttons/delete_FILL0_wght400_GRAD0_opsz24.svg";
+        icon_delete.src = "buttons/trash3-fill.svg";
 
         let icon_save = document.createElement("img");
         icon_save.className = "icon-save";
-        icon_save.src = "buttons/save_FILL0_wght400_GRAD0_opsz24.svg";
+        icon_save.src = "buttons/floppy-fill.svg";
 
         /*Link para o setor*/
 
@@ -100,11 +100,11 @@ document.addEventListener("DOMContentLoaded", function () {
               }); //Função de salvar nome novo
             } else {
               controll_button = false;
-              span.style.cursor = "";
+              span.style.cursor = "";//Vi essa técnica em outros exercícios de outras pessoas.
             }
           }
         };
-        icon_edit.addEventListener("click", edit); //Função de editar
+        icon_edit.addEventListener("click", edit);//Função de editar
 
         const exclude = function toDel() {
           let index_nome = `${index}`;

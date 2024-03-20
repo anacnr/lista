@@ -15,10 +15,18 @@ body {
   background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
   background-attachment: fixed;
 }
+
+/*Variável para a fonte*/
+:root {
+  --lyric: Arial, Helvetica, sans-serif;
+}
+
 @media (max-width: 600px) {
+  
   .setor {
-    width: 25%;
+    width: 100px;
     display: block;
+    transform: translateY(10vh);
     border-radius: 7px;
     border-width: 0px;
     box-shadow: 3px 2px 9px black;
@@ -26,41 +34,37 @@ body {
     text-transform: capitalize;
     padding: 3px;
     margin: auto;
-    margin-top: 1%;
-    margin-bottom: 2%;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin-right: 50%;
+    font-family: var(--lyric);
     font-weight: 500;
-    font-size: 3dvi;
+    font-size: 2.5dvi;
     text-align: center;
     cursor: pointer;
   }
 
   .span_icons {
-    border: 2px solid black;
-    display: block;
-    width: 25%;
-    height: 35px;
+    /*border: 2px solid black;*/
     position: relative;
-    bottom: 6%;
-    left: 65%;
+    top: 7%;
+    left: 55%;
   }
 
   .icon-edit {
     cursor: pointer;
-    width: 20%;
+    font-size: 1em;
     margin: 1px 4px 0px 2px;
   }
 
   .icon-delete {
     cursor: pointer;
-    width: 20%;
-    margin: 1px 4px 0px 20px;
+    font-size: 1em;
+    margin: 1px 4px 0px 15px;
   }
 
   .icon-save {
     cursor: pointer;
-    width: 20%;
-    margin: 1px 4px 0px 18px;
+    font-size: 1em;
+    margin: 1px 4px 0px 15px;
   }
 
   .link {
