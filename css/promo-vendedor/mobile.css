@@ -3,26 +3,41 @@
 @media (max-width:600px){
 
     body{
-        background-color: pink;
+        background-color: rgba(252, 212, 239, 0.644);
+    }
+
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 3.5dvi;
+        font-weight: 300;
+        color: rgb(243, 249, 249);
+        text-shadow: 1px 1px 3px black;
+        text-align: center;
+        margin-top: 60px;
+        margin-bottom: 20px;
     }
 
     #search{
         border: 2px solid black;
+        border-radius: 10px;
+        width: 40%;
+        position: absolute;
+        top: 20%;
+        left: 50%;
     }
 
+    #search > #product{
+        width: 95%;
+        border-radius: 6px;
+        
+    }
+
+    /*Lupa da barra de pesquisa*/
     #search > .bi-search{
-        font-size: 10px;
+        font-size: 16px;
+        position: absolute;
+        left: 90%;
+        margin-top: 1px;
     }
 
-    #searched {
-        border: 2px solid red;
-    }
-
-    #searched > ul{
-        width: 100%; height: 100%;
-    }
-
-    #searched > #ul-list > li {
-        list-style-type: none;
-    }
 }
