@@ -1,0 +1,28 @@
+@charset "UTF-08";
+
+@media (max-width:600px){
+
+    body{
+        background-color: pink;
+    }
+
+    #search{
+        border: 2px solid black;
+    }
+
+    #search > .bi-search{
+        font-size: 10px;
+    }
+
+    #searched {
+        border: 2px solid red;
+    }
+
+    #searched > ul{
+        width: 100%; height: 100%;
+    }
+
+    #searched > #ul-list > li {
+        list-style-type: none;
+    }
+}
