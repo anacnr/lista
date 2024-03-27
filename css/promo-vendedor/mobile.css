@@ -2,6 +2,15 @@
 
 @media (max-width:600px){
 
+    *{
+        margin: 0%;
+        padding: 0px;
+    }
+
+    body,html{
+        width: 90vw; height: 85vh;
+    }
+
     body{
         background-color: rgba(252, 212, 239, 0.644);
     }
@@ -13,31 +22,32 @@
         color: rgb(243, 249, 249);
         text-shadow: 1px 1px 3px black;
         text-align: center;
-        margin-top: 60px;
-        margin-bottom: 20px;
+        transform: translateY(25vh);
     }
-
+/*Barra de pesquisa do produto*/
     #search{
-        border: 2px solid black;
+        box-shadow: 2px 1px 7px black;
         border-radius: 10px;
-        width: 40%;
+        width: 30%;
         position: absolute;
-        top: 20%;
+        top: 40%;
         left: 30%;
+        background-color: white;
+        padding: 2px 4px 2px;
     }
 
+/*Input*/
     #search > #product{
-        width: 95%;
+        width: 85%;
         border-radius: 6px;
-        
+        border: none;
     }
 
-    /*Lupa da barra de pesquisa*/
+/*Lupa da barra de pesquisa*/
     #search > .bi-search{
-        font-size: 16px;
+        font-size: 3dvi;
         position: absolute;
-        left: 90%;
-        margin-top: 1px;
+        left: 84%;
+        margin:1px 6px 3px 2px;
     }
-
 }
