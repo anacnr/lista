@@ -1,0 +1,81 @@
+@charset "UTF-08";
+
+*{
+    margin: 0%;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html{
+    width: 90%; height: 90%;
+}
+
+body{
+    background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
+    background-attachment: fixed;
+}
+
+:root{
+    --lyric : Arial, Helvetica, sans-serif;
+    --lyric_color_h1: rgba(255, 255, 255, 0.936);
+    --lyric_color_h2: rgb(83, 17, 215);
+}
+
+@media (max-width:600px){
+    
+    h1{
+        text-align: center;
+        text-transform: capitalize;
+        text-shadow: 1px 1px 3px black;
+        font-family: var(--lyric);
+        font-weight: 100;
+        color: var(--lyric_color_h1) ;
+        transform: translateY(30vh);
+    }
+    
+    main > h2{
+        text-align: center;
+        text-transform: capitalize;
+        text-shadow: 1px 1px 3px rgb(155, 152, 152);
+        font-family: var(--lyric);
+        font-weight: 100;
+        color: var(--lyric_color_h2);
+    }
+
+    main > #logo-market{
+        width: 10px; height: 10px;
+    }
+
+    main > #atual{
+        color: yellow;
+    }
+
+    main > div {
+        margin: auto;
+        display: block;
+    }
+
+    main > div > input{
+        background-color: black;
+    }
+
+    main > div > #phrase-check1{
+        color: red;
+    }
+
+    main > div > #hour{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main > div > #phrase-check2{
+        color: purple;
+    }
+
+    main > div > #phrase-check3{
+        color: green;
+    }
+
+    button{
+        background-color: blue;
+    }
+}
