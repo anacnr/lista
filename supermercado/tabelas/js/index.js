@@ -21,7 +21,7 @@ const add = function toAdd(){
             input.type = 'text'
             input.className = 'input'
             input.required = true
-            
+
             table_data.appendChild(input)
     }
 
@@ -31,10 +31,16 @@ const add = function toAdd(){
 
     let input = document.createElement("input")
         input.type = 'file'
+        input.id = 'input-id'
         input.className = 'input'
         input.required = true
 
         table_data.appendChild(input)
+
+     //Label do input file
+     let label = document.createElement("label")
+     label.className = 'label-input'
+     label.htmlFor = `input-id`
 
 }//Função para adicionar.
 

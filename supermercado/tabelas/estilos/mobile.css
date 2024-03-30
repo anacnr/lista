@@ -69,7 +69,7 @@
     color: rgb(243, 242, 242);
     text-shadow: 1px 2px 3px black;
     width: 30px;
-    height: 40px;
+    height: 30px;
     cursor: context-menu;
   }
 
@@ -145,4 +145,14 @@
   }
 
   /*Inputs*/
+
+  tbody > tr > td > .input{
+    background-color: transparent;
+    border-width: 0px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: 2px;
+    width: 50px;
+  }
+
 }

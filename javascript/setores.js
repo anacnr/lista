@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
         let id_setor = data.id; //Esse vai mandar lá para o formulário quando quiser mser manipulado
 
         let span = document.createElement("span");
-        span.id = `nome${id_setor}`; //Essa técnina eu vi em um vídeo no Youtube, o span terá como id a palavra nome + o número do seu id do banco
         span.className = "setor";
 
         let span_icons = document.createElement("span");
@@ -21,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let icon_edit = document.createElement("img");
         icon_edit.className = "icon-edit";
-        icon_edit.id = `nome${id_setor}`;
         icon_edit.src = "buttons/pencil-square.svg";
 
         let icon_delete = document.createElement("img");
