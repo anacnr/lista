@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="estilos/desktop.css">
     <!--Tela menor-->
     <link rel="stylesheet" href="estilos/mobile.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
    <span><p>Limpeza</p></span>
@@ -15,30 +17,23 @@
    <table>
     <thead id="head-tab">
         <tr>
-            <th>ord.</th> <th>prod.</th> <th>código</th> <th>kg/l</th> <th>preço</th> <th>quant.</th> <th>marca</th> <th>imagem</th>
+            <th>produto</th> <th>código</th> <th>kg/l</th> <th>preço</th> <th>quant.</th> <th>marca</th> <th>imagem</th>
         </tr>
     </thead>
     <tbody id="body-tab">
-        <tr>
-            <td>1</td> <td>água sanitária</td> <td id="code">pk3r45</td> <td>1l</td> <td>15,00</td> <td>500</td> <td>tarc</td> <td><img src="/imagens/icons/letter-min.png" alt="produto" class="produto"></td>
-        </tr>
-
-        <tr>
-            <td>2</td> <td>água sanitária</td> <td 
-        id="code">pk3r45</td> <td>1l</td> <td>15,00</td>
-        <td>500</td> <td>tarc</td> <td> <img src="/imagens/icons/lock-min.png" alt="produto" class="produto"></td>
-        </tr>
-                
+      <tr class="first-tr"></tr>
     </tbody>
    </table>
 
-   <span id="buttons">
+   <span id="span-buttons">
     <button type="button" id="exc">Excluir</button>
+    <!--Esse botão vai ficar escondido inicialmente-->
     <button type="submit" id="edi">Editar</button>
     <button type="button" id="sav">Salvar</button>
 
-    <!--Botão de adição que vai começar escondido-->
-    <img src="buttons/add.svg" alt="botão-adiciona" id="add">
+    <!--Botão de adição que vai começar aparecendo-->
+    <img src="buttons/plus-square.svg" alt="botão-adiciona" id="add">
+
     </span>
    <script src="js/index.js"></script>
 </body>
