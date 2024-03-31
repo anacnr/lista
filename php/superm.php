@@ -29,12 +29,12 @@ else{
 //Amostra as configurações da imagem
 $img_dates = $image['name'];
 
-//Verificar se alguma imagem foi escolhida
+//Verifica se alguma imagem foi escolhida
 if(isset($image)){
     
     if($image['size'] < 2000500){
 
-    //Gera um valor aleatório para o nome da iamgem
+    //Gera um valor aleatório para o nome da imagem
     $random_name = uniqid();
 
     //Pega a extensão da imagem. E Converte a extensaão para minúscula
