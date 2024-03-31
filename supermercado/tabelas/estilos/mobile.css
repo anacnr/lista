@@ -137,13 +137,6 @@
     width: 3dvi;
   }
 
-  /*Imagem do produto*/
-  tbody > tr > td > .produto {
-    width: 15px;
-    height: 15px;
-    background-color: rgb(246, 245, 245);
-  }
-
   /*Inputs*/
 
   tbody > tr > td > .input{
@@ -153,6 +146,24 @@
     border-bottom-color: black;
     border-bottom-width: 2px;
     width: 50px;
+  }
+
+  tbody > tr > td > #input-img{
+    display: none;
+  }
+
+  tbody > tr > td > .label-input{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+  }
+
+  tbody > tr > td > .label-input > .icon-upload{
+    width: 15px;
+    transform: translateY(0.7vh);
+    filter: drop-shadow(1px 1px 1px rgb(244, 244, 147));
   }
 
 }

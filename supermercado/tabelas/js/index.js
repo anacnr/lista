@@ -31,7 +31,7 @@ const add = function toAdd(){
 
     let input = document.createElement("input")
         input.type = 'file'
-        input.id = 'input-id'
+        input.id = 'input-img'
         input.className = 'input'
         input.required = true
 
@@ -40,7 +40,16 @@ const add = function toAdd(){
      //Label do input file
      let label = document.createElement("label")
      label.className = 'label-input'
-     label.htmlFor = `input-id`
+     label.htmlFor = `input-img`
+
+     table_data.appendChild(label)
+
+     //Ìcone de upload
+     let icon = document.createElement("img")
+     icon.className = 'icon-upload'
+     icon.src = 'buttons/upload.svg'
+    
+     label.appendChild(icon)
 
 }//Função para adicionar.
 

@@ -88,7 +88,7 @@ body {
     }
     
    /*Span que contém os botões*/
-   #span-buttons {
+   #span-buttons{
     position: absolute;
     transform: translateY(40vh);
     width: 100%;
@@ -142,7 +142,36 @@ body {
     cursor: pointer;
     position: absolute;
     width: 3dvi;
-  } 
+  }
+  
+    /*Inputs*/
+
+    tbody > tr > td > .input{
+      background-color: transparent;
+      border-width: 0px;
+      border-bottom-style: solid;
+      border-bottom-color: black;
+      border-bottom-width: 2px;
+      width: 70px;
+    }
+  
+    tbody > tr > td > #input-img{
+      display: none;
+    }
+  
+    tbody > tr > td > .label-input{
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: auto;
+      cursor: pointer;
+    }
+  
+    tbody > tr > td > .label-input > .icon-upload{
+      width: 15px;
+      transform: translateY(1.5vh);
+      filter: drop-shadow(1px 1px 1px rgb(244, 244, 147));
+    }
 }
 
 @media (min-width:768px) and (max-width:992px) {
@@ -265,7 +294,36 @@ body {
     cursor: pointer;
     position: absolute;
     width: 25px;
-  }     
+  }
+  
+    /*Inputs*/
+
+    tbody > tr > td > .input{
+      background-color: transparent;
+      border-width: 0px;
+      border-bottom-style: solid;
+      border-bottom-color: black;
+      border-bottom-width: 2px;
+      width: 70px;
+    }
+  
+    tbody > tr > td > #input-img{
+      display: none;
+    }
+  
+    tbody > tr > td > .label-input{
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: auto;
+      cursor: pointer;
+    }
+  
+    tbody > tr > td > .label-input > .icon-upload{
+      width: 20px;
+      transform: translateY(2vh);
+      filter: drop-shadow(1px 1px 1px rgb(244, 244, 147));
+    }
 }
 
 @media (min-width:992px) and (max-width:1200px) {
@@ -386,7 +444,35 @@ body {
         cursor: pointer;
         position: absolute;
         width: 25px;
-      } 
+      }
+    /*Inputs*/
+
+    tbody > tr > td > .input{
+      background-color: transparent;
+      border-width: 0px;
+      border-bottom-style: solid;
+      border-bottom-color: black;
+      border-bottom-width: 2px;
+      width: 90px;
+    }
+  
+    tbody > tr > td > #input-img{
+      display: none;
+    }
+  
+    tbody > tr > td > .label-input{
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: auto;
+      cursor: pointer;
+    }
+  
+    tbody > tr > td > .label-input > .icon-upload{
+      width: 20px;
+      transform: translateY(2vh);
+      filter: drop-shadow(1px 1px 1px rgb(244, 244, 147));
+    }       
 }
 
 @media (min-width: 1200px) {
@@ -508,5 +594,34 @@ body {
         cursor: pointer;
         position: absolute;
         width: 25px;
-    }  
+    }
+    
+    /*Inputs*/
+
+    tbody > tr > td > .input{
+      background-color: transparent;
+      border-width: 0px;
+      border-bottom-style: solid;
+      border-bottom-color: black;
+      border-bottom-width: 2px;
+      width: 90px;
+    }
+  
+    tbody > tr > td > #input-img{
+      display: none;
+    }
+  
+    tbody > tr > td > .label-input{
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: auto;
+      cursor: pointer;
+    }
+  
+    tbody > tr > td > .label-input > .icon-upload{
+      width: 20px;
+      transform: translateY(2vh);
+      filter: drop-shadow(1px 1px 1px rgb(244, 244, 147));
+    }      
 }
