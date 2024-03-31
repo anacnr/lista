@@ -166,4 +166,12 @@
     filter: drop-shadow(1px 1px 1px rgb(244, 244, 147));
   }
 
+  tbody > tr > td > .label-input > .img-uploaded{
+    width: 30px;
+    transform: translateY(0.5vh);
+    border-radius: 50%;
+    height: 30px;
+    border: 1px solid #00000087;
+  }
+
 }
