@@ -96,6 +96,8 @@ const add = function toAdd(){
         else{
             //É aqui que vai rolar a adição dos produtos
 
+            console.log("Botão salvar clicado!")
+
             const form = new FormData();
             form.append('product' , datas[0])
             form.append('code' , datas[1])
@@ -106,12 +108,12 @@ const add = function toAdd(){
             form.append('image' , datas[6])
 
             $.ajax({
-                url : '/lista/php/produtos.php' , type: 'POST' ,data: form, processData: false ,contentType: false
+                url : '/lista/php/produtos.php' , type: 'POST', type: 'FILES' ,data: form, processData: false ,contentType: false
             }).done(function(request){
                 console.log("Resposta ->" , request);
             })
-        }
-    }//Função para salvar os dados do propriedade
+          }
+        }//Função para salvar os dados do propriedade
 
     button_save.addEventListener("click" , save)
 

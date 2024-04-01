@@ -62,7 +62,7 @@ else{
     //Comunicação com ajax
     header('Content-Type: application/json');
     echo json_encode($request);
-    exit;
+
 }
 //Fecha as validações
 mysqli_stmt_errno($start);
