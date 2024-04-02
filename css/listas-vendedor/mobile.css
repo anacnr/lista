@@ -17,7 +17,7 @@ body {
     box-shadow: 2px 5px 20px rgb(189, 170, 129) inset;
     border-radius: 10px;
     width: 80%;
-    height: 50%;
+    height: 260px;
     background-color: rgba(255, 255, 255, 0.909);
     display: block;
     margin: auto;
@@ -26,7 +26,7 @@ body {
 
   #main > #title {
     text-align: left;
-    padding: 20px 0px 1px 15px;
+    padding: 30px 0px 1px 40px;
     color: rgb(43, 7, 97);
     letter-spacing: 2px;
     text-transform: uppercase;
