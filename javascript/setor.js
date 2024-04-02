@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelector(".save").addEventListener("click", save);
 
-  /*Menu para ver o perfil, ajuda e os setores cadastrados*/
+  /*Menu*/
   let menu_open = document.querySelector("#menu");
-  menu_open.addEventListener("click", function () {
+    menu_open.addEventListener("click", function () {
     let board = document.createElement("div");
     board.id = "conta";
 
@@ -75,8 +75,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     menu_open.style.opacity = "0";
     let bell = document.getElementById("noti");
+
     //Enquanto tiver na media query menor de 600 de largura
-    bell.style.transform = "translate(85vw,30vh)";
+    bell.style.transform = "translate(90vw,30vh)";
 
 console.log(window.innerWidth)
     /*Botão para fechar a div*/

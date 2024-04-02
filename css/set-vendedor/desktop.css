@@ -113,10 +113,12 @@ body {
   /*Menu hambírguer*/
   #menu {
     position: absolute;
-    transform: translate(88vw, -1vh);
+    transform: translate(88vw, 1vh);
     filter: invert(1);
     cursor: pointer;
     display: block;
+    width: 20px;
+    height: 20px;
   }
 
   /*Div onde estão as informações*/
@@ -147,8 +149,8 @@ body {
 
   /*Sino da notificação*/
   #noti {
-    width: 25px;
-    height: 23px;
+    width: 20px;
+    height: 20px;
     position: absolute;
     transform: translate(88vw, 10vh);
     filter: invert();
@@ -252,12 +254,12 @@ body {
   /*Menu hambírguer*/
   #menu {
     position: absolute;
-    transform: translate(90vw, -3vh);
+    left: 90%;
     filter: invert(1);
     cursor: pointer;
     display: block;
     width: 25px;
-    height: 30px;
+    height: 25px;
   }
 
   /*Div onde estão as informações*/
@@ -288,10 +290,10 @@ body {
 
   /*Sino da notificação*/
   #noti {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     position: absolute;
-    transform: translate(90vw, 5vh);
+    right: 95%;
     filter: invert();
     cursor: pointer;
   }
@@ -393,7 +395,7 @@ body {
   /*Menu hambírguer*/
   #menu {
     position: absolute;
-    transform: translate(90vw, -3vh);
+    left: 90%;
     filter: invert(1);
     cursor: pointer;
     display: block;
@@ -429,10 +431,11 @@ body {
 
   /*Sino da notificação*/
   #noti {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     position: absolute;
-    transform: translate(90vw, 5vh);
+    top: 50%;
+    left: 90%;
     filter: invert();
     cursor: pointer;
 }
@@ -534,7 +537,8 @@ body {
   /*Menu hambírguer*/
   #menu {
     position: absolute;
-    transform: translate(70vw, -5vh);
+    bottom: 58%;
+    left: 77%;
     filter: invert(1);
     cursor: pointer;
     display: block;
@@ -570,10 +574,11 @@ body {
 
   /*Sino da notificação*/
   #noti {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     position: absolute;
-    transform: translate(70vw, 3vh);
+    bottom: 50%;
+    left: 77%;
     filter: invert();
     cursor: pointer;
 }
