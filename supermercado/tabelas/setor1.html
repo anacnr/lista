@@ -15,26 +15,28 @@
    <span><p>Frutas</p></span>
 
    <table>
+
+    <form action="/php/produtos.php" method="post" enctype="multipart/form-data"></form>
     <thead id="head-tab">
         <tr>
             <th>produto</th> <th>código</th> <th>kg/l</th> <th>preço</th> <th>marca</th> <th>quantidade</th> <th>imagem</th>
         </tr>
     </thead>
-    <tbody id="body-tab">
-      <tr class="first-tr"></tr>
-    </tbody>
+        <tbody id="body-tab">
+
+        </tbody>
+
+        
+            <button type="button" id="exc">Excluir</button>
+            <!--Esse botão vai ficar escondido inicialmente-->
+            <button type="submit" id="edi">Editar</button>
+            <button type="button" id="sav">Salvar</button>
+            <!--Botão de adição que vai começar aparecendo-->
+            <img src="buttons/plus-square.svg" alt="botão-adiciona" id="add">
+                 
+        
+    </form>
    </table>
-
-   <span id="span-buttons">
-    <button type="button" id="exc">Excluir</button>
-    <!--Esse botão vai ficar escondido inicialmente-->
-    <button type="submit" id="edi">Editar</button>
-    <button type="button" id="sav">Salvar</button>
-
-    <!--Botão de adição que vai começar aparecendo-->
-    <img src="buttons/plus-square.svg" alt="botão-adiciona" id="add">
-
-    </span>
     <script src="/lista/javascript/jquery-3.7.1.min.js"></script>
    <script src="js/index.js"></script>
 </body>

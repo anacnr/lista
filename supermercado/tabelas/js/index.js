@@ -3,15 +3,19 @@
  */
 document.addEventListener("DOMContentLoaded", function(){
 
+let table_body = document.querySelector('tbody')
+
 //Criar as funções para adionar, salvar, editar e deletar
 let button_add = document.querySelector("#add")
+
 const add = function toAdd(){
     
     //Faz com que outra linha da tabela seja criada.
     let table_row = document.createElement('tr')
 
-    let table_body = document.querySelector('tbody')
+    //O formulário está apadrinhando a linha
     table_body.appendChild(table_row)
+
     //Este laço serve para criar tds com a quantidade de ths
     for(let count = 0; count < 5; count++){
             let table_data = document.createElement('td')
@@ -20,7 +24,10 @@ const add = function toAdd(){
             let input = document.createElement("input")
             input.type = 'text'
             input.className = 'input'
+            input.name = 'name[]'
             input.required = true
+
+            //Vou fazer uma técnica que vi pela Internet.
 
             table_data.appendChild(input)
     }
@@ -32,6 +39,7 @@ const add = function toAdd(){
     let input_numbers = document.createElement("input")
     input_numbers.type = 'number'
     input_numbers.className = 'input'
+    input_numbers.name = 'quantity'
     input_numbers.required = true
 
     table_data_number.appendChild(input_numbers)
@@ -44,6 +52,7 @@ const add = function toAdd(){
         input.type = 'file'
         input.id = 'input-img'
         input.className = 'input'
+        input.name = 'image'
         input.accept = 'image/*'
         input.required = true
 

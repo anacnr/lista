@@ -8,11 +8,11 @@ else{
 
   $request = false;
       
-    $product = $_POST['product'];
-    $code = $_POST['code'];
-    $measure = $_POST['measure'];
-    $price = $_POST['price'];
-    $brand = $_POST['brand'];
+    $product = $_POST['name'];
+    $code = $_POST['name'];
+    $measure = $_POST['name'];
+    $price = $_POST['name'];
+    $brand = $_POST['name'];
     $quantity = $_POST['quantity'];
     $image = $_FILES['image'];
 
