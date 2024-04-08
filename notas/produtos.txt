@@ -1,0 +1,22 @@
+    Este laço serve para criar tds com a quantidade de ths
+    for (let count = 0; count < 5; count++) {
+      let table_data = document.createElement("td");
+      table_row.appendChild(table_data);
+
+      let input = document.createElement("input");
+      input.type = "text";
+      input.className = "input";
+      input.name = "name[]";
+      input.required = true;
+
+      //Vou fazer uma técnica que vi pela Internet.
+
+      table_data.appendChild(input);
+    }
+
+PHP:
+
+    $code = $_POST['name']['code'];
+    $measure = $_POST['name']['measure'];
+    $price = $_POST['name']['price'];
+    $brand = $_POST['name']['brand'];

@@ -8,11 +8,11 @@ else{
 
   $request = false;
       
-    $product = $_POST['name'];
-    $code = $_POST['name'];
-    $measure = $_POST['name'];
-    $price = $_POST['name'];
-    $brand = $_POST['name'];
+    $product = $_POST['product'];
+    $code = $_POST['code'];
+    $measure = $_POST['measure'];
+    $price = $_POST['price'];
+    $brand = $_POST['brand'];
     $quantity = $_POST['quantity'];
     $image = $_FILES['image'];
 
@@ -53,6 +53,9 @@ else{
       mysqli_stmt_execute($start);
 
       $request = true;
+
+      sleep(4);
+      header('Location: /lista/supermercado/tabelas/setor1.html');
       }
       else{
         die("Erro na inserção. Imagem muito grande");
@@ -64,8 +67,7 @@ else{
     echo json_encode($request);
 
 }
-//Fecha as validações
-mysqli_stmt_errno($start);
+//Fecha as validações mysqli_stmt_errno($start);
 
 mysqli_close($mysql);
 ?>
