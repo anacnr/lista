@@ -145,25 +145,6 @@ document.addEventListener("DOMContentLoaded", function () {
         //É aqui que vai rolar a adição dos produtos
 
         console.log("Botão salvar clicado!");
-/*
-        const form = new FormData();
-        form.append("product", datas[0]);
-        form.append("code", datas[1]);
-        form.append("measure", datas[2]);
-        form.append("price", datas[3]);
-        form.append("brand", datas[4]);
-        form.append("quantity", datas[5]);
-        form.append("image", datas[6]);
-*/
-        $.ajax({
-          url: "../../php/produtos-salvos.php",
-          type: "POST",
-          type: "FILES",
-          processData: false,
-          contentType: false,
-        }).done(function (request) {
-          console.log("Resposta ->", request.nome); //Request não é amostrado
-        });
       }
     }; //Função para salvar os dados do propriedade
 
@@ -172,3 +153,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   button_add.addEventListener("click", add);
 }); //Carregamento
+
+$.ajax({
+    url: "../../php/produtos-salvos.php",
+    type: "POST",
+    processData: false,
+    contentType: false,
+  }).done(function (request){
+    request.forEach(function (data , index) {
+        const table = document.querySelector("form > table")
+
+        let name = data.nome 
+        let code = data.codigo
+
+        table_row = document.createElement("tr")
+        table.appendChild(table_row)
+
+    });
+  });

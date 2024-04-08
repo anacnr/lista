@@ -6,7 +6,7 @@ if($mysql->connect_error != null){
 }
 else{
 
-// Pesquisar e imprimir na página
+//Pesquisa e imprime na página
 $select = "SELECT * FROM setor";
 
 $query = mysqli_query($mysql, $select);
