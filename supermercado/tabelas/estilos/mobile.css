@@ -92,14 +92,6 @@
     justify-content: center;
     align-items: center;
   }
-
-  /*Personalização dos botões*/
-  #span-buttons > #exc {
-      background-color: rgba(0, 0, 0, 0.712);
-      color: rgb(243, 242, 242);
-      position: absolute;
-      transform: translate(-14vw, 0vh);
-  }
  
   #span-buttons > button {
       padding: 3px;
@@ -112,12 +104,23 @@
       box-shadow: 1px 1px 4px black;
       cursor: pointer;
   }
+
+    /*Personalização dos botões*/
+    #span-buttons > #exc {
+      background-color: rgba(0, 0, 0, 0.712);
+      color: rgb(243, 242, 242);
+      position: absolute;
+      transform: translate(-16vw, 0vh);
+  }
+
   /*Botão de editar*/
   #span-buttons > #edi {
     background-color: #ff3131;
     color: rgb(243, 242, 242);
     text-shadow: 1px 1px 2px black;
     display: none;
+    position: absolute;
+    transform: translate(-2vw, 0vh);
   }
 
   /*Botão de salvar*/
@@ -126,7 +129,7 @@
     color: rgb(243, 242, 242);
     text-shadow: 1px 1px 2px black;
     position: absolute;
-    transform: translate(10vw, 0vh);
+    transform: translate(12vw, 0vh);
   }
   /*Botão de salvar*/
   #span-buttons > #add { 

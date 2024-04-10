@@ -2,9 +2,27 @@
  * A tabela poderá ter uma linha editada ou apagada e também o usuário poderá acrescentar mais linhas.
  */
 document.addEventListener("DOMContentLoaded", function () {
-  let table_body = document.querySelector("tbody");
+  const save = function toSave() {
+    //Verifica se os inputs não receberam valores
+    let datas = []
+      document.querySelectorAll(".input").forEach( input => {
+          datas.push(input.value);
+      })
 
-  //Criar as funções para adionar, salvar, editar e deletar
+    if (datas.length == 0) {
+      console.log("Por favor preencha os campos!");
+    } else {
+      //É aqui que vai rolar a adição dos produtos
+
+      console.log("Botão salvar clicado!");
+      //Abrir uma requisição ajax
+
+    }
+  }; //Função para salvar os dados do propriedade
+
+  let table_body = document.querySelector("tbody");
+  if(table_body.rows == 0){
+      //Criar as funções para adionar, salvar, editar e deletar
   let button_add = document.querySelector("#add");
 
   const add = function toAdd() {
@@ -132,29 +150,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let button_save = document.querySelector("#sav");
 
-    const save = function toSave() {
-      //Verifica se os inputs não receberam valores
-      let datas = []
-        document.querySelectorAll(".input").forEach( input => {
-            datas.push(input.value);
-        })
-
-      if (datas.length == 0) {
-        console.log("Por favor preencha os campos!");
-      } else {
-        //É aqui que vai rolar a adição dos produtos
-
-        console.log("Botão salvar clicado!");
-      }
-    }; //Função para salvar os dados do propriedade
-
     button_save.addEventListener("click", save);
   }; //Função para adicionar.
 
   button_add.addEventListener("click", add);
-}); //Carregamento
+  }
+else{
 
-$.ajax({
+  /*Esconde o botão de adiciona*/
+  let hide_butt_add = document.getElementById("add")
+  hide_butt_add.style.display = 'none'
+
+  /*Botão de edição*/
+  let button_edit = document.getElementById("edi")
+  button_edit.style.display = 'block'
+
+  $.ajax({
     url: "../../php/produtos-salvos.php",
     type: "POST",
     processData: false,
@@ -163,7 +174,6 @@ $.ajax({
     request.forEach(function (data, index) {
         const table_body = document.querySelector("table > #body-tab")
 
-        let fields = data.campos
         //Dados do produto
         let name = data.nome 
         let code = data.codigo
@@ -176,31 +186,28 @@ $.ajax({
         let table_row = document.createElement("tr")
         table_body.appendChild(table_row)
 
-      /*Laço de interação para criar quantas tds necessárias*/
+      /*Laço de interação para criar quantas tds com texto necessárias*/
       for(let count = 0; count <= 4; count++){
 
           let table_datas = document.createElement('td')
-          let id = table_datas.ariaColIndex + count
+          let index = table_datas.ariaColIndex + count
 
-          if(id == 0){
-            console.log(name)
+          if(index == 0){
             table_datas.textContent = `${name}`
           }
-          else if (id == 1){
-            console.log(code)
+          else if (index == 1){            
             table_datas.textContent = `${code}`
           }
-          else if (id ==2){
-            console.log(weight)
+          else if (index == 2){
+          
             table_datas.textContent = `${weight}`
           }
-          else if (id == 3){
-            console.log(price)
+          else if (index == 3){
+          
             table_datas.textContent = `${price}`
           }
-          else if (id == 4){
-            console.log(brand)
-            table_datas.textContent = `${price}`
+          else if (index == 4){
+            table_datas.textContent = `${brand}`
           }
           else{
             console.log("Não há mais células")
@@ -209,16 +216,14 @@ $.ajax({
           table_row.appendChild(table_datas)
         }//Laço for
 
-        
+        /*Esta td recebe só números*/
         let table_datas_quant = document.createElement('td')
-
-        console.log(table_datas_quant)
         table_datas_quant.textContent = `${quantity}`
 
         table_row.appendChild(table_datas_quant)
 
+        /*Esta td recebe a imagem*/
         let table_data_img = document.createElement('td')
-
         let img = document.createElement('img')
         //Vou fazer igual o cadastro da imagem
         img.src = `../../php/${image}`
@@ -228,6 +233,19 @@ $.ajax({
 
         table_row.appendChild(table_data_img)
         table_data_img.appendChild(img)
+              
+                const edit = function toEdit(){
+                let td_name = document.querySelectorAll('td')[0]
+                let td_code = document.querySelectorAll('td')[1]
+                let td_measure = document.querySelectorAll('td')[2]
+                let td_price = document.querySelectorAll('td')[3]
 
-    });
+                td_name.textContent = 'NOme!'
+                }//Função para editar
+
+              button_edit.addEventListener("click" , edit)
+    });//Forreach
   });
+}
+
+}); //Carregamento
