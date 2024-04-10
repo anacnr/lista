@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 13/03/2024 às 19:26
+-- Tempo de geração: 11/04/2024 às 00:03
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -57,10 +57,18 @@ CREATE TABLE `produto` (
   `codigo` varchar(255) DEFAULT NULL,
   `peso` varchar(10) DEFAULT NULL,
   `valor` varchar(10) DEFAULT NULL,
-  `quantidade` int(10) DEFAULT NULL,
   `marca` varchar(255) DEFAULT NULL,
+  `quantidade` int(10) DEFAULT NULL,
   `imagem` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `produto`
+--
+
+INSERT INTO `produto` (`id`, `nome`, `codigo`, `peso`, `valor`, `marca`, `quantidade`, `imagem`) VALUES
+(1, 'teste', 'teste', 'teste', 'teste', 'teste', 11, 'produtos/661444420dd1b.jpg'),
+(2, 'teste', 'teste', 'teste', 'teste', 'teste', 11, 'produtos/661444e901cab.jpg');
 
 -- --------------------------------------------------------
 
@@ -72,6 +80,13 @@ CREATE TABLE `setor` (
   `id` int(11) NOT NULL,
   `nome` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `setor`
+--
+
+INSERT INTO `setor` (`id`, `nome`) VALUES
+(1, 'limpeza');
 
 -- --------------------------------------------------------
 
@@ -171,13 +186,13 @@ ALTER TABLE `comprador`
 -- AUTO_INCREMENT de tabela `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `setor`
 --
 ALTER TABLE `setor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `suporte`

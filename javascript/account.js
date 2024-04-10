@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(request);
 
     //Vou fazer igual o cadastro da imagem
-    
     li_img.style.backgroundImage = `url(../php/${request.imagem})`
     li_img.style.backgroundSize = 'cover'
 

@@ -160,14 +160,74 @@ $.ajax({
     processData: false,
     contentType: false,
   }).done(function (request){
-    request.forEach(function (data , index) {
-        const table = document.querySelector("form > table")
+    request.forEach(function (data, index) {
+        const table_body = document.querySelector("table > #body-tab")
 
+        let fields = data.campos
+        //Dados do produto
         let name = data.nome 
         let code = data.codigo
+        let weight = data.peso
+        let price = data.valor
+        let brand = data.marca
+        let quantity = data.quantidade
+        let image = data.img 
 
-        table_row = document.createElement("tr")
-        table.appendChild(table_row)
+        let table_row = document.createElement("tr")
+        table_body.appendChild(table_row)
+
+      /*Laço de interação para criar quantas tds necessárias*/
+      for(let count = 0; count <= 4; count++){
+
+          let table_datas = document.createElement('td')
+          let id = table_datas.ariaColIndex + count
+
+          if(id == 0){
+            console.log(name)
+            table_datas.textContent = `${name}`
+          }
+          else if (id == 1){
+            console.log(code)
+            table_datas.textContent = `${code}`
+          }
+          else if (id ==2){
+            console.log(weight)
+            table_datas.textContent = `${weight}`
+          }
+          else if (id == 3){
+            console.log(price)
+            table_datas.textContent = `${price}`
+          }
+          else if (id == 4){
+            console.log(brand)
+            table_datas.textContent = `${price}`
+          }
+          else{
+            console.log("Não há mais células")
+          }
+          
+          table_row.appendChild(table_datas)
+        }//Laço for
+
+        
+        let table_datas_quant = document.createElement('td')
+
+        console.log(table_datas_quant)
+        table_datas_quant.textContent = `${quantity}`
+
+        table_row.appendChild(table_datas_quant)
+
+        let table_data_img = document.createElement('td')
+
+        let img = document.createElement('img')
+        //Vou fazer igual o cadastro da imagem
+        img.src = `../../php/${image}`
+        img.style.width = '25px'
+        img.style.height = '25px'
+        img.className = 'img-uploaded'        
+
+        table_row.appendChild(table_data_img)
+        table_data_img.appendChild(img)
 
     });
   });
