@@ -177,4 +177,15 @@
     border: 1px solid #00000087;
   }
 
+  /*Input que abriga o novo nome*/
+  tr > td > .new-name{
+    width: 100%;
+    height: 50%;
+    background-color: transparent;
+    border-bottom-color: black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+
 }

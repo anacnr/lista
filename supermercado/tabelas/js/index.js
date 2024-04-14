@@ -2,29 +2,39 @@
  * A tabela poderá ter uma linha editada ou apagada e também o usuário poderá acrescentar mais linhas.
  */
 document.addEventListener("DOMContentLoaded", function () {
+
+  const button_save = document.querySelector("#sav")
+  /*Não permite que o botão salvar envie o formulário sem editar ou criar*/
+   button_save.addEventListener("click" , function(){
+    this.disabled = true
+  })
+
   const save = function toSave() {
-    //Verifica se os inputs não receberam valores
+    
     let datas = []
       document.querySelectorAll(".input").forEach( input => {
           datas.push(input.value);
       })
-
+    //Verifica se os inputs não receberam valores. Envio do formulário desautorizado
     if (datas.length == 0) {
       console.log("Por favor preencha os campos!");
     } else {
-      //É aqui que vai rolar a adição dos produtos
-
       console.log("Botão salvar clicado!");
-      //Abrir uma requisição ajax
-
+      //Envio do formulário autorizado
+      button_save.addEventListener("click" , function(){
+        this.disabled = false
+      })
     }
-  }; //Função para salvar os dados do propriedade
 
+  };//Função para salvar
+
+/*Se não houver nenhum conteúdo na tabela*/
   let table_body = document.querySelector("tbody");
+
   if(table_body.rows == 0){
       //Criar as funções para adionar, salvar, editar e deletar
   let button_add = document.querySelector("#add");
-
+ 
   const add = function toAdd() {
     //Faz com que outra linha da tabela seja criada.
     let table_row = document.createElement("tr");
@@ -146,22 +156,19 @@ document.addEventListener("DOMContentLoaded", function () {
       eyes.readAsDataURL(img_uploaded.files[0]);
     }); //Função da imagem
 
-    //Parte de salvar os setores
-
-    let button_save = document.querySelector("#sav");
-
-    button_save.addEventListener("click", save);
-  }; //Função para adicionar.
+      button_save.addEventListener("click", save);
+    
+  };//Função para adicionar.
 
   button_add.addEventListener("click", add);
-  }
+  }//Condicional.
 else{
 
   /*Esconde o botão de adiciona*/
   let hide_butt_add = document.getElementById("add")
   hide_butt_add.style.display = 'none'
 
-  /*Botão de edição*/
+  /*Mostra o botão de edição*/
   let button_edit = document.getElementById("edi")
   button_edit.style.display = 'block'
 
@@ -235,17 +242,61 @@ else{
         table_data_img.appendChild(img)
               
                 const edit = function toEdit(){
-                let td_name = document.querySelectorAll('td')[0]
-                let td_code = document.querySelectorAll('td')[1]
-                let td_measure = document.querySelectorAll('td')[2]
-                let td_price = document.querySelectorAll('td')[3]
 
-                td_name.textContent = 'NOme!'
-                }//Função para editar
+                let table_datas = document.getElementsByTagName('td')
+
+                Array.from(table_datas).forEach(function(td){
+                  td.addEventListener("click", function(){
+
+                    console.log(td.textContent)
+                  
+                    if(td.textContent === ''){
+                    let new_input_td = document.createElement('input')
+                    new_input_td.type = 'image'
+                    new_input_td.name = 'new-img'
+                    new_input_td.id = 'new-img'
+                    new_input_td.required = true
+                    new_input_td.className = ''                
+            
+                    td.appendChild(new_input_td)
+
+                      new_input_td.addEventListener("click", function(click){
+                        click.stopPropagation()//Para input não sumir
+                      })
+
+                      let label = document.createElement('label')
+                      label.htmlFor = 'new-img'
+                      label.className = 'label-input'
+                      console.log("Vazio!")
+                    }
+                    else{
+                    let new_input_td = document.createElement('input')
+                    new_input_td.type = 'text'
+                    new_input_td.name = 'new-name'
+                    new_input_td.required = true
+                    new_input_td.className = 'new-name'
+                        
+                      td.textContent = null
+  
+                      td.appendChild(new_input_td)
+
+                      new_input_td.addEventListener("click", function(click){
+                        click.stopPropagation()//Para input não sumir
+                      })
+
+                    }
+                  })
+                })
+                
+                  button_edit.style.display = 'none'
+                  //Botão de adição
+                  let button_add = document.getElementById("add")
+                  button_add.style.display = 'block'
+              }//Função para editar
 
               button_edit.addEventListener("click" , edit)
     });//Forreach
-  });
-}
+  });//Ajax //Done
+}//Condicional else
 
-}); //Carregamento
+});//Carregamento
