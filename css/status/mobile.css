@@ -72,6 +72,17 @@ body{
         text-transform:  uppercase;
     }
 
+    main > div > .hours{
+        font-size: var(--p_font_size);
+        font-family: var(--lyric);
+        color: var(--p_color);
+        text-shadow: 1px 2px 3px black;
+        cursor: context-menu;
+        position: absolute;
+        top: 11%;
+        left: 50%;
+    }
+
     main > div > #check1[type="checkbox"]{
         position: absolute;
         top: 13%;
@@ -125,11 +136,6 @@ body{
         position: absolute;
         transform: translate(20vw,15vh);
     }
-
-    main > div > #hour{
-        font-family: var(--lyric);
-    }
-
 
     button{
         position: absolute;

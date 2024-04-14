@@ -66,6 +66,16 @@ body{
         text-transform:  uppercase;
     }
 
+    main > div > .hours{
+        font-size: 12px;
+        font-family: var(--lyric);
+        color: var(--p_color);
+        text-shadow: 1px 2px 3px black;
+        cursor: context-menu;
+        position: absolute;
+        transform: translate(300px,30px);
+    }
+
     main > div > #check1[type="checkbox"]{
         position: absolute;
         transform: translate(80px,32px);
@@ -185,6 +195,16 @@ body{
 
     main > div > label{
         text-transform:  uppercase;
+    }
+
+    main > div > .hours{
+        font-size: 12px;
+        font-family: var(--lyric);
+        color: var(--p_color);
+        text-shadow: 1px 2px 3px black;
+        cursor: context-menu;
+        position: absolute;
+        transform: translate(300px,27px);
     }
 
     main > div > #check1[type="checkbox"]{
@@ -308,6 +328,16 @@ body{
         text-transform:  uppercase;
     }
 
+    main > div > .hours{
+        font-size: 12px;
+        font-family: var(--lyric);
+        color: var(--p_color);
+        text-shadow: 1px 1px 3px black;
+        cursor: context-menu;
+        position: absolute;
+        transform: translate(460px,27px);
+    }
+
     main > div > #check1[type="checkbox"]{
         position: absolute;
         transform: translate(270px,32px);
@@ -427,6 +457,16 @@ body{
 
     main > div > label{
         text-transform:  uppercase;
+    }
+
+    main > div > .hours{
+        font-size: 12px;
+        font-family: var(--lyric);
+        color: var(--p_color);
+        text-shadow: 1px 1px 3px black;
+        cursor: context-menu;
+        position: absolute;
+        transform: translate(480px,27px);
     }
 
     main > div > #check1[type="checkbox"]{
