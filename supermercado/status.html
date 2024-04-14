@@ -30,13 +30,19 @@
             <br>
 
             <input type="checkbox" name="check3" id="check3">
-            <label for="check3" id="phrase-check3">compra pronta para entrega.</label>
-
-            
+            <label for="check3" id="phrase-check3">compra pronta para entrega.</label> 
         </div>
     </main>
 
-    <button type="submit">tela principal</button>
+    <button type="button">tela principal</button>
+
+    <script>
+        document.querySelector('button').addEventListener("click", function(){
+            setTimeout(()=>{
+                location.href = '../index.html'
+            },1000)
+        })
+    </script>
 
 </body>
 </html>

@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     this.disabled = true
   })
 
-  const save = function toSave() {
+const save = function toSave() {
     
     let datas = []
       document.querySelectorAll(".input").forEach( input => {
@@ -155,8 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
       };
       eyes.readAsDataURL(img_uploaded.files[0]);
     }); //Função da imagem
-
-      button_save.addEventListener("click", save);
+  button_save.addEventListener("click", save);
     
   };//Função para adicionar.
 
@@ -241,60 +240,41 @@ else{
         table_row.appendChild(table_data_img)
         table_data_img.appendChild(img)
               
-                const edit = function toEdit(){
+      const edit = function toEdit(){
 
-                let table_datas = document.getElementsByTagName('td')
+        let table_datas = document.getElementsByTagName('td')
 
-                Array.from(table_datas).forEach(function(td){
-                  td.addEventListener("click", function(){
-
-                    console.log(td.textContent)
+        Array.from(table_datas).forEach(function(td){
+          td.addEventListener("click", function(){           
                   
-                    if(td.textContent === ''){
-                    let new_input_td = document.createElement('input')
-                    new_input_td.type = 'image'
-                    new_input_td.name = 'new-img'
-                    new_input_td.id = 'new-img'
-                    new_input_td.required = true
-                    new_input_td.className = ''                
+          let new_input_td = document.createElement('input')
+          new_input_td.type = 'image'
+          new_input_td.name = 'new-img'
+          new_input_td.id = `img`//Criação de um id
+          new_input_td.required = true
+          new_input_td.style.display = 'none'               
             
-                    td.appendChild(new_input_td)
+          td.appendChild(new_input_td)
 
-                      new_input_td.addEventListener("click", function(click){
-                        click.stopPropagation()//Para input não sumir
-                      })
+          new_input_td.addEventListener("click", function(click){
+            click.stopPropagation()//Para input não sumir
+          })
 
-                      let label = document.createElement('label')
-                      label.htmlFor = 'new-img'
-                      label.className = 'label-input'
-                      console.log("Vazio!")
-                    }
-                    else{
-                    let new_input_td = document.createElement('input')
-                    new_input_td.type = 'text'
-                    new_input_td.name = 'new-name'
-                    new_input_td.required = true
-                    new_input_td.className = 'new-name'
-                        
-                      td.textContent = null
-  
-                      td.appendChild(new_input_td)
+          let label = document.createElement('label')
+          label.htmlFor = 'new-img'
+          label.className = 'label-input'
+          td.appendChild(label)                 
 
-                      new_input_td.addEventListener("click", function(click){
-                        click.stopPropagation()//Para input não sumir
-                      })
-
-                    }
-                  })
-                })
+         })
+        })
                 
-                  button_edit.style.display = 'none'
+            button_edit.style.display = 'none'
                   //Botão de adição
-                  let button_add = document.getElementById("add")
-                  button_add.style.display = 'block'
-              }//Função para editar
+            let button_add = document.getElementById("add")
+            button_add.style.display = 'block'
 
-              button_edit.addEventListener("click" , edit)
+              }//Função para editar
+            button_edit.addEventListener("click" , edit)
     });//Forreach
   });//Ajax //Done
 }//Condicional else
