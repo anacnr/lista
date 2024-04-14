@@ -31,7 +31,7 @@ body{
         font-weight: 100;
         font-size: 30px;
         color: var(--lyric_color_h1) ;
-        transform: translate(120px,180px);
+        transform: translate(120px,200px);
         
     }
 
@@ -43,14 +43,14 @@ body{
         font-size: 30px;
         color: var(--lyric_color_h2);
         position: absolute;
-        transform: translate(60px,60px);
+        transform: translate(90px,60px);
     }
 
     main > #logo-market{
         width: 60px; height: 60px;
         border-radius: 50%;
         position: absolute;
-        transform: translate(300px,45px);
+        transform: translate(350px,45px);
         filter: opacity(0.8);
         box-shadow: 1px 2px 6px black;
     }
@@ -59,7 +59,7 @@ body{
         position: absolute;
         transform: translate(10px,200px);
         width: 100%; height: 40%;
-        border: 2px solid rgba(0, 0, 0, 0.192);
+        margin-top: 20px;
     }
 
     main > div > label{
@@ -125,7 +125,7 @@ body{
         position: absolute;
         transform: translate(45vw, 82vh);
         padding: 2px 4px 2px 4px;
-        font-family: var(---p_font_size);
+        font-family: 12px;
         font-weight: 100;
         text-transform: capitalize;
         background-color: rgb(122, 223, 223);
@@ -151,8 +151,8 @@ body{
         font-weight: 100;
         font-size: 30px;
         color: var(--lyric_color_h1) ;
-        transform: translate(120px,180px);
-        
+        transform: translate(120px,200px);
+        cursor: context-menu;
     }
 
     main > h2{
@@ -163,14 +163,15 @@ body{
         font-size: 30px;
         color: var(--lyric_color_h2);
         position: absolute;
-        transform: translate(60px,60px);
+        transform: translate(100px,60px);
+        cursor: context-menu;
     }
 
     main > #logo-market{
         width: 60px; height: 60px;
         border-radius: 50%;
         position: absolute;
-        transform: translate(300px,45px);
+        transform: translate(360px,45px);
         filter: opacity(0.8);
         box-shadow: 1px 2px 6px black;
     }
@@ -179,7 +180,7 @@ body{
         position: absolute;
         transform: translate(10px,200px);
         width: 100%; height: 40%;
-        border: 2px solid rgba(0, 0, 0, 0.192);
+        margin-top: 30px;
     }
 
     main > div > label{
@@ -188,7 +189,7 @@ body{
 
     main > div > #check1[type="checkbox"]{
         position: absolute;
-        transform: translate(80px,32px);
+        transform: translate(95px,32px);
         width: 10px; height: 10px;
         border-color: #ff3131;
         border-width: 100px;
@@ -202,12 +203,12 @@ body{
         text-shadow: 1px 1px 3px  black;
         word-spacing: 5px;
         position: absolute;
-        transform: translate(110px,30px);
+        transform: translate(130px,30px);
     }
 
     main > div > #check2[type="checkbox"]{
         position: absolute;
-        transform: translate(80px,60px);
+        transform: translate(95px,70px);
         width: 10px; height: 10px;
         accent-color: rgb(44, 234, 44)
     }
@@ -218,12 +219,12 @@ body{
         text-shadow: 1px 1px 3px  black;
         word-spacing: 5px;
         position: absolute;
-        transform: translate(110px,58px);
+        transform: translate(130px,65px);
     }
 
     main > div > #check3[type="checkbox"]{
         position: absolute;
-        transform: translate(80px,90px);
+        transform: translate(95px,105px);
         width: 10px; height: 10px;
         accent-color: rgb(44, 234, 44)
     }
@@ -234,7 +235,7 @@ body{
         text-shadow: 1px 1px 3px  black;
         word-spacing: 5px;
         position: absolute;
-        transform: translate(110px,86px);
+        transform: translate(130px,100px);
     }
 
     main > div > #hour{
@@ -244,8 +245,250 @@ body{
     button{
         position: absolute;
         transform: translate(45vw, 82vh);
-        padding: 2px 4px 2px 4px;
-        font-family: var(---p_font_size);
+        padding: 4px 8px 4px 8px;
+        font-family: 12px;
+        font-weight: 100;
+        text-transform: capitalize;
+        background-color: rgb(122, 223, 223);
+        border: 0px;
+        border-radius: 8px;
+        box-shadow: 2px 3px 10px black;
+        cursor: pointer;
+    }
+    
+    button:hover{
+        background-color: rgb(209, 188, 239);
+    }
+}
+
+@media(min-width:992px) and (max-width:1200px){
+    h1{
+        text-transform: capitalize;
+        text-shadow: 1px 1px 3px black;
+        text-decoration-line: underline;
+        text-decoration-color:white;
+        text-decoration-style: dotted;
+        font-family: var(--lyric);
+        font-weight: 100;
+        font-size: 30px;
+        color: var(--lyric_color_h1) ;
+        transform: translate(310px,220px);
+        cursor: context-menu;
+    }
+
+    main > h2{
+        text-transform: capitalize;
+        text-shadow: 1px 1px 3px rgb(136, 113, 82);
+        font-family: var(--lyric);
+        font-weight: 100;
+        font-size: 30px;
+        color: var(--lyric_color_h2);
+        position: absolute;
+        transform: translate(280px,60px);
+        cursor: context-menu;
+    }
+
+    main > #logo-market{
+        width: 70px; height: 70px;
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(550px,45px);
+        filter: opacity(0.8);
+        box-shadow: 1px 2px 6px black;
+    }
+
+    main > div {
+        position: absolute;
+        transform: translate(10px,200px);
+        width: 100%; height: 40%;
+        margin-top: 50px;
+    }
+
+    main > div > label{
+        text-transform:  uppercase;
+    }
+
+    main > div > #check1[type="checkbox"]{
+        position: absolute;
+        transform: translate(270px,32px);
+        width: 10px; height: 10px;
+        border-color: #ff3131;
+        border-width: 100px;
+        accent-color: rgb(44, 234, 44);  
+    }
+
+
+    main > div > #phrase-check1{
+        color: var(--p_color);
+        font-size: 12px;
+        text-shadow: 1px 1px 3px  black;
+        word-spacing: 5px;
+        position: absolute;
+        transform: translate(300px,30px);
+    }
+
+    main > div > #check2[type="checkbox"]{
+        position: absolute;
+        transform: translate(270px,68px);
+        width: 10px; height: 10px;
+        accent-color: rgb(44, 234, 44)
+    }
+
+    main > div > #phrase-check2{
+        color: var(--p_color);
+        font-size: 12px;
+        text-shadow: 1px 1px 3px  black;
+        word-spacing: 5px;
+        position: absolute;
+        transform: translate(300px,65px);
+    }
+
+    main > div > #check3[type="checkbox"]{
+        position: absolute;
+        transform: translate(270px,103px);
+        width: 10px; height: 10px;
+        accent-color: rgb(44, 234, 44)
+    }
+
+    main > div > #phrase-check3{
+        color: var(--p_color);
+        font-size: 12px;
+        text-shadow: 1px 1px 3px  black;
+        word-spacing: 5px;
+        position: absolute;
+        transform: translate(300px,100px);
+    }
+
+    main > div > #hour{
+        font-family: var(--lyric);
+    }
+
+    button{
+        position: absolute;
+        transform: translate(45vw, 82vh);
+        padding: 4px 8px 4px 8px;
+        font-family: 12px;
+        font-weight: 100;
+        text-transform: capitalize;
+        background-color: rgb(122, 223, 223);
+        border: 0px;
+        border-radius: 8px;
+        box-shadow: 2px 3px 10px black;
+        cursor: pointer;
+    }
+    
+    button:hover{
+        background-color: rgb(209, 188, 239);
+    }
+}
+
+@media(min-width:1200px){
+    h1{
+        text-transform: capitalize;
+        text-shadow: 1px 1px 3px black;
+        text-decoration-line: underline;
+        text-decoration-color:white;
+        text-decoration-style: dotted;
+        font-family: var(--lyric);
+        font-weight: 100;
+        font-size: 30px;
+        color: var(--lyric_color_h1) ;
+        transform: translate(310px,220px);
+        cursor: context-menu;
+    }
+
+    main > h2{
+        text-transform: capitalize;
+        text-shadow: 1px 1px 3px rgb(136, 113, 82);
+        font-family: var(--lyric);
+        font-weight: 100;
+        font-size: 30px;
+        color: var(--lyric_color_h2);
+        position: absolute;
+        transform: translate(280px,60px);
+        cursor: context-menu;
+    }
+
+    main > #logo-market{
+        width: 70px; height: 70px;
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(550px,45px);
+        filter: opacity(0.8);
+        box-shadow: 1px 2px 6px black;
+    }
+
+    main > div {
+        position: absolute;
+        transform: translate(10px,200px);
+        width: 100%; height: 40%;
+        margin-top: 50px;
+    }
+
+    main > div > label{
+        text-transform:  uppercase;
+    }
+
+    main > div > #check1[type="checkbox"]{
+        position: absolute;
+        transform: translate(270px,32px);
+        width: 10px; height: 10px;
+        border-color: #ff3131;
+        border-width: 100px;
+        accent-color: rgb(44, 234, 44);  
+    }
+
+
+    main > div > #phrase-check1{
+        color: var(--p_color);
+        font-size: 12px;
+        text-shadow: 1px 1px 3px  black;
+        word-spacing: 5px;
+        position: absolute;
+        transform: translate(300px,30px);
+    }
+
+    main > div > #check2[type="checkbox"]{
+        position: absolute;
+        transform: translate(270px,68px);
+        width: 10px; height: 10px;
+        accent-color: rgb(44, 234, 44)
+    }
+
+    main > div > #phrase-check2{
+        color: var(--p_color);
+        font-size: 12px;
+        text-shadow: 1px 1px 3px  black;
+        word-spacing: 5px;
+        position: absolute;
+        transform: translate(300px,65px);
+    }
+
+    main > div > #check3[type="checkbox"]{
+        position: absolute;
+        transform: translate(270px,103px);
+        width: 10px; height: 10px;
+        accent-color: rgb(44, 234, 44)
+    }
+
+    main > div > #phrase-check3{
+        color: var(--p_color);
+        font-size: 12px;
+        text-shadow: 1px 1px 3px  black;
+        word-spacing: 5px;
+        position: absolute;
+        transform: translate(300px,100px);
+    }
+
+    main > div > #hour{
+        font-family: var(--lyric);
+    }
+
+    button{
+        position: absolute;
+        transform: translate(45vw, 82vh);
+        padding: 4px 8px 4px 8px;
+        font-family: 12px;
         font-weight: 100;
         text-transform: capitalize;
         background-color: rgb(122, 223, 223);
