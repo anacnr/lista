@@ -37,81 +37,122 @@ const save = function toSave() {
  
 /*Ação para adicionar mais linhas*/
 const add = function toAdd() {
-  //Faz com que a linha da tabela seja criada.
-  let table_row = document.createElement("tr");
+    //Faz com que outra linha da tabela seja criada.
+    let table_row = document.createElement("tr");
 
-  //O formulário está apadrinhando a linha
-  table_body.appendChild(table_row);
+    //O formulário está apadrinhando a linha
+    table_body.appendChild(table_row);
 
-for(let count = 0;count <= 4;count++){  
-    let table_data_product = document.createElement("td");
-    table_row.appendChild(table_data_product);
+      let table_data_product = document.createElement("td");
+      table_row.appendChild(table_data_product);
 
-    let input = document.createElement("input")
-    input.type = 'text'
-    input.className = 'input'
-    input.name = `name${count}`//Forma que vi pela internet
-    input.required = true
-    
-    console.log(input.name )
-    table_data_product.appendChild(input)
-}//Laço for
+      let input_product = document.createElement("input");
+      input_product.type = "text";
+      input_product.className = "input";
+      input_product.name = "product";
+      input_product.required = true;
+      
+      table_data_product.appendChild(input_product)
 
-  let table_data_number = document.createElement("td");
-  table_row.appendChild(table_data_number);
+      let table_data_code = document.createElement("td");
+      table_row.appendChild(table_data_code);
 
-  //Criação do input do tipo número
-  let input = document.createElement("input")
-  input.type = 'number'
-  input.className = 'input'
-  input.name = 'quantity'//Forma que vi pela internet
-  input.required = true
+      let input_code = document.createElement("input");
+      input_code.type = "text";
+      input_code.className = "input";
+      input_code.name = "code";
+      input_code.required = true;
+      
+      table_data_code.appendChild(input_code)
 
-  table_data_number.appendChild(input)
+      let table_data_measure = document.createElement("td");
+      table_row.appendChild(table_data_measure);
 
-  let table_data_img = document.createElement("td");
-  table_row.appendChild(table_data_img);
+      let input_measure = document.createElement("input");
+      input_measure.type = "text";
+      input_measure.className = "input";
+      input_measure.name = "measure";
+      input_measure.required = true;
+      
+      table_data_measure.appendChild(input_measure)
+      
+      let table_data_price = document.createElement("td");
+      table_row.appendChild(table_data_price);
 
-  //Criação do input do tipo imagem
-  let input_img = document.createElement("input");
-  input_img.type = "file";
-  input_img.id = "input-img";
-  input_img.className = "input";
-  input_img.name = "image";
-  input_img.accept = "image/*";
-  input_img.required = true;
+      let input_price = document.createElement("input");
+      input_price.type = "text";
+      input_price.className = "input";
+      input_price.name = "price";
+      input_price.required = true;
+      
+      table_data_price.appendChild(input_price)
 
-  table_data_img.appendChild(input_img);
+      let table_data_brand = document.createElement("td");
+      table_row.appendChild(table_data_brand);
 
-  //Label do input file
-  let label = document.createElement("label");
-  label.className = "label-input";
-  label.htmlFor = `input-img`;
+      let input_brand = document.createElement("input");
+      input_brand.type = "text";
+      input_brand.className = "input";
+      input_brand.name = "brand";
+      input_brand.required = true;
+      
+      table_data_brand.appendChild(input_brand)
 
-  table_data_img.appendChild(label);
+      //Input de números
+      let table_data_number = document.createElement("td");
+      table_row.appendChild(table_data_number);
 
-  //Ìcone de upload
-  let icon = document.createElement("img");
-  icon.id = "icon-upload";
-  icon.className = "icon-upload";
-  icon.src = "buttons/upload.svg";
+      let input_numbers = document.createElement("input");
+      input_numbers.type = "number";
+      input_numbers.className = "input";
+      input_numbers.name = "quantity";
+      input_numbers.required = true;
 
-  label.appendChild(icon);
+      table_data_number.appendChild(input_numbers);
 
-//Parte para mostrar a imagem inserida
-let img_uploaded = document.getElementById("input-img");
+      //Input file para receber a imagem
+      let table_data_img = document.createElement("td");
+      table_row.appendChild(table_data_img);
+
+      let input_img = document.createElement("input");
+      input_img.type = "file";
+      input_img.id = "input-img";
+      input_img.className = "input";
+      input_img.name = "image";
+      input_img.accept = "image/*";
+      input_img.required = true;
+
+      table_data_img.appendChild(input_img);
+
+      //Label do input file
+      let label = document.createElement("label");
+      label.className = "label-input";
+      label.htmlFor = `input-img`;
+
+      table_data_img.appendChild(label);
+
+      //Ìcone de upload
+      let icon = document.createElement("img");
+      icon.id = "icon-upload";
+      icon.className = "icon-upload";
+      icon.src = "buttons/upload.svg";
+
+      label.appendChild(icon);
+
+    //Parte para mostrar a imagem inserida
+    let img_uploaded = document.getElementById("input-img");
 img_uploaded.addEventListener("change", function () {
-  let label_icon = document.getElementById("icon-upload");
-  label_icon.classList.remove("icon-upload");
+      let label_icon = document.getElementById("icon-upload");
+      label_icon.classList.remove("icon-upload");
 
-  let eyes = new FileReader();
+      let eyes = new FileReader();
 
-  eyes.onload = function toRead() {
-    label_icon.src = `${eyes.result}`;
-    label_icon.classList.add("img-uploaded");
-  };
-  eyes.readAsDataURL(img_uploaded.files[0]);
-});//Função da imagem
+      eyes.onload = function toRead() {
+        label_icon.src = `${eyes.result}`;
+        label_icon.classList.add("img-uploaded");
+      };
+      eyes.readAsDataURL(img_uploaded.files[0]);
+    });//Função da imagem
 
    //Chamada da função no botão de salvar 
 button_save.addEventListener("click", save);
@@ -308,14 +349,11 @@ img_uploaded.addEventListener("change", function () {
     label_icon.classList.add("img-uploaded");
   };
   eyes.readAsDataURL(img_uploaded.files[0]);
-    });//Função da imagem
+});//Função da imagem
 
-    //Faz o processo de envio do formulário.
-    button_save.addEventListener("click" , function(){
-      this.disabled = false
-    })
-  })
-};//Função para editar
+
+})
+  };//Função para editar
   //Chama a função no botão de editar
 button_edit.addEventListener("click" , edit)
   });//Ajax //Done

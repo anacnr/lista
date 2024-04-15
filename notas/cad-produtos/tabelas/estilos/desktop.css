@@ -1,0 +1,627 @@
+@charset "UTF-8";
+*{
+    margin: 0%;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
+    background-attachment: fixed;
+}
+
+/*Imagem do produto*/
+  tbody > tr > td > .produto {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(246, 245, 245);
+  }
+
+@media (min-width:600px) and (max-width:768px) {
+
+/*Caixa nome sessão*/
+    span > p{
+        text-align: center;
+        background-color: #dc6cebe8;
+        width: 130px;
+        height: 20px;
+        margin: auto;
+        transform: translateY(10vh);
+        border-radius: 20px;
+        box-shadow: 2px 2px 7px black;
+        color: rgb(243, 242, 242);
+        text-shadow: 1px 1px 2px black;
+        cursor: context-menu;
+        font-size: 1.1em;
+    }
+    
+    table{
+        margin: auto;
+        transform: translateY(20vh);
+        width: 70%;
+        border-collapse: collapse;
+        box-shadow: 1px 2px 7px black;
+    }
+    
+    /*Cabeçalho da tabela*/
+    table > #head-tab{
+        height: 40px;
+    }
+    
+    /*Cor das linhas(cor sim e cornão)*/
+    table > #head-tab, tbody > tr:nth-child(2n){
+        background-color: #dc6ceb85;    
+    }
+    
+    /*Configuração dos campos do cabeçalho*/
+    table > #head-tab > tr > th{
+        border: 1px solid black;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 2.6dvi;
+        font-weight: 400;
+        text-transform: capitalize;
+        color: rgb(243, 242, 242);
+        text-shadow: 1px 2px 3px black;
+        width: 30px;
+        height: 30px;   
+    }
+    
+    /*Configuração dos campos do corpo*/
+    table > #body-tab > tr > td{
+        border: 1px solid black;
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 2.6dvi;
+        color: rgb(243, 242, 242);
+        text-shadow: 1px 2px 3px black;
+        width: 30px;
+        height: 40px;  
+    }
+    
+    table > #body-tab > tr > #new_td{
+        border: 1px solid black;
+    }
+    
+    /*Código do produto*/
+    table > #body-tab > tr > #code{
+        text-transform: lowercase;
+    }
+    
+   /*Span que contém os botões*/
+   #span-buttons{
+    position: absolute;
+    transform: translateY(40vh);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*Personalização dos botões*/
+  #span-buttons > button {
+    padding: 3px;
+    margin-left: 15px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 2.3dvi;
+    border-width: 0px;
+    border-radius: 15px;
+    width: 12%;
+    box-shadow: 1px 1px 4px black;
+    cursor: pointer;
+}
+
+/*Botão de excluir*/
+  #span-buttons > #exc {
+      background-color: rgba(0, 0, 0, 0.712);
+      color: rgb(243, 242, 242);
+      position: absolute;
+      transform: translate(-100px, 0px);
+  }
+
+  /*Botão de editar*/
+  #span-buttons > #edi {
+    background-color: #ff3131;
+    color: rgb(243, 242, 242);
+    text-shadow: 1px 1px 2px black;
+    display: none;
+  }
+
+  /*Botão de salvar*/
+  #span-buttons > #sav {
+    background-color: #00bf63;
+    color: rgb(243, 242, 242);
+    text-shadow: 1px 1px 2px black;
+    position: absolute;
+    transform: translate(80px, 0px);
+  }
+  /*Botão de salvar*/
+  #span-buttons > #add { 
+    border-radius: 1px;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    width: 3dvi;
+  }
+  
+    /*Inputs*/
+
+    tbody > tr > td > .input{
+      background-color: transparent;
+      border-width: 0px;
+      border-bottom-style: solid;
+      border-bottom-color: black;
+      border-bottom-width: 2px;
+      width: 70px;
+    }
+  
+    tbody > tr > td > #input-img{
+      display: none;
+    }
+  
+    tbody > tr > td > .label-input{
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: auto;
+      cursor: pointer;
+    }
+  
+    tbody > tr > td > .label-input > .icon-upload{
+      width: 15px;
+      transform: translateY(1.5vh);
+      filter: drop-shadow(1px 1px 1px rgb(244, 244, 147));
+    }
+}
+
+@media (min-width:768px) and (max-width:992px) {
+   
+/*Caixa nome sessão*/
+    span > p{
+        text-align: center;
+        background-color: #dc6cebe8;
+        width: 150px;
+        height: 25px;
+        margin: auto;
+        transform: translateY(10vh);
+        border-radius: 20px;
+        box-shadow: 2px 2px 7px black;
+        color: rgb(243, 242, 242);
+        text-shadow: 1px 1px 2px black;
+        cursor: context-menu;
+        font-size: 1.4em;
+    }
+    
+    table{
+        margin: auto;
+        transform: translateY(20vh);
+        width: 600px;
+        border-collapse: collapse;
+        box-shadow: 1px 2px 7px black;
+    }
+    
+    /*Cor das linhas(cor sim e cornão)*/
+    table > #head-tab, tbody > tr:nth-child(2n){
+        background-color: #dc6ceb85;    
+    }
+    
+    /*Configuração dos campos do cabeçalho*/
+    table > #head-tab > tr > th{
+        border: 1px solid black;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: capitalize;
+        color: rgb(243, 242, 242);
+        text-shadow: 1px 2px 3px black;
+        width: 50px;
+        height: 45px;   
+    }
+    
+    /*Configuração dos campos do corpo*/
+    table > #body-tab > tr > td{
+        border: 1px solid black;
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 18px;
+        color: rgb(243, 242, 242);
+        text-shadow: 1px 2px 3px black;
+        width: 30px;
+        height: 50px;  
+    }
+    
+    table > #body-tab > tr > #new_td{
+        border: 1px solid black;
+    }
+    
+    /*Código do produto*/
+    table > #body-tab > tr > #code{
+        text-transform: lowercase;
+    }
+    
+   /*Span que contém os botões*/
+   #span-buttons {
+    position: absolute;
+    transform: translateY(40vh);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*Personalização dos botões*/
+  #span-buttons > button {
+    padding: 3px;
+    margin-left: 15px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 20px;
+    border-width: 0px;
+    border-radius: 15px;
+    width: 110px;
+    box-shadow: 1px 1px 4px black;
+    cursor: pointer;
+}
+
+/*Botão de excluir*/
+  #span-buttons > #exc {
+      background-color: rgba(0, 0, 0, 0.712);
+      color: rgb(243, 242, 242);
+      position: absolute;
+      transform: translate(-120px, 0px);
+  }
+
+  /*Botão de editar*/
+  #span-buttons > #edi {
+    background-color: #ff3131;
+    color: rgb(243, 242, 242);
+    text-shadow: 1px 1px 2px black;
+    display: none;
+  }
+
+  /*Botão de salvar*/
+  #span-buttons > #sav {
+    background-color: #00bf63;
+    color: rgb(243, 242, 242);
+    text-shadow: 1px 1px 2px black;
+    position: absolute;
+    transform: translate(100px, 0px);
+  }
+  /*Botão de salvar*/
+  #span-buttons > #add { 
+    border-radius: 1px;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    width: 25px;
+  }
+  
+    /*Inputs*/
+
+    tbody > tr > td > .input{
+      background-color: transparent;
+      border-width: 0px;
+      border-bottom-style: solid;
+      border-bottom-color: black;
+      border-bottom-width: 2px;
+      width: 70px;
+    }
+  
+    tbody > tr > td > #input-img{
+      display: none;
+    }
+  
+    tbody > tr > td > .label-input{
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: auto;
+      cursor: pointer;
+    }
+  
+    tbody > tr > td > .label-input > .icon-upload{
+      width: 20px;
+      transform: translateY(2vh);
+      filter: drop-shadow(1px 1px 1px rgb(244, 244, 147));
+    }
+}
+
+@media (min-width:992px) and (max-width:1200px) {
+   /*Caixa nome sessão*/
+    span > p{
+        text-align: center;
+        background-color: #dc6cebe8;
+        width: 150px;
+        height: 25px;
+        margin: auto;
+        transform: translateY(10vh);
+        border-radius: 20px;
+        box-shadow: 2px 2px 7px black;
+        color: rgb(243, 242, 242);
+        text-shadow: 1px 1px 2px black;
+        cursor: context-menu;
+        font-size: 1.4em;
+    }
+    
+    table{
+        margin: auto;
+        transform: translateY(20vh);
+        width: 700px;
+        border-collapse: collapse;
+        box-shadow: 1px 2px 7px black;
+    }
+    
+    /*Cor das linhas(cor sim e cornão)*/
+    table > #head-tab, tbody > tr:nth-child(2n){
+        background-color: #dc6ceb85;    
+    }
+    
+    /*Configuração dos campos do cabeçalho*/
+    table > #head-tab > tr > th{
+        border: 1px solid black;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: capitalize;
+        color: rgb(243, 242, 242);
+        text-shadow: 1px 2px 3px black;
+        width: 50px;
+        height: 50px;   
+    }
+    
+    /*Configuração dos campos do corpo*/
+    table > #body-tab > tr > td{
+        border: 1px solid black;
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 18px;
+        color: rgb(243, 242, 242);
+        text-shadow: 1px 2px 3px black;
+        width: 30px;
+        height: 50px;  
+    }
+    
+    table > #body-tab > tr > #new_td{
+        border: 1px solid black;
+    }
+    
+    /*Código do produto*/
+    table > #body-tab > tr > #code{
+        text-transform: lowercase;
+    }
+    
+    #span-buttons {
+        position: absolute;
+        transform: translateY(40vh);
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      /*Personalização dos botões*/
+      #span-buttons > button {
+        padding: 3px;
+        margin-left: 15px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 20px;
+        border-width: 0px;
+        border-radius: 15px;
+        width: 110px;
+        box-shadow: 1px 1px 4px black;
+        cursor: pointer;
+    }
+    
+    /*Botão de excluir*/
+      #span-buttons > #exc {
+          background-color: rgba(0, 0, 0, 0.712);
+          color: rgb(243, 242, 242);
+          position: absolute;
+          transform: translate(-120px, 0px);
+      }
+    
+      /*Botão de editar*/
+      #span-buttons > #edi {
+        background-color: #ff3131;
+        color: rgb(243, 242, 242);
+        text-shadow: 1px 1px 2px black;
+        display: none;
+      }
+    
+      /*Botão de salvar*/
+      #span-buttons > #sav {
+        background-color: #00bf63;
+        color: rgb(243, 242, 242);
+        text-shadow: 1px 1px 2px black;
+        position: absolute;
+        transform: translate(100px, 0px);
+      }
+      /*Botão de salvar*/
+      #span-buttons > #add { 
+        border-radius: 1px;
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        width: 25px;
+      }
+    /*Inputs*/
+
+    tbody > tr > td > .input{
+      background-color: transparent;
+      border-width: 0px;
+      border-bottom-style: solid;
+      border-bottom-color: black;
+      border-bottom-width: 2px;
+      width: 90px;
+    }
+  
+    tbody > tr > td > #input-img{
+      display: none;
+    }
+  
+    tbody > tr > td > .label-input{
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: auto;
+      cursor: pointer;
+    }
+  
+    tbody > tr > td > .label-input > .icon-upload{
+      width: 20px;
+      transform: translateY(2vh);
+      filter: drop-shadow(1px 1px 1px rgb(244, 244, 147));
+    }       
+}
+
+@media (min-width: 1200px) {
+    /*Caixa nome sessão*/
+    span > p{
+        text-align: center;
+        background-color: #dc6cebe8;
+        width: 150px;
+        height: 25px;
+        margin: auto;
+        transform: translateY(10vh);
+        border-radius: 20px;
+        box-shadow: 2px 2px 7px black;
+        color: rgb(243, 242, 242);
+        text-shadow: 1px 1px 2px black;
+        cursor: context-menu;
+        font-size: 1.4em;
+    }
+    
+    table{
+        margin: auto;
+        transform: translateY(20vh);
+        width: 700px;
+        border-collapse: collapse;
+        box-shadow: 1px 2px 7px black;
+    }
+    
+    /*Cor das linhas(cor sim e cornão)*/
+    table > #head-tab, tbody > tr:nth-child(2n){
+        background-color: #dc6ceb85;    
+    }
+    
+    /*Configuração dos campos do cabeçalho*/
+    table > #head-tab > tr > th{
+        border: 1px solid black;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: capitalize;
+        color: rgb(243, 242, 242);
+        text-shadow: 1px 2px 3px black;
+        width: 50px;
+        height: 50px;   
+    }
+    
+    /*Configuração dos campos do corpo*/
+    table > #body-tab > tr > td{
+        border: 1px solid black;
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 18px;
+        color: rgb(243, 242, 242);
+        text-shadow: 1px 2px 3px black;
+        width: 30px;
+        height: 50px;  
+    }
+    
+    table > #body-tab > tr > #new_td{
+        border: 1px solid black;
+    }
+    
+    /*Código do produto*/
+    table > #body-tab > tr > #code{
+        text-transform: lowercase;
+    }
+    
+    /*Span dos Bbotões*/
+    #span-buttons {
+        position: absolute;
+        transform: translateY(40vh);
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      /*Personalização dos botões*/
+      #span-buttons > button {
+        padding: 3px;
+        margin-left: 15px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 20px;
+        border-width: 0px;
+        border-radius: 15px;
+        width: 110px;
+        box-shadow: 1px 1px 4px black;
+        cursor: pointer;
+    }
+    
+    /*Botão de excluir*/
+      #span-buttons > #exc {
+          background-color: rgba(0, 0, 0, 0.712);
+          color: rgb(243, 242, 242);
+          position: absolute;
+          transform: translate(-120px, 0px);
+      }
+    
+      /*Botão de editar*/
+      #span-buttons > #edi {
+        background-color: #ff3131;
+        color: rgb(243, 242, 242);
+        text-shadow: 1px 1px 2px black;
+        display: none;
+      }
+    
+      /*Botão de salvar*/
+      #span-buttons > #sav {
+        background-color: #00bf63;
+        color: rgb(243, 242, 242);
+        text-shadow: 1px 1px 2px black;
+        position: absolute;
+        transform: translate(100px, 0px);
+      }
+      /*Botão de salvar*/
+      #span-buttons > #add { 
+        border-radius: 1px;
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        width: 25px;
+    }
+    
+    /*Inputs*/
+
+    tbody > tr > td > .input{
+      background-color: transparent;
+      border-width: 0px;
+      border-bottom-style: solid;
+      border-bottom-color: black;
+      border-bottom-width: 2px;
+      width: 90px;
+    }
+  
+    tbody > tr > td > #input-img{
+      display: none;
+    }
+  
+    tbody > tr > td > .label-input{
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: auto;
+      cursor: pointer;
+    }
+  
+    tbody > tr > td > .label-input > .icon-upload{
+      width: 20px;
+      transform: translateY(2vh);
+      filter: drop-shadow(1px 1px 1px rgb(244, 244, 147));
+    }      
+}
