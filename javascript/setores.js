@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .done(function (request) {
       request.forEach(function (data, index) {
         let name_setor = data.nome;
-        let id_setor = data.id; //Esse vai mandar lá para o formulário quando quiser mser manipulado
+        let id_setor = data.id; //Esse vai mandar lá para o formulário quando quiser ser manipulado
 
         let span = document.createElement("span");
         span.className = "setor";
@@ -53,10 +53,10 @@ document.addEventListener("DOMContentLoaded", function () {
           let index_edit = `${index}`;
 
           if (index_nome == index_edit) {
-            //Esse controle é para que ao clicar novamente na tela , em outro botão, o botão anterior clicado volte ao estado original. Ainda nõa funciona
             if (!controll_button) {
               controll_button = true;
               span.style.cursor = "pointer";
+              
               let input = document.createElement("input");
               input.className = "setor";
               input.style.border = "none";

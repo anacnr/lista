@@ -208,22 +208,78 @@ const edit = function toEdit() {
   /*Pega todas as tds*/
     let table_datas = document.getElementsByTagName("td")
 
-    Array.from(table_datas).forEach(function(td){
+    Array.from(table_datas).forEach(function(td ,index){
 
       td.addEventListener("click", function(){
-      td.textContent = null
-      //Novo input criado
-      let input = document.createElement("input")
-      input.type = 'text'
-      input.name = 'product[]'
-      input.className = 'new-name'//Criação de um id
-      input.required = true
-                    
-      td.appendChild(input)
-      /*Faz com que o input não desapareça*/
-      input.addEventListener("click", function(click){
-        click.stopPropagation()
-      });//Evento do input
+
+      if(td.textContent.trim() !== ''){
+        td.textContent = null
+
+         //Novo input criado
+         let input = document.createElement("input")
+         input.type = 'text'
+         input.name = `name${index}`//Técnica vista na internet
+         input.className = 'new-input'
+         input.required = true
+                       
+         td.appendChild(input)
+         /*Faz com que o input não desapareça*/
+         input.addEventListener("click", function(click){
+           click.stopPropagation()
+         });//Evento do input
+
+         console.log(input.name)
+      }
+      else{
+        //Criação do input do tipo imagem
+        let input = document.createElement("input");
+        input.type = "file";
+        input.id = "input-img";
+        input.className = "input";
+        input.name = "image";
+        input.accept = "image/*";
+        input.required = true;
+
+        td.appendChild(input);
+
+        //Label do input file
+        let label = document.createElement("label");
+        label.className = "label-input";
+        label.htmlFor = `input-img`;
+
+        td.appendChild(label);
+
+        //Ìcone de upload
+        let icon = document.createElement("img");
+        icon.id = "icon-upload";
+        icon.className = "icon-upload";
+        icon.src = "buttons/upload.svg";
+
+        label.appendChild(icon);
+
+        td.appendChild(input)
+        /*Faz com que o input não desapareça*/
+        input.addEventListener("click", function(click){
+          click.stopPropagation()
+        });//Evento do input
+
+      //Parte para mostrar a imagem inserida
+      let img_uploaded = document.getElementById("input-img");
+      img_uploaded.addEventListener("change", function () {
+        let label_icon = document.getElementById("icon-upload");
+        label_icon.classList.remove("icon-upload");
+
+        let eyes = new FileReader();
+
+        eyes.onload = function toRead() {
+          label_icon.src = `${eyes.result}`;
+          label_icon.classList.add("img-uploaded");
+        };
+        eyes.readAsDataURL(img_uploaded.files[0]);
+});//Função da imagem
+                      
+}//Condicional else
+
       });//Evento adicionado a cada td
     })//forEach 
 
