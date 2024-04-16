@@ -1,4 +1,4 @@
-/**
+/*
  * A tabela poderá ter uma linha editada ou apagada e também o usuário poderá acrescentar mais linhas.
  */
 document.addEventListener("DOMContentLoaded", function () {
@@ -212,6 +212,8 @@ const edit = function toEdit() {
 
       td.addEventListener("click", function(){
 
+        //console.log(index)
+
       if(td.textContent.trim() !== ''){
         td.textContent = null
 
@@ -223,65 +225,64 @@ const edit = function toEdit() {
          input.required = true
                        
          td.appendChild(input)
-         /*Faz com que o input não desapareça*/
-         input.addEventListener("click", function(click){
-           click.stopPropagation()
-         });//Evento do input
 
-         console.log(input.name)
       }
       else{
-        //Criação do input do tipo imagem
-        let input = document.createElement("input");
-        input.type = "file";
-        input.id = "input-img";
-        input.className = "input";
-        input.name = "image";
-        input.accept = "image/*";
-        input.required = true;
 
-        td.appendChild(input);
+        if(index == index){
+          //console.log("Index: " ,index)
+          let img_uploaded = document.querySelectorAll('.img-uploaded')
+          img_uploaded.forEach(function(iten){
+            iten.addEventListener("click", function(){
+              iten.style.display = 'none'
 
-        //Label do input file
-        let label = document.createElement("label");
-        label.className = "label-input";
-        label.htmlFor = `input-img`;
+            //Criação do input do tipo imagem
+            let input_img = document.createElement("input");
+            input_img.type = "file";
+            input_img.id = "input-img";
+            input_img.className = "input";
+            input_img.name = "image";
+            input_img.accept = "image/*";
+            input_img.required = true;
 
-        td.appendChild(label);
+            td.appendChild(input_img);
 
-        //Ìcone de upload
-        let icon = document.createElement("img");
-        icon.id = "icon-upload";
-        icon.className = "icon-upload";
-        icon.src = "buttons/upload.svg";
+            //Label do input file
+            let label = document.createElement("label");
+            label.className = "label-input";
+            label.htmlFor = `input-img`;
 
-        label.appendChild(icon);
+            td.appendChild(label);
 
-        td.appendChild(input)
-        /*Faz com que o input não desapareça*/
-        input.addEventListener("click", function(click){
-          click.stopPropagation()
-        });//Evento do input
+            //Ìcone de upload
+            let icon = document.createElement("img");
+            icon.id = "icon-upload";
+            icon.className = "icon-upload";
+            icon.src = "buttons/upload.svg";
 
-      //Parte para mostrar a imagem inserida
-      let img_uploaded = document.getElementById("input-img");
-      img_uploaded.addEventListener("change", function () {
-        let label_icon = document.getElementById("icon-upload");
-        label_icon.classList.remove("icon-upload");
+            label.appendChild(icon);
 
-        let eyes = new FileReader();
+            //Parte para mostrar a imagem inserida
+            let img_uploaded = document.getElementById("input-img");
+            img_uploaded.addEventListener("change", function () {
+              let label_icon = document.getElementById("icon-upload");
+              label_icon.classList.remove("icon-upload");
 
-        eyes.onload = function toRead() {
-          label_icon.src = `${eyes.result}`;
-          label_icon.classList.add("img-uploaded");
-        };
-        eyes.readAsDataURL(img_uploaded.files[0]);
-});//Função da imagem
-                      
+              let eyes = new FileReader();
+
+              eyes.onload = function toRead() {
+                label_icon.src = `${eyes.result}`;
+                label_icon.classList.add("img-uploaded");
+              };
+              eyes.readAsDataURL(img_uploaded.files[0]);
+            });//Função da imagem
+            });
+          })
+        }
+                          
 }//Condicional else
-
-      });//Evento adicionado a cada td
-    })//forEach 
+  });//Evento adicionado a cada td
+})//forEach 
 
   /*Mostra o botão de adiciona*/
   let button_add = document.getElementById("add")
