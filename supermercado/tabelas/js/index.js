@@ -203,19 +203,16 @@ else{
         table_data_img.appendChild(img)       
     });//ForEach
 
-    //Parte para editar os campos
+  //Parte para editar os campos
 const edit = function toEdit() {
   /*Pega todas as tds*/
     let table_datas = document.getElementsByTagName("td")
 
     Array.from(table_datas).forEach(function(td ,index){
 
-      td.addEventListener("click", function(){
-
-        //console.log(index)
-
       if(td.textContent.trim() !== ''){
-        td.textContent = null
+        td.addEventListener("click", function(){
+        td.textContent = ''
 
          //Novo input criado
          let input = document.createElement("input")
@@ -225,63 +222,69 @@ const edit = function toEdit() {
          input.required = true
                        
          td.appendChild(input)
-
+        });//Evento do click
       }
       else{
+        function toClick() {
+          //Remove o event listener para evitar que a ação seja executada novamente
+          td.removeEventListener("click", toClick);
+        
+          // Remove a imagem da célula clicada
+          let img_change = td.querySelector('.img-uploaded');
+          if (img_change) {
+            td.removeChild(img_change);
 
-        if(index == index){
-          //console.log("Index: " ,index)
-          let img_uploaded = document.querySelectorAll('.img-uploaded')
-          img_uploaded.forEach(function(iten){
-            iten.addEventListener("click", function(){
-              iten.style.display = 'none'
-
-            //Criação do input do tipo imagem
+                                    // Criação do input do tipo imagem
             let input_img = document.createElement("input");
             input_img.type = "file";
-            input_img.id = "input-img";
             input_img.className = "input";
+            input_img.id ='input-img'
             input_img.name = "image";
             input_img.accept = "image/*";
             input_img.required = true;
-
+            
+            //Adiciona o input à célula
             td.appendChild(input_img);
-
+            
             //Label do input file
             let label = document.createElement("label");
             label.className = "label-input";
-            label.htmlFor = `input-img`;
-
+            label.htmlFor = "input-img";
+            
+            //Adiciona o label à célula
             td.appendChild(label);
-
-            //Ìcone de upload
+            
+            // Ícone de upload
             let icon = document.createElement("img");
-            icon.id = "icon-upload";
             icon.className = "icon-upload";
             icon.src = "buttons/upload.svg";
-
+            
+            //Adiciona o ícone ao label
             label.appendChild(icon);
-
+            
             //Parte para mostrar a imagem inserida
-            let img_uploaded = document.getElementById("input-img");
-            img_uploaded.addEventListener("change", function () {
-              let label_icon = document.getElementById("icon-upload");
+            input_img.addEventListener("change", function() {
+              let label_icon = document.createElement("img");
               label_icon.classList.remove("icon-upload");
 
               let eyes = new FileReader();
-
+            
               eyes.onload = function toRead() {
                 label_icon.src = `${eyes.result}`;
                 label_icon.classList.add("img-uploaded");
               };
-              eyes.readAsDataURL(img_uploaded.files[0]);
-            });//Função da imagem
-            });
-          })
+              eyes.readAsDataURL(input_img.files[0]);
+            });            
+          } else {
+            console.log('Nenhuma imagem encontrada nesta célula.');
+          }
         }
-                          
+        
+        // Adiciona o event listener para o clique na célula
+        td.addEventListener("click", toClick);
+                             
 }//Condicional else
-  });//Evento adicionado a cada td
+
 })//forEach 
 
   /*Mostra o botão de adiciona*/
