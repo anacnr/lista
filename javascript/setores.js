@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     url: "../php/setores-salvos.php",
     type: "POST",
     processData: false,
-    contentType: false,
+    contentType: false
   })
     .done(function (request) {
       request.forEach(function (data, index) {
