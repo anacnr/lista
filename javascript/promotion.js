@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded" , function(){
 
-    let input = document.getElementById("product").value
+    let input = document.getElementById("product")
 
     console.log(input)
 
@@ -15,11 +15,11 @@ document.addEventListener("DOMContentLoaded" , function(){
         }).done(function(request){
             console.log(request)
         });//Ajax*/
-        if(input.length < 1 || !input.match[/a-zA-Z/]){
+        if(input.value.length == 0){
             alert("Por favor digite pelo menos uma letra!")
         }
         else{
-            console.log(" Letra digitada " , input)
+            console.log(" Letra digitada " , input.value)
         }
     })
 });//Carregamento
