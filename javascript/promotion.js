@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded" , function(){
                 processData: false,
                 contentType: false
             }).done(function(request) {
-                    console.log(request)
+                    console.log(request.code)
             });
             
         }
