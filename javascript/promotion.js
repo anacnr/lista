@@ -1,20 +1,26 @@
 document.addEventListener("DOMContentLoaded" , function(){
 
-    let input = document.getElementById("product")
+    const input = document.getElementById("product")
 
-    let value_inp = input.value
+    const button = document.querySelector('.bi-search')
 
-    const bloom = document.getElementById("bloom")//Ìcone de lupa
-    bloom.addEventListener("click", function(){
-        /**/
-        if(input.value.length == 0){
-            alert("Por favor digite pelo menos uma letra!")
+    const search = function toSearch(){
+        
+        if(input.value.length == 0 ){
+            console.log("Valor:" , input)
         }
         else{
-            console.log(" Letra digitada " , input.value)
+            console.log("Pesquisando...")
+
+            const select = document.getElementById("field-sel")
+            select.style.display = 'block'
+
+            /*let option = document.createElement('option')
+            select.appendChild(option)*/
 
             const form = new FormData()
-            form.append('product' , value_inp)
+            form.append('product', input.value)
+            
             $.ajax({
                 url: '../php/promo.php',
                 type: "POST",
@@ -22,9 +28,28 @@ document.addEventListener("DOMContentLoaded" , function(){
                 processData: false,
                 contentType: false
             }).done(function(request) {
-                    console.log(request.code)
+                //console.log(request)  
+                request.forEach(iten => {
+                    //console.log(iten.nome)
+                    //Dados puxado do banco
+                    let name = iten.nome
+                    let code = iten.codigo
+                    let brand = iten.marca
+                    let line = iten.linhas
+
+                    for(let count = 0; count < line; count++){
+                        let option = document.createElement('option')
+                        option.id = `opt${count}`//Técnica vista na internet
+                        option.value = `name${count}`//Técnica vista na internet
+                        option.className = 'dates'
+                        option.textContent = code
+                        select.appendChild(option)
+                    }
+
+                });
             });
-            
         }
-    })
-});//Carregamento
+    }
+    button.addEventListener("click", search)
+    
+});

@@ -2,31 +2,25 @@
 require('bank.php');
 
 if($mysql->connect_error != null){
-    die("Erro na conexão");
+    die("Erro na conexão" . $mysql->error);
 }
 else{
   
-        $input = $_POST['product'];
+    $select = "SELECT * FROM produto WHERE id = 1"; // Seleciona apenas 'nome'
+    $query = mysqli_query($mysql, $select);
     
-        if ($input) {
-            $select = "SELECT nome FROM produto WHERE ID = 1";
-            $query = mysqli_query($mysql, $select);
-
-            $request = [];
+    $request = [];
     
-            if (mysqli_num_rows($query) > 0) {
-                while ($row = mysqli_fetch_assoc($query)) {
-                    $request[] = array('nome' => $row['nome'], 'code' => $row['codigo'], 'marca' => $row['marca']);
-                }
-                header('Content-Type: application/json');
-                echo json_encode($request);
-            } else {
-                echo "Nenhum resultado encontrado.";
-            }
-        } 
-        else {
-            echo "Nenhum input recebido.";
+    if ($query) {
+        while ($row = mysqli_fetch_assoc($query)) {
+            $request[] = array("nome" =>$row['nome']); // Adiciona o resultado ao array $request
         }
+        header('Content-Type: application/json');
+        echo json_encode($request);
+    } else {
+        echo "Erro na consulta: " . mysqli_error($mysql);
+    }
+    
     
     mysqli_close($mysql);   
 }
