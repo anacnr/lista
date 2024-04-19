@@ -37,14 +37,14 @@
     }
 
 /*Input*/
-    #search > #product{
+    #search > form > #product{
         width: 85%;
         border-radius: 6px;
         border: none;
     }
 
 /*Lupa da barra de pesquisa*/
-    #search > .bi-search{
+    #search > form > .bi-search{
         font-size: 3dvi;
         position: absolute;
         left: 84%;
