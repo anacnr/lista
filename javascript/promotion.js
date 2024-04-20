@@ -15,8 +15,23 @@ document.addEventListener("DOMContentLoaded" , function(){
             const select = document.getElementById("field-sel")
             select.style.display = 'block'
 
-            /*let option = document.createElement('option')
-            select.appendChild(option)*/
+            const edit = () =>{
+                let box = document.createElement('div')
+                box.className = 'price-box'
+
+                let body = document.querySelector('body')
+                body.appendChild(box)
+                
+                let input = document.createElement('input')
+                input.id = 'new-price'
+                input.type = 'text'
+                input.minLength = '4'
+                input.placeholder = "Novo-preço"
+
+                box.appendChild(input)
+
+                this.removeEventListener("click", edit)
+            }
 
             const form = new FormData()
             form.append('product', input.value)
@@ -28,26 +43,33 @@ document.addEventListener("DOMContentLoaded" , function(){
                 processData: false,
                 contentType: false
             }).done(function(request) {
-                //console.log(request)  
+                select.innerHTML = "" //Previne a duplicação            
+                
                 request.forEach(iten => {
-                    //console.log(iten.nome)
                     //Dados puxado do banco
                     let name = iten.nome
                     let code = iten.codigo
                     let brand = iten.marca
-                    let line = iten.linhas
+                    let id = iten.id
 
-                    for(let count = 0; count < line; count++){
-                        let option = document.createElement('option')
-                        option.id = `opt${count}`//Técnica vista na internet
-                        option.value = `name${count}`//Técnica vista na internet
-                        option.className = 'dates'
-                        option.textContent = code
-                        select.appendChild(option)
-                    }
+                        let option = document.createElement('option')                        
+                        option.className = 'data'
+                        option.textContent = name
+                        select.appendChild(option)                    
+                        option.id = `id${id}`
+                        option.value = `val${id}`
 
+                        option.addEventListener("click", edit)
+
+                        const box = document.querySelector('.price-box')
+                        /*Criação do parágrafo para pegar o código*/
+                         let phrase = document.createElement('p')
+                         phrase.id = 'price-prod'
+                         box.appendChild(phrase)    
+
+                        phrase.innerHTML = `Código: ${code}`            
                 });
-            });
+            });            
         }
     }
     button.addEventListener("click", search)

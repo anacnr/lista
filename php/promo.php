@@ -10,7 +10,7 @@ else{
 
     if(!empty($input)){
         //Se o valor do input não estiver vazio vai realizar a pesquisa
-        $select = "SELECT * FROM produto WHERE nome LIKE '%$input%'";
+        $select = "SELECT * FROM produto WHERE nome LIKE '%$input%' OR codigo LIKE '%$input%' OR marca LIKE '%$input%'";
 
         $query = mysqli_query($mysql, $select);
 
@@ -18,10 +18,8 @@ else{
 
         if (mysqli_num_rows($query) > 0) {
 
-            $rows = mysqli_num_rows($query);
-
             while ($row = mysqli_fetch_assoc($query)) {
-                $request[] = array('nome' => $row['nome'], 'codigo' => $row['codigo'], 'marca' => $row['marca'], 'linhas' => $rows);
+                $request[] = array('id' => $row['id'], 'nome' => $row['nome'], 'codigo' => $row['codigo'], 'marca' => $row['marca']);
             }
             header('Content-Type: application/json');
             echo json_encode($request);
