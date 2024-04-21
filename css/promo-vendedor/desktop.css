@@ -57,6 +57,69 @@ body {
     position: absolute;
     left: 85%;
   }
+        /*Campo aonde vai aparecer os produtos*/
+    #search > #field-sel{
+      display: none;
+      border: 1px solid black;
+      width: 100%;
+      height: 100%;
+      }
+  
+  /*Options*/
+  #search > #field-sel > .data{
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: capitalize;
+  }
+  
+  /*Quadro do preço novo*/
+  .price-box{
+      width: 35vw;
+      height: 15vh;
+      box-shadow: 1px 1px 6px black inset;
+      background-color: white;
+      border-radius: 10px;
+      position: absolute;
+      transform: translate(30vw, 15vh);
+  }
+  
+  /*Input criado para por o no valor*/
+  .price-box > #new-price{
+      width: 55%;
+      border-radius: 6px;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-bottom: solid;
+      display: block;
+      margin: auto;
+      transform: translateY(37px);
+      height: 15px;
+      text-align: center;
+      background-color: #80922038;
+  }
+  /*Paragráfo onde aparece o código*/
+  .price-box > #code-prod{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 2dvi;
+      font-weight: 600;
+      text-align: center;
+      text-transform: uppercase;
+      color: #010200;
+      transform: translateY(60px);
+  }
+  
+  /*Botão de salvar*/
+  
+  .price-box > .bi-floppy-fill{
+    font-size: 2.5dvi;
+    cursor: pointer;
+    position: absolute;
+    left: 85%;
+    top: 31%;
+    background-color: #edc511;
+    border-radius: 4px;
+    border: 1px solid #2f2e2e;
+  }
 }
 
 @media (min-width:768px) and (max-width:992px){
@@ -98,6 +161,7 @@ body {
         position: absolute;
         left: 85%;
       }
+
 }
 
 @media (min-width:992px) and (max-width:1200px){

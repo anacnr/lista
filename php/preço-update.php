@@ -21,8 +21,6 @@ else{
 
             if($query){
                 $request = true;
-                sleep(4);
-                header('Location: ../supermercado/promo.html');
             }
             else{
                 $request = false;

@@ -37,7 +37,9 @@ document.addEventListener("DOMContentLoaded" , function(){
                 /*Criação do parágrafo para pegar o código*/
                 let phrase = document.createElement('p')
                 phrase.id = 'code-prod'
-                box.appendChild(phrase)    
+                box.appendChild(phrase)
+                
+                document.querySelector('h1').style.display = 'none'
             }
 
             const form = new FormData()
@@ -120,11 +122,9 @@ document.addEventListener("DOMContentLoaded" , function(){
                                     url: '../php/preço-update.php', type: 'POST', data: form, processData: false, contentType:false
                                 }).done(function(data){
                                     console.log(data)//Se funcionar retorna true
-                                    if(data == true){
-                                        setTimeout(()=>{
-                                            location.href = '../supermercado/promo.html'
-                                        },1000)
-                                    }
+                                    setTimeout(()=>{
+                                        location.href = '../supermercado/promo.html'                                       
+                                    },3000)
                                 });//ajax para trocar o preço 
                                 });//Clique do i
                             }                            
