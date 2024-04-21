@@ -8,7 +8,6 @@ if($mysql->connect_error != null){
 else{
     if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-        $request = false;
 }
 }
 ?>

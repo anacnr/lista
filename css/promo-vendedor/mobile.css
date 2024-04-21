@@ -93,16 +93,21 @@
     background-color: #80922038;
 }
 /*Paragráfo onde aparece o código*/
-#price-prod{
+.price-box > #code-prod{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
+    font-size: 2dvi;
     font-weight: 600;
     text-align: center;
     text-transform: uppercase;
-    color: rgb(36, 21, 21);
-    z-index: 1;
-    position: absolute;
-    transform: translate(38vw, 27vh);
-    color: #6a8832e3;
+    color: #010200;
+    transform: translateY(60px);
+}
+
+/*Botão de salvar*/
+
+.price-box > .bi-floppy-fill{
+    font-size: 2dvi;
+    border: 2px solid red;
+    cursor: pointer;
 }
 }
