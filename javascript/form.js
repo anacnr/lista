@@ -38,14 +38,13 @@ document.addEventListener("DOMContentLoaded", function () {
             }).done(function(valide) {
             /*O .done() cuida do que ocorre depois da requisição bem sucedida.
             Inicío da validação de acesso. O parâm. valide é quem recebe a variável $request lá do php.*/
-                if (valide.status === "Encontrado") { //Email e senha corretos
-                    console.log(valide.message)
-                    window.location.href = './index.html' 
+                if (valide.status === "Válida") { //Email e senha corretos
+                    console.log(valide.status)
                 }
-                else if(valide.status === "SenhaErrada"){ //Email correto mas senha incorreta.
-                    console.log(valide.message)
+                else if(valide.status === "Incorreta"){//Email correto mas senha incorreta.
+                    console.log(valide.status)
 
-                    //Esconder o form por um tempo
+                   //Esconder o form por um tempo
                     let form = document.querySelector("#loginForm")
                     form.style.opacity = '0'
 
@@ -75,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 }
                 else {
-                  console.log(valide.message) //Usuário não cadastrado.
+                  console.log(valide.status)//Usuário não cadastrado.
 
                 //Esconder o form por um tempo
                   let form = document.querySelector("#loginForm")
