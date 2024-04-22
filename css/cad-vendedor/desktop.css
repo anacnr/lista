@@ -107,11 +107,12 @@ form > ul > li > #descricao {
 /*Personalização dos ícones*/
 
  #descricao > .bi-upload{
-    font-size: 5dvi;
-    transform: translate(6vw, 6vh);
+    font-size: 2.5em;
     position: absolute;
-    opacity: 60%;
+    opacity: 80%;
     text-shadow: 1px 1px 2px gray;
+    left: 33%;
+    top: 33%;
  }
 
 ul > li > #company, #worker, #address{
@@ -244,11 +245,12 @@ ul > li > #pass{
     /*Personalização dos ícones*/
 
     #descricao > .bi-upload{
-        font-size: 3em;
-        transform: translate(4.5vw, 6vh);
+        font-size: 2.5em;
         position: absolute;
-        opacity: 60%;
+        opacity: 80%;
         text-shadow: 1px 1px 2px gray;
+        left: 33%;
+        top: 33%;
     }
     ul > li > #company, #worker{
         font-size: 1.3em;
@@ -496,7 +498,6 @@ ul > li > #pass{
         border-radius: 50%;
         box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.559);
         background-position: center;
-        background-image: url('/supermercado/imgs-cad/upload-min.png');
         background-color: rgba(255, 255, 255, 0.879);
         background-size: cover;
         cursor: pointer;
@@ -542,6 +543,14 @@ ul > li > #pass{
 
     ul > li > #company, #worker, #address, #cnpj, #telephone, #phone, #email, #pass{
     display: none;
+    }
+
+   #descricao > .bi-upload{
+        position: absolute;
+        left: 35%;
+        font-size: 2.6em;
+        opacity: 80%;
+        top: 35%;
     }
 
 }
@@ -788,5 +797,13 @@ ul > li > #pass{
 
     ul > li > #company, #worker, #address, #cnpj, #telephone, #phone, #email, #pass{
     display: none;
+    }
+
+    #descricao > .bi-upload{
+        position: absolute;
+        left: 35%;
+        font-size: 2.6em;
+        opacity: 80%;
+        top: 35%;
     }
 }

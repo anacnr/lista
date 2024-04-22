@@ -87,13 +87,13 @@ form > ul > li > #foto[type = 'file']{
 
 /*Label do input com tipo image*/
 form > ul > li > #descricao { 
-    top: 6%;
-    left: 38%;
+    top: 8%;
+    left: 40%;
     position: absolute;
     font-size: 0.9em;
     border-width: 0px;
-    height: 19cqmin;
-    width: 19cqmin;
+    height: 18cqmin;
+    width: 18cqmin;
     border-radius: 50%;
     box-shadow: 2px 2px 6px black;
     cursor: pointer;
@@ -104,11 +104,12 @@ form > ul > li > #descricao {
 /*Personalização dos ícones*/
 
 #descricao > .bi-upload{
-    font-size: 25px;
-    transform: translate(7vw, 5vh);
+    font-size: 6dvi;
     position: absolute;
-    opacity: 60%;
+    opacity: 80%;
     text-shadow: 1px 1px 2px gray;
+    top: 35%;
+    left: 35%;
  }
 
 ul > li > #company, #worker, #address{

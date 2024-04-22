@@ -14,12 +14,7 @@
   </head>
   <body>
 
-    <form
-      method="post"
-      action="../php/superm.php"
-      enctype="multipart/form-data"
-      onsubmit="return Register()"
-    >
+    <form method="post" action="../php/superm.php" enctype="multipart/form-data" onsubmit="return Register">
       <ul>
         <li>
           <i class="bi bi-building" id="company"></i>
@@ -131,7 +126,7 @@
 
         <li>
           <label for="foto" id="descricao" onclick="Generator()"><i class="bi bi-upload"></i></label>
-          <input type="file" id="foto" name="img" accept="image/*" required />
+          <input type="file" id="foto" name="img" accept="image/*"/>
         </li>
       </ul>
 
@@ -139,7 +134,6 @@
     </form>
 
     <!--Javascript-->
-
     <script>
       //Configurar a foto do input file depois da imagem ter sido escolhida
       function Generator() {
@@ -147,6 +141,8 @@
         let input = document.getElementById("foto");
 
         input.addEventListener("change", function () {
+          //Remove o ícone
+          document.querySelector('.bi-upload').style.display = 'none'
           //Label
           let label = document.getElementById("descricao");
           //Aqui o código vai ler o arquivo
@@ -156,7 +152,7 @@
             //Nesse trecho está a definição da imagem que vai ocupar o fundo da label. Eu vi essa dica em um comentário.
             label.style.backgroundImage = `url('${eyes.result}')`;
             label.style.backgroundSize = "cover";
-            /*Criar uma imagem*/
+            label.style.backgroundPosition = 'center'
           };
           //Isso serve para pegar a url da imagem
           eyes.readAsDataURL(input.files[0]);
@@ -164,7 +160,15 @@
       }
 
       function Register() {
-        //Bota para ser redirecionado aqui também precisa fazer uma validação
+            /*
+            Tentei fazer uma condicional para impedir que o botão fosse chamado mesmo com o required, mas não funcionou.
+             document.querySelector("button").addEventListener("submit", (click) =>{
+              click.stopPropagation              
+            })
+            */
+            setTimeout( () =>{
+           location.href = 'cad-setor.html'
+          },3000)         
       }
     </script>
   </body>
