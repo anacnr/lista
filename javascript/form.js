@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const password = document.querySelector("#senha")
 
     document.querySelector('form').addEventListener("submit", (event)=>{
+
         event.preventDefault()
 
         if(email.value.length == 0 && password.value.length == 0){
@@ -26,16 +27,38 @@ document.addEventListener("DOMContentLoaded", function () {
             $.ajax({
                 url: './php/login.php', type: 'POST', data: form, processData: false, contentType: false
             }).done(function(request){
-                if (Array(request)){
-                    console.log(request[0])
-                    if(request[0] == "Invalida"){
-                        console.log(request[0])
+                //console.log(request)
+                request.forEach(element => {
+                    if(element.answer == "Incorreta"){
+                        console.log("Senha ", element)
                     }
-                    else if (request[0] == "Incorreta"){
-                        console.log(request[0])
+                    else if(element.answer == "Correta"){
+                        console.log("Senha ", element)
                     }
-                }
-            })
+                    else{
+                        console.log("Dados inválidos ", element)
+                    }                    
+                });
+                /*
+                request.forEach(element => {
+                    console.log(element)
+                    
+                    if(element.answer == "Incorreta"){
+                        console.log("Senha ", element)
+                    }
+                    else if(element.answer == "Correta"){
+                        console.log("Senha ", element)
+                    }
+                    else if(element.answer == "Erro"){
+                        console.log("Usuário não encontrado ", element)
+                    }
+                    else{
+                        console.log("Else de enfeite.", element)
+                    }
+                });*/
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                console.log(" ERRO ", jqXHR, textStatus, errorThrown);
+              });
         }
     });//Evento do formulário
 });//Carregamento
