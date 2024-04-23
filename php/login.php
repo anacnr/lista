@@ -14,8 +14,8 @@ else {
    
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-    $email = $_POST['end'];
-    $passw = $_POST['passw'];
+    $email = $_POST['email'];
+    $passw = $_POST['senha'];
 
     if(!empty($email) && !empty($passw)){
 
@@ -23,24 +23,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
         $query = mysqli_query($mysql, $select);
 
-        $request = [];
+        $flag = false;
 
         while ($row = mysqli_fetch_assoc($query)){
 
             if($email == $row['email']){
+                
+                $flag = true;
 
                 if(password_verify($passw, $row["senha_hash"])){
-                    $request[] = array("status" => "Válida");
+                    $request[] = array('answer' => 'Correta');
                 }
                 else{
-                    $request[] = array("status" => "Incorreta");
+                    $request[] = array('answer' => 'Incorreta');
                 }
             }
-        else{
-            $request[] = array("status" => "Erro");
         }
+
+        if($flag != true){
+            $request[] = array('answer' => 'Invalida');
         }
-        // Retorna a resposta como JSON
         header('Content-Type: application/json');
         echo json_encode($request);
     }
