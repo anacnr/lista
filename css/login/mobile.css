@@ -118,10 +118,18 @@ margin-left: 5%;
     background-color: white;
     border-radius: 12px;
 
+    /*Animação*/
     animation-name: alert;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1; 
+
+    /*Mensagem*/
+    color: rgb(10, 10, 10);
+    font-size: 1rem;
+    text-align: center;
+    transform: translateY(50px);
+    font-family: var(--lyric);
 }
 
 @keyframes alert {
@@ -137,11 +145,6 @@ margin-left: 5%;
     }
 }
 
-/*ID do parágrafo contido no aqudro de aviso*/
-#alert{
-    color: rgb(10, 10, 10);
-    font-size: 1rem;
-    text-align: center;
-    transform: translateY(50px);
-    font-family: var(--lyric);
+#back{
+margin-left: 5%;
 }

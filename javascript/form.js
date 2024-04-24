@@ -1,6 +1,5 @@
 
-/**
- * PARTE DO JAVASCRIPT CLIENTE SIDE
+/*
  *O Ajax permite que o JavaScript se comunique com o PHP para validar as condicionais de acesso.
  */
 
@@ -19,8 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("Inputs vazios")
         }
         else{
-            //console.log("Email: " , email.value , "Senha: " , password.value)
-
+            /*Requisição Ajax*/
             const form = new FormData()
             form.append('email', email.value)
             form.append('senha', password.value)
@@ -29,33 +27,36 @@ document.addEventListener("DOMContentLoaded", function () {
             }).done(function(request){
                 //console.log(request)
                 request.forEach(element => {
+                    //Email encontrado porém senha errada
                     if(element.answer == "Incorreta"){
                         console.log("Senha ", element)
+
+                        //Esconde a dib
+                        const form = document.querySelector('form')
+                        form.style.display = 'none'
+
+                        //Cria a div para emitir a mensagem
+                        const box = document.createElement("div")
+                        box.className = 'advice'
+
+                        document.querySelector('body').appendChild(box)
+
+                        //Botão para corrigir a senha
+                        const button = document.createElement("button")
+                        button.id = 'back'
+                        button.type = 'reset'
+                        button.textContent = 'Voltar'
+                        
                     }
+                    //Email encontrado senha correta
                     else if(element.answer == "Correta"){
                         console.log("Senha ", element)
                     }
+                    //Dados não encontrado
                     else{
                         console.log("Dados inválidos ", element)
                     }                    
                 });
-                /*
-                request.forEach(element => {
-                    console.log(element)
-                    
-                    if(element.answer == "Incorreta"){
-                        console.log("Senha ", element)
-                    }
-                    else if(element.answer == "Correta"){
-                        console.log("Senha ", element)
-                    }
-                    else if(element.answer == "Erro"){
-                        console.log("Usuário não encontrado ", element)
-                    }
-                    else{
-                        console.log("Else de enfeite.", element)
-                    }
-                });*/
             }).fail(function (jqXHR, textStatus, errorThrown) {
                 console.log(" ERRO ", jqXHR, textStatus, errorThrown);
               });
