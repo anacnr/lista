@@ -14,6 +14,9 @@ else {
 
             $select = "SELECT * FROM vendedor";
 
+            /*
+            $select = "SELECT * FROM vendedor UNION SELECT * FROM comprador UNION SELECT * FROM vendedor"; -> O ajax reclamou alegando que a request não é uma função que recebe o forEach*/
+
             $query = mysqli_query($mysql, $select);
 
             $flag = false;// Inicializa $flag como falso

@@ -286,6 +286,15 @@ footer {
   /*RODAPÉ RESPONSIVO*/
   
   @media only screen and (max-width: 730px) {
+
+    .text-center > .rounded-circle{
+      background-image: url('/imagens/supermarket-2011060_1280-min.png');
+      background-position: center;
+      background-size: contain;
+      background-attachment: local;
+      filter: contrast(2);
+    } 
+
     footer {
         flex-direction: column;
         text-align: center;

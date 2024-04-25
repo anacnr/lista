@@ -31,13 +31,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     if(element.answer == "Incorreta"){
                         console.log("Senha ", element)
 
-                        //Esconde a dib
-                        const form = document.querySelector('form')
-                        form.style.display = 'none'
+                        //Esconde o formulário
+                        const form_hide = document.querySelector('form')
+                        form_hide.style.display = 'none'
 
                         //Cria a div para emitir a mensagem
                         const box = document.createElement("div")
                         box.className = 'advice'
+                        box.textContent = 'Senha incorreta. Tente novamente!'
 
                         document.querySelector('body').appendChild(box)
 
@@ -47,14 +48,71 @@ document.addEventListener("DOMContentLoaded", function () {
                         button.type = 'reset'
                         button.textContent = 'Voltar'
                         
+                        document.querySelector('body').appendChild(button)
+
+                        //Ìcone de retorno do botão
+                        const i = document.createElement("i")
+                        i.className = 'bi bi-arrow-counterclockwise'
+
+                        button.appendChild(i)
+
+                        console.log(box.textContent)
+
+                        //Evento para chamar o form novamente
+                        button.addEventListener("click", ()=>{
+                            setInterval(()=>{
+                                form_hide.style.display = 'block'
+
+                                box.style.display = 'none'
+                            },2000)
+                        });//Evento do botão reset
                     }
                     //Email encontrado senha correta
                     else if(element.answer == "Correta"){
                         console.log("Senha ", element)
+                        setTimeout(()=>{
+                            location.href = '../index.html'
+                        },2000)
                     }
-                    //Dados não encontrado
+                    //Dados não encontrados
                     else{
                         console.log("Dados inválidos ", element)
+                        
+                        //Esconde a div
+                        const form_hide = document.querySelector('form')
+                        form_hide.style.display = 'none'
+
+                        //Cria a div para emitir a mensagem
+                        const box = document.createElement("div")
+                        box.className = 'advice'
+                        box.textContent = 'Dados inválidos. Faça o seu cadastro!'
+
+                        document.querySelector('body').appendChild(box)
+
+                        //Botão para corrigir a senha
+                        const button = document.createElement("button")
+                        button.id = 'back'
+                        button.type = 'reset'
+                        button.textContent = 'Voltar'
+                        
+                        document.querySelector('body').appendChild(button)
+
+                        //Ìcone de retorno do botão
+                        const i = document.createElement("i")
+                        i.className = 'bi bi-arrow-counterclockwise'
+
+                        button.appendChild(i)
+
+                        console.log(box.textContent)
+
+                        //Evento para chamar o form novamente
+                        button.addEventListener("click", ()=>{
+                            setInterval(()=>{
+                                form_hide.style.display = 'block'
+
+                                box.style.display = 'none'
+                            },2000)
+                        });//Evento do botão reset
                     }                    
                 });
             }).fail(function (jqXHR, textStatus, errorThrown) {
@@ -65,8 +123,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });//Carregamento
 
 function Register() {
-
 /*Essa função redireciona para a tela de escolha entre supermercado e comprador*/
-   window.location.href = 'choose.html'
-    
+setTimeout(()=>{
+    location.href = 'choose.html'
+}); 
 }

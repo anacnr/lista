@@ -145,6 +145,12 @@ margin-left: 5%;
     }
 }
 
+/*Botão reset*/
 #back{
 margin-left: 5%;
+}
+
+/*Ìcone de retorno*/
+#back > .bi-arrow-counterclockwise{
+font-size: 1em;
 }
