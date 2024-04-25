@@ -25,7 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
             $.ajax({
                 url: './php/login.php', type: 'POST', data: form, processData: false, contentType: false
             }).done(function(request){
-                //console.log(request)
+                console.log(request)
+                /*
                 request.forEach(element => {
                     //Email encontrado porém senha errada
                     if(element.answer == "Incorreta"){
@@ -114,11 +115,11 @@ document.addEventListener("DOMContentLoaded", function () {
                             },2000)
                         });//Evento do botão reset
                     }                    
-                });
+                });*/
             }).fail(function (jqXHR, textStatus, errorThrown) {
                 console.log(" ERRO ", jqXHR, textStatus, errorThrown);
               });
-        }
+        }//Else
     });//Evento do formulário
 });//Carregamento
 

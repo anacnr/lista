@@ -1,0 +1,3 @@
+Validação do login 
+
+Estava realizando a consulta para validar a senha e o email, na parte de fazer a consulta havia colocado apenas as colunas email e senha e isso estava gerando uma resposta que não era desejável. Qunado usei o seletor * funcionou e agora eu coloquei os três campos email, senha e senha_hash para a pesquisa.
