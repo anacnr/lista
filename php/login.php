@@ -12,62 +12,74 @@ else {
 
         if(!empty($email) && !empty($passw)){
 
-            $select = "SELECT * FROM comprador INNER JOIN vendedor ON comprador.email = vendedor.email INNER JOIN suporte ON vendedor.email = suporte.email";
+            $select_client = "SELECT email, senha, senha_hash FROM comprador";
+            $query_client = mysqli_query($mysql, $select_client);
 
-            /*
-            $select = "SELECT * FROM vendedor UNION SELECT * FROM comprador UNION SELECT * FROM vendedor"; -> O ajax reclamou alegando que a request não é uma função que recebe o forEach. -> Não vou poder usar pois as tabelas tem o número de colunas diferentes.*/
-            
-/*            while($row = mysqli_fetch_assoc($query)){
+            $select_super = "SELECT email, senha, senha_hash FROM vendedor";
+            $query_super = mysqli_query($mysql, $select_super);
 
-                if($email == $row['email']){
-                    if(password_verify($passw, $row['senha_hash'])){
-                        $flag = true;
-                        $request[] = array("answer" => "Correta"); 
-                    }
-                    else{
-                        $flag = false;
-                        $request[] = array("answer" => "Incorreta"); 
-                    }
-                }
-                else{
-                    $request[] = array("answer" => "Erro");
-                }
-            }*/
+            $select_suport = "SELECT email, senha, senha_hash FROM suporte";
+            $query_suport = mysqli_query($mysql, $select_suport);
 
             $flag = false;//Variável de controle
 
-            $request = [];//Variável que vai receber os dados
+            $request = array();//Variável que vai receber os dados
 
-            $query = mysqli_query($mysql, $select);
-
-            if ($query) {
-                $flag = true;
-                $authenticated = false;
-            
-                while ($row = mysqli_fetch_assoc($query)) {
-                    if ($email == $row['email'] && password_verify($passw, $row['senha_hash'])) {
-                        $authenticated = true;
-                        break; // Não há necessidade de continuar verificando se a senha já foi encontrada
+            while($row1 = mysqli_fetch_assoc($query_client)){
+                if($email == $row1['email']){
+                    $flag = true;
+                    if(password_verify($passw, $row1['senha_hash'])){
+                        $request[] = array('senha' => 'Comprador-autorizado' , 'tabela' =>  'comprador');
+                    }
+                    else{
+                        $request[] = array('senha' => 'Comprador-desautorizado' , 'tabela' =>  'comprador');
                     }
                 }
-            
-                if ($authenticated == true) {
-                    $request[] = array('senha' => 'correta');
-                } else {
-                    $request[] = array('senha' => 'incorreta');
+                else{
+                    $request[] = array('invalido' => 'Comprador-desconhecido', 'tabela' =>  'comprador');
                 }
-            } else {
-                $request[] = array('erro' => 'Erro');
             }
-            
+
+            while($row2 = mysqli_fetch_assoc($query_super)){
+                if($email == $row2['email']){
+                    $flag = true;
+                    if(password_verify($passw, $row2['senha_hash'])){
+                        $request[] = array('senha' => 'Vendedor-autorizado' , 'tabela' =>  'vendedor');
+                    }
+                    else{
+                        $request[] = array('senha' => 'Vendedor-desautorizado' , 'tabela' =>  'vendedor');
+                    }
+                }
+                else{
+                    $request[] = array('invalido' => 'Vendedor-desconhecido' , 'tabela' =>  'vendedor');
+                }
+            }
+
+            while($row3 = mysqli_fetch_assoc($query_suport)){
+                if($email == $row3['email']){
+                    $flag = true;
+                    if(password_verify($passw, $row3['senha_hash'])){
+                        $request[] = array('senha' => 'Suporte-autorizado' , 'tabela' =>  'suporte');
+                    }
+                    else{
+                        $request[] = array('senha' => 'Suporte-desautorizado' , 'tabela' =>  'suporte');
+                    }
+                }
+                else{
+                    $request[] = array('invalido' => 'Suporte-desconhecido' , 'tabela' =>  'suporte');
+                }
+            }
+           
+            $query_client->free();
+            $query_super->free();
+            $query_suport->free();
+
             header('Content-Type: application/json');
             echo json_encode($request);
-            
-        }
-        else{
-            die("Campos vazios!");
         }
     }
-}
+
+ }
 mysqli_close($mysql);
+
 ?>

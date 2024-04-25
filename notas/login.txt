@@ -1,3 +1,76 @@
 Validação do login 
 
 Estava realizando a consulta para validar a senha e o email, na parte de fazer a consulta havia colocado apenas as colunas email e senha e isso estava gerando uma resposta que não era desejável. Qunado usei o seletor * funcionou e agora eu coloquei os três campos email, senha e senha_hash para a pesquisa.
+
+
+
+
+
+
+Rascunho:
+
+            $select_client = "SELECT email, senha, senha_hash FROM comprador";
+            $query_client = mysqli_query($mysql, $select_client);
+
+            $select_super = "SELECT email, senha, senha_hash FROM vendedor";
+            $query_super = mysqli_query($mysql, $select_super);
+
+            $select_suport = "SELECT email, senha, senha_hash FROM suporte";
+            $query_suport = mysqli_query($mysql, $select_suport);
+
+            $flag = false;//Variável de controle
+
+            $request = array();//Variável que vai receber os dados
+
+            while($row1 = mysqli_fetch_assoc($query_client)){
+                if($email == $row1['email']){
+                    $flag = true;
+                    if(password_verify($passw, $row1['senha_hash'])){
+                        $request[] = array('senha' => 'Comprador-autorizado');
+                    }
+                    else{
+                        $request[] = array('senha' => 'Comprador-desautorizado');
+                    }
+                }
+                else{
+                    $request[] = array('invalido' => 'Comprador-desconhecido');
+                }
+            }
+
+            while($row2 = mysqli_fetch_assoc($query_super)){
+                if($email == $row2['email']){
+                    $flag = true;
+                    if(password_verify($passw, $row2['senha_hash'])){
+                        $request[] = array('senha' => 'Vendedor-autorizado');
+                    }
+                    else{
+                        $request[] = array('senha' => 'Vendedor-desautorizado');
+                    }
+                }
+                else{
+                    $request[] = array('invalido' => 'Vendedor-desconhecido');
+                }
+            }
+
+            while($row3 = mysqli_fetch_assoc($query_suport)){
+                if($email == $row3['email']){
+                    $flag = true;
+                    if(password_verify($passw, $row3['senha_hash'])){
+                        $request[] = array('senha' => 'Suporte-autorizado');
+                    }
+                    else{
+                        $request[] = array('senha' => 'Suporte-desautorizado');
+                    }
+                }
+                else{
+                    $request[] = array('invalido' => 'Suporte-desconhecido');
+                }
+            }
+           
+            $query_client->free();
+            $query_super->free();
+            $query_suport->free();
+
+            header('Content-Type: application/json');
+            echo json_encode($request);
+        }
