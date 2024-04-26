@@ -1,0 +1,5 @@
+Cadastro dos setores
+
+Qunado o navegador está aberto na pasta php e no arquivo php, quando dou um reload na pasta ele cadastra novamente.
+
+O ajax não funciou lá no curso com o cadastro dos setores. O erro na verdade estava no form pois estava com o preventDeufault, só que com o login foi tranquilo e não deu problema com validação. Tirei o preventDefault

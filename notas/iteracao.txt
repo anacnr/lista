@@ -1,3 +1,0 @@
-Esse endereço explica sobre o uso do forEach que foi usado para iterar cada da tabela setor e manipluar para passar para a tela.
-
-url: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach

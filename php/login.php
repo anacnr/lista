@@ -32,11 +32,11 @@ else {
                         $request[] = array('senha' => 'Comprador-autorizado' , 'tabela' =>  'comprador');
                     }
                     else{
-                        $request[] = array('senha' => 'Comprador-desautorizado' , 'tabela' =>  'comprador');
+                        $request[] = array('senha' => 'desautorizado' , 'tabela' =>  'comprador');
                     }
                 }
                 else{
-                    $request[] = array('invalido' => 'Comprador-desconhecido', 'tabela' =>  'comprador');
+                    $request[] = array('login' => 'desconhecido', 'tabela' =>  'comprador');
                 }
             }
 
@@ -47,11 +47,11 @@ else {
                         $request[] = array('senha' => 'Vendedor-autorizado' , 'tabela' =>  'vendedor');
                     }
                     else{
-                        $request[] = array('senha' => 'Vendedor-desautorizado' , 'tabela' =>  'vendedor');
+                        $request[] = array('senha' => 'desautorizado' , 'tabela' =>  'vendedor');
                     }
                 }
                 else{
-                    $request[] = array('invalido' => 'Vendedor-desconhecido' , 'tabela' =>  'vendedor');
+                    $request[] = array('login' => 'desconhecido' , 'tabela' =>  'vendedor');
                 }
             }
 
@@ -62,11 +62,11 @@ else {
                         $request[] = array('senha' => 'Suporte-autorizado' , 'tabela' =>  'suporte');
                     }
                     else{
-                        $request[] = array('senha' => 'Suporte-desautorizado' , 'tabela' =>  'suporte');
+                        $request[] = array('senha' => 'desautorizado' , 'tabela' =>  'suporte');
                     }
                 }
                 else{
-                    $request[] = array('invalido' => 'Suporte-desconhecido' , 'tabela' =>  'suporte');
+                    $request[] = array('login' => 'desconhecido' , 'tabela' =>  'suporte');
                 }
             }
            
