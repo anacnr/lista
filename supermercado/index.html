@@ -7,7 +7,7 @@
     <!--Links do Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Supermercado</title>
 </head>
 
@@ -19,10 +19,10 @@
             </div>
             <div class="nav-list">
                 <ul>
-                <li class="nav-item"><a href="#" class="nav-link">Notificações</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Setores</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Conta</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Ajuda</a></li>
+                <li class="nav-item"><a href="listas.html" class="nav-link">Notificações</a></li>
+                <li class="nav-item"><a href="supermercado\cad-setor.html" class="nav-link">Setores</a></li>
+                <li class="nav-item"><a href="conta.html" class="nav-link">Conta</a></li>
+                <li class="nav-item"><a href="ajuda.html" class="nav-link">Ajuda</a></li>
                 </ul>
             </div>
             <div class="login-button">
@@ -30,15 +30,16 @@
             </div>
 
             <div class="mobile-menu-icon">
-                <button onclick="menuShow()"><img class="icon" src="/assets/img/menu_white_36dp.svg" alt=""></button>
+                <button onclick="menuShow()"><img class="icon" src="assets/botoes/menu_white_36dp.svg" alt=""></button>
             </div>
         </nav>
         <div class="mobile-menu">
             <ul>
-                <li class="nav-item"><a href="#" class="nav-link">Notificações</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Setores</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Conta</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Ajuda</a></li>
+                <li class="nav-item"><a href="listas.html" class="nav-link">Notificações</a></li>
+                <li class="nav-item"><a href="cad-setor.html" class="nav-link">Setores</a></li>
+                <li class="nav-item"><a href="conta.html" class="nav-link">Conta</a></li>
+                <li class="nav-item"><a href="ajuda.html" class="nav-link">Ajuda</a></li>
+                <li class="nav-item"><a href="promo.html" class="nav-link">Promoção</a></li>
             </ul>
 
             <div class="login-button">
@@ -57,13 +58,13 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="/imagens/carrossel/img2.jpeg" class="d-block w-100" alt="...">
+        <img src="assets/imgcarousel/img2.jpeg" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="/imagens/carrossel/img2.jpeg" class="d-block w-100" alt="...">
+        <img src="assets/imgcarousel/img3.jpeg" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="/imagens/carrossel/img3.jpeg" class="d-block w-100" alt="...">
+        <img src="assets/imgcarousel/img2.jpeg" class="d-block w-100" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -80,10 +81,10 @@
 
 <div class="nav-scroller py-1 mb-3 border-bottom">
     <nav class="nav nav-underline justify-content-between">
-      <a class="nav-item nav-link link-body-emphasis active" href="#">Conta</a>
-      <a class="nav-item nav-link link-body-emphasis active" href="#">Ajuda</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Setores</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Promoções</a>
+      <a class="nav-item nav-link link-body-emphasis active" href="conta.html">Conta</a>
+      <a class="nav-item nav-link link-body-emphasis active" href="ajuda.html">Ajuda</a>
+      <a class="nav-item nav-link link-body-emphasis" href="setores.html">Setores</a>
+      <a class="nav-item nav-link link-body-emphasis" href="promo.html">Promoções</a>
     </nav>
 </div>
 
@@ -91,36 +92,36 @@
   
 <div class="card-container">
     <div class="card">
-      <img src="/assets/imgcard/apricots.jpg" alt="Avatar" style="width:100%">
+      <img src="assets/imgcard/produtos/bebida/leite-corte-min.jpg" alt="Avatar" style="width:80%">
       <div class="container">
-        <h2>John Doe</h2>
-        <h3>10,00</h3> 
-        <p><button>Contact</button></p>
+        <h2>Leite</h2>
+        <h3>4,99</h3> 
+        <p><button>Ver</button></p>
       </div>
     </div>
     
     <div class="card">
-      <img src="/assets/imgcard/pexels-pixabay-min.jpg" alt="Avatar" style="width:100%">
+      <img src="assets/imgcard/produtos/carne/meal-min.png" alt="Avatar" style="width:80%">
       <div class="container">
-        <h2>John Doe</h2>
-        <h3>10,00</h3> 
-        <p><button>Contact</button></p>
+        <h2>Carne de sol</h2>
+        <h3>30,80</h3> 
+        <p><button>Ver</button></p>
       </div>
     </div>
     
     <div class="card">
-      <img src="/imagens/produtos/frutas/berries-min.jpg" alt="Avatar" style="width:100%">
+      <img src="assets/imgcard/produtos/hortalicas/paprika-corte-min.jpg" alt="Avatar" style="width:80%; margin: top 20px;">
       <div class="container">
-        <h2>John Doe</h2>
-        <h3>10,00</h3> 
-        <p><button>Contact</button></p>
+        <h2>Pimentão</h2>
+        <h3>6,90</h3> 
+        <p><button>Ver</button></p>
       </div>
     </div>
     
     <div class="card">
-      <img src="/imagens/produtos/frutas/oranges-21min.jpg" alt="Avatar" style="width:100%">
+      <img src="assets/imgcard/produtos/carne/beef-min.png" alt="Avatar" style="width:75%">
       <div class="container">
-        <h2>John Doe</h2>
+        <h2>Carne</h2>
         <h3>10,00</h3> 
         <p><button>Contact</button></p>
       </div>
@@ -130,9 +131,9 @@
 
 <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
     <div class="col-lg-6 px-0">
-      <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
-      <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
-      <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">Continue reading...</a></p>
+      <h1 class="display-4 fst-italic">Smartlist é um projeto de TCC</h1>
+      <p class="lead my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe reprehenderit autem dolorem aut a sapiente sed ullam quas consequuntur pariatur perspiciatis, illo, esse dolorum vel dolore quae, odit labore id?</p>
+      <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">Conitunar lendo...</a></p>
     </div>
   </div>
 
@@ -142,12 +143,12 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary-emphasis">World</strong>
-          <h3 class="mb-0">Featured post</h3>
-          <div class="mb-1 text-body-secondary">Nov 12</div>
-          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <strong class="d-inline-block mb-2 text-primary-emphasis">Smartlist</strong>
+          <h3 class="mb-0">Trabalho</h3>
+          <div class="mb-1 text-body-secondary">12/11</div>
+          <p class="card-text mb-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi odio harum doloremque suscipit vero. Cupiditate natus velit doloremque nihil esse repellendus nesciunt, pariatur iure beatae molestiae delectus ad dolore labore!</p>
           <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
-            Continue reading
+            Continuar lendo
             <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
           </a>
         </div>
@@ -159,12 +160,12 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
-          <h3 class="mb-0">Post title</h3>
-          <div class="mb-1 text-body-secondary">Nov 11</div>
-          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <strong class="d-inline-block mb-2 text-success-emphasis">Smartlist</strong>
+          <h3 class="mb-0">Trabalho</h3>
+          <div class="mb-1 text-body-secondary">11/11</div>
+          <p class="mb-auto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae exercitationem facilis aperiam quisquam molestias provident maiores hic a esse repudiandae officiis facere nobis omnis, ad distinctio vero saepe labore at!</p>
           <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
-            Continue reading
+            Contunar lendo
             <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
           </a>
         </div>
@@ -200,7 +201,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   
 <!--script menu responsivo-->
-<script src="/assets/js/script.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
 
 </html>

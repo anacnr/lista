@@ -82,8 +82,6 @@ header {
     display: none;
 }
 
-
-
 @media screen and (max-width: 730px) {
     .nav-bar {
         padding: 1.5rem 4rem;
@@ -194,19 +192,12 @@ header {
   }
   
 /*PARAGRAFO NOME PROMOÇÃO*/
+
 .promocao {
     text-align: center;
     margin: 20px;
   }
   
-  .text-center > .rounded-circle{
-    background-image: url('cliente/assets/imgsuper/supermarket-min.png');
-    background-position: center;
-    background-size: contain;
-    background-attachment: local;
-    filter: contrast(2);
-  } 
-    
   @media only screen and (max-width: 730px) {
     .promocao {
       font-size: 1rem;
@@ -218,14 +209,6 @@ header {
 .img-fluid{
   width: 100px; height: 100px;
 }
-
-.text-center > .rounded-circle{
-  background-image: url('cliente/assets/imgsuper/supermarket-min.png');
-  background-position: center;
-  background-size: contain;
-  background-attachment: local;
-  filter: contrast(2);
-} 
 
 /*RODAPÉ*/
 
@@ -280,13 +263,12 @@ footer {
   footer > .conteudo-rodape > .redes-sociais > .bi-facebook, .bi-instagram, .bi-twitter-x{
     font-size: 20px;
     cursor: pointer;
-    top: -13%;
   }
 
   footer > .conteudo-rodape > .redes-sociais > .bi-facebook{
     position: relative;
-    right: 40%;
-    bottom: 50%;
+    right: 35%;
+    bottom: 50%
   }
 
   footer > .conteudo-rodape > .redes-sociais > .bi-instagram{
@@ -304,6 +286,7 @@ footer {
   /*RODAPÉ RESPONSIVO*/
   
   @media only screen and (max-width: 730px) {
+
     footer {
         flex-direction: column;
         text-align: center;
@@ -320,15 +303,15 @@ footer {
         margin-bottom: 10px;
     }
 
-    /*PARTE DOS ÍCONES DAS REDES SOCIAIS*/
+        /*PARTE DOS ÍCONES DAS REDES SOCIAIS*/
     footer > .conteudo-rodape > .redes-sociais > .bi-facebook, .bi-instagram, .bi-twitter-x{
       font-size: 16px;
       cursor: pointer;
     }
-
+B
     footer > .conteudo-rodape > .redes-sociais > .bi-facebook{
       position: relative;
-      left: 5%;
+      right: -2%;
       bottom: 30%;
     }
 
