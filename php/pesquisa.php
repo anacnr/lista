@@ -21,7 +21,7 @@ else{
             if(mysqli_num_rows($query_superm) > 0){
 
                 while($row1 = mysqli_fetch_assoc($query_superm)){
-                    $request[] = array("empresa" => $row1['empresa'] , "responsavel" => $row1['responsavel'] , "cnpj" => $row1['cnpj'] , "local" => $row1['localizacao'] , "tel_fixo" => $row1['telfixo'] , "celular" => $row1['celular'] , "email" => $row1['email'] , "senha" => $row1['senha'] , "imagem" => $row1['imagem'], "tabela" => "empresa");
+                    $request[] = array("empresa" => $row1['empresa'] , "responsavel" => $row1['responsavel'] , "cnpj" => $row1['cnpj'] , "local" => $row1['localizacao'] , "tel_fixo" => $row1['telfixo'] , "celular" => $row1['celular'] , "email" => $row1['email'] , "senha" => $row1['senha'] , "imagem" => $row1['imagem'], "linhas" => mysqli_num_rows($query_superm) ,"id" => $row1['id'] ,"tabela" => "empresa");
                 }
             }
             else{
