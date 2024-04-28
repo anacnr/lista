@@ -1,5 +1,4 @@
 <?php
-
 require('bank.php');
 
 if($mysql->connect_error != null){

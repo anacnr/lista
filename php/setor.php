@@ -20,7 +20,7 @@ if (mysqli_num_rows($query) > 0) {
     $nome = $row['nome']; //Coluna dos nomes
     $request = ["id" => $id, "nome" => $nome, "linha" => $lines]; //Esse array vai servir para fazer a manipulação para o front-end
 }
-header('Content-Type: application:json');
+header('Content-Type: application/json');
 echo json_encode($request);
 
 }       

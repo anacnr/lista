@@ -1,13 +1,6 @@
 <?php
 // Criar a conexão com o banco
-
-$local = '127.0.0.1';
-$user = 'root';
-$pass = "";
-$bank = 'supermercado';
-
-//Cria uma instância da classe mysqli
-$mysql = new mysqli("$local", "$user", "$pass", "$bank");
+require('bank.php');
 
 //Pega os dados do formulário
 $company = $_POST['empresa'];

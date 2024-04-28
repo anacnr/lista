@@ -1,12 +1,6 @@
 <?php
 //Criação do cadastro para suporte . Este script cria para que a senha do suporte receba o tratamento de hash e seja inserido no banco criptografado
-$local = '127.0.0.1';
-$user = 'root';
-$pass = "";
-$bank = 'supermercado';
-
-//Cria uma instância da classe mysqli
-$mysql = new mysqli("$local", "$user", "$pass", "$bank");
+require('bank.php');
 
 $email = $_POST["email"];
 $passw = $_POST["senha"];

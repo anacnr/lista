@@ -74,10 +74,10 @@ document.addEventListener("DOMContentLoaded" , function(){
             });
                 //Função para lidar com a mudança de opção
                 function change(event) {
-                    // Obtém o elemento <select>
+                    //Obtém o elemento <select>
                     let select = event.target;
 
-                    // Verifica se uma opção foi selecionada
+                    //Verifica se uma opção foi selecionada
                     let selectedOption = select.options[select.selectedIndex];
                     if (selectedOption) {
                         edit();
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded" , function(){
                                 box.appendChild(i)
 
                                 i.addEventListener("click" , ()=> {
-                                                                                    /*Novo form para enviar o valor e também o código*/
+                                /*Novo form para enviar o valor e também o código*/
                                 let input = document.querySelector('#new-price').value
 
                                 const form = new FormData()
