@@ -1,0 +1,92 @@
+@charset "UTF-08";
+
+*{
+    margin: 0%;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body,html{
+    width: 100%; height: 100%;
+    background-image: radial-gradient(circle, rgba(240, 250, 240, 0.521), rgba(252, 212, 239, 0.644));
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --font: "Poppins", sans-serif;
+}
+
+
+@media (max-width:600px) {
+    /*Div que está apadrinhando o form*/
+    #search{
+        width: 100%;
+        height: 25%;
+    }
+
+    #search > form{
+        width: 100%; height: 100%;
+    }
+
+    #search > form > #span-input{
+        width: 50%;
+        height: 20%;
+        display: block;
+        margin: auto;
+        transform: translateY(20vh);
+    }
+
+    #search > form > #span-input > input{
+       border-style: none;
+       width: 80%;
+       height: 20px;
+       border-radius: 6px;
+       box-shadow: 0px 1px 5px black;
+       margin-top: 3px;
+       padding: 1px;
+    }
+    /*Remove a borda de click do input*/
+    #search > form > #span-input > input:focus{
+       outline: 0px;
+    }
+    #search > form > #span-input > .bi-search{
+        margin-left: 20px;
+        opacity: 0.8;
+        color: white;
+        text-shadow: 0px 1px 2px black;
+        cursor: pointer;
+    }
+    /*Div que está com as duas frase*/
+    #message{
+        border-radius: 7px;
+        width: 100%;
+        height: 25%;
+        transform: translateY(15vh);   
+    }
+    /*Primeira frase*/
+    #message > #first-phrase{
+        text-align: center;
+        font-family: var(--font);
+        font-size: 2.5dvi;
+        color: rgb(4, 4, 97);
+        cursor: context-menu;
+        margin-top: 40px;
+    }
+    /*Segunda frase*/
+    #message > #second-phrase{
+        text-align: center;
+        font-family: var(--font);
+        font-size: 2.5dvi;
+        color: rgb(4, 4, 97);
+        text-shadow: 1px 1px 2px white;
+        background-image: linear-gradient(120deg, rgba(253, 237, 58, 0.808) 65%,rgba(77, 224, 185, 0.808));
+        width: 25%;
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 36%;
+        padding: 5px;
+        cursor: context-menu;
+    }
+}
