@@ -67,7 +67,7 @@ button_submit.addEventListener('click', ()=>{
                         const dates = document.createElement("p")
                         dates.className = 'phrase-prod'
                         dates.id = `${element.id}`
-                        dates.innerHTML = `Marca: ${element.marca}<br> Preço: ${element.valor} p/kg.`
+                        dates.innerHTML = `Marca: ${element.marca}<br> Preço: ${element.valor} por kg.`
     
                         card.appendChild(dates)
 
@@ -81,13 +81,18 @@ button_submit.addEventListener('click', ()=>{
                         const button = document.createElement("button")
                         button.type = 'button'
                         button.className = 'button-card'
-                        button.innerHTML = 'Abrir'
+                        button.innerHTML = 'Adicionar'
 
                         card.appendChild(button)
 
                         button.addEventListener("click" ,  ()=>{
                             setTimeout(()=>{
-                                location.href = '../cliente/lista.html'
+                                //location.href = '../cliente/lista.html'
+
+                                /*Cálculo rápido sobre o quilo*/
+
+                                let price = element.valor;
+                               console.log(price *10)
                             })
                         });
 

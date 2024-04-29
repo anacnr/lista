@@ -31,14 +31,16 @@ else{
             if(mysqli_num_rows($query_brand_prod) > 0){
 
                 while($row2 = mysqli_fetch_assoc($query_brand_prod)){
-                    $request[]= array('id' => $row2['id'] , 'nome' => $row2['nome'] , 'codigo' => $row2['codigo'] ,'peso' => $row2['peso'] ,'valor' => $row2['valor'],'marca' => $row2['marca'],'quantidade' => $row2['quantidade'],'img' => $row2['imagem'], "tabela" => "produto");
+                    $peso = $row2['peso'];
+                    $valor = $row2['valor'];
+
+                    $request[]= array('id' => $row2['id'] , 'nome' => $row2['nome'] , 'codigo' => $row2['codigo'] ,'peso' => floatval($peso) ,'valor' => floatval(str_replace(',','.',$valor)),'marca' => $row2['marca'],'quantidade' => $row2['quantidade'],'img' => $row2['imagem'], "tabela" => "produto");
                 }
             }
             else{
                 $request[] = array("vazio" => "vazio" , "tabela" => "produto");
             }
             
-
             header('Content-Type: application/json');
             echo json_encode($request);
         }
