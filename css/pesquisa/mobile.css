@@ -95,8 +95,6 @@ body,html{
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        margin-bottom: 10px;
-        margin-top: 10px;
         width: 60%;
         height: 20%;
         border-radius: 7px;
@@ -110,5 +108,65 @@ body,html{
     font-size: 2.5dvi;
     color: white;
     text-shadow: 1px 2px 3px black;
+    text-decoration-line: underline;
+    text-decoration-color: white;
+    text-decoration-style: solid;
+    text-transform: capitalize;   
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    background-color: rgba(240, 248, 255, 0.767);
     }
+
+    .results > .phrase-comp{
+        text-align: center;
+        font-family: var(--font);
+        font-size: 1em;
+        background-color: #121111a4;
+        color: white;
+        padding: 10px;
+    }
+
+    .results > .phrase-prod{
+        text-align: left;
+        font-family: var(--font);
+        font-size: 0.8em;
+        color: #121111e9;
+        padding: 10px;     
+    }
+
+    .results > .img-product{
+        width: 29%;
+        height: 50%;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.132);
+        position: relative;
+        left: 60%;
+        bottom: 65%;
+    }
+
+    .results > .button-card{
+        border-top: none;
+        border-right: none;
+        padding: 0px 5px 0px 6px;
+        font-family: arial;
+        font-size: 0.8em;
+        position: relative;
+        bottom: 44%;
+        left: 30%;
+        cursor: pointer;
+    }
+
+    .button-card:hover{
+        background-image: linear-gradient(to left, rgba(98, 229, 98, 0.79) 25%,rgba(255, 255, 0, 0.785) 50%,rgba(255, 0, 0, 0.712));
+    }
+
+
+    .results > .button-card > .bi-cart-plus{
+        margin-left: 8px;
+        border-radius: 3%;
+        font-size: 1.1em;     
+        cursor: pointer;  
+    }
+
 }
