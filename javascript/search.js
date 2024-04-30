@@ -67,7 +67,8 @@ button_submit.addEventListener('click', ()=>{
                         const dates = document.createElement("p")
                         dates.className = 'phrase-prod'
                         dates.id = `${element.id}`
-                        dates.innerHTML = `Marca: ${element.marca}<br> Preço: ${element.valor} por kg.`
+                        
+                        dates.innerHTML = 'Marca:' + `${element.marca}` + '<br> Preço:' +  parseFloat(`${element.valor}`).toFixed(2).replace('.' ,',') + ' por kg.'
     
                         card.appendChild(dates)
 
@@ -84,8 +85,7 @@ button_submit.addEventListener('click', ()=>{
                         button.innerHTML = 'Adicionar'
 
                         card.appendChild(button)
-
-                                                const i = document.createElement("i")
+                        const i = document.createElement("i")
                         i.className = 'bi bi-cart-plus'
 
                         button.appendChild(i)
@@ -96,13 +96,12 @@ button_submit.addEventListener('click', ()=>{
                                 /*Cálculo rápido sobre o quilo
                                 let price = element.valor;
                                console.log(price *10)
-                               */
-                               
+                               */                             
                                let price = `${element.valor}`;
-                               let calcu = (price * 1000)/1000
-                               console.log(calcu)
-    
-                               alert("Produto " , `${element.nome}`, " adicionado na lista " , "Preço: ", calcu)
+                               let calcu = (price * 500)/1000
+  
+                               confirm("Produto " + `${element.nome}`+ " adicionado na lista " + "Preço: " + parseFloat((`${calcu}}`)).toFixed(2).replace('.' , ','))
+
                             })
                         });
                     }
