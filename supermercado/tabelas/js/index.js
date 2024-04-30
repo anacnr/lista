@@ -326,6 +326,13 @@ for(let count = 0;count <= 4;count++){
 
   table_data_number.appendChild(input)
 
+  input.addEventListener("click", function(click){
+        click.preventDefault()
+    click.stopPropagation()
+    console.log(input)
+  })
+
+
   let table_data_img = document.createElement("td");
   table_row.appendChild(table_data_img);
 

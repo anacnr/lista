@@ -85,21 +85,26 @@ button_submit.addEventListener('click', ()=>{
 
                         card.appendChild(button)
 
+                                                const i = document.createElement("i")
+                        i.className = 'bi bi-cart-plus'
+
+                        button.appendChild(i)
+
                         button.addEventListener("click" ,  ()=>{
                             setTimeout(()=>{
                                 //location.href = '../cliente/lista.html'
-
-                                /*Cálculo rápido sobre o quilo*/
-
+                                /*Cálculo rápido sobre o quilo
                                 let price = element.valor;
                                console.log(price *10)
+                               */
+                               
+                               let price = `${element.valor}`;
+                               let calcu = (price * 1000)/1000
+                               console.log(calcu)
+    
+                               alert("Produto " , `${element.nome}`, " adicionado na lista " , "Preço: ", calcu)
                             })
                         });
-
-                        /*const i = document.createElement("i")
-                        i.className = 'bi bi-cart-plus'
-
-                        button.appendChild(i)*/
                     }
                 });
             })           
