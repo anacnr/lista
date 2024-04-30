@@ -20,7 +20,6 @@ button_submit.addEventListener('click', ()=>{
                 request.forEach(element => {
 
                     /*Criação dos cards de empresa e produtos*/
-
                     const body = document.querySelector('body')
 
                     if(element.tabela == 'empresa'){
@@ -90,6 +89,8 @@ button_submit.addEventListener('click', ()=>{
 
                         button.appendChild(i)
 
+                        let choose = element.nome//Produto escolhido
+
                         button.addEventListener("click" ,  ()=>{
                             setTimeout(()=>{
                                 //location.href = '../cliente/lista.html'
@@ -100,9 +101,13 @@ button_submit.addEventListener('click', ()=>{
                                let price = `${element.valor}`;
                                let calcu = (price * 500)/1000
   
-                               confirm("Produto " + `${element.nome}`+ " adicionado na lista " + "Preço: " + parseFloat((`${calcu}}`)).toFixed(2).replace('.' , ','))
+                               alert("Produto " + `${element.nome}`+ " adicionado na lista " + "Preço: " + parseFloat((`${calcu}}`)).toFixed(2).replace('.' , ','))
+                               
+                               //console.log("Primeiro produto: " + choose)
 
-                            })
+                               const listed = new CustomEvent('choose', {detail: choose});
+                               document.dispatchEvent(listed);
+                            },2500)
                         });
                     }
                 });
