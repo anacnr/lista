@@ -1,5 +1,4 @@
 /*Criar a lista com js*/
-document.addEventListener("DOMContentLoaded", ()=> {
 //Segundo arquivo
   // Fazer uma requisição Ajax para obter o conteúdo do arquivo
     const xhr = new XMLHttpRequest();
@@ -20,4 +19,3 @@ document.addEventListener("DOMContentLoaded", ()=> {
     };
     xhr.open('GET', '../javascript/search.js');
     xhr.send();
-});

@@ -1,9 +1,9 @@
 console.log("Script JS")
 
 const input = document.querySelector('input')
-const button_submit = document.querySelector('i')
+const button_submit = document.querySelector('.bi bi-search')
 
-button_submit.addEventListener('click', ()=>{
+button_submit.addEventListener('click', function aa(){
     if(input.value.length < 1){
             console.log("Input vazio!");
     }
