@@ -93,21 +93,15 @@ button_submit.addEventListener('click', ()=>{
 
                         button.addEventListener("click" ,  ()=>{
                             setTimeout(()=>{
-                                //location.href = '../cliente/lista.html'
-                                /*Cálculo rápido sobre o quilo
-                                let price = element.valor;
-                               console.log(price *10)
-                               */                             
+                           /*
                                let price = `${element.valor}`;
                                let calcu = (price * 500)/1000
   
-                               alert("Produto " + `${element.nome}`+ " adicionado na lista " + "Preço: " + parseFloat((`${calcu}}`)).toFixed(2).replace('.' , ','))
-                               
-                               //console.log("Primeiro produto: " + choose)
+                               alert("Produto " + `${element.nome}`+ " adicionado na lista " + "Preço: " + parseFloat((`${calcu}}`)).toFixed(2).replace('.' , ','))*/
 
                                const listed = new CustomEvent('choose', {detail: choose});
                                document.dispatchEvent(listed);
-                            },2500)
+                            },0)
                         });
                     }
                 });
