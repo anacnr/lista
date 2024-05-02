@@ -12,118 +12,126 @@ body {
 } 
 
 * {
-    padding: 0;
-    margin: 0;
-    font-family: 'Inter', sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 header {
-    background-color: #24252a;
-    box-shadow: 0px 3px 10px #464646;
+  background-color: #24252a;
+  box-shadow: 0px 3px 10px #464646;
 }
 
 .nav-bar {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.60rem 5rem; /* Remova o padding horizontal e adicione 0 na largura para preencher toda a largura */ /*0.60 altura e 0 meche no nome logo e no botão*/
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 40px; /*o 7px deixa a nav maior e 40px afasta a logo da ponta*/
 }
-
 
 .logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo h1 {
-    color: #fff;
+  display: flex;
+  align-items: center; 
+  color: #fff;
 }
 
 .nav-list {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center; /*deixa centralizado*/
 }
 
 .nav-list ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
+  display: flex;
+  justify-content: center;
+  list-style: none; /*tirar a bolinha*/
 }
 
 .nav-item {
-    margin: 0 15px;
+  margin: 0 15px; /*deixa afastado um do outro*/
 }
 
 .nav-link {
-    text-decoration: none;
-    font-size: 1.15rem;
-    color: #fff;
-    font-weight: 400;
+  text-decoration: none; /*tira a linha que mostra do link*/
+  font-size: 1.15rem;
+  color: #fff;
+  font-weight: 400;
+}
+
+/*BOTÃO DO MENU*/
+
+.login-buttons {
+  display: flex;
+}
+
+.login-button {
+  margin-left: 15px; /* Ajustei a margem para separar os botões */
 }
 
 .login-button button {
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    background-color: #0187a7;
+  border: none;  /*zerar o estilo*/
+  padding: 10px 15px; /*10px altura e 15px largura*/
+  border-radius: 5px; /*deixar aredondado*/
+  background-color: #0187a7;
 }
 
 .login-button button a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    font-size: 1.1rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.1rem;
 }
 
 .mobile-menu-icon {
-    display: none;
+  display: none;
 }
 
 .mobile-menu {
-    display: none;
+  display: none;
 }
 
-
+/*JAVASCRIPT DO MENU*/
 
 @media screen and (max-width: 730px) {
-    .nav-bar {
-        padding: 1.5rem 4rem;
-    }
-    .nav-item {
-        display: none;
-    }
-    .login-button {
-        display: none;
-    }
-    .mobile-menu-icon {
-        display: block;
-    }
-    .mobile-menu-icon button {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-    }
-    .mobile-menu ul {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding-bottom: 1rem;
-    }
-    .mobile-menu .nav-item {
-        display: block;
-        padding-top: 1.2rem;
-    }
-    .mobile-menu .login-button {
-        display: block;
-        padding: 1rem 2rem;
-    }
-    .mobile-menu .login-button button {
-        width: 100%;
-    }
-    .open {
-        display: block;
-    }
+  .nav-bar {
+      padding: 1.5rem 4rem;
+  }
+  .nav-item {
+      display: none;
+  }
+  .login-button {
+      display: none;
+  }
+  .mobile-menu-icon {
+      display: block;
+  }
+  .mobile-menu-icon button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+  }
+  .mobile-menu ul {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding-bottom: 1rem;
+  }
+  .mobile-menu .nav-item {
+      display: block;
+      padding-top: 1.2rem;
+  }
+  .mobile-menu .login-button {
+      display: block;
+      padding: 1rem 4rem;
+  }
+  .mobile-menu .login-button button {
+      width: 100%;
+      margin-top: 10px;
+  }
+  .open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
-
 
 /*CAROUSEL*/
 
@@ -135,6 +143,54 @@ header {
     width: 100%; /* Defina a largura das imagens do carousel como 100% para ocupar toda a largura */
 }
 
+/*BOTÃO DE LINK DOS PRODUTOS*/
+
+.lista {
+  background-color: #333;
+  width: 100%; /* Ajuste para ocupar a largura total da tela */
+  text-align: center; /* Centralizar os itens na horizontal */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.item {
+  display: inline-block; /* Exibir os itens em linha, fazendo ficar um do lado do outro */
+  padding: 14px 50px; /*altura 14px e largura 16px*/ 
+  text-decoration: none;
+  color: #f2f2f2;
+  text-align: center;
+}
+
+.link {
+  text-decoration: none; /*tira a linha que mostra do link*/
+  font-size: 1.15rem;
+  color: #fff;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 730px) {
+  .lista {
+      background-color: #333;
+      width: 100%; /* Ajuste para ocupar a largura total da tela */
+      text-align: center; /* Centralizar os itens na horizontal */
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .item {
+      display: inline-block; /* Exibir os itens em linha, fazendo ficar um do lado do outro */
+      padding: 14px 50px; /*altura 14px e largura 16px*/ 
+      
+      text-decoration: none;
+      color: #f2f2f2;
+      text-align: center;
+    }
+    
+    .link {
+      text-decoration: none; /*tira a linha que mostra do link*/
+      font-size: 1.15rem;
+      color: #fff;
+      font-weight: 400;
+    }
+}   
 
 /*CARD*/
 
@@ -206,6 +262,7 @@ header {
     background-attachment: local;
     filter: contrast(2);
   } 
+
     
   @media only screen and (max-width: 730px) {
     .promocao {
