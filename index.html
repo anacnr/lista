@@ -8,44 +8,52 @@
     <!--Links do Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Menu Responsivo</title>
-</head>
+</head> 
 
 <body>
-    <header>
-        <nav class="nav-bar">
-            <div class="logo">
-                <h1>Logo</h1>
-            </div>
-            <div class="nav-list">
-                <ul>
-                    <li class="nav-item"><a href="#" class="nav-link">Pesquisa</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link"> Sobre</a></li>
-                </ul>
-            </div>
-            <div class="login-button">
-                <button><a href="login.html">Entrar</a></button>
-            </div>
-
-            <div class="mobile-menu-icon">
-                <button onclick="menuShow()"><img class="icon" src="assets/img/menu_white_36dp.svg" alt=""></button>
-            </div>
-        </nav>
-        <div class="mobile-menu">
+  <header>
+    <nav class="nav-bar">
+        <div class="logo">
+            <h1>Logo</h1>
+        </div>
+        <div class="nav-list">
             <ul>
                 <li class="nav-item"><a href="#" class="nav-link">Pesquisa</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
             </ul>
-
+        </div>
+        <div class="login-buttons">
             <div class="login-button">
-                <button><a href="login.html">Entrar</a></button>
+                <button><a href="#">Entrar</a></button>
+            </div>
+            <div class="login-button">
+                <button><a href="#">Login</a></button>
             </div>
         </div>
-</header>
+        <div class="mobile-menu-icon">
+            <button onclick="menuShow()"><img class="icon" src="assets/img/menu_white_36dp.svg" alt=""></button>
+        </div>
+    </nav>
+    <div class="mobile-menu">
+        <ul>
+            <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+        </ul>
 
+        <div class="login-buttons">
+            <div class="login-button">
+                <button><a href="#">Entrar</a></button>
+            </div>
+            <div class="login-button">
+                <button><a href="#">Login</a></button>
+            </div>
+        </div>
+    </div>
+</header>
 <!--Carousel-->
 
 <div id="carouselExampleIndicators" class="carousel slide">
@@ -77,15 +85,15 @@
 
 <!--BOTÃO COM LINK-->
 
-<div class="nav-scroller py-1 mb-3 border-bottom">
-    <nav class="nav nav-underline justify-content-between">
-      <a class="nav-item nav-link link-body-emphasis active" href="#">Hortifruti</a>
-      <a class="nav-item nav-link link-body-emphasis active" href="#">Massas</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Congelados e Frios</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Produtos de Limpeza</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Higiene Pessoal</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Bebidas</a>
-    </nav>
+<div class="lista">
+  <ul>
+      <li class="item"><a href="#" class="link">Hortifruti</a></li>
+      <li class="item"><a href="#" class="link">Massas</a></li>
+      <li class="item"><a href="#" class="link">Congelados e Frios</a></li>
+      <li class="item"><a href="#" class="link">Produtos de Limpeza</a></li>
+      <li class="item"><a href="#" class="link">Higiene Pessoal</a></li>
+      <li class="item"><a href="#" class="link">Bebidas</a></li>
+  </ul>
 </div>
 
 <!--CARD-->
@@ -170,35 +178,33 @@
     <h1><p>Promoções Especiais</p></h1>
 </div>    
 
-<!--IMAGENS DE PROMOÇÃO-->
-
 <div class="row justify-content-center">
-    <div class="col-lg-4">
-        <div class="text-center"> 
-      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
-      </div>
-      <h2 class="fw-normal text-center">Supermercado</h2>
-      <p class="text-center">Mercado com campanha promocional.</p>
-      <p class="text-center"><a class="btn btn-secondary" href="#">Ver detalhes »</a></p>
-    </div><!-- /.col-lg-4 -->
-
-    <div class="col-lg-4">
+  <div class="col-lg-4">
       <div class="text-center"> 
-    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"> <title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
-    </div>
-    <h2 class="fw-normal text-center">Mercadinho</h2>
-    <p class="text-center">Mercado com campanha promocional.</p>
-    <p class="text-center"><a class="btn btn-secondary" href="#">Ver detalhes »</a></p>
+          <img src="sla.png" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="Imagem 1">
+      </div>
+      <h2 class="fw-normal text-center">Heading</h2>
+      <p class="text-center">Mercado com campanha promocional.</p>
+      <p class="text-center"><a class="btn btn-secondary" href="#">...</a></p>
   </div><!-- /.col-lg-4 -->
 
   <div class="col-lg-4">
-    <div class="text-center"> 
-  <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
-  </div>
-  <h2 class="fw-normal text-center">Mercadinho</h2>
-  <p class="text-center">Mercado com campanha promocional.</p>
-  <p class="text-center"><a class="btn btn-secondary" href="#">Ver detalhes »</a></p>
-</div><!-- /.col-lg-4 -->
+      <div class="text-center"> 
+          <img src="../oficial/assets/sla.png" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="Imagem 2">
+      </div>
+      <h2 class="fw-normal text-center">Heading</h2>
+      <p class="text-center">Mercado com campanha promocional</p>
+      <p class="text-center"><a class="btn btn-secondary" href="#">...</a></p>
+  </div><!-- /.col-lg-4 -->
+
+  <div class="col-lg-4">
+      <div class="text-center"> 
+          <img src="../oficial/assets/sla.png" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="Imagem 3">
+      </div>
+      <h2 class="fw-normal text-center">Heading</h2>
+      <p class="text-center">Mercado com campanha promocional</p>
+      <p class="text-center"><a class="btn btn-secondary" href="#">...</a></p>
+  </div><!-- /.col-lg-4 -->
 </div>
 
 <!--IMAGEM GRANDE-->
