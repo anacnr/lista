@@ -104,3 +104,8 @@ A renomeação do setor não estava funcionando então coloquei o nome entre par
                 });
             })           
     }
+                          /*
+                               let price = `${element.valor}`;
+                               let calcu = (price * 500)/1000
+  
+                               alert("Produto " + `${element.nome}`+ " adicionado na lista " + "Preço: " + parseFloat((`${calcu}}`)).toFixed(2).replace('.' , ','))*/

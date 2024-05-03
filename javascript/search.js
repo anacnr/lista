@@ -89,20 +89,71 @@ button_submit.addEventListener('click', ()=>{
 
                         button.appendChild(i)
 
-                        let choose = element.nome//Produto escolhido
+                        // Adiciona o ouvinte de evento para o button
+                        let name_prod = element.nome// Produto escolhido
+                        let peso_prod = element.peso
+                        let value_prod = element.valor
+                        let brand_prod = element.marca
+                        //let quant_prod = 
+                        //let image = element.img 
+                        
 
-                        button.addEventListener("click" ,  ()=>{
-                            setTimeout(()=>{
-                           /*
-                               let price = `${element.valor}`;
-                               let calcu = (price * 500)/1000
-  
-                               alert("Produto " + `${element.nome}`+ " adicionado na lista " + "Preço: " + parseFloat((`${calcu}}`)).toFixed(2).replace('.' , ','))*/
+                        const form = document.createElement("form")
+                        form.action = 'json.php'
+                        form.method = 'POST'
+                        form.style.opacity = '0'
 
-                               const listed = new CustomEvent('choose', {detail: choose});
-                               document.dispatchEvent(listed);
-                            },0)
+                        document.querySelector('body').appendChild(form)
+
+                        for(let count=0;count<=3; count++){
+                            const input = document.createElement("input")
+                            input.id = count
+                            input.type = 'text'
+                            if(input.id == 0){
+                                input.name = 'nome'
+                                input.value = name_prod
+                            }
+                            else if(input.id == 1){
+                                input.name = 'peso'
+                                input.value = peso_prod
+                            }
+                            else if(input.id == 2){
+                                input.name = 'valor'
+                                input.value = value_prod
+                            }
+                            else{
+                                input.name = 'marca'
+                                input.value = brand_prod
+                            }
+                            form.appendChild(input)
+                        }
+
+                        form.appendChild(button)
+                        
+                        button.addEventListener("click", () => {
+                            setTimeout(() => {
+                                    
+                                    let price = `${element.valor}`;
+                                    let calcu = (price * 1000) / 1000;
+                                    alert("Produto " + name_prod + " adicionado na lista " + "Preço: " + parseFloat(`${calcu}`).toFixed(2).replace('.', ','));
+
+
+                                    const dates = new FormData()
+                                    dates.append('nome' , name_prod)
+                                    dates.append('peso' , peso_prod)
+                                    dates.append('valor' , value_prod)
+                                    dates.append('marca' , brand_prod)
+
+                                    $.ajax({
+                                        url:'../php/lista.php', type: 'POST', data: dates, processData: false, contentType:false
+                                    }).done(function(request){
+                                        console.log(request)
+                                    })
+                            }, 0);
                         });
+                
+                        // Anexa o button ao card
+                        card.appendChild(button);
                     }
                 });
             })           
