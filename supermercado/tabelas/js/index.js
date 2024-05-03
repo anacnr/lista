@@ -229,7 +229,7 @@ const edit = function toEdit() {
           //Remove o event listener para evitar que a ação seja executada novamente
           td.removeEventListener("click", toClick);
         
-          // Remove a imagem da célula clicada
+          //Remove a imagem da célula clicada
           let img_change = td.querySelector('.img-uploaded');
           if (img_change) {
             td.removeChild(img_change);
@@ -327,11 +327,8 @@ for(let count = 0;count <= 4;count++){
   table_data_number.appendChild(input)
 
   input.addEventListener("click", function(click){
-        click.preventDefault()
     click.stopPropagation()
-    console.log(input)
   })
-
 
   let table_data_img = document.createElement("td");
   table_row.appendChild(table_data_img);

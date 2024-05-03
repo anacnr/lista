@@ -43,8 +43,8 @@ button_submit.addEventListener('click', ()=>{
     
                         card.appendChild(dates)
                     }
-                    else if(element.tabela == 'produto'){
-                        console.log("cc")
+                    else if(element.tabela == 'produto' && element.setor == 'frutas'){
+                        console.log("setor: " + element.setor)
 
                         const card = document.createElement("div")
                         card.className = 'results'
@@ -146,8 +146,7 @@ button_submit.addEventListener('click', ()=>{
                                         console.log(request)
                                     })
                             }, 0);
-                        });
-                
+                        });          
                         // Anexa o button ao card
                         card.appendChild(button);
                     }

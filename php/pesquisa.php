@@ -34,7 +34,7 @@ else{
                     $peso = $row2['peso'];
                     $valor = $row2['valor'];
 
-                    $request[]= array('id' => $row2['id'] , 'nome' => $row2['nome'] , 'codigo' => $row2['codigo'] ,'peso' => floatval($peso) ,'valor' => floatval(str_replace(',','.',$valor)),'marca' => $row2['marca'],'quantidade' => $row2['quantidade'],'img' => $row2['imagem'], "tabela" => "produto",  "setor" => $row['setor']);
+                    $request[]= array('id' => $row2['id'] , 'nome' => $row2['nome'] , 'codigo' => $row2['codigo'] ,'peso' => floatval($peso) ,'valor' => floatval(str_replace(',','.',$valor)),'marca' => $row2['marca'],'quantidade' => $row2['quantidade'],'img' => $row2['imagem'], "tabela" => "produto" ,  "setor" => $row2['setor']);
                 }
             }
             else{

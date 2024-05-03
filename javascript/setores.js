@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
         icon_save.src = "buttons/floppy-fill.svg";
 
         /*Link para o setor*/
-
         let link = document.createElement('a')
         link.href = '../supermercado/tabelas/setor1.html'
         link.className = 'link'
@@ -54,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           if (index_nome == index_edit) {
             if (!controll_button) {
+              console.log("Muda aqui");
               controll_button = true;
               span.style.cursor = "pointer";
               
@@ -76,17 +76,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 sent_dates.append("novo-valor", novo_nome);
                 sent_dates.append("id", id_setor);
 
+              console.log(id_setor);
+
                 if (novo_nome.length == 0 || novo_nome.length < 2) {
                   alert("Por favor preencha o campo!");
                 } else {
                   $.ajax({
-                    url: "../php/nome-setor.php",
-                    type: "POST",
+                    url: '../php/nome-setor.php',
+                    type: 'POST',
                     data: sent_dates,
                     processData: false,
                     contentType: false,
-                  }).done(function (request) {
-                    if (request == true) {
+                  }).done(function(request) {
+                    if (request == 'true') {
                       let father = input.parentNode;
                       father.appendChild(span);
                       span.textContent = `${novo_nome}`;
@@ -112,9 +114,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (confirm(`Deletar o setor ${name_setor}?`)) {
 
-                let id = data.id
                 let sent_id = new FormData()
-                sent_id.append('id' , id)
+                sent_id.append('id' , id_setor)
 
                 $.ajax({
                     url: '../php/del-setor.php', type: "POST", data: sent_id , processData : false, contentType: false

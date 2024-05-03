@@ -14,6 +14,7 @@ else{
         if(isset($input)){
     
             $id_edit = $_POST['id'];
+            var_dump($id_edit);
     
             $alter_date = "UPDATE setor SET nome = '$input' WHERE  id = $id_edit"; 
     
