@@ -18,7 +18,6 @@ button_submit.addEventListener('click', ()=>{
                 document.querySelector('body').removeChild(div_mess)
 
                 request.forEach(element => {
-
                     /*Criação dos cards de empresa e produtos*/
                     const body = document.querySelector('body')
 
@@ -43,12 +42,10 @@ button_submit.addEventListener('click', ()=>{
                         dates.innerHTML = `Email: ${element.email} <br> Telefone-fixo: ${element.tel_fixo} <br> Telefone-móvel: ${element.celular}`
     
                         card.appendChild(dates)
-
-                        if(element.tabela == undefined){
-                            card.style.display = 'none'
-                        }
                     }
                     else if(element.tabela == 'produto'){
+                        console.log("cc")
+
                         const card = document.createElement("div")
                         card.className = 'results'
                         card.id = `${element.id}`
@@ -87,17 +84,16 @@ button_submit.addEventListener('click', ()=>{
                         const i = document.createElement("i")
                         i.className = 'bi bi-cart-plus'
 
-                        button.appendChild(i)
+                        button.appendChild(i)                      
 
                         // Adiciona o ouvinte de evento para o button
                         let name_prod = element.nome// Produto escolhido
                         let peso_prod = element.peso
                         let value_prod = element.valor
                         let brand_prod = element.marca
-                        //let quant_prod = 
+                        //let quant_prod =
                         //let image = element.img 
                         
-
                         const form = document.createElement("form")
                         form.action = 'json.php'
                         form.method = 'POST'
@@ -145,7 +141,7 @@ button_submit.addEventListener('click', ()=>{
                                     dates.append('marca' , brand_prod)
 
                                     $.ajax({
-                                        url:'../php/lista.php', type: 'POST', data: dates, processData: false, contentType:false
+                                        //url:'../php/lista.php', type: 'POST', data: dates, processData: false, contentType:false
                                     }).done(function(request){
                                         console.log(request)
                                     })
