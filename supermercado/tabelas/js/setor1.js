@@ -1,14 +1,12 @@
 /*
  * A tabela poderá ter uma linha editada ou apagada e também o usuário poderá acrescentar mais linhas.
  */
-document.addEventListener("DOMContentLoaded", function () {
-
+document.addEventListener("DOMContentLoaded", function (){
   const button_save = document.querySelector("#sav")
   /*Não permite que o botão salvar envie o formulário sem editar ou criar*/
    button_save.addEventListener("click" , function(){
     this.disabled = true
   })
-
 /*Ação para salvar os dados*/
 const save = function toSave() {    
     let datas = []
@@ -195,8 +193,6 @@ else{
         let img = document.createElement('img')
         //Vou fazer igual o cadastro da imagem
         img.src = `../../php/${image}`
-        img.style.width = '25px'
-        img.style.height = '25px'
         img.className = 'img-uploaded'        
 
         table_row.appendChild(table_data_img)
@@ -278,15 +274,11 @@ const edit = function toEdit() {
           } else {
             console.log('Nenhuma imagem encontrada nesta célula.');
           }
-        }
-        
+        }       
         // Adiciona o event listener para o clique na célula
-        td.addEventListener("click", toClick);
-                             
+        td.addEventListener("click", toClick);                             
 }//Condicional else
-
 })//forEach 
-
   /*Mostra o botão de adiciona*/
   let button_add = document.getElementById("add")
   button_add.style.display = 'block'

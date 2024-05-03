@@ -141,7 +141,6 @@
   }
 
   /*Inputs*/
-
   tbody > tr > td > .input{
     background-color: transparent;
     border-width: 0px;
@@ -163,19 +162,12 @@
     cursor: pointer;
   }
 
+  /*
   tbody > tr > td > .label-input > .icon-upload{
     width: 15px;
     transform: translateY(0.7vh);
     filter: drop-shadow(1px 1px 1px rgb(244, 244, 147));
-  }
-
-  tbody > tr > td > .label-input > .img-uploaded{
-    width: 25px;
-    transform: translateY(0.5vh);
-    border-radius: 50%;
-    height: 25px;
-    border: 1px solid #00000087;
-  }
+  }*/
 
   /*Input que abriga os novos dados*/
   tr > td > .new-input{

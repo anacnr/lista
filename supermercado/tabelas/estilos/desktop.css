@@ -160,28 +160,12 @@ body {
     }
   
     tbody > tr > td > .label-input{
-      width: 100%;
+      width: 10%;
       height: 100%;
       display: block;
       margin: auto;
       cursor: pointer;
     }
-
-    td > .label-input > .img-uploaded {
-      width: 25px;
-      transform: translateY(0.5vh);
-      border-radius: 50%;
-      height: 25px;
-      border: 1px solid #00000087;
-  }
-  
-  tbody > tr > td > .label-input > .img-uploaded{
-    width: 25px;
-    transform: translateY(0.5vh);
-    border-radius: 50%;
-    height: 25px;
-    border: 1px solid #00000087;
-  }
 
   /*Input que abriga os novos dados*/
   tr > td > .new-input{
@@ -340,10 +324,15 @@ body {
       cursor: pointer;
     }
   
-    tbody > tr > td > .label-input > .icon-upload{
-      width: 20px;
-      transform: translateY(2vh);
-      filter: drop-shadow(1px 1px 1px rgb(244, 244, 147));
+    /*Input que abriga os novos dados*/
+    tr > td > .new-input{
+      width: 100%;
+      height: 50%;
+      background-color: transparent;
+      border-bottom-color: black;
+      border-top: none;
+      border-left: none;
+      border-right: none;
     }
 }
 
@@ -489,11 +478,16 @@ body {
       cursor: pointer;
     }
   
-    tbody > tr > td > .label-input > .icon-upload{
-      width: 20px;
-      transform: translateY(2vh);
-      filter: drop-shadow(1px 1px 1px rgb(244, 244, 147));
-    }       
+    /*Input que abriga os novos dados*/
+    tr > td > .new-input{
+      width: 100%;
+      height: 50%;
+      background-color: transparent;
+      border-bottom-color: black;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -640,9 +634,14 @@ body {
       cursor: pointer;
     }
   
-    tbody > tr > td > .label-input > .icon-upload{
-      width: 20px;
-      transform: translateY(2vh);
-      filter: drop-shadow(1px 1px 1px rgb(244, 244, 147));
-    }      
+    /*Input que abriga os novos dados*/
+    tr > td > .new-input{
+      width: 100%;
+      height: 50%;
+      background-color: transparent;
+      border-bottom-color: black;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
 }

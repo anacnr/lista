@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       request.forEach(function (data, index) {
         let name_setor = data.nome;
         let id_setor = data.id; //Esse vai mandar lá para o formulário quando quiser ser manipulado
+        console.log(index);
 
         let span = document.createElement("span");
         span.className = "setor";
@@ -32,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         /*Link para o setor*/
         let link = document.createElement('a')
-        link.href = '../supermercado/tabelas/setor1.html'
+        //link.href = '../supermercado/tabelas/setor1.html'
         link.className = 'link'
         link.rel = ''
         link.textContent = name_setor
@@ -46,6 +47,13 @@ document.addEventListener("DOMContentLoaded", function () {
         span.appendChild(link)
         /*Função para editar o nome*/
         let controll_button = false;
+
+        if(index==0){
+          link.href = '../supermercado/tabelas/setor1.html'
+        }
+        else{
+          link.href = '#'
+        }
 
         const edit = function toEdit() {
           let index_nome = `${index}`;
@@ -130,6 +138,8 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
         icon_delete.addEventListener("click", exclude);
+      
+        
       }); //forEach
     }).fail(function (jqXHR, textStatus, errorThrown) {
       console.log(" ERRO ", jqXHR, textStatus, errorThrown);

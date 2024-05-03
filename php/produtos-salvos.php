@@ -18,7 +18,7 @@ else{
         $fields = mysqli_num_fields($query);
 
         while($row = mysqli_fetch_assoc($query)){
-            $request[]= array('campos' => $fields,'id' => $row['id'] , 'nome' => $row['nome'] , 'codigo' => $row['codigo'] ,'peso' => $row['peso'] ,'valor' => $row['valor'],'marca' => $row['marca'],'quantidade' => $row['quantidade'],'img' => $row['imagem']);
+            $request[]= array('campos' => $fields,'id' => $row['id'] , 'nome' => $row['nome'] , 'codigo' => $row['codigo'] ,'peso' => $row['peso'] ,'valor' => $row['valor'],'marca' => $row['marca'],'quantidade' => $row['quantidade'],'img' => $row['imagem'], 'setor' => $row['setor']);
         }
 
         header('Content-Type: application/json');
