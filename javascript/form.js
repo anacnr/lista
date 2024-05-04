@@ -30,19 +30,19 @@ document.addEventListener("DOMContentLoaded", function () {
                     if(element.senha == 'Comprador-autorizado' && element.tabela == 'comprador'){
                         setTimeout(()=>{
                             location.href = '../lista/cliente/index.html'
-                        },2500)
+                        },500)
                     }//Primeira condicional
                     //Email e senha encontrados na tabela comprador
                     else if(element.senha == 'Vendedor-autorizado' && element.tabela == 'vendedor'){
                         setTimeout(()=>{
                             location.href = '../lista/supermercado/index.html'
-                        },2500)
+                        },500)
                     }//Segunda condicional
                     //Email e senha encontrados na tabela comprador
                     else if(element.senha == 'Suporte-autorizado' && element.tabela == 'suporte'){
                         setTimeout(()=>{
                             location.href = '../lista/suporte/teste.html'
-                        },2500)
+                        },500)
                     }//Terceira condicional
                     //Senha incorreta
                     else if(element.senha == 'desautorizado'){

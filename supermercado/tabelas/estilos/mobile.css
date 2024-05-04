@@ -162,7 +162,13 @@
     cursor: pointer;
   }
 
-  /*
+    /*Imagem armazenada no banco*/
+    tbody > tr > td > .img-uploaded{
+      width: 30px;
+      height: 30px;
+    }
+
+  /*Imagem quando é carregada
   tbody > tr > td > .label-input > .icon-upload{
     width: 15px;
     transform: translateY(0.7vh);

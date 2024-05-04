@@ -125,6 +125,7 @@ body {
     color: rgb(243, 242, 242);
     text-shadow: 1px 1px 2px black;
     display: none;
+    margin-right: 15px;
   }
 
   /*Botão de salvar*/
@@ -165,6 +166,12 @@ body {
       display: block;
       margin: auto;
       cursor: pointer;
+    }
+
+    /*Imagem armazenada no banco*/
+    tbody > tr > td > .img-uploaded{
+      width: 30px;
+      height: 30px;
     }
 
   /*Input que abriga os novos dados*/
@@ -282,6 +289,7 @@ body {
     color: rgb(243, 242, 242);
     text-shadow: 1px 1px 2px black;
     display: none;
+    margin-right: 15px;
   }
 
   /*Botão de salvar*/
@@ -322,6 +330,12 @@ body {
       display: block;
       margin: auto;
       cursor: pointer;
+    }
+
+    /*Imagem armazenada no banco*/
+    tbody > tr > td > .img-uploaded{
+      width: 30px;
+      height: 30px;
     }
   
     /*Input que abriga os novos dados*/
@@ -477,6 +491,12 @@ body {
       margin: auto;
       cursor: pointer;
     }
+
+    /*Imagem armazenada no banco*/
+    tbody > tr > td > .img-uploaded{
+      width: 30px;
+      height: 30px;
+    }
   
     /*Input que abriga os novos dados*/
     tr > td > .new-input{
@@ -592,6 +612,7 @@ body {
         color: rgb(243, 242, 242);
         text-shadow: 1px 1px 2px black;
         display: none;
+        margin-right: 15px;
       }
     
       /*Botão de salvar*/
@@ -632,6 +653,12 @@ body {
       display: block;
       margin: auto;
       cursor: pointer;
+    }
+
+    /*Imagem armazenada no banco*/
+    tbody > tr > td > .img-uploaded{
+      width: 30px;
+      height: 30px;
     }
   
     /*Input que abriga os novos dados*/

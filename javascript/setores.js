@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         /*Link para o setor*/
         let link = document.createElement('a')
-        //link.href = '../supermercado/tabelas/setor1.html'
         link.className = 'link'
         link.rel = ''
         link.textContent = name_setor
@@ -48,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         /*Função para editar o nome*/
         let controll_button = false;
 
+        /*Redirecionamento do link*/
         if(index==0){
           link.href = '../supermercado/tabelas/setor1.html'
         }

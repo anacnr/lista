@@ -83,7 +83,6 @@ for(let count = 0;count <= 4;count++){
 
   //Label do input file
   let label = document.createElement("label");
-  label.className = "label-input";
   label.htmlFor = `input-img`;
 
   table_data_img.appendChild(label);
@@ -372,7 +371,7 @@ img_uploaded.addEventListener("change", function () {
     })
   })
 };//Função para editar
-  //Chama a função no botão de editar
+//Chama a função no botão de editar
 button_edit.addEventListener("click" , edit)
   });//Ajax //Done
 }//Condicional else
