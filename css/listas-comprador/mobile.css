@@ -1,0 +1,150 @@
+@charset "UTF-08";
+
+*{
+    margin: 0%;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --font_family : "Poppins", sans-serif;
+    --font_color: rgb(4, 4, 97);
+    --font_size: 4dvi;
+    --total_back: linear-gradient(120deg, rgba(253, 237, 58, 0.808) 65%,rgba(77, 224, 185, 0.808));
+    --backgound_color: radial-gradient(circle, rgba(240, 250, 240, 0.521), rgba(252, 212, 239, 0.644));
+}
+
+body,html{
+    width: 100%;
+    height: 100%;
+    background-color: var(--backgound_color);
+}
+
+@media (max-width:600px) {
+
+    h1{
+        text-align: center;
+        font-family: var(--font_family);
+        color: var(--font_color);
+        margin-top: 10%;
+        font-size: var(--font_size);
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        cursor: context-menu;
+    }
+
+    #div-list{
+        width: 100%;
+        height: 90%;
+    }
+
+    #div-list > table{
+        border-collapse: collapse;
+        width: 70%;
+        margin: auto;
+        position: relative;
+        transform: translateY(5vh);
+        border-radius: 50px;
+    }
+
+    table > thead{
+        height:25px;
+        box-shadow: 1px 2px 5px black;
+        border-radius: 10px;
+        background-color: pink;
+    }
+
+    thead > tr > th{
+        border-left: 1px solid black;
+        font-family: var(--font_family);
+        color: var(--font_color);
+        font-size: 0.5em;
+        text-transform: capitalize;
+        letter-spacing: 2px;
+        cursor: context-menu;
+    }
+
+    thead > tr >#th-nome{
+        border-left: 0px solid black;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    thead > tr > #th-img{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    table > tbody > tr{
+        background-color: rgba(0, 0, 0, 0.753);
+        position: relative;
+        transform: translateY(5vh);
+        box-shadow: 2px 2px 8px black;
+        border-radius: 10px;
+    }
+
+    tbody > tr > td{
+        font-family: var(--font_family);
+        color: white;
+        font-size: 0.5em;
+        text-transform: capitalize;
+        text-align: center;
+        letter-spacing: 2px;
+        padding: 10px;
+        cursor: context-menu;
+    }
+
+    tbody > tr > td > img{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        box-shadow: 2px;
+    }
+
+    tbody > tr > #td0{
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;        
+    }
+
+    tbody > tr > #td5{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    #div-list > #total-span{
+        position: absolute;
+        transform: translate(42vw,30vh);
+        font-family: var(--font_family);
+        font-size: 2.5dvi;
+        background-image: var(--total_back);
+        padding: 3px;
+        border-radius: 6%;
+        box-shadow: 1px 1px 2px black;
+        cursor: context-menu;
+    }
+
+    #div-list > button{
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-size: 2dvi;
+        position: relative;
+        border-width: 0px;
+        box-shadow: 1px 2px 5px black;
+        padding: 4px;
+        border-radius: 6%;
+        cursor: pointer;
+    }
+
+    #div-list > #sav{
+        transform: translate(35vw,50vh);
+        background-image: linear-gradient(65deg,rgba(0, 153, 255, 0.646),rgba(118, 218, 233, 0.696));
+    }
+
+    #div-list > #can{
+        transform: translate(40vw,50vh);
+        background-image: linear-gradient(65deg,rgba(255, 0, 242, 0.737),rgba(235, 22, 72, 0.888));
+    }
+
+}

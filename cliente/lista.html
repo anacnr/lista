@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smartlist-lista</title>
     <!--Tela maior-->
+    <link rel="stylesheet" href="/css/listas-comprador/desktop.css">
     <!--Tela menor-->
+    <link rel="stylesheet" href="/css/listas-comprador/mobile.css">
 </head>
 <body>
-    <h1 style="text-align: center;">Sua lista</h1>
+    <h1>Sua lista</h1>
     <div id="div-list">
-        <ul></ul>
+        <table>
+            <thead> <th id="th-nome">nome</th> <th>peso</th> <th>preço</th> <th>marca</th><th>quantidade</th> <th id="th-img">Imagem</th>
+            </thead>
+        
+        <tbody></tbody>
+    </table>
+
+    <span id="total-span">R$ </span>
+    
+    <button type="submit" id="sav">Salvar</button> <button type="submit" id="can">Cancelar</button>
     </div>
     <script src="../javascript/jquery-3.7.1.min.js"></script>
     <script src="../javascript/lista.js"></script>
