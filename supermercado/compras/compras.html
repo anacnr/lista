@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/compras-vendedor/desktop.css">
     <!--Tela menor-->
     <link rel="stylesheet" href="/css/compras-vendedor/mobile.css">
+    <link rel="shortcut icon" href="/imagens/icons/favicon.ico" type="image/x-icon">
 
 </head>
 <body>
@@ -17,25 +18,26 @@
         <div id="dates">
             <p id="address">endereço: avenida 1 rua, 0000, Niterói-RJ</p>
             <p id="pay">pagamento: pix</p>
-            <p id="money">R$ 151,72</p>
+            <p id="money">R$ 12,80</p>
             <p id="status">aprovado</p>
         </div>
     
         <button type="submit" id="butt-list">ver lista</button>
         <button type="submit" id="butt-main">tela pricipal</button>
+
     </div>
 
     <script>
         document.querySelectorAll('button')[0].addEventListener("click", function(){
             setTimeout(()=>{
-                location.href = '#'
-                console.log("Botão de ver lista")
+                //location.href = '../../cliente/lista.html'
+                location.href = 'lista1.html'
             },1000)
         });
 
         document.querySelectorAll('button')[1].addEventListener("click", function(){
             setTimeout(()=>{
-                location.href = '/index.html'
+                location.href = '../index.html'
                 console.log("Botão que redireciona para a tela principal")
             },1000)
         });

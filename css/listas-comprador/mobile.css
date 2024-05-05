@@ -123,28 +123,27 @@ body,html{
         border-radius: 6%;
         box-shadow: 1px 1px 2px black;
         cursor: context-menu;
+        opacity: 0.9;
     }
 
     #div-list > button{
-        font-family: Arial, Helvetica, sans-serif;
-        text-transform: uppercase;
-        font-size: 2dvi;
-        position: relative;
-        border-width: 0px;
-        box-shadow: 1px 2px 5px black;
-        padding: 4px;
-        border-radius: 6%;
+        margin: auto;
+        display: block;
+        transform: translateY(49vh);
+        border-top: none;
+        border-right: none;
+        background-image: radial-gradient(rgba(78, 232, 35, 0.559),rgba(6, 240, 84, 0.71));
+        border-left: none;
+        border-bottom: 1px solid rgba(35, 6, 142, 0.82);
         cursor: pointer;
+        padding: 3px;
+        border-radius: 7%;
     }
 
-    #div-list > #sav{
-        transform: translate(35vw,50vh);
-        background-image: linear-gradient(65deg,rgba(0, 153, 255, 0.646),rgba(118, 218, 233, 0.696));
-    }
-
-    #div-list > #can{
-        transform: translate(40vw,50vh);
-        background-image: linear-gradient(65deg,rgba(255, 0, 242, 0.737),rgba(235, 22, 72, 0.888));
+    #div-list > button:hover{
+        background-color: beige;
+        box-shadow: 1px 2px 5px black;
+        font-family: var(--font_family);
     }
 
 }

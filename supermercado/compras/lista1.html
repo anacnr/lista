@@ -1,6 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartlist-lista</title>
+    <!--Tela maior-->
+    <link rel="stylesheet" href="/css/listas-comprador/desktop.css">
+    <!--Tela menor-->
+    <link rel="stylesheet" href="/css/listas-comprador/mobile.css">
+    <link rel="shortcut icon" href="/imagens/icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Lista</h1>
+    <div id="div-list">
+        <table>
+            <thead> <th id="th-nome">nome</th> <th>peso</th> <th>preço</th> <th>marca</th><th>quantidade</th> <th id="th-img">Imagem</th>
+            </thead>
+        
+        <tbody></tbody>
+    </table>
+
+    <span id="total-span">R$</span>
+
+    <button type="button">Atualizar o status</button>
+    </div>
+    <script src="../../javascript/jquery-3.7.1.min.js"></script>
+<script>
 /*Criar a lista com js*/
 document.addEventListener("DOMContentLoaded" , ()=>{
-    fetch("../javascript/lista.json").then(function(response){
+    fetch("../../javascript/lista.json").then(function(response){
         response.json().then(function(produto){
             /*Aqui deve fazer a lógica de criação da lista*/
             let quanti_row = Array(produto).length
@@ -42,4 +70,13 @@ document.addEventListener("DOMContentLoaded" , ()=>{
             })
         })
     }) 
-});
+
+    document.querySelector('button').addEventListener("click", ()=>{
+        setTimeout(()=>{
+            location.href = '../status.html'
+        },1000)
+    });
+});//Carregamenti
+</script>
+</body>
+</html>

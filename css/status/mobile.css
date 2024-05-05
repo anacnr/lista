@@ -79,8 +79,19 @@ body{
         text-shadow: 1px 2px 3px black;
         cursor: context-menu;
         position: absolute;
-        top: 11%;
-        left: 50%;
+        cursor: context-menu;
+    }
+
+    main > div > #id0{
+        transform: translate(70vw, -2vh);
+    }
+
+    main > div > #id1{
+        transform: translate(70vw, 6vh);
+    }
+
+    main > div > #id2{
+        transform: translate(70vw, 15vh);        
     }
 
     main > div > #check1[type="checkbox"]{
