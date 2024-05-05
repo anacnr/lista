@@ -14,6 +14,7 @@ box-sizing: border-box;
 body{
     background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
     background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 @media (min-width:600px) and (max-width: 768px){
@@ -22,19 +23,18 @@ body{
     text-align: center;
     position: relative;
     top: 33%;
-    font-size: 42px;
-    text-shadow: 2px 2px 6px #111111eb;
+    font-size: 2em;
     }
 
     div{
         background-color: rgb(252, 219, 209);
-        border-top-left-radius: 10%;
-        border-top-right-radius: 10%;
-        border-bottom-left-radius: 10%;
-        border-bottom-right-radius: 10%;
+        border-top-left-radius: 5%;
+        border-top-right-radius: 5%;
+        border-bottom-left-radius: 5%;
+        border-bottom-right-radius: 5%;
         margin: auto;
         display: block;
-        width: 60vw;
+        width: 57vw;
         height:38vh;
         position: relative;
         top: 38%;
@@ -91,22 +91,22 @@ body{
     h1{
         text-align: center;
         position: relative;
-        top: 30%;
-        font-size: 3em;
+        top: 33%;
+        font-size: 2em;
     }
 
     div{
         background-color: rgb(252, 219, 209);
-        border-top-left-radius: 10%;
-        border-top-right-radius: 10%;
-        border-bottom-left-radius: 10%;
-        border-bottom-right-radius: 10%;
+        border-top-left-radius: 5%;
+        border-top-right-radius: 5%;
+        border-bottom-left-radius: 5%;
+        border-bottom-right-radius: 5%;
         margin: auto;
         display: block;
         width: 440px;
         height:38vh;
         position: relative;
-        top: 35%;
+        top: 38%;
         box-shadow: 2px 1px 10px rgb(10, 10, 10);
     }
 
@@ -115,7 +115,7 @@ body{
         display: block;
         position: relative;
         top: 35%;
-        width: 50%;
+        width: 200px;
         height: 15%;
     }
 
@@ -124,7 +124,7 @@ body{
         display: block;
         position: relative;
         top: 50%;
-        width: 50%;
+        width: 200px;
         height: 15%;
     }
 
@@ -151,7 +151,7 @@ body{
     div > #cliente{
         width: 20px;
         position: absolute;
-        transform: translate(205px,85px);
+        transform: translate(205px,80px);
     }
 }
 
@@ -159,22 +159,22 @@ body{
     h1{
         text-align: center;
         position: relative;
-        top: 30%;
-        font-size: 3em;
+        top: 33%;
+        font-size: 2.2em;
     }
 
     div{
         background-color: rgb(252, 219, 209);
-        border-top-left-radius: 10%;
-        border-top-right-radius: 10%;
-        border-bottom-left-radius: 10%;
-        border-bottom-right-radius: 10%;
+        border-top-left-radius: 5%;
+        border-top-right-radius: 5%;
+        border-bottom-left-radius: 5%;
+        border-bottom-right-radius: 5%;
         margin: auto;
         display: block;
         width: 440px;
         height:38vh;
         position: relative;
-        top: 35%;
+        top: 38%;
         box-shadow: 2px 1px 10px rgb(10, 10, 10);
     }
 
@@ -183,7 +183,7 @@ body{
         display: block;
         position: relative;
         top: 35%;
-        width: 50%;
+        width: 200px;
         height: 15%;
     }
 
@@ -192,7 +192,7 @@ body{
         display: block;
         position: relative;
         top: 50%;
-        width: 50%;
+        width: 200px;
         height: 15%;
     }
 
@@ -219,7 +219,7 @@ body{
     div > #cliente{
         width: 20px;
         position: absolute;
-        transform: translate(205px,85px);
+        transform: translate(205px,80px);
     }
 }
 
@@ -227,22 +227,22 @@ body{
     h1{
         text-align: center;
         position: relative;
-        top: 30%;
-        font-size: 3em;
+        top: 33%;
+        font-size: 2.2em;
     }
 
     div{
         background-color: rgb(252, 219, 209);
-        border-top-left-radius: 10%;
-        border-top-right-radius: 10%;
-        border-bottom-left-radius: 10%;
-        border-bottom-right-radius: 10%;
+        border-top-left-radius: 5%;
+        border-top-right-radius: 5%;
+        border-bottom-left-radius: 5%;
+        border-bottom-right-radius: 5%;
         margin: auto;
         display: block;
         width: 440px;
         height:38vh;
         position: relative;
-        top: 35%;
+        top: 38%;
         box-shadow: 2px 1px 10px rgb(10, 10, 10);
     }
 
@@ -251,7 +251,7 @@ body{
         display: block;
         position: relative;
         top: 35%;
-        width: 40%;
+        width: 200px;
         height: 14%;
     }
 
@@ -260,7 +260,7 @@ body{
         display: block;
         position: relative;
         top: 50%;
-        width: 40%;
+        width: 200px;
         height: 14%;
     }
 
@@ -275,7 +275,6 @@ body{
     }
 
     /*Configurações das imagens*/
-
     div > #supermercado{
         width: 60px;
         height: 60px;
@@ -287,6 +286,6 @@ body{
     div > #cliente{
         width: 20px;
         position: absolute;
-        transform: translate(205px,85px);
+        transform: translate(205px,80px);
     }
 }
