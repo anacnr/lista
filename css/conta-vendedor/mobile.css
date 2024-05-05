@@ -6,14 +6,17 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body, html{
     width: 100vw;
-    height: 100vh;
 }
 
 body{
     background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
     background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 
 @media (max-width: 600px){
@@ -22,8 +25,8 @@ body{
 #company-dates{
     box-shadow: 4px 4px 15px rgb(19, 14, 14);
     width: 80vw;
-    height: 110vh;
-    background-color: rgba(255, 255, 255, 0.793);
+    height: 130vh;
+    background-color: rgba(255, 255, 255, 0.781);
     text-align: center;
     display: block;
     margin: auto;
@@ -49,8 +52,6 @@ body{
     text-transform: uppercase;
     text-align: left;
     font-size: 2dvi;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
     font-style: oblique;
     color: rgb(43, 36, 36);
     cursor: context-menu;
@@ -64,6 +65,12 @@ body{
     margin: auto;
     transform: translateY(7vh);
     background-color: black;
+    background-image: url('/imagens/icons/store-min.jpg');
+    background-size: cover;/*Vi esta dica em um comentário*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: brightness(90%);
 }
 
 /*Empresa(parágrafo)*/
@@ -257,8 +264,6 @@ transform: translate(20vw, 47vh);
 #edit{
     text-transform: uppercase;
     font-size: 13px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 600;
     color: rgb(88, 33, 113);
     padding: 5px 10px 5px 10px;
     display: block;
@@ -274,8 +279,6 @@ transform: translate(20vw, 47vh);
 #save{
     text-transform: uppercase;
     font-size: 13px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 600;
     color: rgb(88, 33, 113);
     padding: 5px 10px 5px 10px;
     display: block;
