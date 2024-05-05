@@ -400,4 +400,10 @@ footer {
       left: 30%;
       bottom: 30%;
     }
+    footer > .conteudo-rodape > .redes-sociais > bi-whatsapp{
+      position: relative;
+      left: 50%;
+      bottom: 10%;
+    }
+    
   }
