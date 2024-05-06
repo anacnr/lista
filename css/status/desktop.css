@@ -73,7 +73,18 @@ body{
         text-shadow: 1px 2px 3px black;
         cursor: context-menu;
         position: absolute;
-        transform: translate(300px,30px);
+    }
+
+    main > div > #id0{
+        transform: translate(70vw, -2vh);
+    }
+
+    main > div > #id1{
+        transform: translate(70vw, 5vh);
+    }
+
+    main > div > #id2{
+        transform: translate(70vw, 14vh);        
     }
 
     main > div > #check1[type="checkbox"]{
@@ -204,7 +215,18 @@ body{
         text-shadow: 1px 2px 3px black;
         cursor: context-menu;
         position: absolute;
-        transform: translate(300px,27px);
+    }
+
+    main > div > #id0{
+        transform: translate(525px, -15px);
+    }
+
+    main > div > #id1{
+        transform: translate(525px, 40px);
+    }
+
+    main > div > #id2{
+        transform: translate(525px, 95px);        
     }
 
     main > div > #check1[type="checkbox"]{
@@ -281,7 +303,7 @@ body{
     }
 }
 
-@media(min-width:992px) and (max-width:1200px){
+@media(min-width:992px){
     h1{
         text-transform: capitalize;
         text-shadow: 1px 1px 3px black;
@@ -335,7 +357,21 @@ body{
         text-shadow: 1px 1px 3px black;
         cursor: context-menu;
         position: absolute;
-        transform: translate(460px,27px);
+    }
+
+    main > div > #id0{
+        left: 65%;
+        bottom: 84%;
+    }
+
+    main > div > #id1{
+        left: 65%;
+        bottom: 63%;
+    }
+
+    main > div > #id2{
+        left: 65%;
+        bottom: 43%;     
     }
 
     main > div > #check1[type="checkbox"]{
@@ -411,7 +447,7 @@ body{
         background-color: rgb(209, 188, 239);
     }
 }
-
+/*
 @media(min-width:1200px){
     h1{
         text-transform: capitalize;
@@ -541,4 +577,4 @@ body{
     button:hover{
         background-color: rgb(209, 188, 239);
     }
-}
+}*/

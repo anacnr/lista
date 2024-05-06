@@ -19,41 +19,47 @@ body{
 
 @media(min-width:600px) and (max-width: 768px){
 
-/*Esses são os campos onde vão receber os dados*/
+h1{
+    text-align: center; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    margin-top: 50px;
+    color: rgba(255, 255, 255, 0.849);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.772);
+}
+
+form > ul{
+    width: 100%;
+    margin: auto;
+    display: block;
+    transform: translateY(35vh);
+}
+
 form > ul > li{
     list-style: none;
 }
 
 /*Esses são os campos onde vão receber os dados*/
-
 form > ul > li > input{
-    width: 40%;
-    height: 25px;
+    width: 240px;
+    height: 24px;
     display: block;
     margin: auto;
     text-align: center;
-    margin-top: 0%;
-    margin-bottom: 10%;
+    margin-bottom: 8%;
+    border-radius: 25px;
     border-radius: 25px;
     border-width: 0px;
     box-shadow: 2px 2px 6px black;
-    border-style: solid;
-    border-color: black;
     font-size: 0.8em;
     font-style: oblique;
     font-weight: 600;
+    cursor: context-menu;
 } 
 
-/*Primeiro campo que recebe o dado (nome)*/
-
-form > ul > li > #cliente{
-    margin-top: 35%;    
-}
-
 /*Último campo que recebe o dado (senha)*/
-
 form > ul > li > #valido{
-    margin-bottom: 15%;    
+    margin-bottom: 30%;    
 }
 
 /*O placeholder é o que está escrito dentro dos campos*/
@@ -68,15 +74,18 @@ form > ul > li > input::placeholder{
 form > button{
     margin: auto;
     display: block;
-    width: 35%;
-    height: 27px;
-    border-style: solid;
-    border-color: black;
-    border-radius: 25px;
+    width: 100px;
+    height: 20px;
     border-width: 0px;
     box-shadow: 2px 2px 6px black;
+    border-radius: 25px;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1em;
+    cursor: pointer;
+    transform: translateY(70px);
+    background-color: rgba(186, 91, 230, 0.772);
+    color: rgb(245, 243, 240);
+    letter-spacing: 2px;
 }
 
 form > ul > li > label{
@@ -90,13 +99,13 @@ form > ul > li > #foto[type = 'file']{
 
 /*Label do input com tipo image*/
 form > ul > li > #descricao { 
-    top: 8%;
     left: 40%;
+    bottom: 110%;
     position: absolute;
     font-size: 0.9em;
     border: 0px solid black;
-    height: 18cqmin;
-    width: 18cqmin;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.559);
     background-color: rgba(248, 233, 253, 0.886);  
@@ -163,146 +172,168 @@ ul > li > #pass{
 }
 
 @media (min-width:768px) and (max-width: 992px){
-
+    h1{
+        text-align: center; 
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5em;
+        margin-top: 50px;
+        color: rgba(255, 255, 255, 0.849);
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.772);
+    }
+    
+    form > ul{
+        width: 100%;
+        margin: auto;
+        display: block;
+        transform: translateY(30vh);
+    }
+    
     form > ul > li{
         list-style: none;
     }
     
     /*Esses são os campos onde vão receber os dados*/
-    
     form > ul > li > input{
-        width: 40%;
-        height: 30px;
+        width: 240px;
+        height: 24px;
         display: block;
         margin: auto;
         text-align: center;
-        margin-top: 0%;
-        margin-bottom: 10%;
+        margin-bottom: 6%;
         border-radius: 25px;
-        border-style: solid;
-        border-color: black;
+        border-radius: 25px;
+        border-width: 0px;
+        box-shadow: 2px 2px 6px black;
         font-size: 0.8em;
         font-style: oblique;
         font-weight: 600;
-    }
-        
-    /*Primeiro campo que recebe o dado (nome)*/
-
-    form > ul > li > #cliente{
-    margin-top: 30%;    
-    }
-
-/*Último campo que recebe o dado (senha)*/
-
+        cursor: context-menu;
+    } 
+    
+    /*Último campo que recebe o dado (senha)*/
     form > ul > li > #valido{
-    margin-bottom: 15%;    
+        margin-bottom: 20%;    
     }
-
-/*O placeholder é o que está escrito dentro dos campos*/
-
+    
+    /*O placeholder é o que está escrito dentro dos campos*/
+    
     form > ul > li > input::placeholder{
-    color: black;
+        color: black;
+        font-size: 0.8em;
     }
-
-/*Configurações do botão de cadastro*/
-
+    
+    /*Configurações do botão de cadastro*/
+    
     form > button{
-    margin: auto;
-    display: block;
-    width: 100px;
-    height: 30px;
-    border-style: solid;
-    border-color: black;
-    border-radius: 25px;
-    font-weight: 600;
+        margin: auto;
+        display: block;
+        width: 120px;
+        height: 20px;
+        border-width: 0px;
+        box-shadow: 2px 2px 6px black;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 1em;
+        cursor: pointer;
+        transform: translateY(50px);
+        background-color: rgba(186, 91, 230, 0.772);
+        color: rgb(245, 243, 240);
+        letter-spacing: 2px;
     }
-
+    
     form > ul > li > label{
-    display: none;
+        display: none;
     }
-
+    
     /*Campo do input com tipo image*/
     form > ul > li > #foto[type = 'file']{
         display: none;
     }
-
+    
     /*Label do input com tipo image*/
     form > ul > li > #descricao { 
-        top: 8%;
-        left: 42%;
+        left: 40%;
+        bottom: 110%;
         position: absolute;
         font-size: 0.9em;
         border: 0px solid black;
-        height: 18cqmin;
-        width: 18cqmin;
+        height: 100px;
+        width: 100px;
         border-radius: 50%;
         box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.559);
         background-color: rgba(248, 233, 253, 0.886);  
         cursor: pointer;
         display: block;    
     }
-
+    
     /*Personalização dos ícones*/
-
-    #descricao > .bi-upload{
+    
+     #descricao > .bi-upload{
         font-size: 2.5em;
         position: absolute;
         opacity: 80%;
         text-shadow: 1px 1px 2px gray;
         left: 33%;
         top: 33%;
-    }
-    ul > li > #company, #worker{
-        font-size: 1.3em;
+     }
+    
+    ul > li > #company, #worker, #address{
+        font-size: 20px;
         position: absolute;
-        transform: translate(25vw,1vh);
+        transform: translateX(250px);
     }
-
-    ul > li > #address{
-        font-size: 1.3em;
-        position: absolute;
-        transform: translate(25vw,1vh);
-        filter: hue-rotate(180deg);
-    }
-
+    
     ul > li > #cnpj{
-        font-size: 1.3em;
+        font-size: 20px;
         font-weight: 900;
         font-style: italic;
         position: absolute;
-        transform: translate(25vw,0vh);
+        transform: translate(250px,0px);
         text-decoration: underline;
     }
-
+    
+    ul > li > #address{
+        filter: hue-rotate(180deg);
+    }
+    
     ul > li > #telephone{
-        font-size: 1.3em;
+        font-size: 20px;
         position: absolute;
-        transform: translate(25vw,1vh);
+        transform: translate(250px,0px);
         filter: brightness(0);
     }
-
+    
     ul > li > #phone{
-        font-size: 1.3em;
+        font-size: 20px;
         position: absolute;
-        transform: translate(25vw,0vh);
+        transform: translate(250px,0px);
     }
-
+    
     ul > li > #email{
-        font-size: 1.3em;
+        font-size: 20px;
         position: absolute;
-        transform: translate(25vw, 1vh);
+        transform: translate(250px,0px);
     }
-
+    
     ul > li > #pass{
-        font-size: 1.3em;
+        font-size: 20px;
         position: absolute;
-        transform: translate(25vw,0vh);
+        transform: translate(250px, 2px);
         filter: brightness(0);
     }
-
 }
 
+
 @media (min-width: 992px) and (max-width: 1200px){
+
+    h1{
+        text-align: center; 
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5em;
+        margin-top: 50px;
+        color: rgba(255, 255, 255, 0.849);
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.772);
+    }
 
     /*Esses são os campos onde vão receber os dados*/
     form{
@@ -525,6 +556,7 @@ ul > li > #pass{
         position: absolute;
         top: 87%;
         left: 77%;
+        background-color: rgba(186, 91, 230, 0.772);
     }
 
     /*Esse comando é para tirar as setinhas dos campos que tem o tipo number*/
@@ -556,6 +588,15 @@ ul > li > #pass{
 }
 
 @media (min-width:1200px) {
+
+    h1{
+        text-align: center; 
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5em;
+        margin-top: 50px;
+        color: rgba(255, 255, 255, 0.849);
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.772);
+    }
     
     /*Esses são os campos onde vão receber os dados*/
     form{
@@ -754,6 +795,7 @@ ul > li > #pass{
         background-image: url('/supermercado/imgs-cad/upload-min.png');
         background-color: rgba(255, 255, 255, 0.879);
         background-size: cover;
+        background-attachment: fixed;
         cursor: pointer;
         display: block;
     }
@@ -779,6 +821,7 @@ ul > li > #pass{
         position: absolute;
         top: 87%;
         left: 77%;
+        background-color: rgba(186, 91, 230, 0.772);
     }
 
     /*Esse comando é para tirar as setinhas dos campos que tem o tipo number*/
