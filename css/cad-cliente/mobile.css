@@ -75,6 +75,9 @@ form > button{
     font-weight: 600;
     font-size: 2.5dvw;
     cursor: pointer;
+    background-color: rgba(186, 91, 230, 0.772);
+    color: rgb(245, 243, 240);
+    letter-spacing: 2px;
 }
 
 form > ul > li > label{
@@ -86,33 +89,50 @@ form > ul > li > label{
 form > ul > li > #user, #cpf{
     font-size: 14px;
     position: absolute;
-    transform: translate(25vw,1vh);
+    transform: translate(25vw,0vh);
+    background-color: white;
+    border-radius: 25%;
+    padding: 4px;
 }
 
 form > ul > li > #cell{
     width: 4%;
     position: absolute;
-    transform: translate(24vw,0vh);
+    transform: translate(25vw,0vh);
+    background-color: white;
+    border-radius: 25%;
+    padding: 1px;
 }
 
 form > ul > li > #house{
     font-size: 14px;
     position: absolute;
-    transform: translate(24vw,0vh);
+    transform: translate(25vw,0vh);
+    background-color: white;
+    border-radius: 25%;
+    padding: 1px;
 }
 
 form > ul > li > #email{
    font-size: 14px;
     height: 2vh;
     position: absolute;
-    transform: translate(24vw,1vh);
+    transform: translate(25vw,0vh);
+    background-color: white;
+    border-radius: 25%;
+    padding: 3px;
 }
 
 form > ul > li > #password{
    font-size: 14px;
     height: 3%;
     position: absolute;
-    transform: translate(24vw,1vh);
-    filter: brightness(0);
+    transform: translate(25vw,0vh);
+    background-color: white;
+    border-radius: 25%;
+    padding-top: 4px;
+    padding-right: 2px;
+    padding-bottom: 0px;
+    padding-left: 2px;
 }
 }

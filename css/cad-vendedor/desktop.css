@@ -17,6 +17,10 @@ body{
     background-attachment: fixed;
 }
 
+h1{
+    cursor: context-menu;
+}
+
 @media(min-width:600px) and (max-width: 768px){
 
 h1{

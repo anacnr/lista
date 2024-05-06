@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <link rel="shortcut icon" href="/imagens/icons/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../imagens/icons/favicon.ico" type="image/x-icon">
   </head>
   <body>
 
@@ -134,7 +134,7 @@
         </li>
       </ul>
 
-      <button type="submit" onclick="Register()">Cadastrar</button>
+      <button type="submit">Cadastrar</button>
     </form>
 
     <!--Javascript-->
@@ -163,17 +163,29 @@
         });
       }
 
-      function Register() {
-            /*
-            Tentei fazer uma condicional para impedir que o botão fosse chamado mesmo com o required, mas não funcionou.
-             document.querySelector("button").addEventListener("submit", (click) =>{
-              click.stopPropagation              
-            })
-            */
-            setTimeout( () =>{
-           location.href = 'cad-setor.html'
-          },3000)         
-      }
+        //Criação de condicional para verificar os campos estão preenchidos. Eu vi essa técnica pela internet. Pois a seleção dos inputs são como um array.
+        document.querySelectorAll('input').forEach(element =>{
+          if(element.value.length <1){
+            console.log(element.placeholder);
+            //Deixa o botão inacessível
+            document.querySelector('button').addEventListener("click", ()=>{
+            this.disabled = true
+          })
+          //Impede o envio do formulário
+          document.querySelector('form').addEventListener("submit", (event)=>{
+            event.preventDefault();
+          })
+          }
+          else{
+            document.querySelector('button').addEventListener("click", ()=>{
+            this.disabled = false
+          })
+          console.log(this.disabled)
+          setTimeout(()=>{
+            location.href = 'index.html'
+          })
+          }    
+      })
     </script>
   </body>
 </html>

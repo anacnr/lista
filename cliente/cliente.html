@@ -7,9 +7,10 @@
     <!--Tela maior-->
     <link rel="stylesheet" href="../css/cad-cliente/desktop.css">
     <!--Tela menor-->
-    <link rel="stylesheet" href="../css/cad-cliente/mobile.css">
-    
+    <link rel="stylesheet" href="../css/cad-cliente/mobile.css">  
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="shortcut icon" href="../imagens/icons/favicon.ico" type="image/x-icon">
   </head>
   <body>
     <form method="post" action="../php/cliente.php"> 
@@ -54,16 +55,34 @@
 
     </ul>
   
-      <button type="submit" onclick="Open()">Cadastrar</button>
+      <button type="submit">Cadastrar</button>
 
     </form>
 
      <!--Código para fazer abrir em outra página-->
-     <script>
-      function Open(){
-        //Criação de condicional para verificar os campos preenchidos completamente e se corresponder ao requisito vai para a sessão inicial.
-
-      }
+     <script>    
+        //Criação de condicional para verificar os campos estão preenchidos. Eu vi essa técnica pela internet. Pois a seleção dos inputs são como um array.
+        document.querySelectorAll('input').forEach(element =>{
+          if(element.value.length <1){
+            //Deixa o botão inacessível
+            document.querySelector('button').addEventListener("click", ()=>{
+            this.disabled = true
+          })
+          //Impede o envio do formulário
+          document.querySelector('form').addEventListener("submit", (event)=>{
+            event.preventDefault();
+          })
+          }
+          else{
+            document.querySelector('button').addEventListener("click", ()=>{
+            this.disabled = false
+          })
+          console.log(this.disabled)
+          setTimeout(()=>{
+            location.href = 'index.html'
+          })
+          }    
+      })
     </script>
   </body>
 </html>
