@@ -426,6 +426,7 @@ body,html{
     #edit{
         text-transform: uppercase;
         font-size: 13px;
+        font-weight: 600;
         color: rgb(88, 33, 113);
         padding: 5px 10px 5px 10px;
         display: block;
@@ -647,6 +648,7 @@ body,html{
     #edit{
         text-transform: uppercase;
         font-size: 13px;
+        font-weight: 600;
         color: rgb(88, 33, 113);
         padding: 5px 10px 5px 10px;
         display: block;

@@ -18,6 +18,10 @@ body{
     font-weight: 600;
 }
 
+h1{
+    cursor: context-menu;
+}
+
 @media (min-width:600px) and (max-width:768px){
     h1{
         text-align: center;
@@ -551,6 +555,7 @@ body{
     #edit{
         text-transform: uppercase;
         font-size: 13px;
+        font-weight: 600;
         color: rgb(94, 33, 113);
         padding: 5px 10px 5px 10px;
         display: block;
