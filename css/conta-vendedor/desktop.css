@@ -555,7 +555,7 @@ body{
         padding: 5px 10px 5px 10px;
         display: block;
         margin: auto;
-        transform: translateY(4vh);
+        transform: translateY(9vh);
         cursor: pointer;
         border-width: 0px;
         border-radius: 5px;
@@ -570,7 +570,7 @@ body{
         padding: 5px 10px 5px 10px;
         display: block;
         margin: auto;
-        transform: translateY(4vh);
+        transform: translateY(9vh);
         cursor: pointer;
         border-width: 0px;
         border-radius: 5px;
