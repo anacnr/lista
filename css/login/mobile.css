@@ -113,10 +113,11 @@ margin-left: 5%;
     height: 125px;
     display: block;
     margin: auto;
-    transform: translateY(-50vh);
+    transform: translateY(-100vh);
     box-shadow: 0px -1px 6px black inset;
     background-color: white;
     border-radius: 12px;
+    text-align: center;
 
     /*Animação*/
     animation-name: alert;

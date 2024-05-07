@@ -13,7 +13,7 @@ else{
     $measure = $_POST['name2'];
     $price = $_POST['name3'];
     $brand = $_POST['name4'];
-    $quantity = $_POST['quantity'];
+    $quantity = $_POST['name5'];
     $image = $_FILES['image'];
 
     $image_name = $image['name'];
@@ -55,7 +55,7 @@ else{
       $request = true;
 
       sleep(4);
-      header('Location: /lista/supermercado/tabelas/setor1.html');
+      header('Location: /l/lista/supermercado/tabelas/setor1.html');
       }
       else{
         die("Erro na inserção. Imagem muito grande");

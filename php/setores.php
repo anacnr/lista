@@ -37,7 +37,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         mysqli_stmt_close($start);
 
         sleep(3);
-        header('Location: /lista/supermercado/cad-setor.html');//O endereço deve ser completo. Tive que por o redirecionamento aqui.
+        header('Location: /l/lista/supermercado/cad-setor.html');//O endereço deve ser completo. Tive que por o redirecionamento aqui.
 
         $request = true;
   }

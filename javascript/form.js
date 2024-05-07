@@ -28,25 +28,28 @@ document.addEventListener("DOMContentLoaded", function () {
                     request.forEach(element => {
                     //Email e senha encontrados na tabela comprador
                     if(element.senha == 'Comprador-autorizado' && element.tabela == 'comprador'){
+                        console.log("Email e senha encontrados na tabela comprador " + element);
                         setTimeout(()=>{
                             location.href = '../lista/cliente/index.html'
                         },500)
                     }//Primeira condicional
-                    //Email e senha encontrados na tabela comprador
+                    //Email e senha encontrados na tabela vendedor
                     else if(element.senha == 'Vendedor-autorizado' && element.tabela == 'vendedor'){
+                        console.log("Email e senha encontrados na tabela vendedor " + element);
                         setTimeout(()=>{
                             location.href = '../lista/supermercado/index.html'
                         },500)
                     }//Segunda condicional
-                    //Email e senha encontrados na tabela comprador
+                    //Email e senha encontrados na tabela de suporte
                     else if(element.senha == 'Suporte-autorizado' && element.tabela == 'suporte'){
+                        console.log("Email e senha encontrados na tabela de suporte "+ element);
                         setTimeout(()=>{
                             location.href = '../lista/suporte/teste.html'
                         },500)
                     }//Terceira condicional
                     //Senha incorreta
                     else if(element.senha == 'desautorizado'){
-
+                        console.log("Senha incorreta" + element);
                         //Esconde o formulário
                         const hide_form = document.querySelector('form')
                         hide_form.style.display = 'none'
@@ -68,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     }//Quarta condicional
                     //Se não encontrar nenhum registro com email e senha
                     else if(element.login == 'desconhecido'){
-                        console.log(element)
+                        console.log("Se não encontrar nenhum registro " + element)
                         //Esconde o formulário
                         const hide_form = document.querySelector('form')
                         hide_form.style.display = 'none'

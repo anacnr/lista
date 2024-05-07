@@ -160,6 +160,11 @@
     display: block;
     margin: auto;
     cursor: pointer;
+    background-image: url('../buttons/upload.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    background-color: rgba(128, 0, 128, 0.301);
   }
 
     /*Imagem armazenada no banco*/
