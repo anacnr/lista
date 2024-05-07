@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+@charset "UTF-08";
 
 body {
   background-image: linear-gradient(to bottom, #ffbf318f, #ffd34d);
@@ -14,7 +14,12 @@ body {
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-bar > .logo > img{
+  width: 25%;
+  margin-left: 20px;
 }
 
 header {
@@ -27,7 +32,6 @@ header {
     justify-content: space-between;
     padding: 0.60rem 5rem; /* Remova o padding horizontal e adicione 0 na largura para preencher toda a largura */ /*0.60 altura e 0 meche no nome logo e no botão*/
 }
-
 
 .logo {
     display: flex;
@@ -82,8 +86,6 @@ header {
     display: none;
 }
 
-
-
 @media screen and (max-width: 730px) {
     .nav-bar {
         padding: 1.5rem 4rem;
@@ -123,7 +125,6 @@ header {
         display: block;
     }
 }
-
 
 /*CAROUSEL*/
 
@@ -188,7 +189,6 @@ header {
     border-radius: 5px;
   }
   
-  
   button:hover, a:hover {
     opacity: 0.7;
   }
@@ -198,14 +198,6 @@ header {
     text-align: center;
     margin: 20px;
   }
-  
-  .text-center > .rounded-circle{
-    background-image: url('cliente/assets/imgsuper/supermarket-min.png');
-    background-position: center;
-    background-size: contain;
-    background-attachment: local;
-    filter: contrast(2);
-  } 
     
   @media only screen and (max-width: 730px) {
     .promocao {
@@ -217,14 +209,6 @@ header {
 
 .img-fluid{
   width: 100px; height: 100px;
-}
-
-.text-center > .rounded-circle{
-  background-image: url('cliente/assets/imgsuper/supermarket-min.png');
-  background-position: center;
-  background-size: contain;
-  background-attachment: local;
-  filter: contrast(2);
 } 
 
 /*RODAPÉ*/
@@ -277,7 +261,7 @@ footer {
   }
   
   /*PARTE DOS ÍCONES DAS REDES SOCIAIS*/
-  footer > .conteudo-rodape > .redes-sociais > .bi-facebook, .bi-instagram, .bi-twitter-x{
+  footer > .conteudo-rodape > .redes-sociais > .bi-facebook, .bi-instagram, .bi-twitter-x, .bi-whatsapp{
     font-size: 20px;
     cursor: pointer;
     top: -13%;
@@ -293,6 +277,12 @@ footer {
     position: relative;
     right: 25%;
     bottom: 50%;
+  }
+
+  footer > .conteudo-rodape > .redes-sociais > .bi-whatsapp{
+    position: relative;
+    left: 40%;
+    bottom: 10%;
   }
 
   footer > .conteudo-rodape > .redes-sociais > .bi-twitter-x{
@@ -321,7 +311,7 @@ footer {
     }
 
     /*PARTE DOS ÍCONES DAS REDES SOCIAIS*/
-    footer > .conteudo-rodape > .redes-sociais > .bi-facebook, .bi-instagram, .bi-twitter-x{
+    footer > .conteudo-rodape > .redes-sociais > .bi-facebook, .bi-instagram, .bi-twitter-x, .bi-whatsapp{
       font-size: 16px;
       cursor: pointer;
     }
@@ -343,4 +333,33 @@ footer {
       left: 30%;
       bottom: 30%;
     }
+
+    footer > .conteudo-rodape > .redes-sociais > .bi-whatsapp{
+      position: relative;
+      left: 40%;
+      bottom: 10%;
+    }
   }
+
+  /*CAROUSEL EM TELA MAIOR*/
+
+@media (min-width: 730px) and (max-width: 930px){
+  .w-100 {
+    height: 60vh; /*Altura do Carousel*/
+  }
+  
+  .carousel-inner img {
+    width: 100%; /* Defina a largura das imagens do carousel como 100% para ocupar toda a largura */
+  } 
+}
+
+@media (min-width: 930px){
+  .w-100 {
+    height: 450px; /*Altura do Carousel*/
+  }
+  
+  .carousel-inner img {
+    width: 100%;
+    /*Defina a largura das imagens do carousel como 100% para ocupar toda a largura */
+  }
+}

@@ -1,0 +1,330 @@
+@charset "UTF-08";
+/*Common styles for all device*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --font_family: 'Poppins', sans-serif;
+    --font_color: rgba(255, 255, 255, 0.954);
+    --background-color: linear-gradient(#ff3131, #ffd34d);
+    --font_size: 2dvi;
+}
+
+body,html{
+    width: 100vw;
+    height: 100vh;
+    background-image: var(--background-color);
+    background-attachment: fixed;
+}
+
+@media (max-width:600px){
+
+section {
+    width: 100%;
+}
+
+section > h1 {
+    text-align: center;
+    color: var(--font_color);
+    font-family: var(--font_family);
+    text-shadow: 1px 1px 2px black;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+section > h3 {
+    color: rgba(9, 9, 62, 0.895);
+    font-family: var(--font_family);
+    font-size: 2.5dvi;
+    text-shadow: 1px 1px 2px rgb(244, 243, 243);
+    text-align: center;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+section > form {
+    display: flex;
+    flex-direction: column;
+}
+
+section > form > input {
+    padding: 7px;
+    margin-bottom: 20px;
+    width: 50%;
+    border-radius: 10px;
+    border-width: 0px;
+    border-color: black;
+    font-family: var(--font_family);
+    box-shadow: 2px 2px 8px black;
+    font-family: var(--font_family);
+    position: relative;
+    left: 25%;
+    background-color: rgb(248, 247, 244);
+}
+
+section > form > input:focus{
+    outline: 0;
+}
+
+form > textarea {
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px black;
+    border-width: 0px;
+    text-align: left;
+    font-family: var(--font_family);
+    width: 50%;
+    height: 150px;
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+form >textarea:focus{
+    outline: 0;
+}
+
+form textarea::placeholder{
+    text-align: left;
+    font-family: var(--font_family);
+    padding-top: 2px;
+    padding-left: 10px;
+}
+
+button {
+    cursor: pointer;
+    background: rgb(179, 97, 224);
+    color: white;
+    width: 100px;
+    height: 30px;
+    transition: all 0.3s;
+    font-family: var(--font_family);
+    border-width: 0px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 6px black;
+    display: block;
+    margin: auto;
+    transform: translateY(7vh);
+    letter-spacing: 2px;
+}
+
+button:hover {
+    background: #45e645d8;
+}
+}
+
+@media (min-width:600px) and (max-width:768px) {
+section {
+    width: 100%;
+}
+
+section > h1 {
+    text-align: center;
+    color: var(--font_color);
+    font-family: var(--font_family);
+    text-shadow: 1px 1px 2px black;
+    margin-top: 10%;
+    margin-bottom: 8%;
+}
+
+section > h3 {
+    color: rgba(9, 9, 62, 0.895);
+    font-family: var(--font_family);
+    font-size: 1em;
+    text-shadow: 1px 1px 2px rgb(244, 243, 243);
+    text-align: center;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+section > form {
+    display: flex;
+    flex-direction: column;
+}
+
+section > form > input {
+    padding: 7px;
+    width: 300px;
+    border-radius: 10px;
+    border-width: 0px;
+    border-color: black;
+    font-family: var(--font_family);
+    box-shadow: 2px 2px 8px black;
+    font-family: var(--font_family);
+    background-color: rgb(248, 247, 244);
+}
+
+section > form > #nome{
+    margin: auto;
+    display: block;
+}
+
+section > form > #email{
+    margin: auto;
+    display: block;
+    transform: translateY(3vh);
+}
+
+section > form > input:focus{
+    outline: 0;
+}
+
+form > textarea {
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px black;
+    border-width: 0px;
+    text-align: left;
+    font-family: var(--font_family);
+    width: 300px;
+    height: 150px;
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+    padding-left: 10px;
+    transform: translateY(7vh);
+}
+
+form >textarea:focus{
+    outline: 0;
+}
+
+form textarea::placeholder{
+    text-align: left;
+    font-family: var(--font_family);
+    padding-top: 2px;
+    padding-left: 10px;
+}
+
+button {
+    cursor: pointer;
+    background: rgb(179, 97, 224);
+    color: white;
+    width: 100px;
+    height: 30px;
+    transition: all 0.3s;
+    font-family: var(--font_family);
+    border-width: 0px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 6px black;
+    display: block;
+    margin: auto;
+    transform: translateY(14vh);
+    letter-spacing: 2px;
+}
+
+button:hover {
+    background: #45e645d8;
+}    
+}
+
+@media (min-width:768px){
+    section {
+        width: 100%;
+    }
+    
+    section > h1 {
+        text-align: center;
+        color: var(--font_color);
+        font-family: var(--font_family);
+        text-shadow: 1px 1px 2px black;
+        margin-top: 75px;
+        margin-bottom: 50px;
+    }
+    
+    section > h3 {
+        color: rgba(9, 9, 62, 0.895);
+        font-family: var(--font_family);
+        font-size: 1em;
+        text-shadow: 1px 1px 2px rgb(244, 243, 243);
+        text-align: center;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin-bottom: 30px;
+    }
+    
+    section > form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    section > form > input {
+        padding: 7px;
+        width: 300px;
+        border-radius: 10px;
+        border-width: 0px;
+        border-color: black;
+        font-family: var(--font_family);
+        box-shadow: 2px 2px 8px black;
+        font-family: var(--font_family);
+        background-color: rgb(248, 247, 244);
+    }
+    
+    section > form > #nome{
+        margin: auto;
+        display: block;
+    }
+    
+    section > form > #email{
+        margin: auto;
+        display: block;
+        transform: translateY(3vh);
+    }
+    
+    section > form > input:focus{
+        outline: 0;
+    }
+    
+    form > textarea {
+        border-radius: 10px;
+        box-shadow: 2px 2px 8px black;
+        border-width: 0px;
+        text-align: left;
+        font-family: var(--font_family);
+        width: 300px;
+        height: 150px;
+        display: block;
+        margin: auto;
+        padding-top: 10px;
+        padding-left: 10px;
+        transform: translateY(7vh);
+    }
+    
+    form >textarea:focus{
+        outline: 0;
+    }
+    
+    form textarea::placeholder{
+        text-align: left;
+        font-family: var(--font_family);
+        padding-top: 2px;
+        padding-left: 10px;
+    }
+    
+    button {
+        cursor: pointer;
+        background: rgb(179, 97, 224);
+        color: white;
+        width: 100px;
+        height: 30px;
+        transition: all 0.3s;
+        font-family: var(--font_family);
+        border-width: 0px;
+        border-radius: 6px;
+        box-shadow: 2px 2px 6px black;
+        display: block;
+        margin: auto;
+        transform: translateY(15vh);
+        letter-spacing: 2px;
+    }
+    
+    button:hover {
+        background: #45e645d8;
+    }
+}

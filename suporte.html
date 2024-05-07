@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de suporte</title>
+    <link rel="stylesheet" href="/css/suporte/suporte.css">
+    <link rel="shortcut icon" href="imagens/icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <section>
+        <h1>Area de suporte:</h1>
+        <h3>Escreva uma mesagem relatando um problema, uma dúvida ou uma dificuldade:</h3>
+        <form action="#" method="post">
+            <input type="text" name="nome" placeholder="Digite seu nome:" id="nome">
+            <input type="text" name="email" placeholder="Digite seu e-mail:" id="email">
+            <textarea name="mensagem" cols="30" rows="10" placeholder="Escreva" tabindex="50"></textarea>
+            <button type="submit"><b>ENVIAR</b></button>
+        </form>
+    </section>
+</body>
+</html>
+<script>
+    let input_name  =document.querySelectorAll('input')[0]
+    let input_email  =document.querySelectorAll('input')[1]
+    let message = document.querySelector('textarea')
+
+    document.querySelector('button').addEventListener("click", ()=>{
+        //Se os campos não estiverem plenamente preenchidos não enviará o form
+        if(input_name.value.length < 3 || input_email.value.length <=5 && message.value.length < 5){
+            document.querySelector('form').addEventListener("submit", (event)=>{
+                event.preventDefault();//Não permite o formulário ser submetido
+            });
+            alert("Por favor preencha os campos!")
+            console.log("Nome " + input_name.length + " email " + input_email.length + " messagem " + message.length);
+        }
+         //Se estiver tudo correto
+        else{
+
+            /*const form = new FormData()
+            form.append('email', input_email.value)
+            form.append('message' , message.value)
+            $.ajax({
+                url: 'email copy.php', type: 'POST', data: form, processData: false, contentType:false
+            }).done(function(request){
+                console.log(request);
+            })*/
+        }
+    })
+</script>
