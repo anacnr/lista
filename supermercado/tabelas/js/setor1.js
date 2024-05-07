@@ -74,18 +74,21 @@ document.addEventListener("DOMContentLoaded" , ()=>{
     })
   });//Cadastra os produtos
 
-  /*Emissão dos produtos salvos*/
-  const table = document.querySelector("table")
+  /*Emissão dos produtos salvos //Requisição ajax*/
+  $.ajax({
+    url: '/l/lista/php/produtos-salvos.php' , type: 'POST', processData: false, contentType: false
+  }).done(function(request){
+    console.log(typeof(request));
+    request.forEach(function(element, index){
+      const tbody
+      let tr = document.createElement("tr")
+    })
+  })
+  
+  console.log("Script!");
+  /*const table = document.querySelector("table")
   let disponible_rows = table.rows.length
   console.log(disponible_rows);
   if(disponible_rows > 1){
-    //Requisição ajax
-    $.ajax({
-      url: '../../php/produtos.php' , type: 'POST', processData: false, contentType: false
-    }).done(function(request){
-      request.forEach(function(element, index){
-        console.log(element);
-      })
-    })
-  }
+  }*/
 });//Carregamento da página 
