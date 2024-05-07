@@ -80,8 +80,15 @@ document.addEventListener("DOMContentLoaded" , ()=>{
   }).done(function(request){
     console.log(typeof(request));
     request.forEach(function(element, index){
-      const tbody
+      const tbody = document.querySelector('tbody')
       let tr = document.createElement("tr")
+      tbody.appendChild(tr)
+      const fields = element.campos - 2 
+      let id = element.id
+      for(let count=0;count<fields;count++){
+        let td = document.createElement("td")
+        tr.appendChild(td)
+      }
     })
   })
   
