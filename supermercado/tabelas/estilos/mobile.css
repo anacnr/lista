@@ -173,12 +173,13 @@
       height: 30px;
     }
 
-  /*Imagem quando é carregada
-  tbody > tr > td > .label-input > .icon-upload{
-    width: 15px;
-    transform: translateY(0.7vh);
-    filter: drop-shadow(1px 1px 1px rgb(244, 244, 147));
-  }*/
+  /*Campo que vai exibir a imagem*/
+  tbody > tr > td > .image{
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin: auto;
+  }
 
   /*Input que abriga os novos dados*/
   tr > td > .new-input{
@@ -191,4 +192,8 @@
     border-right: none;
   }
 
+  /*Ìcone do botão de editar*/
+  #span-buttons > .bi-pencil-square{
+    cursor: pointer;
+  }
 }
