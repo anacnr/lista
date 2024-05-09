@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /*Configurações para tela menor*/
 
 @media (max-width:600px){
@@ -16,6 +17,12 @@ body{
     box-sizing: border-box;
     background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
     background-attachment: fixed;
+}
+
+form > h1{
+    font-family: 'Poppins';
+    text-align: center;
+    margin-top: 73px;
 }
 
 form > ul > li{
@@ -45,7 +52,7 @@ form > ul > li > input{
 /*Primeiro campo que recebe o dado (nome)*/
 
 form > ul > li > #cliente{
-    margin-top: 20%;    
+    margin-top: 7%;    
 }
 
 /*Último campo que recebe o dado (senha)*/
@@ -90,7 +97,6 @@ form > ul > li > #user, #cpf{
     font-size: 14px;
     position: absolute;
     transform: translate(25vw,0vh);
-    background-color: white;
     border-radius: 25%;
     padding: 4px;
 }
@@ -99,7 +105,6 @@ form > ul > li > #cell{
     width: 4%;
     position: absolute;
     transform: translate(25vw,0vh);
-    background-color: white;
     border-radius: 25%;
     padding: 1px;
 }
@@ -108,7 +113,6 @@ form > ul > li > #house{
     font-size: 14px;
     position: absolute;
     transform: translate(25vw,0vh);
-    background-color: white;
     border-radius: 25%;
     padding: 1px;
 }
@@ -118,7 +122,6 @@ form > ul > li > #email{
     height: 2vh;
     position: absolute;
     transform: translate(25vw,0vh);
-    background-color: white;
     border-radius: 25%;
     padding: 3px;
 }
@@ -128,7 +131,6 @@ form > ul > li > #password{
     height: 3%;
     position: absolute;
     transform: translate(25vw,0vh);
-    background-color: white;
     border-radius: 25%;
     padding-top: 4px;
     padding-right: 2px;

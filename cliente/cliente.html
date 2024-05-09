@@ -14,7 +14,7 @@
   </head>
   <body>
     <form method="post" action="../php/cliente.php"> 
-
+      <h1>Cadastro</h1>
     <ul>
       
       <li>
@@ -67,13 +67,15 @@
             //Deixa o botão inacessível
             document.querySelector('button').addEventListener("click", ()=>{
             this.disabled = true
-            console.log("Botão: " , this.disabled , "Valores: " ,element.value.length );
+          })
+          //Impede o envio do formulário
+          document.querySelector('form').addEventListener("submit", (event)=>{
+            event.preventDefault();
           })
           }
           else{
             document.querySelector('button').addEventListener("click", ()=>{
             this.disabled = false
-            console.log(this.disabled);
           })
           console.log(this.disabled)
           setTimeout(()=>{
