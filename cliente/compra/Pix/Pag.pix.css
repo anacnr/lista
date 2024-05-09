@@ -1,0 +1,115 @@
+/* CSS Existente */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1.300;1.400;1.500;1.600;1.700;1.800;1.900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(-45deg, #ffce51, #ff7253, #fd5754);
+}
+
+#form {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 10px;
+    padding: 60px;
+    width: min-content;
+    max-width: 90%; /* Limitando a largura máxima */
+    text-align: center; /* Centralizando o conteúdo */
+    color: #2b344b;
+}
+
+.title {
+    font-size: 1.8em;
+    margin-bottom: 10%;
+}
+
+.input {
+    min-width: 200px; /*mínimo da largura do cículo do código*/
+    border-radius: 22px;
+    border: 2px solid #6f7e8a; /* Corrigindo a propriedade border */
+    padding: 10px; /* Ajustando o padding */
+    margin-bottom: 20px; /* Aumentando a margem inferior */
+    display: flex; /* Usando flex para alinhar o ícone */
+    align-items: center; /* Centralizando verticalmente */
+    justify-content: center; /* Centralizando horizontalmente */
+}
+
+.icone {
+    font-size: 36px; /* Aumentando o tamanho do ícone */
+    margin-right: 10px;
+}
+
+.input {
+    min-width: 200px;
+    border-radius: 11px; /* Este estilo pode ser removido, pois é redundante */
+    border: 2px solid #6f7e8a; /* Adicionei "solid" para especificar o tipo de borda */
+    padding: 6px;
+    margin: 0px 0px 12px -5px;
+}    
+
+#form img {
+    display: block;
+    margin: 0 auto;
+  }
+
+.input i{
+    font-size: 1.2em;
+    padding: 4px; /*mecher no tamanho*/
+    background: -webkit-linear-gradient(-45deg, #ffce51, #ff7253,#fd5754);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.input input {
+    width: 80%; /*largura*/
+    border: none; /*sumir o quadrado dentro*/
+    outline: none; /*nã aparecer o quadrado, quando o mouse apertar*/
+}
+
+
+#btn {
+    margin-top: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+#btn button{
+    font-family: 'poppins', sans-serif;
+    background:  linear-gradient(-45deg, #ffce51, #ff7253,#fd5754);
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-size: 1.2em;
+    color: #fff;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer; /*animação da mão*/
+}
+
+
+/* Adição para a responsividade */
+
+@media screen and (max-width: 600px) {
+    .input {
+        min-width: 150px; /* Reduzindo a largura mínima */
+        padding: 8px; /* Reduzindo o padding */
+    }
+
+    .icone {
+        font-size: 20px; /* Reduzindo o tamanho do ícone */
+    }
+
+    #btn button {
+        font-size: 0.9em; /* Reduzindo o tamanho da fonte */
+    }
+}

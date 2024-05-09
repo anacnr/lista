@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded" , ()=>{
                     }
                     else{
                         let img = document.createElement("img")
-                        img.src = '/imagens/produtos/frutas/berries-min.jpg'
+                        img.src = 'produtos/frutas/pears-min.jpg'
                         img.className = 'image'
                         element.appendChild(img)
                     }
@@ -41,5 +41,10 @@ document.addEventListener("DOMContentLoaded" , ()=>{
                 document.getElementById("total-span").innerHTML += parseFloat(`${ponto.valor}`).toFixed(2).replace('.', ',')
             })
         })
-    }) 
+    })
+    document.getElementById("sav").addEventListener("click", ()=>{
+        setTimeout(()=>{
+            location.href = '../cliente/compra/Pagamento/Pagamento.html'
+        },1000)
+    })
 });
