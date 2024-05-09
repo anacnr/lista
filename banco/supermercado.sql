@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 11/04/2024 às 00:03
--- Versão do servidor: 10.4.28-MariaDB
--- Versão do PHP: 8.2.4
+-- Tempo de geração: 09/05/2024 às 16:26
+-- Versão do servidor: 10.4.32-MariaDB
+-- Versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -58,17 +58,23 @@ CREATE TABLE `produto` (
   `peso` varchar(10) DEFAULT NULL,
   `valor` varchar(10) DEFAULT NULL,
   `marca` varchar(255) DEFAULT NULL,
-  `quantidade` int(10) DEFAULT NULL,
-  `imagem` varchar(255) DEFAULT NULL
+  `quantidade` varchar(50) DEFAULT NULL,
+  `imagem` varchar(255) DEFAULT NULL,
+  `setor` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `produto`
 --
 
-INSERT INTO `produto` (`id`, `nome`, `codigo`, `peso`, `valor`, `marca`, `quantidade`, `imagem`) VALUES
-(1, 'teste', 'teste', 'teste', 'teste', 'teste', 11, 'produtos/661444420dd1b.jpg'),
-(2, 'teste', 'teste', 'teste', 'teste', 'teste', 11, 'produtos/661444e901cab.jpg');
+INSERT INTO `produto` (`id`, `nome`, `codigo`, `peso`, `valor`, `marca`, `quantidade`, `imagem`, `setor`) VALUES
+(1, 'maçã', 'código1', '300000', '5,80', 'teste1', '120000', 'produtos/661444420dd1b.jpg', ''),
+(2, 'maçã', 'código2', '40000', '3,90', 'teste2', '67000', 'produtos/661444e901cab.jpg', ''),
+(4, 'Laranja', 'Código3', '20000', '6,60', 'Teste3', '90000', 'produtos/663c000fe1980.jpg', ''),
+(5, 'limão', 'Código4', '30000', '5,55', 'Teste4', '20000', 'produtos/663c00b26e615.jpg', ''),
+(6, 'Carne', 'Código5', '40000', '37,89', 'Teste5', '50000', 'produtos/663c00f19db92.png', ''),
+(7, 'Picanha', 'Código6', '80000', '45,67', 'Teste6', '120000', 'produtos/663c01542538a.png', ''),
+(8, 'Couve-flor', 'Código7', '10000', '13,80', 'Teste7', '30000', 'produtos/663c01a982782.jpg', '');
 
 -- --------------------------------------------------------
 
@@ -186,7 +192,7 @@ ALTER TABLE `comprador`
 -- AUTO_INCREMENT de tabela `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de tabela `setor`
