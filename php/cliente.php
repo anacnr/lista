@@ -29,8 +29,8 @@ else{
     //Faz os comandos serem executados
     mysqli_stmt_execute($start);
 
-    sleep(4);
-    header('Location: ../index.html');
+    sleep(3);
+    header('Location: ../cliente/index.html');//Precisa ser redirecionado para o index dentro da pasta cliente
       
     //Fecha as validações
     mysqli_stmt_close($start);

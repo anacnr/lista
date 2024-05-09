@@ -15,7 +15,7 @@ $hash_pass = password_hash($passw, PASSWORD_DEFAULT);
 $image = $_FILES['img']; 
 
 if($mysql->connect_error != null){
-    die("Erro na conexão" . $mysql->connect_error);
+    die("Erro na conexão");
 }
 else{
 
@@ -55,11 +55,11 @@ if(isset($image)){
 
     //Faz os comandos serem executados
     mysqli_stmt_execute($start);
-    sleep(4);
-    header('Location: ../index.html');        
+    sleep(3);
+    header('Location: ../supermercado/index.html');//Precisa ser redirecionado para o index na pasta supermercado
     }
     else{
-        die("Erro" . $mysql->error);
+        die("Erro");
     }
 } 
     else{
