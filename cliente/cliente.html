@@ -67,15 +67,13 @@
             //Deixa o botão inacessível
             document.querySelector('button').addEventListener("click", ()=>{
             this.disabled = true
-          })
-          //Impede o envio do formulário
-          document.querySelector('form').addEventListener("submit", (event)=>{
-            event.preventDefault();
+            console.log("Botão: " , this.disabled , "Valores: " ,element.value.length );
           })
           }
           else{
             document.querySelector('button').addEventListener("click", ()=>{
             this.disabled = false
+            console.log(this.disabled);
           })
           console.log(this.disabled)
           setTimeout(()=>{

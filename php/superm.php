@@ -15,7 +15,7 @@ $hash_pass = password_hash($passw, PASSWORD_DEFAULT);
 $image = $_FILES['img']; 
 
 if($mysql->connect_error != null){
-    die("Erro na conexão");
+    die("Erro na conexão" . $mysql->connect_error);
 }
 else{
 
@@ -59,7 +59,7 @@ if(isset($image)){
     header('Location: ../index.html');        
     }
     else{
-        die("Erro");
+        die("Erro" . $mysql->error);
     }
 } 
     else{

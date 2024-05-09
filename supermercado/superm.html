@@ -18,7 +18,7 @@
 
     <h1>Cadastro da empresa</h1>
 
-    <form method="post" action="../php/superm.php" enctype="multipart/form-data" onsubmit="return Register">
+    <form method="post" action="../php/superm.php" enctype="multipart/form-data">
       <ul>
         <li>
           <i class="bi bi-building" id="company"></i>
@@ -166,23 +166,19 @@
         //Criação de condicional para verificar os campos estão preenchidos. Eu vi essa técnica pela internet. Pois a seleção dos inputs são como um array.
         document.querySelectorAll('input').forEach(element =>{
           if(element.value.length <1){
-            console.log(element.placeholder);
             //Deixa o botão inacessível
             document.querySelector('button').addEventListener("click", ()=>{
             this.disabled = true
-          })
-          //Impede o envio do formulário
-          document.querySelector('form').addEventListener("submit", (event)=>{
-            event.preventDefault();
+            console.log(this.disabled);
           })
           }
           else{
             document.querySelector('button').addEventListener("click", ()=>{
             this.disabled = false
+            console.log(this.disabled);
+            setTimeout(()=>{
+            location.href = 'supermercado/index.html'
           })
-          console.log(this.disabled)
-          setTimeout(()=>{
-            location.href = 'index.html'
           })
           }    
       })

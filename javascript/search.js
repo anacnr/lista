@@ -43,7 +43,7 @@ button_submit.addEventListener('click', ()=>{
     
                         card.appendChild(dates)
                     }
-                    else if(element.tabela == 'produto' && element.setor == 'frutas'){
+                    else if(element.tabela == 'produto'){
                         console.log("setor: " + element.setor)
 
                         const card = document.createElement("div")

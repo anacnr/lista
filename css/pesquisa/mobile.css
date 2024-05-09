@@ -138,13 +138,13 @@ body,html{
     }
 
     .results > .img-product{
-        width: 29%;
+        width: 20%;
         height: 50%;
         border-radius: 50%;
         border: 1px solid rgba(0, 0, 0, 0.132);
         position: relative;
-        left: 60%;
-        bottom: 65%;
+        left: 70%;
+        bottom: 60%;
     }
 
     .results > .button-card{
@@ -154,8 +154,8 @@ body,html{
         font-family: arial;
         font-size: 0.8em;
         position: relative;
-        bottom: 44%;
-        left: 30%;
+        bottom: 35%;
+        left: 40%;
         cursor: pointer;
     }
 
