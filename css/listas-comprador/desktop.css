@@ -135,14 +135,39 @@ body,html{
         cursor: pointer;
     }
 
+    /*Botão de salvar*/
     #div-list > #sav{
         transform: translate(35vw,50vh);
-        background-image: linear-gradient(65deg,rgba(0, 153, 255, 0.646),rgba(118, 218, 233, 0.696));
+        background-image: radial-gradient(rgba(78, 232, 35, 0.559),rgba(6, 240, 84, 0.71));
+        color: rgba(255, 255, 255, 0.801);
+        text-shadow: 1px 1px 2px black;
     }
 
+    /*Botão de cancelar*/
     #div-list > #can{
         transform: translate(45vw,50vh);
         background-image: linear-gradient(65deg,rgba(255, 0, 242, 0.737),rgba(235, 22, 72, 0.888));
+        color: rgb(219, 219, 212);
+        text-shadow: 1px 1px 3px black;
+    }
+
+    .span-supermarkets{
+        text-align: center;
+        display: block;
+        margin: auto;
+        transform: translateY(-13vh);
+        background-image: linear-gradient(120deg,rgba(239, 153, 25, 0.824)25%,rgba(242, 8, 78, 0.897)50%);
+        font-family: var(--font_family);
+        padding: 3px;
+        font-size: 1em;
+        letter-spacing: 1px;
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.774);
+        text-shadow: 1px 1px 4px black;
+        margin-bottom: 4px;
+        width: 60%;
+        border-radius: 9px;
+        box-shadow: 2px 2px 5px rgb(109, 109, 109);
     }
 }
 
@@ -266,8 +291,30 @@ body,html{
         background-image: linear-gradient(65deg,rgba(0, 153, 255, 0.646),rgba(118, 218, 233, 0.696));
     }
 
+    /*Botão de cancelar*/
     #div-list > #can{
         transform: translate(55vw,50vh);
         background-image: linear-gradient(65deg,rgba(255, 0, 242, 0.737),rgba(235, 22, 72, 0.888));
+        color: rgb(219, 219, 212);
+        text-shadow: 1px 1px 3px black;
+    }
+    
+    .span-supermarkets{
+        text-align: center;
+        display: block;
+        margin: auto;
+        transform: translateY(-13vh);
+        background-image: linear-gradient(120deg,rgba(239, 153, 25, 0824)25%,rgba(242, 8, 78, 0.897)50%);
+        font-family: var(--font_family);
+        padding: 3px;
+        font-size: 1em;
+        letter-spacing: 1px;
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.774);
+        text-shadow: 1px 1px 4px black;
+        margin-bottom: 4px;
+        width: 450px;
+        border-radius: 9px;
+        box-shadow: 2px 2px 5px rgb(109, 109, 109);
     }
 }

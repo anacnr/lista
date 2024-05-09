@@ -5,7 +5,6 @@
     padding: 0px;
     box-sizing: border-box;
 }
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
@@ -138,12 +137,32 @@ body,html{
         cursor: pointer;
         padding: 3px;
         border-radius: 7%;
-    }
-
-    #div-list > button:hover{
-        background-color: beige;
         box-shadow: 1px 2px 5px black;
-        font-family: var(--font_family);
     }
 
+    /*Botão de cancelar*/
+    #div-list > #can{
+        background-image: linear-gradient(65deg,rgba(255, 0, 242, 0.737),rgba(235, 22, 72, 0.888));
+        color: rgb(219, 219, 212);
+        text-shadow: 1px 1px 3px black;
+    }
+
+    .span-supermarkets{
+        text-align: center;
+        display: block;
+        margin: auto;
+        transform: translateY(-12vh);
+        background-image: linear-gradient(120deg,rgba(239, 153, 25, 0.824)25%,rgba(242, 8, 78, 0.897)50%);
+        font-family: var(--font_family);
+        padding: 3px;
+        font-size: 1em;
+        letter-spacing: 1px;
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.774);
+        text-shadow: 1px 1px 4px black;
+        margin-bottom: 4px;
+        width: 60%;
+        border-radius: 9px;
+        box-shadow: 2px 2px 5px rgb(109, 109, 109);
+    }
 }
