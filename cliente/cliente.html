@@ -68,10 +68,6 @@
             document.querySelector('button').addEventListener("click", ()=>{
             this.disabled = true
           })
-          //Impede o envio do formulário
-          document.querySelector('form').addEventListener("submit", (event)=>{
-            event.preventDefault();
-          })
           }
           else{
             document.querySelector('button').addEventListener("click", ()=>{
@@ -79,7 +75,7 @@
           })
           console.log(this.disabled)
           setTimeout(()=>{
-            location.href = 'index.html'
+            location.href = 'cliente/index.html'
           })
           }    
       })

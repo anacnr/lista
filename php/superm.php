@@ -59,7 +59,7 @@ if(isset($image)){
     header('Location: ../supermercado/index.html');//Precisa ser redirecionado para o index na pasta supermercado
     }
     else{
-        die("Erro");
+        die("Erro " . $mysql->error);
     }
 } 
     else{
