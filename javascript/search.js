@@ -1,5 +1,7 @@
 console.log("Script JS")
 
+prompt("Qual supermercado você deseja fazer compras?")
+
 const input = document.querySelector('input')
 const button_submit = document.getElementById('icon-butt')
 
@@ -8,43 +10,22 @@ button_submit.addEventListener('click', ()=>{
             console.log("Input vazio!");
     }
     else{
+            /*O body remove a div das frases*/
+            const div_mess = document.getElementById("message")              
+            document.querySelector('body').removeChild(div_mess)
+
             const form = new FormData()
             form.append('input' , input.value)    
             $.ajax({
                 url:'../php/pesquisa.php', type: 'POST', data: form, processData: false, contentType: false
             }).done(function(request){
-                /*O body remove a div das frases*/
-                const div_mess = document.getElementById("message")              
-                document.querySelector('body').removeChild(div_mess)
 
                 request.forEach(element => {
-                    /*Criação dos cards de empresa e produtos*/
-                    const body = document.querySelector('body')
 
-                    if(element.tabela == 'empresa'){
-                        const card = document.createElement("div")
-                        card.className = 'results'
-                        card.id = `${element.id}`
-                        card.style.backgroundImage = `url(../php/${element.imagem})`
-    
-                        body.appendChild(card)
-    
-                        const h1 = document.createElement("h1")
-                        h1.className = 'title'
-                        h1.id = `${element.id}`
-                        h1.innerHTML = `${element.empresa}`
-    
-                        card.appendChild(h1)
-    
-                        const dates = document.createElement("p")
-                        dates.className = 'phrase-comp'
-                        dates.id = `${element.id}`
-                        dates.innerHTML = `Email: ${element.email} <br> Telefone-fixo: ${element.tel_fixo} <br> Telefone-móvel: ${element.celular}`
-    
-                        card.appendChild(dates)
-                    }
-                    else if(element.tabela == 'produto'){
-                        console.log("setor: " + element.setor)
+                    const body = document.querySelector('body')
+                
+                     if(element.tabela == 'produto'){
+                        console.log("setor: " + element.img)//Retornou: produtos/663c00b26e615.jpg
 
                         const card = document.createElement("div")
                         card.className = 'results'
@@ -130,7 +111,7 @@ button_submit.addEventListener('click', ()=>{
                             setTimeout(() => {
                                     
                                     let price = `${element.valor}`;
-                                    let calcu = (price * 1000) / 1000;
+                                    let calcu = (price * peso_prod) / 1000;
                                     alert("Produto " + name_prod + " adicionado na lista " + "Preço: " + parseFloat(`${calcu}`).toFixed(2).replace('.', ','));
 
 
@@ -139,9 +120,10 @@ button_submit.addEventListener('click', ()=>{
                                     dates.append('peso' , peso_prod)
                                     dates.append('valor' , value_prod)
                                     dates.append('marca' , brand_prod)
+                                    dates.append('img' , element.img)
 
                                     $.ajax({
-                                        //url:'../php/lista.php', type: 'POST', data: dates, processData: false, contentType:false
+                                        url:'../php/lista.php', type: 'POST', data: dates, processData: false, contentType:false
                                     }).done(function(request){
                                         console.log(request)
                                     })

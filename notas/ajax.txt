@@ -1,8 +1,5 @@
 A renomeação do setor não estava funcionando então coloquei o nome entre parenteses e dentro de aspas simples, funcionou.
 
-
-
-
     else{
             const form = new FormData()
             form.append('input' , input.value)    
