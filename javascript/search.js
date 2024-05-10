@@ -25,7 +25,6 @@ button_submit.addEventListener('click', ()=>{
                     const body = document.querySelector('body')
                 
                      if(element.tabela == 'produto'){
-                        console.log("setor: " + element.img)//Retornou: produtos/663c00b26e615.jpg
 
                         const card = document.createElement("div")
                         card.className = 'results'
@@ -67,72 +66,50 @@ button_submit.addEventListener('click', ()=>{
 
                         button.appendChild(i)                      
 
-                        // Adiciona o ouvinte de evento para o button
-                        let name_prod = element.nome// Produto escolhido
+                        //Empacota os dados para serem salvos no arquivo json e o PHP irá tratar os dados vindos do arquivo json
+                        let name_prod = element.nome//Produto escolhido
                         let peso_prod = element.peso
                         let value_prod = element.valor
                         let brand_prod = element.marca
-                        //let quant_prod =
-                        //let image = element.img 
+                        let quant_prod = element.quantidade
+                        let image_prod = element.img 
+                    
                         
-                        const form = document.createElement("form")
-                        form.action = 'json.php'
-                        form.method = 'POST'
-                        form.style.opacity = '0'
-
-                        document.querySelector('body').appendChild(form)
-
-                        for(let count=0;count<=3; count++){
-                            const input = document.createElement("input")
-                            input.id = count
-                            input.type = 'text'
-                            if(input.id == 0){
-                                input.name = 'nome'
-                                input.value = name_prod
-                            }
-                            else if(input.id == 1){
-                                input.name = 'peso'
-                                input.value = peso_prod
-                            }
-                            else if(input.id == 2){
-                                input.name = 'valor'
-                                input.value = value_prod
-                            }
-                            else{
-                                input.name = 'marca'
-                                input.value = brand_prod
-                            }
-                            form.appendChild(input)
-                        }
-
-                        form.appendChild(button)
-                        
-                        button.addEventListener("click", () => {
-                            setTimeout(() => {
+                button.addEventListener("click", () => {
+                setTimeout(() => {
                                     
-                                    let price = `${element.valor}`;
-                                    let calcu = (price * peso_prod) / 1000;
-                                    alert("Produto " + name_prod + " adicionado na lista " + "Preço: " + parseFloat(`${calcu}`).toFixed(2).replace('.', ','));
+                let price = `${element.valor}`;
+                let calcu = (price * peso_prod) / 1000;
+                alert("Produto " + name_prod + " adicionado na lista " + "Preço: " + parseFloat(`${calcu}`).toFixed(2).replace('.', ','));
 
+                //Converter a imagem para a base64
 
-                                    const dates = new FormData()
-                                    dates.append('nome' , name_prod)
-                                    dates.append('peso' , peso_prod)
-                                    dates.append('valor' , value_prod)
-                                    dates.append('marca' , brand_prod)
-                                    dates.append('img' , element.img)
+                const canvas = document.createElement("canvas")
+                let context = canvas.getContext('2d')//Gerar o gráfico em 2D
+                context.drawImage(image_prod,0,0)
+                let base64 = canvas.toDataURL('image/jpeg') 
 
-                                    $.ajax({
-                                        url:'../php/lista.php', type: 'POST', data: dates, processData: false, contentType:false
-                                    }).done(function(request){
-                                        console.log(request)
-                                    })
-                            }, 0);
-                        });          
-                        // Anexa o button ao card
-                        card.appendChild(button);
-                    }
-                });
-            })           
-    }
+                const dates = new FormData()
+                dates.append('id' , element.id)
+                dates.append('nome' , name_prod)
+                dates.append('peso' , peso_prod)
+                dates.append('valor' , value_prod)
+                dates.append('marca' , brand_prod)
+                //dates.append('quantidade', quant_prod)
+                dates.append('img' , base64)
+                console.log("Imagem: " , base64);
+    
+                $.ajax({
+                            url:'../php/lista.php', type: 'POST', data: dates, processData: false, contentType:false
+                }).done(function(request){
+                    console.log(request)
+                })
+              }, 0);
+            });          
+            // Anexa o button ao card
+            card.appendChild(button);
+        }
+    });
+    })           
+  }
 });//Botão

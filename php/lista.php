@@ -4,8 +4,9 @@ $inputname = $_POST['nome'];
 $inputpeso = $_POST['peso'];
 $inputvalue = $_POST['valor'];
 $inputbrand = $_POST['marca'];
-$inputimg = $_FILES['img'];//Imagem do produto
-var_dump($inputimg);
+$inputimg = $_POST['img'];
+//$inputquantity = $_POST['quantidade'];
+
 if(isset($inputname)){
         //Capta o que o php leu através deste arquivo passado
         $existingData = file_get_contents('../javascript/lista.json');
