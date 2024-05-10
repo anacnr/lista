@@ -79,7 +79,6 @@ document.addEventListener("DOMContentLoaded" , ()=>{
     const tbody = document.getElementById('body-tab')
     request.forEach(element =>{
       //Variávris que recebem o resultado de cada campo
-      let fields =  element.campos
       let product = element.nome
       let code = element.codigo
       let kilos = element.peso

@@ -44,7 +44,7 @@ button_submit.addEventListener('click', ()=>{
                         dates.className = 'phrase-prod'
                         dates.id = `${element.id}`
                         
-                        dates.innerHTML = 'Marca:' + `${element.marca}` + '<br> Preço:' +  parseFloat(`${element.valor}`).toFixed(2).replace('.' ,',') + '<br>' + 'Peso: 600g.'
+                        dates.innerHTML = 'Marca:' + `${element.marca}` + '<br> Preço:' +  parseFloat(`${element.valor}`).toFixed(2).replace('.' ,',') + '<br>' + `Peso: ${element.peso}g.`
     
                         card.appendChild(dates)
 
@@ -68,14 +68,12 @@ button_submit.addEventListener('click', ()=>{
 
                         //Empacota os dados para serem salvos no arquivo json e o PHP irá tratar os dados vindos do arquivo json
                         let name_prod = element.nome//Produto escolhido
-                        let peso_prod = 500
+                        let peso_prod = element.peso
                         let value_prod = element.valor
                         let brand_prod = element.marca
-                        let image_prod = element.img 
-                    
+                        let image_prod = element.img                    
                         
                 button.addEventListener("click", () => {
-                setTimeout(() => {
                                     
                 let price = `${element.valor}`;
                 let calcu = (price * peso_prod) / 1000;
@@ -95,8 +93,6 @@ button_submit.addEventListener('click', ()=>{
                     console.log(request)
                 })
 
-
-              }, 0);
             });          
             // Anexa o button ao card
             card.appendChild(button);
