@@ -51,11 +51,12 @@ body,html{
        outline: 0px;
     }
     #search > form > #span-input > .bi-search{
-        margin-left: 20px;
+        margin-left: 18px;
         opacity: 0.8;
         color: white;
         text-shadow: 0px 1px 2px black;
         cursor: pointer;
+        font-size: 3.6dvi;
     }
     /*Div que está com as duas frase*/
     #message{
@@ -169,6 +170,15 @@ body,html{
         border-radius: 3%;
         font-size: 1.1em;     
         cursor: pointer;  
+    }
+
+    #product{
+        position: absolute;
+        top: 14%;
+        left: 89%;
+        width: 3.5dvi;
+        opacity: 0.6;
+        cursor: pointer;
     }
 
 }

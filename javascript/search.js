@@ -1,6 +1,6 @@
 console.log("Script JS")
 
-prompt("Qual supermercado você deseja fazer compras?")
+//prompt("Qual supermercado você deseja fazer compras?")
 
 const input = document.querySelector('input')
 const button_submit = document.getElementById('icon-butt')
@@ -101,3 +101,9 @@ button_submit.addEventListener('click', ()=>{
     })           
   }
 });//Botão
+
+document.querySelector("#product").addEventListener("click", ()=>{
+    setTimeout(()=>{
+        location.href = '../cliente/lista.html'
+    },1000)
+})
