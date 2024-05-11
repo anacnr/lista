@@ -43,6 +43,10 @@
         border: none;
     }
 
+    #search > form > #product:focus{
+        outline: 0;
+    }
+
 /*Lupa da barra de pesquisa*/
     #search > form > .bi-search{
         font-size: 3dvi;

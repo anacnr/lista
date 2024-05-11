@@ -18,6 +18,11 @@ body {
   --lyric: Arial, Helvetica, sans-serif;
 }
 
+#search > form > #product:focus{
+  outline: 0;
+  padding-left: 10px;
+}
+
 @media (min-width: 600px) and (max-width: 768px) {
     
   h1 {
@@ -42,7 +47,7 @@ body {
   }
 
   /*Input*/
-  #search > #product {
+  #search > form > #product {
     width: 85%;
     border-radius: 6px;
     padding-bottom: 2px;
@@ -146,7 +151,7 @@ body {
       }
     
       /*Input*/
-      #search > #product {
+      #search > form > #product {
         width: 80px;
         border-radius: 6px;
         padding-bottom: 2px;
@@ -250,7 +255,7 @@ body {
       }
     
       /*Input*/
-      #search > #product {
+      #search > form > #product {
         width: 85%;
         border-radius: 6px;
         padding-bottom: 2px;
@@ -354,7 +359,7 @@ body {
       }
     
       /*Input*/
-      #search > #product {
+      #search > form > #product {
         width: 85%;
         border-radius: 6px;
         padding-bottom: 2px;
