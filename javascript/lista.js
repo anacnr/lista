@@ -83,4 +83,15 @@ document.querySelector("#total-span").textContent += total.toFixed(2).replace('.
         },1500)
     })
 
+    document.querySelector("#supermarket").addEventListener("click", ()=>{
+        setTimeout(()=>{
+            location.href = '../cliente/index.html'
+        },1500)
+    })
+
+    document.querySelector("#product").addEventListener("click", ()=>{
+        setTimeout(()=>{
+            location.href = '../cliente/pesquisa.html'
+        },1500)
+    })
 });//onlodad
