@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let setor = document.querySelector(".setor").value;
 
     if (setor.length < 2) {
-      alert("Por favor coloque um nome acima de 2 letras");
+      alert("Por favor coloque um nome com mais de 2 letras");
     } else {
       let nome = new FormData();
 
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let link_site = document.createElement("a");
     link_site.className = "link";
-    link_site.href = "../index.html";
+    link_site.href = "../supermercado/index.html";
     link_site.textContent = "Site";
 
     board.appendChild(link_user);

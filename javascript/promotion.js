@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded" , function(){
     const search = function toSearch(){
         
         if(input.value.length == 0 ){
-            console.log("Valor:" , input)
+            console.log("Valor: vazio.")
         }
         else{
             console.log("Pesquisando...")
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded" , function(){
 
             const form = new FormData()
             form.append('product', input.value)
-            
+            /*Faz as pesquisas para puxar os produtos do banco*/
             $.ajax({
                 url: '../php/promo.php',
                 type: "POST",
@@ -52,12 +52,12 @@ document.addEventListener("DOMContentLoaded" , function(){
                 processData: false,
                 contentType: false
             }).done(function(request) {
-                select.innerHTML = "" //Previne a duplicação 
+                select.innerHTML = "" //Previne a duplicação da option
                 
                /*Solução para que a função de editar não seja chamada em seguida*/
                let first_opt = document.createElement('option')
                first_opt.className = 'data'
-               first_opt.innerHTML = "Setor: fruta"
+               first_opt.innerHTML = "Setor: Variados"
                select.appendChild(first_opt)
                 
                 request.forEach(iten =>{
@@ -74,17 +74,15 @@ document.addEventListener("DOMContentLoaded" , function(){
             });
                 //Função para lidar com a mudança de opção
                 function change(event) {
-                    //Obtém o elemento <select>
+                    //Obtém o elemento selecionado
                     let select = event.target;
 
                     //Verifica se uma opção foi selecionada
                     let selectedOption = select.options[select.selectedIndex];
                     if (selectedOption) {
-                        edit();
                         //selectedOption.id -> É responsável por pegar o id do produto no select
 
                         /*Requisição ajax para buscar o código*/
-
                         $.ajax({
                             url: '../php/produtos-salvos.php',
                             type: 'POST',
@@ -98,6 +96,9 @@ document.addEventListener("DOMContentLoaded" , function(){
                             let opt_id = selectedOption.id
 
                             if(id == opt_id){
+                                
+                            console.log("ID do produto: " + id + " ID da option: " + opt_id);
+
                                 let phrase = document.getElementById("code-prod")
                                 phrase.innerHTML = `Código:${iten.codigo}`
 
@@ -106,6 +107,7 @@ document.addEventListener("DOMContentLoaded" , function(){
 
                                 let box = document.querySelector('.price-box')
 
+                                box.appendChild(phrase)
                                 box.appendChild(i)
 
                                 i.addEventListener("click" , ()=> {
@@ -137,7 +139,8 @@ document.addEventListener("DOMContentLoaded" , function(){
                 }
                 // Adiciona um event listener para o evento de mudança no <select>
                 select.addEventListener("change", change);               
-            });            
+            });   
+        edit()         
         }
     }
     button.addEventListener("click", search);   

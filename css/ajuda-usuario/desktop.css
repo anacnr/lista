@@ -6,6 +6,7 @@ html {
   height: 100vh;
   box-sizing: border-box;
   cursor: context-menu;
+  overflow-x: hidden;
 }
 
 body {
@@ -43,7 +44,11 @@ body {
     font-weight: 400;
   }
 
-  footer > #par-contacts {
+  footer > a{
+    text-decoration: none;
+}
+
+  footer > a > #par-contacts {
     text-align: center;
     color: rgb(227, 227, 231);
     text-shadow: 2px 1px 3px black;
@@ -90,7 +95,11 @@ body {
     padding-bottom: 20px;
   }
 
-  footer > #par-contacts {
+    footer > a{
+      text-decoration: none;
+  }
+
+  footer > a > #par-contacts {
     text-align: center;
     color: rgb(227, 227, 231);
     text-shadow: 2px 1px 3px black;
@@ -137,7 +146,11 @@ body {
     padding-bottom: 20px;
   }
 
-  footer > #par-contacts {
+    footer > a{
+      text-decoration: none;
+  }
+
+  footer > a > #par-contacts {
     text-align: center;
     color: rgb(227, 227, 231);
     text-shadow: 2px 1px 3px black;
@@ -183,8 +196,12 @@ body {
       font-weight: 400;
       padding-bottom: 20px;
     }
+
+    footer > a{
+      text-decoration: none;
+    }
   
-    footer > #par-contacts {
+    footer > a > #par-contacts {
       text-align: center;
       color: rgb(227, 227, 231);
       text-shadow: 2px 1px 3px black;

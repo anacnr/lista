@@ -1,14 +1,13 @@
-/*Criar a lista com js*/
+/*Cria a lista com js atarvés do json e do php*/
 document.addEventListener("DOMContentLoaded" , ()=>{
 fetch("../javascript/lista.json").then(function(response){
     response.json().then(function(produto){
 
-// Obtém o tbody onde queremos adicionar as linhas
 let tbody = document.querySelector('tbody');
 
-// Itera sobre cada ponto do produto e adiciona uma nova linha para cada um
+//Passado um forEach para que pegue cada ponto da resposta do json
 produto.forEach((ponto) => {
-    // Cria uma nova linha
+    //A linha vai ser criada conforme cada iteração do array associativo
     let create_row = document.createElement('tr');
     
     for(let count=0;count<5;count++){

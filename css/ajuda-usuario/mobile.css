@@ -7,6 +7,7 @@
         height: 100vh;
         box-sizing: border-box;
         cursor: context-menu;
+        overflow-x: hidden;
     }
 
     body{
@@ -39,7 +40,11 @@
         font-weight: 400;
     }
 
-    footer > #par-contacts{
+    footer > a{
+        text-decoration: none;
+    }
+
+    footer > a > #par-contacts{
         text-align: center;
         color: rgb(227, 227, 231);
         text-shadow: 2px 1px 3px black;
