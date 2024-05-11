@@ -40,7 +40,7 @@ produto.forEach((ponto) => {
 });   
 
 let total = 0;
-document.querySelectorAll("#td2").forEach((item, index) => {
+document.querySelectorAll("#td2").forEach((item) => {
     //Aqui vai converter novamente os valores para números flutuantes a cada vez que estiver procurando pelas tds com id td2
     let td_value = parseFloat(item.innerHTML.replace(',', '.'));
     
@@ -49,7 +49,38 @@ document.querySelectorAll("#td2").forEach((item, index) => {
 });
 //Este elemento vai receber o total da lista
 document.querySelector("#total-span").textContent += total.toFixed(2).replace('.', ',');
-    
     })
     })
-});//then
+
+    document.querySelectorAll('.span-supermarkets').forEach(iten =>{
+        iten.addEventListener("click" , ()=>{
+            window.confirm("As marcas podem ter sido mudadas, mas os produtos são os mesmos. Deseja alterar o supermercado?")
+        })
+    })
+
+    document.querySelectorAll('button')[1].addEventListener("click" , ()=>{
+       let advice = window.confirm("Você deseja cancelar a encomenda? A lista será perdida caso clique em 'OK'.")
+
+        if(advice){
+            document.querySelector('table').style.display = 'none'
+            document.querySelectorAll('span').forEach(iten =>{
+                iten.style.display = 'none'
+            })
+            document.querySelectorAll('button').forEach(iten =>{
+                iten.style.display = 'none'
+            })
+
+            document.querySelector('h1').innerHTML = 'Lista vazia'
+        }
+        else{
+
+        }
+    })
+
+    document.querySelectorAll('button')[0].addEventListener("click", ()=>{
+        setTimeout(()=>{
+            location.href = '../cliente/compra/Pagamento/Pagamento.html'
+        },1500)
+    })
+
+});//onlodad

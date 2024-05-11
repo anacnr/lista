@@ -180,4 +180,20 @@ footer{
         border-radius: 9px;
         box-shadow: 2px 2px 5px rgb(109, 109, 109);
     }
+
+    abbr > #supermarket{
+        position: absolute;
+        top: 10%;
+        left: 89%;
+        width: 3dvi;
+        cursor: pointer;
+    }
+
+    abbr > #product{
+        position: relative;
+        top: 3%;
+        left: 89%;
+        width: 3dvi;
+        cursor: pointer;
+    }
 }
