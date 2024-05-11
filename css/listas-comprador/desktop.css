@@ -20,6 +20,10 @@ body,html{
     --backgound_color: radial-gradient(circle, rgba(240, 250, 240, 0.521), rgba(252, 212, 239, 0.644));
 }
 
+footer{
+    height: 300px;
+}
+
 @media (min-width:600px) and (max-width:768px){
     h1{
         text-align: center;
@@ -44,7 +48,6 @@ body,html{
         margin: auto;
         position: relative;
         transform: translateY(5vh);
-        border-radius: 50px;
     }
 
     table > thead{
@@ -66,13 +69,13 @@ body,html{
 
     thead > tr >#th-nome{
         border-left: 0px solid black;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
     }
 
     thead > tr > #th-img{
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
     }
 
     table > tbody > tr{
@@ -80,7 +83,7 @@ body,html{
         position: relative;
         transform: translateY(5vh);
         box-shadow: 2px 2px 8px black;
-        border-radius: 10px;
+        border-radius: 4px;
     }
 
     tbody > tr > td{
@@ -90,7 +93,7 @@ body,html{
         text-transform: capitalize;
         text-align: center;
         letter-spacing: 2px;
-        padding: 10px;
+        padding: 8px;
         cursor: context-menu;
     }
 
@@ -102,31 +105,32 @@ body,html{
     }
 
     tbody > tr > #td0{
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;        
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;        
     }
 
     tbody > tr > #td5{
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
     }
 
     #div-list > #total-span{
         position: absolute;
-        transform: translate(45vw,30vh);
+        transform: translate(42vw,30vh);
         font-family: var(--font_family);
-        font-size: 1em;
+        font-size: 0.8em;
         background-image: var(--total_back);
         padding: 3px;
         border-radius: 6%;
         box-shadow: 1px 1px 2px black;
         cursor: context-menu;
+        font-weight: 600;
     }
 
-    #div-list > button{
+     button{
         font-family: Arial, Helvetica, sans-serif;
         text-transform: uppercase;
-        font-size: 0.8em;
+        font-size: 0.7em;
         position: relative;
         border-width: 0px;
         box-shadow: 1px 2px 5px black;
@@ -136,16 +140,16 @@ body,html{
     }
 
     /*Botão de salvar*/
-    #div-list > #sav{
-        transform: translate(35vw,50vh);
+     #sav{
+        transform: translate(34vw,50vh);
         background-image: radial-gradient(rgba(78, 232, 35, 0.559),rgba(6, 240, 84, 0.71));
         color: rgba(255, 255, 255, 0.801);
         text-shadow: 1px 1px 2px black;
     }
 
     /*Botão de cancelar*/
-    #div-list > #can{
-        transform: translate(45vw,50vh);
+     #can{
+        transform: translate(44vw,50vh);
         background-image: linear-gradient(65deg,rgba(255, 0, 242, 0.737),rgba(235, 22, 72, 0.888));
         color: rgb(219, 219, 212);
         text-shadow: 1px 1px 3px black;
@@ -155,16 +159,16 @@ body,html{
         text-align: center;
         display: block;
         margin: auto;
-        transform: translateY(-13vh);
+        transform: translateY(13vh);
         background-image: linear-gradient(120deg,rgba(239, 153, 25, 0.824)25%,rgba(242, 8, 78, 0.897)50%);
         font-family: var(--font_family);
-        padding: 3px;
-        font-size: 1em;
+        padding: 5px;
+        font-size: 0.8em;
         letter-spacing: 1px;
         cursor: pointer;
         color: rgba(255, 255, 255, 0.774);
         text-shadow: 1px 1px 4px black;
-        margin-bottom: 4px;
+        margin-bottom: 5px;
         width: 60%;
         border-radius: 9px;
         box-shadow: 2px 2px 5px rgb(109, 109, 109);
@@ -264,7 +268,7 @@ body,html{
 
     #div-list > #total-span{
         position: absolute;
-        transform: translate(47vw,30vh);
+        transform: translate(46vw,30vh);
         font-family: var(--font_family);
         font-size: 1em;
         background-image: var(--total_back);
@@ -274,7 +278,7 @@ body,html{
         cursor: context-menu;
     }
 
-    #div-list > button{
+     button{
         font-family: Arial, Helvetica, sans-serif;
         text-transform: uppercase;
         font-size: 0.8em;
@@ -286,14 +290,14 @@ body,html{
         cursor: pointer;
     }
 
-    #div-list > #sav{
-        transform: translate(40vw,50vh);
+     #sav{
+        transform: translate(40vw,60vh);
         background-image: linear-gradient(65deg,rgba(0, 153, 255, 0.646),rgba(118, 218, 233, 0.696));
     }
 
     /*Botão de cancelar*/
-    #div-list > #can{
-        transform: translate(55vw,50vh);
+     #can{
+        transform: translate(55vw,60vh);
         background-image: linear-gradient(65deg,rgba(255, 0, 242, 0.737),rgba(235, 22, 72, 0.888));
         color: rgb(219, 219, 212);
         text-shadow: 1px 1px 3px black;
@@ -303,7 +307,7 @@ body,html{
         text-align: center;
         display: block;
         margin: auto;
-        transform: translateY(-13vh);
+        transform: translateY(30vh);
         background-image: linear-gradient(120deg,rgba(239, 153, 25, 0824)25%,rgba(242, 8, 78, 0.897)50%);
         font-family: var(--font_family);
         padding: 3px;

@@ -76,7 +76,7 @@ button_submit.addEventListener('click', ()=>{
                 button.addEventListener("click", () => {
                                     
                 let price = `${element.valor}`;
-                let calcu = (price * peso_prod) / 1000;
+                let calcu = (price * peso_prod)/1000;
                 alert("Produto " + name_prod + " adicionado na lista " + "Preço: " + parseFloat(`${calcu}`).toFixed(2).replace('.', ','));
                 
                 const dates = new FormData()

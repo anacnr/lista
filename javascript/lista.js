@@ -12,20 +12,21 @@ produto.forEach((ponto) => {
     
     for(let count=0;count<5;count++){
         let create_td = document.createElement("td")
-        create_td.id = `${count}`
+        create_td.id = `td${count}`
         create_row.appendChild(create_td)
 
-        if(create_td.id == 0){
-            create_td.innerHTML = `${ponto.nome}`
+        if(create_td.id == 'td0'){
+            create_td.innerHTML = ponto.nome
         }
-        else if(create_td.id == 1){
-            create_td.innerHTML = `${ponto.peso}`
+        else if(create_td.id == 'td1'){
+            create_td.innerHTML = ponto.peso
         }
-        else if(create_td.id == 2){
-            create_td.innerHTML = `${ponto.valor}`
+        else if(create_td.id == 'td2'){
+            let price = parseFloat(`${ponto.valor}`).toFixed(2).replace('.', ',')
+            create_td.textContent = price
         }
-        else if(create_td.id == 3){
-            create_td.innerHTML = `${ponto.marca}`
+        else if(create_td.id == 'td3'){
+            create_td.innerHTML = ponto.marca
         }
         else{
             let create_img = document.createElement("img")
@@ -37,7 +38,18 @@ produto.forEach((ponto) => {
     // Adiciona a nova linha ao tbody
     tbody.appendChild(create_row);
 });   
-    //console.log("TD: " + iten.id + "INDEX: " + index);
-      })
+
+let total = 0;
+document.querySelectorAll("#td2").forEach((item, index) => {
+    //Aqui vai converter novamente os valores para números flutuantes a cada vez que estiver procurando pelas tds com id td2
+    let td_value = parseFloat(item.innerHTML.replace(',', '.'));
+    
+    //O contadot total está incrementando o valor a cada soma
+    total += td_value;
+});
+//Este elemento vai receber o total da lista
+document.querySelector("#total-span").textContent += total.toFixed(2).replace('.', ',');
+    
+    })
     })
 });//then
