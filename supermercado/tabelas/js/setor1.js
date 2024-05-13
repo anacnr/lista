@@ -164,3 +164,21 @@ document.addEventListener("DOMContentLoaded" , ()=>{
   });//ajax  
   console.log("Script gerado primeiro!");
 });//Carregamento da página 
+
+  /*Parte para deletar(simulação)*/
+  document.getElementById("exc").addEventListener("click", ()=>{
+    console.log("Apagar!");
+
+    document.querySelectorAll('tbody > tr').forEach(iten =>{
+      iten.style.cursor = 'pointer'
+      iten.addEventListener("click" , ()=>{
+        let advice = window.confirm("O produto será excluído")
+        if(advice){
+          iten.style.display = 'none'
+        }
+        else{
+
+        }
+      })
+    })
+  });//Evento do botão de excluir

@@ -8,14 +8,19 @@
 body {
     background-image: linear-gradient(to bottom, #ff3131, #ffd34d);
     background-attachment: fixed;
+    cursor: context-menu;
 }
 
 /*Imagem do produto*/
-  tbody > tr > td > .produto {
+tbody > tr > td > .produto {
     width: 20px;
     height: 20px;
     background-color: rgb(246, 245, 245);
-  }
+}
+
+form > #span-buttons > #exc, #sav, #add, .bi-pencil-square{
+   cursor: pointer;
+}
 
 @media (min-width:600px) and (max-width:768px) {
 
