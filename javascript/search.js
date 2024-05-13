@@ -55,16 +55,21 @@ button_submit.addEventListener('click', ()=>{
 
                         card.appendChild(image)
 
+                        
+                        const abbr = document.createElement("abbr")
+                        abbr.title = 'Adicionar produto.'
+                        card.appendChild(abbr)
+
                         const button = document.createElement("button")
                         button.type = 'button'
                         button.className = 'button-card'
-                        button.innerHTML = 'Adicionar'
 
-                        card.appendChild(button)
+                        abbr.appendChild(button)
+
                         const i = document.createElement("i")
                         i.className = 'bi bi-cart-plus'
 
-                        button.appendChild(i)                      
+                        button.appendChild(i)                  
 
                         //Empacota os dados para serem salvos no arquivo json e o PHP irá tratar os dados vindos do arquivo json
                         let name_prod = element.nome//Produto escolhido

@@ -18,7 +18,7 @@ body,html{
 }
 
 
-@media (min-width:600px) and (max-width:768px) {
+@media (min-width:600px) and (max-width:768px){
     /*Div que está apadrinhando o form*/
     #search{
         width: 100%;
@@ -98,30 +98,32 @@ body,html{
     }
     /*Card que mostra os resultados da empresa*/
     .results{
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 400px;
+        width: 325px;
         height: 150px;
-        border-radius: 7px;
-        box-shadow: 1px -2px 10px #876b6b;
-        display: block;
-        margin: auto;
+        border-radius: 5px;
+        box-shadow: 1px 1px 10px #876b6b;
+        position: relative;
+        top: 10%;
+        margin-top: 20px;
+        margin-left: 5%;
+        left: 20%;
+        background-color: #ffce51;
     }
 
     .results > h1{
-        font-family: var(--font);
-        font-size: 1em;
-        color: white;
-        text-shadow: 1px 2px 3px black;
-        text-decoration-line: underline;
-        text-decoration-color: white;
-        text-decoration-style: solid;
-        text-transform: capitalize;
-        padding-top: 20px;
-        padding-bottom: 10px;
-        padding-left: 15px;
-        background-color: rgba(240, 248, 255, 0.767);
+    font-family: var(--font);
+    font-size: 1em;
+    color: white;
+    text-shadow: 1px 2px 3px black;
+    text-decoration-line: underline;
+    text-decoration-color: white;
+    text-decoration-style: solid;
+    text-transform: capitalize;   
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    background-image: linear-gradient(213deg, #1bade2c4 10%, #0a8fe7 65%);
+    border-radius: 3px;
     }
 
     .results > .phrase-comp{
@@ -137,8 +139,9 @@ body,html{
         text-align: left;
         font-family: var(--font);
         font-size: 0.8em;
-        color: #121111e9;
-        padding: 10px;     
+        color: #6f1704fa;
+        padding-left: 10%;
+        margin-top: 23px;
     }
 
     .results > .img-product{
@@ -147,9 +150,10 @@ body,html{
         border-radius: 50%;
         border: 1px solid rgba(0, 0, 0, 0.132);
         position: relative;
-        left: 72%;
-        bottom: 50%;
-
+        left: 65%;
+        bottom: 30%;
+        box-shadow: 1px 1px 2px #150312;
+        background-color: #ffffffb5;
     }
 
     .results > .button-card{
@@ -158,34 +162,37 @@ body,html{
         padding: 0px 5px 0px 6px;
         font-family: arial;
         font-size: 0.8em;
-        position: relative;
-        bottom: 28%;
-        left: 51%;
+        position: absolute;
+        bottom: 76%;
+        left: 70%;
         cursor: pointer;
+        border-left: none;
+        border-radius: 12%;
+        margin-left: 5%;
+        background-color: transparent;
     }
 
     .button-card:hover{
-        background-image: linear-gradient(to left, rgba(98, 229, 98, 0.79) 25%,rgba(255, 255, 0, 0.785) 50%,rgba(255, 0, 0, 0.712));
+       background-color: rgba(255, 255, 255, 0.767);
     }
 
+
     .results > .button-card > .bi-cart-plus{
-        margin-left: 8px;
         border-radius: 3%;
-        font-size: 1.1em;     
+        font-size: 1.2em;     
         cursor: pointer;  
     }
 
     #product{
         position: absolute;
-        top: 14%;
-        left: 86%;
+        top: 20%;
+        left: 85%;
         width: 20px;
-        opacity: 0.6;
         cursor: pointer;
     }
 }
 
-@media (min-width: 768px){
+@media (min-width:768px) and (max-width:992px){
     /*Div que está apadrinhando o form*/
     #search{
         width: 100%;
@@ -219,19 +226,19 @@ body,html{
        outline: 0px;
     }
     #search > form > #span-input > .bi-search{
-        margin-left: 25px;
+        margin-left: 20px;
         opacity: 0.8;
         color: white;
         text-shadow: 0px 1px 2px black;
         cursor: pointer;
-        font-size: 20px;
+        font-size: 21px;
     }
     /*Div que está com as duas frase*/
     #message{
         background-color: rgba(240, 248, 255, 0.733);
         box-shadow: 2px 2px 4px grey;
         border-radius: 7px;
-        width:600px;
+        width:500px;
         height: 25%;
         display: block;
         margin: auto;
@@ -244,8 +251,8 @@ body,html{
         font-size: 15px;
         color: rgb(4, 4, 97);
         cursor: context-menu;
-        transform: translate(6vw,5vh);
-        width: 500px;
+        transform: translate(7vw,5vh);
+        width: 400px;
     }
     /*Segunda frase*/
     #message > #second-phrase{
@@ -263,41 +270,64 @@ body,html{
         padding: 5px;
         cursor: context-menu;
     }
-
+    /*Card que mostra os resultados da empresa*/
     .results{
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 400px;
+        width: 325px;
         height: 150px;
-        border-radius: 7px;
-        box-shadow: 1px -2px 10px #876b6b;
-        display: block;
-        margin: auto;
+        border-radius: 5px;
+        box-shadow: 1px 1px 10px #876b6b;
+        position: relative;
+        top: 10%;
+        margin-top: 20px;
+        margin-left: 5%;
+        left: 20%;
+        background-color: #ffce51;
     }
 
     .results > h1{
+    font-family: var(--font);
+    font-size: 1em;
+    color: white;
+    text-shadow: 1px 2px 3px black;
+    text-decoration-line: underline;
+    text-decoration-color: white;
+    text-decoration-style: solid;
+    text-transform: capitalize;   
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    background-image: linear-gradient(213deg, #1bade2c4 10%, #0a8fe7 65%);
+    border-radius: 3px;
+    }
+
+    .results > .phrase-comp{
+        text-align: center;
         font-family: var(--font);
         font-size: 1em;
+        background-color: #121111a4;
         color: white;
-        text-shadow: 1px 2px 3px black;
-        text-decoration-line: underline;
-        text-decoration-color: white;
-        text-decoration-style: solid;
-        text-transform: capitalize;
-        padding-top: 20px;
-        padding-bottom: 10px;
-        padding-left: 15px;
-        background-color: rgba(240, 248, 255, 0.767);
+        padding: 10px;
     }
+
+    .results > .phrase-prod{
+        text-align: left;
+        font-family: var(--font);
+        font-size: 0.8em;
+        color: #6f1704fa;
+        padding-left: 10%;
+        margin-top: 23px;
+    }
+
     .results > .img-product{
-        width: 90px;
-        height: 90px;
+        width: 70px;
+        height: 70px;
         border-radius: 50%;
         border: 1px solid rgba(0, 0, 0, 0.132);
         position: relative;
         left: 65%;
-        bottom: 35%;
+        bottom: 30%;
+        box-shadow: 1px 1px 2px #150312;
+        background-color: #ffffffb5;
     }
 
     .results > .button-card{
@@ -306,29 +336,206 @@ body,html{
         padding: 0px 5px 0px 6px;
         font-family: arial;
         font-size: 0.8em;
-        position: relative;
-        bottom: 20%;
-        left: 45%;
+        position: absolute;
+        bottom: 76%;
+        left: 70%;
         cursor: pointer;
+        border-left: none;
+        border-radius: 12%;
+        margin-left: 5%;
+        background-color: transparent;
     }
 
     .button-card:hover{
-        background-image: linear-gradient(to left, rgba(98, 229, 98, 0.79) 25%,rgba(255, 255, 0, 0.785) 50%,rgba(255, 0, 0, 0.712));
+       background-color: rgba(255, 255, 255, 0.767);
     }
 
+
     .results > .button-card > .bi-cart-plus{
-        margin-left: 8px;
         border-radius: 3%;
-        font-size: 1.1em;     
+        font-size: 1.2em;     
         cursor: pointer;  
     }
 
     #product{
         position: absolute;
-        top: 15%;
-        left: 80%;
+        top: 20%;
+        left: 82%;
         width: 20px;
-        opacity: 0.6;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 992px){
+    /*Div que está apadrinhando o form*/
+    #search{
+        width: 100%;
+        height: 25%;
+    }
+
+    #search > form{
+        width: 100%; height: 100%;
+    }
+
+    #search > form > #span-input{
+        width: 350px;
+        height: 20%;
+        display: block;
+        margin: auto;
+        transform: translateY(20vh);
+    }
+
+    #search > form > #span-input > input{
+       border-style: none;
+       width: 240px;
+       height: 20px;
+       border-radius: 6px;
+       box-shadow: 0px 1px 5px black;
+       padding: 10px;
+       margin-left: 50px;
+       font-family: var(--font);
+    }
+    /*Remove a borda de click do input*/
+    #search > form > #span-input > input:focus{
+       outline: 0px;
+    }
+    #search > form > #span-input > .bi-search{
+        margin-left: 20px;
+        opacity: 0.8;
+        color: white;
+        text-shadow: 0px 1px 2px black;
+        cursor: pointer;
+        font-size: 21px;
+    }
+    /*Div que está com as duas frase*/
+    #message{
+        background-color: rgba(240, 248, 255, 0.733);
+        box-shadow: 2px 2px 4px grey;
+        border-radius: 7px;
+        width:500px;
+        height: 25%;
+        display: block;
+        margin: auto;
+        transform: translateY(20vh);  
+    }
+    /*Primeira frase*/
+    #message > #first-phrase{
+        text-align: center;
+        font-family: var(--font);
+        font-size: 15px;
+        color: rgb(4, 4, 97);
+        cursor: context-menu;
+        transform: translate(7vw,5vh);
+        width: 400px;
+    }
+    /*Segunda frase*/
+    #message > #second-phrase{
+        text-align: center;
+        font-family: var(--font);
+        font-size: 15px;
+        color: rgb(4, 4, 97);
+        text-shadow: 1px 1px 2px white;
+        background-image: linear-gradient(120deg, rgba(253, 237, 58, 0.808) 65%,rgba(77, 224, 185, 0.808));
+        width: 150px;
+        border-radius: 10px;
+        display: block;
+        margin: auto;
+        transform: translateY(10vh);
+        padding: 5px;
+        cursor: context-menu;
+    }
+    /*Card que mostra os resultados da empresa*/
+    .results{
+        width: 325px;
+        height: 150px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 10px #876b6b;
+        position: relative;
+        top: 10%;
+        margin-top: 20px;
+        margin-left: 8%;
+        left: 25%;
+        background-color: #ffce51;
+    }
+
+    .results > h1{
+    font-family: var(--font);
+    font-size: 1em;
+    color: white;
+    text-shadow: 1px 2px 3px black;
+    text-decoration-line: underline;
+    text-decoration-color: white;
+    text-decoration-style: solid;
+    text-transform: capitalize;   
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    background-image: linear-gradient(213deg, #1bade2c4 10%, #0a8fe7 65%);
+    border-radius: 3px;
+    }
+
+    .results > .phrase-comp{
+        text-align: center;
+        font-family: var(--font);
+        font-size: 1em;
+        background-color: #121111a4;
+        color: white;
+        padding: 10px;
+    }
+
+    .results > .phrase-prod{
+        text-align: left;
+        font-family: var(--font);
+        font-size: 0.8em;
+        color: #6f1704fa;
+        padding-left: 10%;
+        margin-top: 23px;
+    }
+
+    .results > .img-product{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.132);
+        position: relative;
+        left: 65%;
+        bottom: 30%;
+        box-shadow: 1px 1px 2px #150312;
+        background-color: #ffffffb5;
+    }
+
+    .results > .button-card{
+        border-top: none;
+        border-right: none;
+        padding: 0px 5px 0px 6px;
+        font-family: arial;
+        font-size: 0.8em;
+        position: absolute;
+        bottom: 76%;
+        left: 70%;
+        cursor: pointer;
+        border-left: none;
+        border-radius: 12%;
+        margin-left: 5%;
+        background-color: transparent;
+    }
+
+    .button-card:hover{
+       background-color: rgba(255, 255, 255, 0.767);
+    }
+
+
+    .results > .button-card > .bi-cart-plus{
+        border-radius: 3%;
+        font-size: 1.2em;     
+        cursor: pointer;  
+    }
+
+    #product{
+        position: absolute;
+        top: 20%;
+        left: 79%;
+        width: 20px;
         cursor: pointer;
     }
 }

@@ -8,7 +8,7 @@
 
 body,html{
     width: 100%; height: 100%;
-    background-image: radial-gradient(circle, rgba(240, 250, 240, 0.521), rgba(252, 212, 239, 0.644));
+    background-image: radial-gradient(circle, rgb(235 223 229 / 52%), rgb(255 253 251))
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -56,7 +56,7 @@ body,html{
         color: white;
         text-shadow: 0px 1px 2px black;
         cursor: pointer;
-        font-size: 3.6dvi;
+        font-size: 14px;
     }
     /*Div que está com as duas frase*/
     #message{
@@ -93,17 +93,15 @@ body,html{
 
     /*Card que mostra os resultados da empresa*/
     .results{
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 60%;
-        height: 20%;
-        border-radius: 7px;
-        box-shadow: 1px -2px 10px #876b6b;
+        width: 50%;
+        height: 25%;
+        border-radius: 5px;
+        box-shadow: 1px 1px 10px #876b6b;
         position: relative;
         top: 10%;
+        left: 25%;
         margin-top: 20px;
-        left: 20%;
+        background-color: #ffce51;
     }
 
     .results > h1{
@@ -115,10 +113,11 @@ body,html{
     text-decoration-color: white;
     text-decoration-style: solid;
     text-transform: capitalize;   
-    padding-top: 20px;
+    padding-top: 15px;
     padding-bottom: 10px;
     padding-left: 15px;
-    background-color: rgba(240, 248, 255, 0.767);
+    background-image: linear-gradient(213deg, #1bade2c4 10%, #0a8fe7 65%);
+    border-radius: 3px;
     }
 
     .results > .phrase-comp{
@@ -133,19 +132,22 @@ body,html{
     .results > .phrase-prod{
         text-align: left;
         font-family: var(--font);
-        font-size: 0.8em;
-        color: #121111e9;
-        padding: 10px;     
+        font-size: 0.6em;
+        color: #6f1704fa;
+        padding-left: 10%;
+        margin-top: 23px;
     }
 
     .results > .img-product{
-        width: 20%;
-        height: 50%;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
         border: 1px solid rgba(0, 0, 0, 0.132);
         position: relative;
-        left: 70%;
-        bottom: 60%;
+        left: 65%;
+        bottom: 30%;
+        box-shadow: 1px 1px 2px #150312;
+        background-color: #ffffffb5;
     }
 
     .results > .button-card{
@@ -154,30 +156,32 @@ body,html{
         padding: 0px 5px 0px 6px;
         font-family: arial;
         font-size: 0.8em;
-        position: relative;
-        bottom: 35%;
-        left: 40%;
+        position: absolute;
+        bottom: 76%;
+        left: 65%;
         cursor: pointer;
+        border-left: none;
+        border-radius: 12%;
+        margin-left: 5%;
+        background-color: transparent;
     }
 
     .button-card:hover{
-        background-image: linear-gradient(to left, rgba(98, 229, 98, 0.79) 25%,rgba(255, 255, 0, 0.785) 50%,rgba(255, 0, 0, 0.712));
+       background-color: rgba(255, 255, 255, 0.767);
     }
 
 
     .results > .button-card > .bi-cart-plus{
-        margin-left: 8px;
         border-radius: 3%;
-        font-size: 1.1em;     
+        font-size: 1em;     
         cursor: pointer;  
     }
 
     #product{
         position: absolute;
-        top: 14%;
-        left: 89%;
-        width: 3.5dvi;
-        opacity: 0.6;
+        top: 20%;
+        left: 85%;
+        width: 15px;
         cursor: pointer;
     }
 
