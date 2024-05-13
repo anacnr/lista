@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         }
                     }//Terceira condicional
                     //Usuário não encontrado
-                    else if(element.login == 'desconhecido'){
+                    else{
                         console.log("Nenhum registro " + element + " encontrado")
                         //Esconde o formulário
                         const hide_form = document.querySelector('form')
