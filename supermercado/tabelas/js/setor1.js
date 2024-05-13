@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded" , ()=>{
-  /*Adicionar os campos*/
+  /*Adiciona os campos*/
   const button_add = document.getElementById("add")
   
   button_add.addEventListener("click", ()=>{
-   console.log("Botão de adicionar!");
 
    const tbody = document.querySelector("tbody")
 
@@ -63,7 +62,7 @@ document.addEventListener("DOMContentLoaded" , ()=>{
       if(iten.value.length <=3){
         document.querySelector('form').addEventListener("submit", (event)=>{
           event.preventDefault();
-          console.log("Form não enviaado");
+          console.log("Form não enviado");
         })
       }
       else{
@@ -131,18 +130,25 @@ document.addEventListener("DOMContentLoaded" , ()=>{
 
     });//forEach da requisição
 
+    //Validação do número de tabelas para mostrar o botão de edição ou de adição
     const table = document.querySelector('table')
     let table_rows =  table.rows.length
     if(table_rows > 1){
-      document.querySelectorAll('span')[1].removeChild(button_add)
-      //Criar o botão de adicionar
+      //Remoção do botão de adicionar
+      button_add.style.display = 'none'
+      //Cria o botão de editar
       const button_edit = document.createElement("i")
       button_edit.className = 'bi bi-pencil-square'
 
       document.querySelector('#span-buttons').appendChild(button_edit)
 
       button_edit.addEventListener("click", ()=>{
-        console.log("Botão de editar");
+
+      //Esconde o botão de editar
+      button_edit.style.display = 'none'
+      //Mostra o botão de adição
+      button_add.style.display = 'block'
+
         document.querySelectorAll('td').forEach(function(iten, index){
           iten.addEventListener("click", ()=>{
             if(index == index){
@@ -154,6 +160,15 @@ document.addEventListener("DOMContentLoaded" , ()=>{
               iten.appendChild(input)
             }
           })
+        })
+
+        button_save.addEventListener("click", ()=>{
+          console.log("Botão de salvar");
+
+          //Esconde o botão de editar
+          button_edit.style.display = 'block'
+          //Mostra o botão de adição
+          button_add.style.display = 'none'
         })
       });//Evento do botão de editar
 

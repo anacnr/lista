@@ -22,6 +22,16 @@ form > #span-buttons > #exc, #sav, #add, .bi-pencil-square{
    cursor: pointer;
 }
 
+tbody > tr > td > .label-input {
+  cursor: pointer;
+  background-image: url(../buttons/upload.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  background-color: rgba(128, 0, 128, 0.301); 
+}
+
+
 @media (min-width:600px) and (max-width:768px) {
 
 /*Caixa nome sessão*/

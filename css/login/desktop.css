@@ -100,44 +100,41 @@ form > button{
     margin-left: 5%;
   }
 
-  /*Classe criada para o quadro de aviso dos dados inválidos*/
-  .advice {
-    width: 50vw;
-    height: 150px;
+  .advice{
+    width: 300px;
+    height: 70px;
     display: block;
     margin: auto;
-    transform: translateY(-100vh);
-    box-shadow: 0px -4px 6px black inset;
-    background-color: white;
+    transform: translateY(25vh);
+    box-shadow: 0px -1px 6px black inset;
+    background-color: rgb(237, 243, 239);
     border-radius: 12px;
     text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
 
+    /*Animação*/
     animation-name: alert;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
-  }
+    animation-iteration-count: 1; 
 
-  @keyframes alert {
-    from {
-      opacity: 0%;
-      width: 50vw;
-      height: 150px;
-    }
-    to {
-      opacity: 100%;
-      width: 50vw;
-      height: 150px;
-    }
-  }
-  /*ID do parágrafo que está dentro do quadro de aviso*/
-  #alert {
+    /*Mensagem*/
     color: rgb(10, 10, 10);
     font-size: 1rem;
-    font-family: var(--lyric);
     text-align: center;
-    transform: translateY(50px);
-  }
+    font-family: var(--lyric);
+    cursor: context-menu;
+}
+
+@keyframes alert {
+    from{
+        opacity: 0%;     
+    }
+    to{
+        opacity: 100%;     
+    }
+}
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -229,44 +226,41 @@ form > button{
     transform: translate(200px,220px);
   }
 
-  /*Classe criada para o quadro de aviso dos dados inválidos*/
-  .advice {
-    width: 50vw;
-    height: 150px;
+  .advice{
+    width: 300px;
+    height: 70px;
     display: block;
     margin: auto;
-    transform: translateY(-100vh);
-    box-shadow: 0px -4px 6px black inset;
-    background-color: white;
+    transform: translateY(25vh);
+    box-shadow: 0px -1px 6px black inset;
+    background-color: rgb(237, 243, 239);
     border-radius: 12px;
     text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
 
+    /*Animação*/
     animation-name: alert;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
-  }
+    animation-iteration-count: 1; 
 
-  @keyframes alert {
-    from {
-      opacity: 0%;
-      width: 50vw;
-      height: 150px;
-    }
-    to {
-      opacity: 100%;
-      width: 50vw;
-      height: 150px;
-    }
-  }
-  /*ID do parágrafo que está dentro do quadro de aviso*/
-  #alert {
+    /*Mensagem*/
     color: rgb(10, 10, 10);
     font-size: 1rem;
-    font-family: var(--lyric);
     text-align: center;
-    transform: translateY(50px);
-  }
+    font-family: var(--lyric);
+    cursor: context-menu;
+}
+
+@keyframes alert {
+    from{
+        opacity: 0%;     
+    }
+    to{
+        opacity: 100%;     
+    }
+}
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -358,44 +352,41 @@ form > button{
     transform: translate(200px,220px);
   }
 
-  /*Classe criada para o quadro de aviso dos dados inválidos*/
-  .advice {
-    width: 50vw;
-    height: 150px;
+  .advice{
+    width: 300px;
+    height: 70px;
     display: block;
     margin: auto;
-    transform: translateY(-100vh);
-    box-shadow: 0px -4px 6px black inset;
-    background-color: white;
+    transform: translateY(25vh);
+    box-shadow: 0px -1px 6px black inset;
+    background-color: rgb(237, 243, 239);
     border-radius: 12px;
     text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
 
+    /*Animação*/
     animation-name: alert;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
-  }
+    animation-iteration-count: 1; 
 
-  @keyframes alert {
-    from {
-      opacity: 0%;
-      width: 50vw;
-      height: 150px;
-    }
-    to {
-      opacity: 100%;
-      width: 50vw;
-      height: 150px;
-    }
-  }
-  /*ID do parágrafo que está dentro do quadro de aviso*/
-  #alert {
+    /*Mensagem*/
     color: rgb(10, 10, 10);
     font-size: 1rem;
-    font-family: var(--lyric);
     text-align: center;
-    transform: translateY(50px);
-  }
+    font-family: var(--lyric);
+    cursor: context-menu;
+}
+
+@keyframes alert {
+    from{
+        opacity: 0%;     
+    }
+    to{
+        opacity: 100%;     
+    }
+}
 }
 
 @media (min-width: 1200px) {
@@ -487,42 +478,39 @@ form > button{
     transform: translate(200px,220px);
   }
 
-  /*Classe criada para o quadro de aviso dos dados inválidos*/
-  .advice {
-    width: 50vw;
-    height: 150px;
+  .advice{
+    width: 300px;
+    height: 70px;
     display: block;
     margin: auto;
-    transform: translateY(-100vh);
-    box-shadow: 0px -4px 6px black inset;
-    background-color: white;
+    transform: translateY(25vh);
+    box-shadow: 0px -1px 6px black inset;
+    background-color: rgb(237, 243, 239);
     border-radius: 12px;
     text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
 
+    /*Animação*/
     animation-name: alert;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
-  }
+    animation-iteration-count: 1; 
 
-  @keyframes alert {
-    from {
-      opacity: 0%;
-      width: 50vw;
-      height: 150px;
-    }
-    to {
-      opacity: 100%;
-      width: 50vw;
-      height: 150px;
-    }
-  }
-  /*ID do parágrafo que está dentro do quadro de aviso*/
-  #alert {
+    /*Mensagem*/
     color: rgb(10, 10, 10);
     font-size: 1rem;
-    font-family: var(--lyric);
     text-align: center;
-    transform: translateY(50px);
-  }
+    font-family: var(--lyric);
+    cursor: context-menu;
+}
+
+@keyframes alert {
+    from{
+        opacity: 0%;     
+    }
+    to{
+        opacity: 100%;     
+    }
+}
 }
