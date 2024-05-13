@@ -26,36 +26,29 @@ document.addEventListener("DOMContentLoaded", function () {
                 url: './php/login.php', type: 'POST', data: form, processData: false, contentType: false
             }).done(function(request){
                     request.forEach(element => {
-                    //Email e senha encontrados na tabela comprador
-                    if(element.senha == 'Comprador-autorizado' && element.tabela == 'comprador'){
-                        console.log("Email e senha encontrados na tabela comprador " + element);
-                        setTimeout(()=>{
-                            location.href = '../lista/cliente/index.html'
-                        },500)
-                    }//Primeira condicional
-                    //Email e senha encontrados na tabela vendedor
-                    else if(element.senha == 'Vendedor-autorizado' && element.tabela == 'vendedor'){
-                        console.log("Email e senha encontrados na tabela vendedor " + element);
-                        setTimeout(()=>{
-                            location.href = '../lista/supermercado/index.html'
-                        },500)
-                    }//Segunda condicional
-                    //Email e senha encontrados na tabela de suporte
-                    else if(element.senha == 'Suporte-autorizado' && element.tabela == 'suporte'){
-                        console.log("Email e senha encontrados na tabela de suporte "+ element);
-                        setTimeout(()=>{
-                            location.href = '../lista/suporte/teste.html'
-                        },500)
-                    }//Terceira condicional
-                    //Senha incorreta
-                    else if(element.senha == 'desautorizado'){
-                        console.log("Senha incorreta" + element);
+                    //Validação do comprador
+                    if(element.tabela == 'comprador'){
+                        //Senha correta
+                        if(element.senha == 'Comprador-autorizado'){
+                            console.log("Email e senha encontrados na tabela " + element.tabela);
+                            setTimeout(()=>{
+                                location.href = '../lista/cliente/index.html'
+                            },500)
+                            //Previne que o quadro de aviso apareça
+                            document.querySelector('.advice').style.display = 'none'
+                        }
+                        //Senha incorreta
+                        else{
+                        console.log("Senha incorreta " + element.senha);
                         //Esconde o formulário
                         const hide_form = document.querySelector('form')
                         hide_form.style.display = 'none'
                         password.value = ''//Limpa o campo
 
-                        //Quadro do aviso
+                        const verify_box = document.querySelector('.advice')
+
+                        if(!verify_box){
+                                                 //Quadro do aviso
                         const box = document.createElement("div")
                         box.className = 'advice'
                         box.innerHTML = 'Senha incorreta. <br> Tente novamente!'
@@ -64,28 +57,106 @@ document.addEventListener("DOMContentLoaded", function () {
 
                         setTimeout(()=>{
                             hide_form.style.display = 'block'
-
                             //Remove o quadro para que não sejam criados mais quadros
                             document.querySelector('body').removeChild(box)
-                        },2000)
-                    }//Quarta condicional
-                    //Se não encontrar nenhum registro com email e senha
+                        },4000)   
+                        }
+                        }
+                    }//Primeira condicional
+                    
+                    //Validação do vendedor
+                    else if(element.tabela == 'vendedor'){
+                        //Senha correta
+                        if(element.senha == 'Vendedor-autorizado'){
+                            console.log("Email e senha encontrados na tabela " + element.tabela);
+                            setTimeout(()=>{
+                                location.href = '../lista/supermercado/index.html'
+                            },500)
+                            //Previne que o quadro de aviso apareça
+                            document.querySelector('.advice').style.display = 'none'
+                        }
+                        //Senha incorreta
+                        else{
+                        console.log("Senha incorreta " + element.senha);
+                        //Esconde o formulário
+                        const hide_form = document.querySelector('form')
+                        hide_form.style.display = 'none'
+                        password.value = ''//Limpa o campo
+
+                        const verify_box = document.querySelector('.advice')
+
+                        if(!verify_box){
+                                                //Quadro do aviso
+                        const box = document.createElement("div")
+                        box.className = 'advice'
+                        box.innerHTML = 'Senha incorreta. <br> Tente novamente!'
+
+                        document.querySelector('body').appendChild(box)
+
+                        setTimeout(()=>{
+                            hide_form.style.display = 'block'
+                            //Remove o quadro para que não sejam criados mais quadros
+                            document.querySelector('body').removeChild(box)
+                        },4000)   
+                        }
+                      }
+                    }//Segunda condicional
+                    
+                    //Validação do suporte
+                    else if(element.tabela == 'suporte'){
+                        if(element.senha == 'Suporte-autorizado'){
+                            console.log("Email e senha encontrados na tabela de suporte "+ element);
+                            setTimeout(()=>{
+                                location.href = '../lista/suporte/teste.html'
+                            },500)
+                            document.querySelector('.advice').style.display = 'none'
+                        }
+                        else{
+                            console.log("Senha incorreta " + element.senha);
+                            //Esconde o formulário
+                            const hide_form = document.querySelector('form')
+                            hide_form.style.display = 'none'
+                            password.value = ''//Limpa o campo
+    
+                            const verify_box = document.querySelector('.advice')
+    
+                            if(!verify_box){
+                                                    //Quadro do aviso
+                            const box = document.createElement("div")
+                            box.className = 'advice'
+                            box.innerHTML = 'Senha incorreta. <br> Tente novamente!'
+    
+                            document.querySelector('body').appendChild(box)
+    
+                            setTimeout(()=>{
+                                hide_form.style.display = 'block'
+                                //Remove o quadro para que não sejam criados mais quadros
+                                document.querySelector('body').removeChild(box)
+                            },4000)   
+                            }
+                        }
+                    }//Terceira condicional
+                    //Usuário não encontrado
                     else if(element.login == 'desconhecido'){
-                        console.log("Se não encontrar nenhum registro " + element)
+                        console.log("Nenhum registro " + element + " encontrado")
                         //Esconde o formulário
                         const hide_form = document.querySelector('form')
                         hide_form.style.display = 'none'
 
-                        //Quadro do aviso
-                        const box = document.createElement("div")
-                        box.className = 'advice'
-                        box.innerHTML = 'Dados inválidos. <br> Se cadastre!'
+                        const verify_box = document.querySelector('.advice')
 
-                        document.querySelector('body').appendChild(box)
-                        setTimeout(()=>{
-                            location.href = '../lista/login.html'
-                        },2000)
-                    }//Quinta condicional
+                        if(!verify_box){
+                       //Quadro do aviso
+                       const box = document.createElement("div")
+                       box.className = 'advice'
+                       box.innerHTML = 'Dados inválidos. <br> Se cadastre!'
+
+                       document.querySelector('body').appendChild(box)
+                       setTimeout(()=>{
+                           location.href = '../lista/login.html'
+                       },4000)
+                    }
+                }//Quarta condicional
                     
                 })//Loop for                    
             }).fail(function (jqXHR, textStatus, errorThrown) {

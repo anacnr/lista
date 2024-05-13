@@ -36,7 +36,7 @@ else {
                     }
                 }
                 else{
-                    $request[] = array('login' => 'desconhecido', 'tabela' =>  'comprador');
+                    $request[] = array('login' => 'desconhecido');
                 }
             }
 
@@ -51,7 +51,7 @@ else {
                     }
                 }
                 else{
-                    $request[] = array('login' => 'desconhecido' , 'tabela' =>  'vendedor');
+                    $request[] = array('login' => 'desconhecido');
                 }
             }
 
@@ -66,7 +66,7 @@ else {
                     }
                 }
                 else{
-                    $request[] = array('login' => 'desconhecido' , 'tabela' =>  'suporte');
+                    $request[] = array('login' => 'desconhecido');
                 }
             }
            
