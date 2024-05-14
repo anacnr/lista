@@ -28,20 +28,20 @@
     </div>
   </form>
 <!--modal do html-->
-<div class="modal-container active" id="modal-container" style="display: none;">
-  <div class="modal">
-    <h2>Pagamento efetuado com sucesso</h2>
-    <hr />
-    <span>
-      Escolha nos botões abaixo se você deseja acompanhar o status da sua compra ou continuar comprando.
-    </span>
-    <hr />
-    <div class="btns">
-      <a href="/lista/cliente/status.html"><button class="btnOK" onclick="closeModal()">Status da compra</button></a>
-      <a href="/lista/cliente/pesquisa.html"><button class="btnfechar" onclick="closeModal()">Continuar comprando</button></a> 
-    </div>
+  <div class="modal-container active" id="modal-container" style="display: none;">
+      <div class="modal">
+        <h2>Pagamento efetuado com sucesso</h2>
+        <hr />
+        <span>
+          Escolha nos botões abaixo se você deseja acompanhar o status da sua compra ou continuar comprando.
+        </span>
+        <hr />
+        <div class="btns">
+          <button class="btnOK" onclick="closeModal()">Status da compra</button>
+          <button class="btnfechar" onclick="closeModal()">Continuar comprando</button>
+        </div>
+      </div>
   </div>
-</div>
 
     <script>
       function validar() {
@@ -53,13 +53,15 @@
         openModal();
         }
         }
-    // Funções do modal
+    
+
+        // Funções do modal
     function openModal() {
       document.getElementById("modal-container").style.display = "block";
     }
 
     function closeModal() {
-      location.href = '#';
+      location.href = 'teste.html';
     }
   </script>
 </body>

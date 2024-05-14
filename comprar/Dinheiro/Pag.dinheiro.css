@@ -47,34 +47,31 @@ body {
 }
 
 .input {
-    border-radius: 22px;
-    border: 2px #6f7e8a solid; /*solid é para deixar lisas*/
-    padding: 2px;
+    min-width: 200px;
+    border-radius: 11px; /* Este estilo pode ser removido, pois é redundante */
+    border: 2px solid #6f7e8a; /* Adicionei "solid" para especificar o tipo de borda */
+    padding: 6px;
+    margin: 0px 0px 12px -5px;
 }
 
-.input i{
+.input i {
     font-size: 1.2em;
-    padding: 3px; /*mecher no tamanho*/
-    background: -webkit-linear-gradient(-45deg, #ffce51, #ff7253,#fd5754);
+    padding: 3px;
+    background: -webkit-linear-gradient(-45deg, #ffce51, #ff7253, #fd5754);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .input input {
-    width: 80%; /*largura*/
-    border: none; /*sumir o quadrado dentro*/
-    outline: none; /*nã aparecer o quadrado, quando o mouse apertar*/
+    width: 80%;
+    border: none;
+    outline: none;
+    border-radius: 22px; /* Adicione aqui o border-radius desejado */
 }
 
-#btn {
-    margin-top: 10%;
-    width: 100%;
-    text-align: center;
-}
-
-#btn button{
+#btn button {
     font-family: 'poppins', sans-serif;
-    background:  linear-gradient(-45deg, #ffce51, #ff7253,#fd5754);
+    background: linear-gradient(-45deg, #ffce51, #ff7253, #fd5754);
     width: 100%;
     height: 40px;
     border: none;
@@ -82,9 +79,8 @@ body {
     color: #fff;
     border-radius: 20px;
     outline: none;
-    cursor: pointer; /*animação da mão*/
+    cursor: pointer;
 }
-
 
 /* Adição para responsividade */
 

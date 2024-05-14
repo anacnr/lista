@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela de Pagamento</title>
+  <link rel="stylesheet" href="Pag.cartao.css">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Cartão</h2>
+    <form>
+      <div class="form-group">
+        <label for="numero-cartao">Número do Cartão</label>
+        <input type="text" id="numero-cartao" name="numero-cartao" placeholder="Ex:1234 5678 9012 3456" required maxlength="16">
+      </div>
+
+      <div class="form-group">
+        <label for="data-validade">Data de Validade</label>
+        <input type="text" id="data-validade" name="data-validade" placeholder="MM/AA" required maxlength="4">
+      </div>
+
+      <div class="form-group">
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" name="cvv" placeholder="***" required maxlength="3">
+      </div>
+
+      <div class="form-group">
+        <label for="tipo-pagamento">Tipo de Pagamento</label>
+        <select id="tipo-pagamento" name="tipo-pagamento">
+          <option value="credito">Crédito</option>
+          <option value="debito">Débito</option>
+        </select>
+      </div>
+      <button type="button" onclick="validar()" class="pagar">Pagar</button> <!-- Changed type to 'button' -->
+    </form>
+  </div>
+
+  <!-- Modal HTML -->
+  <div class="modal-container active" id="modal-container" style="display: none;">
+    <div class="modal">
+      <h2>Pagamento efetuado com sucesso</h2>
+      <hr />
+      <span>
+        Escolha nos botões abaixo se você deseja acompanhar o status da sua compra ou continuar comprando.
+      </span>
+      <hr />
+      <div class="btns">
+        <a href="status.html"><button class="btnOK" onclick="closeModal()">Status da compra</button></a>
+        <a href="pesquisa.html"><button class="btnfechar" onclick="closeModal()">Continuar comprando</button></a> 
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function validar() {
+      var numcartao = document.getElementById("numero-cartao").value;
+      var datavalidade = document.getElementById("data-validade").value;
+      var cvv = document.getElementById("cvv").value;
+      var tpagamento = document.getElementById("tipo-pagamento").value;
+
+      // Verificar se os campos estão vazios
+      if (numcartao === "" || datavalidade === "" || cvv === "" || tpagamento === "") {
+        alert("Por favor, preencha todos os campos do formulário.");
+        return false; // Impede o envio do formulário
+      } else {
+        // Abre o modal ao invés de redirecionar
+        openModal();
+        return true;
+      }
+    }
+
+    // Funções do modal
+    function openModal() {
+      document.getElementById("modal-container").style.display = "block";
+    }
+
+    function closeModal() {
+      location.href = 'teste.html';
+    }
+  </script>
+</body>
+</html>
+

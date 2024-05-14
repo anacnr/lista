@@ -1,8 +1,6 @@
-/* CSS Existente */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200; 1.300;1.400;1.500;1.600;1.700;1.800;1.900&display=swap');´
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1.300;1.400;1.500;1.600;1.700;1.800;1.900&display=swap');
-
-* {
+*{
     margin: 0;
     padding: 0;
 }
@@ -10,11 +8,11 @@
 body {
     width: 100%;
     height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(-45deg, #ffce51, #ff7253, #fd5754);
+    font-family: 'poppins', sans-serif;
+    background: linear-gradient(-45deg, #ffce51, #ff7253,#fd5754) 
 }
 
-.payment-container {
+#form {
     position: relative;
     top: 50%;
     left: 50%;
@@ -23,8 +21,7 @@ body {
     border-radius: 10px;
     padding: 60px;
     width: min-content;
-    max-width: 90%; /* Limitando a largura máxima */
-    text-align: center;
+    align-items: center;
     color: #2b344b;
 }
 
@@ -51,6 +48,11 @@ body {
     border: 2px #6f7e8a solid; /*solid é para deixar lisas*/
     padding: 2px;
 }
+
+#form img {
+    display: block;
+    margin: 0 auto;
+  }
 
 .input i{
     font-size: 1.2em;
@@ -85,20 +87,36 @@ body {
     cursor: pointer; /*animação da mão*/
 }
 
-
-/* Adição para responsividade */
+/* Adição para a responsividade */
 
 @media screen and (max-width: 600px) {
+    #form {
+        padding: 30px;
+    }
+
+    .title {
+        font-size: 1.2em;
+        margin-bottom: 8%;
+    }
+
     .input {
         min-width: 150px;
-        padding: 8px;
+        padding: 15px;
+        margin-bottom: 10px;
     }
 
     .icone {
         font-size: 20px;
+        margin-right: 8px;
+    }
+
+    #form img {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
     }
 
     #btn button {
-        font-size: 0.9em;
+        font-size: 1em;
     }
 }

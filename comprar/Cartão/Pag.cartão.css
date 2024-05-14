@@ -11,14 +11,13 @@ body {
   background-color: #f0f0f0;
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(-45deg, #ffce51, #ff7253, #fd5754);
-  background-attachment: fixed;
 }
 /*width=largura e heigh=altura*/
 
 .container {
     position: relative;
-    top: 60%; /*menor sobe e menor desce a tela branca no fundo do formulário top: 40% left:15%*/
-    left: 20%;
+    top: 40%; /*menor sobe e menor desce a tela branca no fundo do formulário*/
+    left: 15%;
     transform: translate(-50%, -50%);
     background: #fff;
     border-radius: 10px;

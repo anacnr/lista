@@ -1,14 +1,19 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200; 1.300;1.400;1.500;1.600;1.700;1.800;1.900&display=swap');´
+
+*{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
 }
 
 body {
     width: 100%;
     height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(-45deg, #ffce51, #ff7253, #fd5754);
+    font-family: 'poppins', sans-serif;
+    background: linear-gradient(-45deg, #ffce51, #ff7253,#fd5754);
 }
 
 #form {
@@ -18,9 +23,9 @@ body {
     transform: translate(-50%, -50%);
     background: #fff;
     border-radius: 10px;
-    padding: 5%;
-    max-width: 350px;
-    text-align: center;
+    padding: 60px;
+    width: min-content;
+    align-items: center;
     color: #2b344b;
 }
 
@@ -30,11 +35,22 @@ body {
 }
 
 .input {
-    border-radius: 10px;
-    border: 2px solid #6f7e8a;
-    padding: 3% 5%;
-    margin-bottom: 8%;
-    padding: 5px;
+    min-width: 200px; /*mínimo da largura do cículo do código*/
+    border-radius: 22px;
+    border: 3px #6f7e8a;
+    padding: 20px; /*aumentar*/
+    margin: 0px 0px 12px -5px;
+}
+
+.icone {
+    font-size: 36px; /* Aumentando o tamanho do ícone */
+    margin-right: 10px;
+}
+
+.input {
+    border-radius: 22px;
+    border: 2px #6f7e8a solid; /*solid é para deixar lisas*/
+    padding: 2px;
 }
 
 #form img {
@@ -75,24 +91,36 @@ body {
     cursor: pointer; /*animação da mão*/
 }
 
-@media only screen and (max-width: 600px) {
+/* Adição para a responsividade */
+
+@media screen and (max-width: 600px) {
+    #form {
+        padding: 30px;
+    }
+
+    .title {
+        font-size: 1.2em;
+        margin-bottom: 8%;
+    }
+
     .input {
-        padding: 8% 10%;
+        min-width: 150px;
+        padding: 15px;
+        margin-bottom: 10px;
     }
 
-    .input i {
-        font-size: 1em;
-    }
-
-    .input input {
-        width: 60%;
+    .icone {
+        font-size: 20px;
+        margin-right: 8px;
     }
 
     #form img {
-        width: 80%;
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
     }
 
     #btn button {
-        width: 60%;
+        font-size: 1em;
     }
 }

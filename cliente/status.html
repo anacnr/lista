@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualização da encomenda</title>
+    <!--Tela maior-->
+    <link rel="stylesheet" href="../css/status/desktop.css">
+    <!--Tela menor-->
+    <link rel="stylesheet" href="../css/status/mobile.css">
+    <link rel="shortcut icon" href="../imagens/icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <h1>status da compra </h1>
+
+    <main>
+        <h2>supermercado:</h2>
+
+        <img src="/imagens/icons/store-min.jpg" id="logo-market" alt="supermercado">
+
+        <div>
+            <input type="checkbox" name="check" id="check1" checked>
+            <label for="check1" id="phrase-check1">pedido visto.</label>
+
+            <br>
+
+            <input type="checkbox" name="check" id="check2">
+            <label for="check2" id="phrase-check2">compras sendo separadas.</label>
+
+            <br>
+
+            <input type="checkbox" name="check" id="check3">
+            <label for="check3" id="phrase-check3">compra pronta para entrega.</label> 
+        </div>
+    </main>
+
+    <button type="button">lista do cliente</button>
+
+    <script>
+
+        document.querySelector('button').addEventListener("click", function(){
+            setTimeout(()=>{
+                location.href = 'compras/lista.html'
+            },1000)
+        })
+
+        let hours = new Date()
+            let hour = hours.getHours()
+            let minutes = hours.getMinutes()
+
+            let check_boxes = document.getElementsByName("check")
+
+            check_boxes.forEach(function(iten, index){
+                iten.addEventListener("click", ()=>{
+                    let phrase = document.createElement("p")
+                    phrase.className = 'hours'
+                    phrase.innerHTML = `${hour}:${minutes}`
+                    phrase.id = `id${index}`
+
+                    document.querySelector('div').appendChild(phrase)
+                })
+            })
+    </script>
+
+</body>
+</html>
