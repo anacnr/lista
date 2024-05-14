@@ -182,6 +182,7 @@ abbr > .bi-building-fill-check{
     width: 50px;
     padding: 2px;
     border-radius: 12px;
+    box-shadow: 1px 1px 2px black;
     cursor: pointer;
 }
 
@@ -251,7 +252,7 @@ abbr > .bi-building-fill-check{
         font-weight: 600;
         font-size: 0.8em;
         cursor: pointer;
-        transform: translateY(80px);
+        transform: translateY(120px);
         background-color: rgba(186, 91, 230, 0.772);
         color: rgb(245, 243, 240);
         letter-spacing: 2px;
@@ -342,11 +343,12 @@ abbr > .bi-building-fill-check{
         text-align: center;
         position: absolute;
         left: 47%;
-        margin-top: 20px;
+        margin-top: 60px;
         background-color: rgba(186, 91, 230, 0.772);
         width: 50px;
         padding: 2px;
         border-radius: 12px;
+        box-shadow: 1px 1px 2px black;
         cursor: pointer;
     }
 }
@@ -575,7 +577,8 @@ abbr > .bi-building-fill-check{
         width: 17%;
         height: 35px;
         border-style: solid;
-        border-width: 1px;
+        border-width: 0px;
+        box-shadow: 1px 1px 2px black;
         border-color: rgb(0, 0, 0);
         border-radius: 5px;
         font-weight: 500;
@@ -616,13 +619,14 @@ abbr > .bi-building-fill-check{
     abbr > .bi-building-fill-check{
         text-align: center;
         position: absolute;
-        top: 97%;
+        top: 92%;
         left: 63%;
         margin-top: 10px;
         background-color: rgba(186, 91, 230, 0.772);
         width: 50px;
         padding: 2px;
         border-radius: 12px;
+        box-shadow: 1px 1px 2px black;
         cursor: pointer;
     }
 
@@ -663,7 +667,8 @@ abbr > .bi-building-fill-check{
         margin-top: 0%;
         margin-bottom: 1%;
         border-radius: 5px;
-        border-width: 1px;
+        border-width: 0px;
+        box-shadow: 1px 1px 6px black;
         border-style: solid;
         border-color: rgba(0, 0, 0, 0.884);
         font-size: 0.5em;
@@ -853,7 +858,8 @@ abbr > .bi-building-fill-check{
         width: 17%;
         height: 35px;
         border-style: solid;
-        border-width: 1px;
+        border-width: 0px;
+        box-shadow: 1px 1px 2px black;
         border-color: rgb(0, 0, 0);
         border-radius: 5px;
         font-weight: 500;
@@ -894,13 +900,14 @@ abbr > .bi-building-fill-check{
     abbr > .bi-building-fill-check{
         text-align: center;
         position: absolute;
-        top: 97%;
-        left: 63%;
+        top: 92%;
+        left: 60%;
         margin-top: 10px;
         background-color: rgba(186, 91, 230, 0.772);
         width: 50px;
         padding: 2px;
         border-radius: 12px;
         cursor: pointer;
+        box-shadow: 1px 1px 2px black;
     }
 }

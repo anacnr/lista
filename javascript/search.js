@@ -11,8 +11,7 @@ button_submit.addEventListener('click', ()=>{
     }
     else{
             /*O body remove a div das frases*/
-            const div_mess = document.getElementById("message")              
-            document.querySelector('body').removeChild(div_mess)
+            document.getElementById("message").style.display = 'none'             
 
             const form = new FormData()
             form.append('input' , input.value)    
@@ -105,7 +104,14 @@ button_submit.addEventListener('click', ()=>{
     });
     })           
   }
-});//Botão
+  const card_prod = document.querySelector('.results')
+  if(card_prod){
+    document.querySelector('body').removeChild(card_prod)
+  }
+  else{
+   
+  }
+});//
 
 document.querySelector("#product").addEventListener("click", ()=>{
     setTimeout(()=>{

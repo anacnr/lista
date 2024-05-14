@@ -94,7 +94,7 @@ body,html{
     /*Card que mostra os resultados da empresa*/
     .results{
         width: 50%;
-        height: 25%;
+        height: 20%;
         border-radius: 5px;
         box-shadow: 1px 1px 10px #876b6b;
         position: relative;
@@ -145,7 +145,7 @@ body,html{
         border: 1px solid rgba(0, 0, 0, 0.132);
         position: relative;
         left: 65%;
-        bottom: 30%;
+        bottom: 15%;
         box-shadow: 1px 1px 2px #150312;
         background-color: #ffffffb5;
     }

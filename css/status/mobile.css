@@ -94,6 +94,10 @@ body{
         transform: translate(70vw, 15vh);        
     }
 
+    main > div > input{
+        cursor: pointer;
+    }
+
     main > div > #check1[type="checkbox"]{
         position: absolute;
         top: 13%;

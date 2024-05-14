@@ -172,7 +172,7 @@ ul > li > #pass{
 abbr > .bi-building-fill-check{
     text-align: center;
     position: absolute;
-    transform: translate(45vw, 8vh);
+    transform: translate(45vw, 5vh);
     background-color: rgba(186, 91, 230, 0.772);
     width: 9%;
     padding: 2px;

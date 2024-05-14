@@ -60,10 +60,8 @@ document.addEventListener("DOMContentLoaded" , ()=>{
   button_save.addEventListener("click" , ()=>{
     document.querySelectorAll('input').forEach(function(iten, index){
       if(iten.value.length <=3){
-        document.querySelector('form').addEventListener("submit", (event)=>{
-          event.preventDefault();
-          console.log("Form não enviado");
-        })
+        iten.innerHTML = ''
+        console.log("Form não enviado");
       }
       else{
         console.log("Produtos salvos");
@@ -169,8 +167,8 @@ document.addEventListener("DOMContentLoaded" , ()=>{
           button_edit.style.display = 'block'
           //Mostra o botão de adição
           button_add.style.display = 'none'
-        })
-      });//Evento do botão de editar
+        });//Evento do botão de editar
+      });//Evento de edição
 
     }
 

@@ -41,12 +41,11 @@
 
         document.querySelector('button').addEventListener("click", function(){
             setTimeout(()=>{
-                location.href = 'compras/lista1.html'
+                location.href = 'compras/lista.html'
             },1000)
         })
 
-        const auto_time = function(){
-            let hours = new Date()
+        let hours = new Date()
             let hour = hours.getHours()
             let minutes = hours.getMinutes()
 
@@ -62,7 +61,6 @@
                     document.querySelector('div').appendChild(phrase)
                 })
             })
-        }
     </script>
 
 </body>

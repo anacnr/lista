@@ -54,7 +54,7 @@ document.querySelector("#total-span").textContent += total.toFixed(2).replace('.
 
     document.querySelectorAll('.span-supermarkets').forEach(iten =>{
         iten.addEventListener("click" , ()=>{
-            window.confirm("As marcas podem ter sido mudadas, mas os produtos são os mesmos. Deseja alterar o supermercado?")
+            window.confirm("As marcas podem ser mudadas, mas os produtos são os mesmos. Deseja alterar o supermercado?")
         })
     })
 

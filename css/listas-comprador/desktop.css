@@ -323,7 +323,7 @@ footer{
         text-align: center;
         display: block;
         margin: auto;
-        transform: translateY(30vh);
+        transform: translateY(36vh);
         background-image: linear-gradient(120deg,rgba(239, 153, 25, 0824)25%,rgba(242, 8, 78, 0.897)50%);
         font-family: var(--font_family);
         padding: 3px;

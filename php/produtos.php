@@ -15,6 +15,7 @@ else{
     $brand = $_POST['name4'];
     $quantity = $_POST['name5'];
     $image = $_FILES['image'];
+    $sector = $_POST['setor'];
 
     $image_name = $image['name'];
     if(isset($image)){
@@ -44,7 +45,7 @@ else{
         $start = mysqli_stmt_init($mysql);
 
        //Inserção dos valores de forma prevenida
-       mysqli_stmt_prepare($start, "INSERT INTO produto (nome,codigo,peso,valor,marca,quantidade,imagem) VALUES(?,?,?,?,?,?,?)");
+       mysqli_stmt_prepare($start, "INSERT INTO produto (nome,codigo,peso,valor,marca,quantidade,imagem,setor) VALUES(?,?,?,?,?,?,?,'variados')");
 
       //Tratamento dos valores
 
