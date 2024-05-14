@@ -1,7 +1,7 @@
 @charset "UTF-08";
 
 body {
-  background-image: linear-gradient(to bottom, #ffbf318f, #ffd34d);
+  background-image: linear-gradient(to top, #f5f40dd9, #50ccde);
   background-attachment: fixed;
 }
 
@@ -141,6 +141,54 @@ header {
     width: 100%; /* Defina a largura das imagens do carousel como 100% para ocupar toda a largura */
 }
 
+/*BOTÃO DE LINK DOS PRODUTOS*/
+
+.lista {
+  background-color: #333;
+  width: 100%; /* Ajuste para ocupar a largura total da tela */
+  text-align: center; /* Centralizar os itens na horizontal */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.item {
+  display: inline-block; /* Exibir os itens em linha, fazendo ficar um do lado do outro */
+  padding: 14px 50px; /*altura 14px e largura 16px*/ 
+  text-decoration: none;
+  color: #f2f2f2;
+  text-align: center;
+}
+
+.link {
+  text-decoration: none; /*tira a linha que mostra do link*/
+  font-size: 1.15rem;
+  color: #fff;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 730px) {
+  .lista {
+      background-color: #333;
+      width: 100%; /* Ajuste para ocupar a largura total da tela */
+      text-align: center; /* Centralizar os itens na horizontal */
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .item {
+      display: inline-block; /* Exibir os itens em linha, fazendo ficar um do lado do outro */
+      padding: 14px 50px; /*altura 14px e largura 16px*/ 
+      
+      text-decoration: none;
+      color: #f2f2f2;
+      text-align: center;
+    }
+    
+    .link {
+      text-decoration: none; /*tira a linha que mostra do link*/
+      font-size: 1.15rem;
+      color: #fff;
+      font-weight: 400;
+    }
+}
 
 /*CARD*/
 
