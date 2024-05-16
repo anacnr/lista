@@ -1,2 +1,2 @@
 # lista
- Projeto do curso de TI
+ Projeto final do curso Técnico em Informática.
