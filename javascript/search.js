@@ -5,6 +5,8 @@ console.log("Script JS")
 const input = document.querySelector('input')
 const button_submit = document.getElementById('icon-butt')
 
+window.prompt("Digite um supermercado:")
+
 button_submit.addEventListener('click', ()=>{
     if(input.value.length < 1){
             console.log("Input vazio!");
