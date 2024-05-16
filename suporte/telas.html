@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de suporte</title>
+    <link rel="stylesheet" href="TelaSuporte.css">
+</head>
+<body>
+    <section>
+        <h1>Area de suporte:</h1>
+        <h3>Responda as mensagens:</h3>
+        <form action="#" method="post">
+            <input type="text" name="nome" id="nomeid">
+            <input type="text" name="email" value="emailteste@gmail.com">
+            <textarea name="mensagem" cols="30" rows="10">preciso de ajuda com a plataforma</textarea>
+            <textarea name="mensagem" cols="30" rows="10" placeholder="Escreva"></textarea>
+            <button type="submit"><b>ENVIAR</b></button>
+        </form>
+    </section>
+    <script>
+        // Obtém o ID armazenado no localStorage
+        const botaoId = localStorage.getItem('botaoId');
+        // Define o valor do campo de entrada
+        document.getElementById('nomeid').value = botaoId;
+        document.querySelector('button').addEventListener("click", ()=>{
+            alert("Mensagem enviada!")
+        })
+    </script>
+</body>
+</html>

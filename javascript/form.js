@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         if(element.senha == 'Suporte-autorizado'){
                             console.log("Email e senha encontrados na tabela de suporte "+ element);
                             setTimeout(()=>{
-                                location.href = '../lista/suporte/teste.html'
+                                location.href = '../lista/suporte/index.html'
                             },500)
                             document.querySelector('.advice').style.display = 'none'
                         }
