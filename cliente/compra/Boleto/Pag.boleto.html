@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="estilo.css">
   <link rel="stylesheet" href="Pag.boleto.css">
+  <link rel="shortcut icon" href="../assets/icons/favicon/favicon-16x16.png" type="image/x-icon">
   <title>Tela de Boleto</title>
 </head>
 <body>
@@ -52,9 +53,9 @@
 
       if (blt === ""){
         alert("Por favor, preencha todos os campos do formulário.");
-        return false; // Impede o envio do formulário
+        return false; //Impede o envio do formulário
       } else {
-        // Abre o modal ao invés de redirecionar
+        //Abre o modal ao invés de redirecionar
         openModal();
         return true;
       }
