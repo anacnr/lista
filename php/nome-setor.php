@@ -16,10 +16,10 @@ else{
             $id_edit = $_POST['id'];
             var_dump($id_edit);
     
-            $alter_date = "UPDATE setor SET nome = '$input' WHERE  id = $id_edit"; 
+            $update = "UPDATE setor SET nome = '$input' WHERE  id = $id_edit"; 
     
             if(!empty($input)){
-                $query = mysqli_query($mysql,$alter_date);
+                $query = mysqli_query($mysql,$update);
     
                 if($query){
                     $request = true;
