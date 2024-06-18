@@ -40,6 +40,8 @@ Esta técnica já foi vista em outros sites de compras.
 
 Este projeto foi desenvolvido por quatro estudantes e ainda receberá melhorias e manutenções na aplicação.
 
-### Download do projeto
+### Execução do projeto baixado
 
-A pessoa pode baixar este repositório e executar a aplicação em seu navegador, é necessário ter um servidor local para executar. Ao salvar o banco de dados no servidor poderá executar o cadastro de usuário, produtos e realizar outras ações.
+O projeto será executado no navegador, é necessário ter um servidor local para executar.
+E ter a pasta do arquivo baixado na pasta do servidor. 
+Ao salvar o banco de dados no servidor poderá executar o cadastro de usuário, produtos e realizar outras ações.
