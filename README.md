@@ -24,7 +24,7 @@ Esta técnica já foi vista em outros sites de compras.
 
 #### Supermercado 
 
-* Cadastro dos dados pessoais;
+* Cadastro dos dados empresariais;
 * Cadastro de promoções;
 * Cradasto de produtos e setores;
 * Ediçao de produtos e setores;
