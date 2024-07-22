@@ -13,17 +13,18 @@
 </head>
 <body>
     <form id="loginForm" method="post" action="php/login.php">
-        <ul>
 
-          <label for="email"></label>
+      <h1>Login</h1>
+
+        <ul>
+  
           <li>
             <i class="bi bi-envelope" id="email-icon"></i>
-            <input type="email" name="email" id="email" placeholder="E-mail" required /> </li>
+            <input type="email" name="email" id="email" placeholder="E-mail" aria-label="campo do email" required /> </li>
             
-          <label for="senha"></label>
           <li>
             <i class="bi bi-lock" id="lock-icon"></i>
-            <input type="password" name="senha" id="senha" placeholder="Senha" required /></li>
+            <input type="password" name="senha" id="senha" placeholder="Senha" aria-label="campo de senha" required /></li>
           
         </ul>
         <button type="submit" id="ent">Entrar</button> <button id="cad" type="button" onclick="Register()">Cadastrar</button>

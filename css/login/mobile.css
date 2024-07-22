@@ -22,6 +22,16 @@ body{
     font-family: var(--lyric);
 }
 
+form > h1{
+    transform: translate(0vw,11vh);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.772);
+    letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    color: rgba(85, 28, 85, 0.667);
+  }
+
 form{
     position: relative;
     background-color: rgba(255, 255, 255, 0.909);
