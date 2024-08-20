@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       nome.append("setor", setor);
 
-      //Requisição principal ajax solicitada para exibir os resultados do banco. Porém o PHP só me retorna a última ocorrência.
+      //Requisição principal ajax solicitada para exibir os resultados do banco.
       $.ajax({
         url: "../php/setor.php",
         type: "POST",
