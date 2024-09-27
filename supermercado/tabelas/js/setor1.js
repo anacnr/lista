@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded" , ()=>{
 
   /*Emissão dos produtos salvos //Requisição ajax*/
   $.ajax({
-    url: '/lista/php/produtos-salvos.php' , type: 'POST', processData: false, contentType: false
+    url: '/l/lista/php/produtos-salvos.php' , type: 'POST', processData: false, contentType: false
   }).done(function(request){
     const tbody = document.getElementById('body-tab')
     request.forEach(element =>{

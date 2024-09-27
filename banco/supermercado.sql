@@ -61,11 +61,7 @@ CREATE TABLE `produto` (
   `valor` varchar(10) DEFAULT NULL,
   `marca` varchar(255) DEFAULT NULL,
   `quantidade` varchar(50) DEFAULT NULL,
-  `imagem` varchar(255) DEFAULT NULL,
-  `setor` varchar(50) NOT NULL,
-  `id_cliente` int(11) NOT NULL,
-  `id_supermercado` int(11) NOT NULL,
-  `id_setor` int(11) NOT NULL
+  `imagem` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --

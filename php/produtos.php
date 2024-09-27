@@ -55,7 +55,7 @@ else{
       $request = true;
 
       sleep(3);
-      header('Location: /lista/supermercado/tabelas/setor1.html');
+      header('Location: /l/lista/supermercado/tabelas/setor1.html');
       }
       else{
         die("Erro na inserção. Imagem muito grande");
