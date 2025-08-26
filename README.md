@@ -39,6 +39,8 @@ Esta técnica já foi vista em outros sites de compras.
 * Assitência ao usuário (sanação das dúvidas).
 
 Este projeto foi desenvolvido por quatro estudantes e ainda receberá melhorias e manutenções na aplicação.
+
+Utilizei a biblioteca jQuery e Ajax para validação.
 Foi utilizado AI para auxilio na construção e correção de erros de lógica.
 
 ### Execução do projeto baixado
